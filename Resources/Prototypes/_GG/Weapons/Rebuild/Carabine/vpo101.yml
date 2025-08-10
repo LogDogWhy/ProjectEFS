@@ -1,0 +1,61 @@
+- type: entity
+  name: Карабин ВПО-101 "Вепрь-Хантер"
+  parent: BaseWeaponRifle
+  id: EFSWeaponSniperVeprHunter
+  description: Самозарядный охотничий карабин калибра 7,62x51 мм, созданный на базе Автомата Калашникова (АКМ), имеет идентичный вид, массу, габаритные размеры. Предназначен для промысловой и любительской охоты на среднего и крупного зверя, а также спортивного использования.
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/vepr_hunter.rsi
+    layers:
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+  - type: Clothing
+    sprite: GG/Weapons/vepr_hunter.rsi
+  - type: Gun
+    minAngle: 1
+    maxAngle: 20
+    angleIncrease: 5
+    angleDecay: 90
+    fireRate: 4
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/Vepr/shot.ogg
+  - type: Item
+    size: SniperRifles
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazineRifleVepr
+        insertSound: /Audio/GG/Weapons/SVD/in.ogg
+        ejectSound: /Audio/GG/Weapons/SVD/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazineRifleVepr
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge7.62x51
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge7.62x51
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ChamberMagazineAmmoProvider
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope

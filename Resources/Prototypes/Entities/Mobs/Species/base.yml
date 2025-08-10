@@ -87,7 +87,7 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 0.35
+          radius: 0.25
         density: 185
         restitution: 0.0
         mask:
@@ -116,6 +116,10 @@
       - !type:WashCreamPieReaction
   - type: StatusEffects
     allowed:
+    - RecoilReducer
+    - StrengthBuffer
+    - TunnelVision
+    - PainKiller
     - Stun
     - KnockedDown
     - SlowedDown
@@ -184,6 +188,8 @@
         type: HumanoidMarkingModifierBoundUserInterface
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
+      enum.HealthAnalyzerUiKey.Key:
+        type: HealthAnalyzerBoundUserInterface
   - type: Puller
   - type: Speech
     speechSounds: Alto
@@ -234,6 +240,14 @@
       groups:
         Brute: -0.07
   - type: Fingerprint
+  - type: ESWeightOverload
+    overloadDamage:
+      types:
+        Blunt: 1
+        Bloodloss: 1
+  - type: ESWeight
+    self: 55.0
+  - type: Quests
 
   - type: Blindable
   # Other

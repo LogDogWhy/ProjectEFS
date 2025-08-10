@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "By LogDog",
+  "size": {
+    "x": 64,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "6p20"
+    },
+    {
+      "name": "attachment-6p20"
+    },
+    {
+      "name": "attachment-comp-akm"
+    },
+    {
+      "name": "attachment-geck_akm"
+    },
+    {
+      "name": "attachment-nt4"
+    },
+    {
+      "name": "attachment-pbs1"
+    },
+    {
+      "name": "attachment-omega"
+    },
+    {
+      "name": "omega"
+    },
+    {
+      "name": "attachment-illusion"
+    },
+    {
+      "name": "illusion"
+    },
+    {
+      "name": "comp-akm"
+    },
+    {
+      "name": "geck_akm"
+    },
+    {
+      "name": "nt4"
+    },
+    {
+      "name": "attachment-savivo"
+    },
+    {
+      "name": "savivo"
+    },
+    {
+      "name": "pbs1"
+    }
+  ]
+}

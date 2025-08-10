@@ -1,0 +1,125 @@
+- type: Tag
+  id: Grip
+
+- type: entity
+  name: DebugGrip
+  parent: BaseItem
+  id: DebugGrip
+  description: DebugGrip
+  components:
+  - type: Sprite
+    sprite: GG/DEV.rsi
+    state: dev
+  - type: Tag
+    tags:
+      - Grip
+
+- type: Tag
+  id: Suppressor
+
+- type: Tag
+  id: EFSDebugTag
+
+- type: entity
+  name: DebugSuppressor
+  parent: BaseItem
+  id: DebugSuppressor
+  description: DebugSuppressor
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/barrels.rsi
+    state: nt4
+  - type: Tag
+    tags:
+      - Suppressor
+  - type: Attachment
+    minAngle: -2
+    maxAngle: 15
+    angleIncrease: 3
+    angleDecay: 2
+    fireRate: 0
+    cameraRecoilScalar: -1
+
+- type: Tag
+  id: Stock
+
+- type: entity
+  name: DebugStock
+  parent: BaseItem
+  id: DebugStock
+  description: DebugStock
+  components:
+  - type: Sprite
+    sprite: GG/DEV.rsi
+    state: dev
+  - type: Tag
+    tags:
+      - Stock
+
+- type: Tag
+  id: Scope
+
+- type: entity
+  name: DebugScope
+  parent: BaseItem
+  id: DebugScope
+  description: DebugScope
+  components:
+  - type: Sprite
+    sprite: GG/DEV.rsi
+    state: dev
+  - type: Tag
+    tags:
+      - Scope
+
+- type: Tag
+  id: Forearm
+
+
+- type: entity
+  name: DebugForearm
+  parent: BaseItem
+  id: DebugForearm
+  description: DebugForearm
+  components:
+  - type: Sprite
+    sprite: GG/DEV.rsi
+    state: dev
+  - type: Tag
+    tags:
+      - Forearm
+
+- type: entity
+  name: DebugGripNato
+  parent: BaseItem
+  id: DebugGripNato
+  description: DebugGrip
+  components:
+  - type: Sprite
+    sprite: GG/DEV.rsi
+    state: dev
+
+
+
+- type: Tag
+  id: Gadget
+
+- type: entity
+  name: DebugGadget
+  parent: BaseItem
+  id: DebugGadget
+  description: DebugGadget
+  components:
+  - type: Sprite
+    sprite: GG/DEV.rsi
+    state: dev
+  - type: Tag
+    tags:
+      - Gadget
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 6
+    netsync: false

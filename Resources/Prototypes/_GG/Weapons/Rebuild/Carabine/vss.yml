@@ -1,0 +1,143 @@
+- type: entity
+  name: VSS
+  parent: BaseWeaponRifle
+  id: EFSWeaponRifleVSS
+  description: ВСС (Винтовка снайперская специальная) — бесшумная снайперская винтовка с интегрированным глушителем, для подразделений и групп специального назначения. Была разработана в 80-х годах в ЦНИИточмаш.
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/vss.rsi
+    layers:
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+      - sprite: GG/Weapons/Mods/scope.rsi
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.75, 0.75
+        offset: -0.325, 0.075
+        visible: false
+  - type: Clothing
+    sprite: GG/Weapons/vss.rsi
+  - type: Gun
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/VSS/shot.ogg
+    minAngle: 1
+    maxAngle: 18
+    angleIncrease: 3.33
+    angleDecay: 90
+    fireRate: 7
+  - type: Item
+    size: Rifles
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazineRifle6L25
+        insertSound: /Audio/GG/Weapons/VSS/in.ogg
+        ejectSound: /Audio/GG/Weapons/VSS/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazineRifle6L25
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge9x39
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge9x39
+      gun_scope:
+        priority: 3
+        whitelist:
+          tags:
+            - EFSNScope
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      gun_scope: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ChamberMagazineAmmoProvider
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+
+
+- type: entity
+  name: SVD
+  parent: BaseWeaponRifle
+  id: EFSWeaponSniperSVD
+  description: Снайперская винтовка Драгунова с 1963 года является единственным самозарядным снайперским оружием мотострелковых и других подразделений Вооружённых сил России.
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/svd.rsi
+    layers:
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+      - sprite: GG/Weapons/Mods/scope.rsi
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.75, 0.75
+        offset: -0.325, 0.075
+        visible: false
+  - type: Clothing
+    sprite: GG/Weapons/svd.rsi
+  - type: Gun
+    minAngle: 1
+    maxAngle: 40
+    angleIncrease: 8
+    angleDecay: 60
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/SVD/shot.ogg
+  - type: Item
+    size: SniperRifles
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazineRifleSVD
+        insertSound: /Audio/GG/Weapons/SVD/in.ogg
+        ejectSound: /Audio/GG/Weapons/SVD/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazineRifleSVD
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge7.62x54R
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge7.62x54R
+      gun_scope:
+        priority: 3
+        whitelist:
+          tags:
+            - EFSNScope
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      gun_scope: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ChamberMagazineAmmoProvider
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope

@@ -8,23 +8,45 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Content.Shared.Preferences.Loadouts.Effects;
 
 namespace Content.Client.Lobby.UI.Loadouts;
 
 [GenerateTypedNameReferences]
 public sealed partial class LoadoutGroupContainer : BoxContainer
 {
+    private string? _currentlySelectedLoadoutId; // Хранение текущего выбранного элемента
     private readonly LoadoutGroupPrototype _groupProto;
+
+    private RoleLoadoutPrototype? _roleProto;
+
+    [Dependency] private readonly ILogManager _logManager = default!;
+
+    private int _recalculate = 0;
+    private Label? _pointsLabel;
+
 
     public event Action<ProtoId<LoadoutPrototype>>? OnLoadoutPressed;
     public event Action<ProtoId<LoadoutPrototype>>? OnLoadoutUnpressed;
 
-    public LoadoutGroupContainer(HumanoidCharacterProfile profile, RoleLoadout loadout, LoadoutGroupPrototype groupProto, ICommonSession session, IDependencyCollection collection)
+    public LoadoutGroupContainer(HumanoidCharacterProfile profile, RoleLoadout loadout, LoadoutGroupPrototype groupProto, ICommonSession session, IDependencyCollection collection, int recalculate = 0)
     {
         RobustXamlLoader.Load(this);
         _groupProto = groupProto;
 
+        _recalculate = recalculate;
+
+
         RefreshLoadouts(profile, loadout, session, collection);
+        UpdatePointsDisplay(loadout.Points);
+    }
+
+    private void UpdatePointsDisplay(int newPoints)
+    {
+        if (_pointsLabel != null && _roleProto != null)
+        {
+            _pointsLabel.Text = Loc.GetString("loadouts-points-limit", ("count", newPoints), ("max", _roleProto.Points));
+        }
     }
 
     /// <summary>
@@ -34,6 +56,29 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
     {
         var protoMan = collection.Resolve<IPrototypeManager>();
         var loadoutSystem = collection.Resolve<IEntityManager>().System<LoadoutSystem>();
+
+        // Инициализация общего количества очков
+        int totalPoints = _roleProto?.Points ?? 0;
+        totalPoints += _recalculate; // Максимальное количество очков, доступных для роли
+
+        // Пересчитываем общее количество очков с учетом всех выбранных предметов во всех группах
+        foreach (var group in loadout.SelectedLoadouts.Values)
+        {
+            foreach (var selectedLoadout in group)
+            {
+                if (protoMan.TryIndex(selectedLoadout.Prototype, out LoadoutPrototype? proto))
+                {
+                    var pointsCostEffect = proto.Effects.OfType<PointsCostLoadoutEffect>().FirstOrDefault();
+                    if (pointsCostEffect != null)
+                    {
+                        totalPoints -= pointsCostEffect.Cost;
+                    }
+                }
+            }
+        }
+
+        loadout.SetPoints(totalPoints); // Обновляем общее количество очков для отображения
+
         RestrictionsContainer.DisposeAllChildren();
 
         if (_groupProto.MinLimit > 0)
@@ -54,29 +99,28 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
             });
         }
 
-        if (protoMan.TryIndex(loadout.Role, out var roleProto) && roleProto.Points != null && loadout.Points != null)
+        if (protoMan.TryIndex(loadout.Role, out var roleProto) && roleProto.Points != null)
         {
-            RestrictionsContainer.AddChild(new Label()
+            _roleProto = roleProto;
+            _pointsLabel = new Label()
             {
-                Text = Loc.GetString("loadouts-points-limit", ("count", loadout.Points.Value), ("max", roleProto.Points.Value)),
+                Text = Loc.GetString("loadouts-points-limit", ("count", loadout.Points), ("max", roleProto.Points)),
                 Margin = new Thickness(5, 0, 5, 5),
-            });
+            };
+            RestrictionsContainer.AddChild(_pointsLabel);
         }
 
         LoadoutsContainer.DisposeAllChildren();
-        // Didn't use options because this is more robust in future.
 
         var selected = loadout.SelectedLoadouts[_groupProto.ID];
-
-        // Corvax-Loadouts-Start
         var groupLoadouts = _groupProto.Loadouts;
+
         if (collection.TryResolveType<ISharedLoadoutsManager>(out var loadoutsManager) && _groupProto.ID == "Inventory")
         {
             groupLoadouts = loadoutsManager.GetClientPrototypes().Select(id => (ProtoId<LoadoutPrototype>)id).ToList();
         }
-        // Corvax-Loadouts-End
 
-        foreach (var loadoutProto in groupLoadouts) // Corvax-Loadouts
+        foreach (var loadoutProto in groupLoadouts)
         {
             if (!protoMan.TryIndex(loadoutProto, out var loadProto))
                 continue;
@@ -91,13 +135,83 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
             loadoutContainer.Select.OnPressed += args =>
             {
+                var pointsCostEffect = loadProto.Effects.OfType<PointsCostLoadoutEffect>().FirstOrDefault();
+
                 if (args.Button.Pressed)
+                {
                     OnLoadoutPressed?.Invoke(loadoutProto);
+
+                    // Возврат очков за предыдущий элемент, если он был выбран ранее
+                    if (_currentlySelectedLoadoutId != null)
+                    {
+                        var previousLoadoutEffect = protoMan.TryIndex<LoadoutPrototype>(_currentlySelectedLoadoutId, out var previousLoadoutProto)
+                            ? previousLoadoutProto.Effects.OfType<PointsCostLoadoutEffect>().FirstOrDefault()
+                            : null;
+
+                        if (previousLoadoutEffect != null)
+                        {
+                            totalPoints += previousLoadoutEffect.Cost; // Возвращаем очки за предыдущий элемент
+                        }
+                    }
+
+                    // Проверяем, хватает ли очков для нового выбора или если cost = 0, или эффект отсутствует
+                    if (pointsCostEffect == null || pointsCostEffect.Cost == 0 || totalPoints >= pointsCostEffect.Cost)
+                    {
+                        if (pointsCostEffect != null && pointsCostEffect.Cost > 0)
+                        {
+                            totalPoints -= pointsCostEffect.Cost;
+                        }
+                    }
+                    else
+                    {
+                        OnLoadoutUnpressed?.Invoke(loadoutProto); // Отменяем выбор, если очков недостаточно
+                        return;
+                    }
+
+                    loadout.SetPoints(totalPoints);
+
+                    // Обновляем интерфейс
+                    UpdatePointsDisplay(totalPoints);
+
+                    // Пересчитываем доступность других предметов
+                    RefreshLoadouts(profile, loadout, session, collection);
+
+                    // Обновление текущего выбранного элемента
+                    _currentlySelectedLoadoutId = loadoutProto;
+                }
                 else
+                {
                     OnLoadoutUnpressed?.Invoke(loadoutProto);
+
+                    // Возврат очков за текущий элемент при отмене выбора
+                    if (pointsCostEffect != null)
+                    {
+                        int cost = pointsCostEffect.Cost;
+                        totalPoints += cost; // Возвращаем очки
+                    }
+
+                    loadout.SetPoints(totalPoints);
+
+                    // Обновляем интерфейс
+                    UpdatePointsDisplay(totalPoints);
+
+                    // Пересчитываем доступность других предметов
+                    RefreshLoadouts(profile, loadout, session, collection);
+
+                    // Сброс текущего выбранного элемента
+                    _currentlySelectedLoadoutId = null;
+                }
             };
+
+
+
 
             LoadoutsContainer.AddChild(loadoutContainer);
         }
+
+        // Убедитесь, что очки корректно отображаются после всех расчетов
+        UpdatePointsDisplay(totalPoints);
     }
+
+
 }

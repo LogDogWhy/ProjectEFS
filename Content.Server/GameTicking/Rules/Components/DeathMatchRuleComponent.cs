@@ -17,7 +17,7 @@ public sealed partial class DeathMatchRuleComponent : Component
     /// The number of points a player has to get to win.
     /// </summary>
     [DataField("killCap"), ViewVariables(VVAccess.ReadWrite)]
-    public FixedPoint2 KillCap = 31;
+    public FixedPoint2 KillCap = 20;
 
     /// <summary>
     /// How long until the round restarts

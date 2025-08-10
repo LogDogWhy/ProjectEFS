@@ -1,0 +1,88 @@
+# - type: job
+#   id: Passenger
+#   # name: ЧВК "BEAR"
+#   # description: Постарайтесь не умереть.
+#   name: job-name-passenger
+#   description: job-description-passenger
+#   startingGear: BearGear
+#   icon: "JobIconBear"
+#   playTimeTracker: JobPassenger
+- type: entity
+  parent: ClothingMilitaryBackpack
+  id: Fiiled_EFSClothingMilitaryBackpack
+  noSpawn: true
+  components:
+  - type: StorageFill
+    contents:
+      - id: Salewa
+        amount: 1
+      - id: Esmarh
+        amount: 1
+      - id: DrinkWaterBottleFull
+        amount: 1
+      - id: FoodSnackNutribrick
+        amount: 1
+
+- type: job
+  id: Passenger
+  name: job-name-passenger
+  description: job-description-passenger
+  playTimeTracker: JobPassenger
+  icon: "BearFaction"
+  startingGear: BearGear
+
+- type: startingGear
+  id: BearGear
+  name: Набор Bear
+  inList: false
+  equipment:
+    shoes: ClothingShoesColorBlack
+    id: BadgeBEAR
+    # back: ClothingMilitaryBackpack
+
+# - type: playTimeTracker
+#   id: JobPassenger
+
+- type: entity
+  id: SpawnPointBEAR
+  parent: SpawnPointJobBase
+  name: Spawn Point BEAR
+  components:
+  - type: SpawnPoint
+    job_id: Passenger
+  - type: Sprite
+    layers:
+      - state: green
+      - state: hop
+
+- type: entity
+  id: SpawnPointBEARLateJoin
+  suffix: LateJoin
+  parent: SpawnPointJobBase
+  name: Spawn Point BEAR
+  components:
+  - type: SpawnPoint
+    job_id: Passenger
+    spawn_type: LateJoin
+  - type: Sprite
+    layers:
+      - state: green
+      - state: hop
+
+
+
+###################
+
+- type: entity
+  id: SpawnPointAssistant # TODO rename, but requires map changes.
+  parent: SpawnPointJobBase
+  name: passenger
+  components:
+  - type: SpawnPoint
+  - type: Sprite
+    layers:
+      - state: green
+      - state: passenger
+
+- type: playTimeTracker
+  id: Experience

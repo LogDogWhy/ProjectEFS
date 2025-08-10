@@ -1,0 +1,45 @@
+- type: salvageBiomeMod
+  id: FlatAssBussin
+  biome: FlatAssBussin
+
+# Grass
+- type: biomeTemplate
+  id: FlatAssBussin
+  layers:
+    - !type:BiomeDummyLayer
+      id: Loot
+    # Fill remainder with dirt.
+    - !type:BiomeTileLayer
+      threshold: -1.0
+      tile: FloorPlanetDirt
+    - !type:BiomeTileLayer
+      threshold: -0.90
+      tile: FloorPlanetGrass
+      noise:
+        seed: 0
+        frequency: 0.02
+        fractalType: None
+    # Water sand
+    - !type:BiomeTileLayer
+      tile: FloorPlanetDirt
+      threshold: 0.95
+      noise:
+        seed: 3
+        noiseType: OpenSimplex2
+        frequency: 0.003
+        lacunarity: 1.50
+        fractalType: Ridged
+        octaves: 1
+    # Rock formation sand
+    - !type:BiomeTileLayer
+      tile: FloorPlanetDirt
+      threshold: -0.30
+      noise:
+        seed: 0
+        noiseType: Cellular
+        frequency: 0.05
+        lacunarity: 2
+        fractalType: FBm
+        octaves: 5
+        cellularDistanceFunction: Euclidean
+        cellularReturnType: Distance2

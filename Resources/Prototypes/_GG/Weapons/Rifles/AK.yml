@@ -1,0 +1,317 @@
+# - type: entity
+#   name: АКМ
+#   parent: BaseWeaponRifle
+#   id: EFSWeaponRifleAkm
+#   description: "Автомат Калашникова модернизированный калибра 7,62 мм, принятый на вооружение в 1959 году на смену автомату АК . Основное отличие от АК: увеличенная прицельная дальность стрельбы, меньший вес, новый приклад, замедлитель срабатывания курка, установлен дульный компенсатор и другие конструктивные изменения направленные на повышение эффективности автомата"
+#   components:
+#   - type: Sprite
+#     sprite: GG/Weapons/ak47.rsi
+#     layers:
+#       - state: base
+#         scale: 0.8, 0.8
+#         map: ["enum.GunVisualLayers.Base"]
+#       - state: mag-0
+#         map: ["enum.GunVisualLayers.Mag"]
+#         scale: 0.8, 0.8
+#   - type: Gun
+#     minAngle: 2
+#     maxAngle: 18
+#     angleIncrease: 3
+#     angleDecay: 44
+#     fireRate: 7
+#     soundLoudGunshot:
+#       path: /Audio/GG/Weapons/AK/akm/shot.ogg
+#   - type: ChamberMagazineAmmoProvider
+#   - type: Item
+#     size: Rifles
+#   - type: ItemSlots
+#     slots:
+#       gun_magazine:
+#         name: Magazine
+#         startingItem: EFSMagazineRifleАКМAluminn
+#         insertSound: /Audio/GG/Weapons/AK/in.ogg
+#         ejectSound: /Audio/GG/Weapons/AK/out.ogg
+#         priority: 2
+#         whitelist:
+#           tags:
+#             - EFSMagazineRifleАКМAluminn
+#       gun_chamber:
+#         name: Chamber
+#         startingItem: Cartridge7.62x39
+#         priority: 1
+#         whitelist:
+#           tags:
+#             - Cartridge7.62x39
+#   - type: ContainerContainer
+#     containers:
+#       gun_magazine: !type:ContainerSlot
+#       gun_chamber: !type:ContainerSlot
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 1
+#     zeroVisible: true
+#   - type: Appearance
+
+# - type: entity
+#   name: АК-74M
+#   parent: BaseWeaponRifle
+#   id: EFSWeaponRifleAk74m
+#   description: "Автомат Калашникова калибра 5,45 мм модернизированный. Оснащён складывающимся на левый бок полимерным прикладом и универсальным креплением (планка «ласточкин хвост») для крепления прицелов, как оптических, так и ночных, на левой стороне ствольной коробки."
+#   components:
+#   - type: Sprite
+#     sprite: GG/Weapons/ak74.rsi
+#     layers:
+#       - state: base
+#         scale: 0.8, 0.8
+#         map: ["enum.GunVisualLayers.Base"]
+#       - state: mag-0
+#         map: ["enum.GunVisualLayers.Mag"]
+#         scale: 0.8, 0.8
+#       - sprite: GG/Weapons/Mods/barrels.rsi
+#         state: suppressor
+#         offset: 0.65, 0
+#         map: ["enum.GunVisualLayers.Suppressor"]
+#         scale: 0.8, 0.8
+#         visible: false
+#   - type: Gun
+#     minAngle: 3
+#     maxAngle: 16
+#     angleIncrease: 3
+#     angleDecay: 40
+#     fireRate: 9
+#     soundGunshot:
+#       path: /Audio/GG/Weapons/AK/74/shot.ogg
+#     soundLoudGunshot:
+#       path: /Audio/GG/Weapons/AK/74/shot.ogg
+#     soundSilGunshot:
+#       path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+#   - type: ChamberMagazineAmmoProvider
+#   - type: Item
+#     size: Rifles
+#   - type: ItemSlots
+#     slots:
+#       gun_magazine:
+#         name: Magazine
+#         startingItem: EFSMagazineRifleBlack6L23
+#         insertSound: /Audio/GG/Weapons/AK/in.ogg
+#         ejectSound: /Audio/GG/Weapons/AK/out.ogg
+#         priority: 2
+#         whitelist:
+#           tags:
+#             - EFSMagazineRifle6L23
+#       gun_chamber:
+#         name: Chamber
+#         startingItem: Cartridge5.45x39
+#         priority: 1
+#         whitelist:
+#           tags:
+#             - Cartridge5.45x39
+#       gun_suppressor:
+#         name: Supperssor
+#         # startingItem: DebugSuppressor
+#         priority: 3
+#         whitelist:
+#           tags:
+#             - Suppressor
+#   - type: ContainerContainer
+#     containers:
+#       gun_magazine: !type:ContainerSlot
+#       gun_chamber: !type:ContainerSlot
+#       gun_suppressor: !type:ContainerSlot
+#   - type: SuppressorVisuals
+#     suppressorState: suppressor
+#   - type: Suppressor
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 1
+#     zeroVisible: true
+#   - type: Appearance
+
+
+# - type: entity
+#   name: АК-74M
+#   parent: BaseWeaponRifle
+#   id: EFSWeaponRifleAk74mSIL
+#   description: "Автомат Калашникова калибра 5,45 мм модернизированный. Оснащён складывающимся на левый бок полимерным прикладом и универсальным креплением (планка «ласточкин хвост») для крепления прицелов, как оптических, так и ночных, на левой стороне ствольной коробки."
+#   components:
+#   - type: Sprite
+#     sprite: GG/Weapons/ak74.rsi
+#     layers:
+#       - state: base
+#         scale: 0.8, 0.8
+#         map: ["enum.GunVisualLayers.Base"]
+#       - state: mag-0
+#         map: ["enum.GunVisualLayers.Mag"]
+#         scale: 0.8, 0.8
+#       - sprite: GG/Weapons/Mods/barrels.rsi
+#         state: suppressor
+#         offset: 0.65, 0
+#         map: ["enum.GunVisualLayers.Suppressor"]
+#         scale: 0.8, 0.8
+#         visible: false
+#   - type: Gun
+#     minAngle: 3
+#     maxAngle: 16
+#     angleIncrease: 3
+#     angleDecay: 40
+#     fireRate: 9
+#     soundLoudGunshot:
+#       path: /Audio/GG/Weapons/AK/74/shot.ogg
+#     soundSilGunshot:
+#       path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+#   - type: ChamberMagazineAmmoProvider
+#   - type: Item
+#     size: Rifles
+#   - type: ItemSlots
+#     slots:
+#       gun_magazine:
+#         name: Magazine
+#         startingItem: EFSMagazineRifleBlack6L23
+#         insertSound: /Audio/GG/Weapons/AK/in.ogg
+#         ejectSound: /Audio/GG/Weapons/AK/out.ogg
+#         priority: 2
+#         whitelist:
+#           tags:
+#             - EFSMagazineRifle6L23
+#       gun_chamber:
+#         name: Chamber
+#         startingItem: Cartridge5.45x39
+#         priority: 1
+#         whitelist:
+#           tags:
+#             - Cartridge5.45x39
+#       gun_suppressor:
+#         name: Supperssor
+#         startingItem: DebugSuppressor
+#         priority: 3
+#         whitelist:
+#           tags:
+#             - Suppressor
+#   - type: ContainerContainer
+#     containers:
+#       gun_magazine: !type:ContainerSlot
+#       gun_chamber: !type:ContainerSlot
+#       gun_suppressor: !type:ContainerSlot
+#   - type: SuppressorVisuals
+#     suppressorState: suppressor
+#   - type: Suppressor
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 1
+#     zeroVisible: true
+#   - type: Appearance
+
+
+# - type: entity
+#   name: ВПО-136 "Вепрь-КМ"
+#   parent: BaseWeaponRifle
+#   id: EFSWeaponRifleVeprKm
+#   description: Самозарядный охотничий карабин калибра 7,62×39 мм, созданный на базе Автомата Калашникова (АКМ), имеет идентичный вид, массу, габаритные размеры. Предназначен для промысловой и любительской охоты на среднего и крупного зверя, а также спортивного использования.
+#   components:
+#   - type: Sprite
+#     sprite: GG/Weapons/vpo762.rsi
+#     layers:
+#       - state: base
+#         scale: 0.8, 0.8
+#         map: ["enum.GunVisualLayers.Base"]
+#       - state: mag-0
+#         map: ["enum.GunVisualLayers.Mag"]
+#         scale: 0.8, 0.8
+#   - type: Gun
+#     minAngle: 3
+#     maxAngle: 15
+#     angleIncrease: 3
+#     angleDecay: 55
+#     fireRate: 7
+#     selectedMode: SemiAuto
+#     availableModes:
+#     - SemiAuto
+#     soundLoudGunshot:
+#       path: /Audio/GG/Weapons/AK/akm/shot.ogg
+#   - type: ChamberMagazineAmmoProvider
+#   - type: Item
+#     size: Rifles
+#   - type: ItemSlots
+#     slots:
+#       gun_magazine:
+#         name: Magazine
+#         startingItem: EFSMagazineRifleАКМAluminn
+#         insertSound: /Audio/GG/Weapons/AK/in.ogg
+#         ejectSound: /Audio/GG/Weapons/AK/out.ogg
+#         priority: 2
+#         whitelist:
+#           tags:
+#             - EFSMagazineRifleАКМAluminn
+#       gun_chamber:
+#         name: Chamber
+#         startingItem: Cartridge7.62x39
+#         priority: 1
+#         whitelist:
+#           tags:
+#             - Cartridge7.62x39
+#   - type: ContainerContainer
+#     containers:
+#       gun_magazine: !type:ContainerSlot
+#       gun_chamber: !type:ContainerSlot
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 1
+#     zeroVisible: true
+#   - type: Appearance
+
+
+# - type: entity
+#   name: АКС-74У
+#   parent: BaseWeaponRifle
+#   id: EFSWeaponRifleAksu
+#   description: Укороченный вариант автомата АКС-74, был разработан в начале 80-х годов для вооружения экипажей боевой техники и десантников. Также пользуется популярностью в силовых структурах и спецподразделениях за свои компактные размеры.
+#   components:
+#   - type: Sprite
+#     sprite: GG/Weapons/aksu.rsi
+#     layers:
+#       - state: base
+#         scale: 0.8, 0.8
+#         map: ["enum.GunVisualLayers.Base"]
+#       - state: mag-0
+#         map: ["enum.GunVisualLayers.Mag"]
+#         scale: 0.8, 0.8
+#         visible: false
+#   - type: Gun
+#     minAngle: 1
+#     maxAngle: 20
+#     angleIncrease: 4
+#     angleDecay: 40
+#     fireRate: 10
+#     soundLoudGunshot:
+#       path: /Audio/GG/Weapons/AK/aksu/shot.ogg
+#   - type: ChamberMagazineAmmoProvider
+#   - type: Item
+#     size: PistolMachine
+#   - type: ItemSlots
+#     slots:
+#       gun_magazine:
+#         name: Magazine
+#         startingItem: EFSMagazineRifle6L23
+#         insertSound: /Audio/GG/Weapons/AK/in.ogg
+#         ejectSound: /Audio/GG/Weapons/AK/out.ogg
+#         priority: 2
+#         whitelist:
+#           tags:
+#             - EFSMagazineRifle6L23
+#       gun_chamber:
+#         name: Chamber
+#         startingItem: Cartridge5.45x39
+#         priority: 1
+#         whitelist:
+#           tags:
+#             - Cartridge5.45x39
+#   - type: ContainerContainer
+#     containers:
+#       gun_magazine: !type:ContainerSlot
+#       gun_chamber: !type:ContainerSlot
+#   - type: Suppressor
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 1
+#     zeroVisible: true
+#   - type: Appearance

@@ -27,3 +27,10 @@
   - "/Audio/Weapons/Guns/Hits/energy_metal1.ogg"
   - "/Audio/Weapons/Guns/Hits/energy_metal2.ogg"
 
+
+
+- type: soundCollection
+  id: VestImpact
+  files:
+  - "/Audio/GG/Hits/Vest/vestimpact1.ogg"
+  - "/Audio/GG/Hits/Vest/vestimpact2.ogg"

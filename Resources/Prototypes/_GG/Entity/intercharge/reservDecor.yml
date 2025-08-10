@@ -1,0 +1,363 @@
+- type: entity
+  id: EFSDecorRezervBase
+  abstract: true
+  parent: BaseStructure
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Decoration/rezerv.rsi
+  - type: Transform
+    noRot: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.04,0.5,-0.04,-0.4"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+
+- type: entity
+  id: EFSDecorRezervbox
+  parent: EFSDecorRezervBase
+  name: Армейские запасы
+  description: Закрыто.
+  components:
+  - type: Sprite
+    state: box
+
+- type: entity
+  id: EFSDecorRezervnagk
+  parent: EFSDecorRezervBase
+  name: Стол
+  description: Проклято
+  components:
+  - type: Sprite
+    state: nagk
+    snapCardinals: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.4,0.3,-0.4,-0.3"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Transform
+    noRot: true
+
+- type: entity
+  id: EFSDecorRezervnagk2
+  parent: EFSDecorRezervnagk
+  name: Стол
+  description: Ни пылинки!
+  components:
+  - type: Sprite
+    state: nagk2
+
+- type: entity
+  id: EFSDecorRezervpesok
+  parent: EFSDecorRezervBase
+  name: Ящик с песком
+  description: П Е С О К
+  components:
+  - type: Sprite
+    state: pesok
+    snapCardinals: true
+
+- type: entity
+  id: EFSDecorRezervrasklad
+  parent: EFSDecorRezervBase
+  name: Кровать
+  description: Матраса нету, спать невозможно!
+  components:
+  - type: Sprite
+    state: rasklad
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.4,0.2,-0.4,-0.2"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+
+
+- type: entity
+  id: EFSDecorRezervrasklad2
+  parent: EFSDecorRezervrasklad
+  name: Кровать
+  description: Матраса есть, спать возможно!
+  components:
+  - type: Sprite
+    state: rasklad2
+
+- type: entity
+  id: EFSDecorRezervrasklad3
+  parent: EFSDecorRezervrasklad
+  name: Кровать
+  description: Матрас есть, подушка тоже, но...
+  components:
+  - type: Sprite
+    state: rasklad3
+
+- type: entity
+  id: EFSDecorRezervrasklad4
+  parent: EFSDecorRezervrasklad
+  name: Кровать
+  description: сейчас 4 ночи, мне лень придумывать что-то, если надумаете над интересными описаниями кроватей, прошу написать хосту!!!
+  components:
+  - type: Sprite
+    state: rasklad4
+
+
+- type: entity
+  id: EFSDecorRezervserverqueen
+  parent: EFSDecorRezervBase
+  name: Серверная полка
+  description: НАМ НЕМ ДЕРЖИТСЯ ВЕСЬ СЕРВЕР!
+  components:
+  - type: Sprite
+    state: serverqueen
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.4,0.3,-0.4,-0.3"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+
+
+- type: entity
+  id: EFSDecorRezervserverqueen2
+  parent: EFSDecorRezervserverqueen
+  name: Серверная полка
+  description: Как будто выдрали магнитолу
+  components:
+  - type: Sprite
+    state: serverqueen2
+
+- type: entity
+  id: EFSDecorRezervtelefon
+  parent: EFSDecorInterchargeCassa
+  name: Телефон
+  description: Под телефоном, номер и подпись "Узнать что с деньгами"
+  components:
+  - type: Sprite
+    state: telefon
+    sprite: GG/Objects/Decoration/rezerv.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.1,0.1,-0.1,-0.1"
+        density: 190
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
+
+- type: entity
+  id: EFSDecorRezervZip
+  parent: EFSDecorInterchargeCassa
+  name: Архивы
+  description: Произведенно компанией WinChan
+  components:
+  - type: Sprite
+    state: zip
+    sprite: GG/Objects/Decoration/decor.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.1,0.1,-0.1,-0.1"
+        density: 190
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
+
+- type: entity
+  parent: BaseSign
+  id: EFSDecorRezervPosterBase
+  abstract: true
+  components:
+  - type: WallMount
+    arc: 360
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: GG/Objects/Decoration/rezerv.rsi
+    snapCardinals: true
+
+- type: entity
+  id: EFSDecorRezervdoska
+  parent: EFSDecorRezervPosterBase
+  name: Пустая доска
+  description:
+  components:
+  - type: Sprite
+    state: doska
+
+- type: entity
+  id: EFSDecorRezervdoska2
+  parent: EFSDecorRezervPosterBase
+  name: Доска с записками
+  description: Нет времени читать, суй сгущенку в жопу!
+  components:
+  - type: Sprite
+    state: doska2
+
+- type: entity
+  id: EFSDecorRezervdoska3
+  parent: EFSDecorRezervPosterBase
+  name: Доска с записками
+  description: Нет времени читать, суй сгущенку в жопу!
+  components:
+  - type: Sprite
+    state: doska3
+
+
+- type: entity
+  id: EFSDecorRezervBigCrate
+  parent: EFSDecorRezervBase
+  name: Армейские запасы
+  description: Закрыто.
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Decoration/2x64.rsi
+    state: crate
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.5,0.04,-0.5,-0.4"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+
+- type: entity
+  id: EFSDecorRezervCrates
+  parent: EFSDecorRezervBase
+  name: Склад Армейских запасов
+  description: И конечно же, они все закрыты!
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Decoration/2x64.rsi
+    state: crates
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.8,0.6,-0.8,-0.6"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+
+
+
+- type: entity
+  id: VXSMortar
+  parent: BaseStructure
+  name: Mortar
+  suffix: DEBUG
+  description: pizdec
+  components:
+  - type: Sprite
+    sprite: VXS/Structures/mortar.rsi
+    state: mortar
+  - type: Mortar
+    accuracy: 0.5
+  - type: ContainerContainer
+    containers:
+      mortar_chamber: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      mortar_chamber:
+        name: Chamber
+        startingItem: VXSMortarShell
+        priority: 1
+        whitelist:
+          tags:
+            - MortarShell
+
+
+- type: entity
+  id: VXSMortarShell
+  parent: BaseItem
+  name: Mortar Shell
+  description: Mortar Shell
+  components:
+  - type: Tag
+    tags:
+      - MortarShell
+  - type: Sprite
+    sprite: VXS/Structures/mortar.rsi
+    state: shell
+  - type: MortarShell
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 5
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+
+- type: Tag
+  id: MortarShell
+
+- type: entity
+  id: VXSFortStruct
+  parent: BaseStructure
+  name: Fort Struct
+  description: Fort Struct
+  components:
+  - type: VXSFortStruct
+    team: Синдикат
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Sprite
+    sprite: # добавь спрайт
+    state: rasklad3
+
+- type: damageModifierSet
+  id: VXSFort
+  coefficients:
+    Blunt: 0.7
+    Slash: 0.7
+    Piercing: 0.7
+    Heat: 0.1
+  flatReductions:
+    Blunt: 5
+    Heat: 1000

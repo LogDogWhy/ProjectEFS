@@ -1,0 +1,810 @@
+
+- type: loadout
+  id: DefaultCamo
+  equipment: DefaultCamo
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+
+- type: loadout
+  id: BrownCamo
+  equipment: BrownCamo
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+
+- type: loadout
+  id: MatroskaCamo
+  equipment: MatroskaCamo
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 4Level
+
+- type: loadout
+  id: SA58
+  equipment: SA58
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+  - !type:PointsCostLoadoutEffect
+    cost: 6
+
+- type: loadout
+  id: Ak74
+  equipment: Ak74
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 5
+
+- type: loadout
+  id: DefaultCamoUsec
+  equipment: DefaultCamoUsec
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+
+- type: loadout
+  id: SandCamoUsec
+  equipment: SandCamoUsec
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+
+- type: loadout
+  id: HoodieCamoUsec
+  equipment: HoodieCamoUsec
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 4Level
+
+- type: loadout
+  id: YellowAndBlackCamo
+  equipment: YellowAndBlackCamo
+
+- type: loadout
+  id: Vitya
+  equipment: Vitya
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 3
+
+- type: loadout
+  id: RussiaCamo
+  equipment: RussiaCamo
+
+- type: loadout
+  id: AbibasBlackSuit
+  equipment: AbibasBlackSuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 5Level
+
+- type: loadout
+  id: TagillaSuit
+  equipment: TagillaSuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 5Level
+##################################
+
+- type: loadout
+  id: BlackCap
+  equipment: BlackCap
+
+- type: loadout
+  id: HatBomber
+  equipment: HatBomber
+
+- type: loadout
+  id: PomPon
+  equipment: PomPon
+
+- type: loadout
+  id: HelmetSH68
+  equipment: HelmetSH68
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 3
+
+- type: loadout
+  id: TagillaHelmet
+  equipment: TagillaHelmet
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 5Level
+
+- type: loadout
+  id: KillaHelmet
+  equipment: KillaHelmet
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 5Level
+
+- type: loadout
+  id: HelmetAltyn
+  equipment: HelmetAltyn
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 7
+  - !type:GroupLoadoutEffect
+    proto: 4Level
+
+- type: loadout
+  id: HelmetRys
+  equipment: HelmetRys
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 7
+  - !type:GroupLoadoutEffect
+    proto: 4Level
+
+- type: loadout
+  id: HelmetSfera94
+  equipment: HelmetSfera94
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 5
+
+- type: loadout
+  id: HelmetUlachTan
+  equipment: HelmetUlachTan
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 5
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+
+- type: loadout
+  id: HelmetExfilDark
+  equipment: HelmetExfilDark
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 6
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+
+##################################
+
+- type: loadout
+  id: None
+  equipment: None
+
+- type: loadout
+  id: ArmbandBlue
+  equipment: ArmbandBlue
+
+- type: loadout
+  id: ArmbandRed
+  equipment: ArmbandRed
+
+- type: loadout
+  id: ArmbandGreen
+  equipment: ArmbandGreen
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 5
+
+- type: loadout
+  id: ArmbandYellow
+  equipment: ArmbandYellow
+
+##################################
+
+- type: loadout
+  id: MilitaryBackpack
+  equipment: MilitaryBackpack
+
+##################################
+
+- type: loadout
+  id: RPSHolder
+  equipment: RPSHolder
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 3
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+
+- type: loadout
+  id: TritonHolder
+  equipment: TritonHolder
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 3
+  - !type:GroupLoadoutEffect
+    proto: 4Level
+
+- type: loadout
+  id: BankRobberHolder
+  equipment: BankRobberHolder
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 3
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+
+- type: loadout
+  id: ScavHolder
+  equipment: ScavHolder
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 3
+
+
+##################################
+
+- type: loadout
+  id: ArmorPress
+  equipment: ArmorPress
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 3
+
+- type: loadout
+  id: Armor6B13
+  equipment: Armor6B13
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 4
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+
+- type: loadout
+  id: ArmorBagariy
+  equipment: ArmorBagariy
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 5
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+
+- type: loadout
+  id: ArmorModule3M
+  equipment: ArmorModule3M
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 3
+
+- type: loadout
+  id: ArmorTrooperTFO
+  equipment: ArmorTrooperTFO
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 4
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+
+- type: loadout
+  id: ArmorNFMTHOR
+  equipment: ArmorNFMTHOR
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 4Level
+  - !type:PointsCostLoadoutEffect
+    cost: 6
+
+- type: loadout
+  id: Armor6B43
+  equipment: Armor6B43
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 4Level
+  - !type:PointsCostLoadoutEffect
+    cost: 6
+
+- type: loadout
+  id: ArmorGearAVS
+  equipment: ArmorGearAVS
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+  - !type:PointsCostLoadoutEffect
+    cost: 4
+
+- type: loadout
+  id: KillaArmor
+  equipment: KillaArmor
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 5Level
+
+- type: loadout
+  id: TagillaArmor
+  equipment: TagillaArmor
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 5Level
+
+#################################################
+
+- type: loadoutEffectGroup
+  id: 2Level
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 600
+
+- type: loadoutEffectGroup
+  id: 3Level
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 1500
+
+- type: loadoutEffectGroup
+  id: 4Level
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 2300
+
+- type: loadoutEffectGroup
+  id: 5Level
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 2800
+
+
+##################################################
+
+- type: loadout
+  id: MosinT
+  equipment: MosinT
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: Kedr91
+  equipment: Kedr91
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 2
+
+- type: loadout
+  id: SKS
+  equipment: SKS
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 2
+
+- type: loadout
+  id: M700
+  equipment: M700
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: MP5
+  equipment: MP5
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 3
+
+- type: loadout
+  id: UMP
+  equipment: UMP
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 3
+
+- type: loadout
+  id: ShotgunM3
+  equipment: ShotgunM3
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 4
+
+- type: loadout
+  id: VeprKm
+  equipment: VeprKm
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 3
+
+- type: loadout
+  id: Adar
+  equipment: Adar
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 3
+
+- type: loadout
+  id: VeprHunter
+  equipment: VeprHunter
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 2
+
+- type: loadout
+  id: Ak74m
+  equipment: Ak74m
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+  - !type:PointsCostLoadoutEffect
+    cost: 5
+
+- type: loadout
+  id: Akm
+  equipment: Akm
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+  - !type:PointsCostLoadoutEffect
+    cost: 6
+
+- type: loadout
+  id: SVD
+  equipment: SVD
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+  - !type:PointsCostLoadoutEffect
+    cost: 5
+
+- type: loadout
+  id: VSS
+  equipment: VSS
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 4Level
+  - !type:PointsCostLoadoutEffect
+    cost: 6
+
+- type: loadout
+  id: M4A1
+  equipment: M4A1
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+  - !type:PointsCostLoadoutEffect
+    cost: 6
+
+- type: loadout
+  id: MDR556
+  equipment: MDR556
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 5
+
+- type: loadout
+  id: MDR762
+  equipment: MDR762
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 4Level
+  - !type:PointsCostLoadoutEffect
+    cost: 7
+
+- type: loadout
+  id: Glock18
+  equipment: Glock18
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: Colt
+  equipment: Colt
+
+- type: loadout
+  id: Grach
+  equipment: Grach
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: G28
+  equipment: G28
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+  - !type:PointsCostLoadoutEffect
+    cost: 5
+
+- type: loadout
+  id: PM
+  equipment: PM
+
+- type: loadout
+  id: PMScav
+  equipment: PMScav
+
+- type: loadout
+  id: Saiga
+  equipment: Saiga
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 4
+
+- type: loadout
+  id: Aksu
+  equipment: Aksu
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 4
+
+- type: loadout
+  id: MagazineShotgun
+  equipment: MagazineShotgun
+
+
+##################################################\
+
+- type: loadout
+  id: BoxPistol9x19
+  equipment: BoxPistol9x19
+
+- type: loadout
+  id: BoxPistol9x19b
+  equipment: BoxPistol9x19b
+
+- type: loadout
+  id: BoxPistol.45
+  equipment: BoxPistol.45
+
+- type: loadout
+  id: BoxPistol.45b
+  equipment: BoxPistol.45b
+
+- type: loadout
+  id: Box9x39
+  equipment: Box9x39
+
+- type: loadout
+  id: Box9x39b
+  equipment: Box9x39b
+
+- type: loadout
+  id: BoxRifleBig7.62x39
+  equipment: BoxRifleBig7.62x39
+
+- type: loadout
+  id: BoxRifleBig7.62x39b
+  equipment: BoxRifleBig7.62x39b
+
+- type: loadout
+  id: BoxRifle5.45x39
+  equipment: BoxRifle5.45x39
+
+- type: loadout
+  id: BoxRifle5.45x39b
+  equipment: BoxRifle5.45x39b
+
+- type: loadout
+  id: BoxRifle5.56x45
+  equipment: BoxRifle5.56x45
+
+- type: loadout
+  id: BoxRifle5.56x45b
+  equipment: BoxRifle5.56x45b
+
+- type: loadout
+  id: BoxPistol9x18
+  equipment: BoxPistol9x18
+
+- type: loadout
+  id: BoxPistol9x18b
+  equipment: BoxPistol9x18b
+
+- type: loadout
+  id: BoxRifle7.62x54R
+  equipment: BoxRifle7.62x54R
+
+- type: loadout
+  id: BoxRifle7.62x54Rb
+  equipment: BoxRifle7.62x54Rb
+
+- type: loadout
+  id: BoxRifle7.62x51
+  equipment: BoxRifle7.62x51
+
+- type: loadout
+  id: BoxRifle7.62x51b
+  equipment: BoxRifle7.62x51b
+
+
+############################
+
+- type: loadout
+  id: KukriKnife
+  equipment: KukriKnife
+
+- type: loadout
+  id: 6x3Knife
+  equipment: 6x3Knife
+
+- type: loadout
+  id: TagillaHammer
+  equipment: TagillaHammer
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 5Level
+
+#############################
+
+- type: loadout
+  id: YellowGloves
+  equipment: YellowGloves
+
+- type: loadout
+  id: FingerlessGloves
+  equipment: FingerlessGloves
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+
+- type: loadout
+  id: TacticalGloves
+  equipment: TacticalGloves
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 3Level
+
+- type: loadout
+  id: TagillaGloves
+  equipment: TagillaGloves
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 5Level
+
+#############################
+
+- type: loadout
+  id: ColdFearMask
+  equipment: ColdFearMask
+
+- type: loadout
+  id: HalfMask
+  equipment: HalfMask
+
+#############################
+
+- type: loadout
+  id: BlackGlasses
+  equipment: BlackGlasses
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 2
+
+- type: loadout
+  id: GoldStarMenu
+  equipment: GoldStarMenu
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: CMSMenu
+  equipment: CMSMenu
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: EFSMedAi2Menu
+  equipment: EFSMedAi2Menu
+
+- type: loadout
+  id: EFSMedGrizzlyMenu
+  equipment: EFSMedGrizzlyMenu
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 2
+
+# - type: loadout
+#   id: CMSMenu
+#   equipment: CMSMenu
+#   effects:
+#   - !type:PointsCostLoadoutEffect
+#     cost: 1
+
+- type: loadout
+  id: FlashlightSecliteMenu
+  equipment: FlashlightSecliteMenu
+
+- type: loadout
+  id: PropitalPenMenu
+  equipment: PropitalPenMenu
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: AdrenalinePenMenu
+  equipment: AdrenalinePenMenu
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: MorphinePenMenu
+  equipment: MorphinePenMenu
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: EFSPerfotoranPenMenu
+  equipment: EFSPerfotoranPenMenu
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: EFSSJ1PenMenu
+  equipment: EFSSJ1PenMenu
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: ZagustinPenMenu
+  equipment: ZagustinPenMenu
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: TrimadolPenMenu
+  equipment: TrimadolPenMenu
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+
+- type: loadout
+  id: F1Grenade
+  equipment: F1Grenade
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: 2Level
+  - !type:PointsCostLoadoutEffect
+    cost: 2
+
+- type: loadout
+  id: GrenadeFlash
+  equipment: GrenadeFlash
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+
+- type: loadout
+  id: Soap
+  equipment: Soap
+  effects:
+  - !type:PointsCostLoadoutEffect
+    cost: 1
+

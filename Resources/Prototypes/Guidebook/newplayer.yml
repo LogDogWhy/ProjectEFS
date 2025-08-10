@@ -4,29 +4,45 @@
   text: "/ServerInfo/Guidebook/NewPlayer/NewPlayer.xml"
   children:
   - Controls
-  - CharacterCreation
+  # - CharacterCreation
 
 - type: guideEntry
   id: Controls
   name: guide-entry-controls
   text: "/ServerInfo/Guidebook/NewPlayer/Controls/Controls.xml"
-  children:
-  - Radio
 
-- type: guideEntry
-  id: Radio
-  name: guide-entry-radio
-  text: "/ServerInfo/Guidebook/NewPlayer/Controls/Radio.xml" 
 
-- type: guideEntry
-  id: CharacterCreation
-  name: guide-entry-charactercreation
-  text: "/ServerInfo/Guidebook/NewPlayer/CharacterCreation.xml"
-  children:
-  - YourFirstCharacter
-  - Species 
+# - type: guideEntry
+#   id: Radio
+#   name: guide-entry-radio
+#   text: "/ServerInfo/Guidebook/NewPlayer/Controls/Radio.xml"
 
-- type: guideEntry
-  id: YourFirstCharacter
-  name: guide-entry-yourfirstcharacter
-  text: "/ServerInfo/Guidebook/NewPlayer/YourFirstCharacter.xml"
+- type: guideEntry # Default for forks and stuff. Should not be listed anywhere if the server is using a custom ruleset.
+  id: DefaultRuleset
+  name: guide-entry-rules
+  ruleEntry: true
+  text: "/ServerInfo/Guidebook/ServerRules/DefaultRules.xml"
+# - type: guideEntry
+#   id: CharacterCreation
+#   name: guide-entry-charactercreation
+#   text: "/ServerInfo/Guidebook/NewPlayer/CharacterCreation.xml"
+#   children:
+#   - YourFirstCharacter
+#   - Species
+
+# - type: guideEntry
+#   id: YourFirstCharacter
+#   name: guide-entry-yourfirstcharacter
+#   text: "/ServerInfo/Guidebook/NewPlayer/YourFirstCharacter.xml"
+
+
+# - type: guideEntry
+#   id: GG
+#   name: Куда нажимать, чтобы было смешно?
+#   text: "/ServerInfo/Guidebook/NewPlayer/NewPlayer.xml"
+#   children:
+#   - CharacterPreset
+#   - GameModes
+#   - Mechanics
+#   - ItemGuide
+

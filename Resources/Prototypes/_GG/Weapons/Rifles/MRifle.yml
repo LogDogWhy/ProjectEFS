@@ -1,0 +1,193 @@
+# - type: entity
+#   name: Colt M4A1
+#   parent: BaseWeaponRifle
+#   id: WeaponRifleM4A1
+#   description: Colt M4A1- штурмовая винтовка (карабин), созданная в США на базе платформы AR-15 под патрон 5.56x45 NATO. Планировалась к вооружению экипажей боевых машин и расчётов техники, которым было необходимо иметь оружие меньших габаритов, чем штатное вооружение, но использующее стандартные боеприпасы. Однако вскоре, US SOCOM (Командование Сил Специальных Операций США) приняло на вооружение M4A1 для всех входящих в его состав подразделений. Затем последовало полное принятие M4A1 на вооружение в армии и морской пехоте США.
+#   components:
+#   - type: Sprite
+#     sprite: GG/Weapons/m4.rsi
+#     layers:
+#       - state: base
+#         scale: 0.8, 0.8
+#         map: ["enum.GunVisualLayers.Base"]
+#       - state: mag-0
+#         map: ["enum.GunVisualLayers.Mag"]
+#         scale: 0.8, 0.8
+#       - state: suppressor
+#         map: ["enum.GunVisualLayers.Suppressor"]
+#         scale: 0.8, 0.8
+#       - state: grip
+#         map: ["enum.GunVisualLayers.Grip"]
+#         scale: 0.8, 0.8
+#       - state: scope
+#         map: ["enum.GunVisualLayers.Scope"]
+#         scale: 0.8, 0.8
+#       - state: forearm
+#         map: ["enum.GunVisualLayers.Forearm"]
+#         scale: 0.8, 0.8
+#       - state: stock
+#         map: ["enum.GunVisualLayers.Stock"]
+#         scale: 0.8, 0.8
+#       - state: gadget
+#         map: ["enum.GunVisualLayers.Gadget"]
+#         scale: 0.8, 0.8
+#   - type: Clothing
+#     sprite: GG/Weapons/m4.rsi
+#   - type: Gun
+#     minAngle: 3
+#     maxAngle: 18
+#     angleIncrease: 4
+#     angleDecay: 45
+#     fireRate: 9
+#     soundLoudGunshot:
+#       path: /Audio/GG/Weapons/M4/shot.ogg
+#     soundSilGunshot:
+#       path: /Audio/GG/Weapons/M4/silshot.ogg
+#   - type: Item
+#     size: Rifles
+#   - type: ItemSlots
+#     slots:
+#       gun_chamber:
+#         name: Chamber
+#         startingItem: Cartridge5.56×45
+#         priority: 1
+#         whitelist:
+#           tags:
+#             - Cartridge5.56×45
+#       gun_magazine:
+#         name: Magazine
+#         startingItem: EFSMagazineRifleSTANAG
+#         insertSound: /Audio/GG/Weapons/M4/in.ogg
+#         ejectSound: /Audio/GG/Weapons/M4/out.ogg
+#         priority: 2
+#         whitelist:
+#           tags:
+#             - EFSMagazineRifleGEN3
+#             - EFSMagazineRifleSTANAG
+#       gun_scope:
+#         name: Scope
+#         priority: 3
+#         whitelist:
+#           tags:
+#             - Scope
+#       gun_stock:
+#         name: Stock
+#         priority: 4
+#         whitelist:
+#           tags:
+#             - Stock
+#       gun_suppressor:
+#         name: Supperssor
+#         priority: 5
+#         whitelist:
+#           tags:
+#             - Suppressor
+#       gun_forearm:
+#         name: Forearm
+#         priority: 6
+#         whitelist:
+#           tags:
+#             - Forearm
+#   - type: ChamberMagazineAmmoProvider
+#   - type: ContainerContainer
+#     containers:
+#       gun_magazine: !type:ContainerSlot
+#       gun_chamber: !type:ContainerSlot
+#       gun_suppressor: !type:ContainerSlot
+#       gun_forearm: !type:ContainerSlot
+#       gun_scope: !type:ContainerSlot
+#       gun_stock: !type:ContainerSlot
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 1
+#     zeroVisible: true
+#   - type: Appearance
+#   - type: SuppressorVisuals
+#     suppressorState: suppressor
+#   - type: Suppressor
+#   - type: GripVisuals
+#     gripState: grip
+#   - type: Grip
+#   - type: StockVisuals
+#     stockState: stock
+#   - type: Stock
+#   - type: ForearmVisuals
+#     forearmState: forearm
+#   - type: Forearm
+#   - type: ScopeVisuals
+#     scopeState: scope
+#   - type: Scope
+#   - type: GadgetVisuals
+#     scopeState: gadget
+#   - type: Gadget
+
+
+
+
+# - type: entity
+#   name: Карабин Adar
+#   parent: BaseWeaponRifle
+#   id: EFSWeaponRifleAdar
+#   description: Российский гражданский карабин ADAR 2-15 основанный на конструкции AR-15. Карабин производится в Санкт-Петербурге из израильских комплектующих с хромированными стволами от ООО «Молот оружие».
+#   components:
+#   - type: Sprite
+#     sprite: GG/Weapons/adar.rsi
+#     layers:
+#       - state: base
+#         scale: 0.8, 0.8
+#         map: ["enum.GunVisualLayers.Base"]
+#       - state: mag-0
+#         map: ["enum.GunVisualLayers.Mag"]
+#         scale: 0.8, 0.8
+#   - type: Clothing
+#     sprite: GG/Weapons/adar.rsi
+#   - type: Gun
+#     selectedMode: SemiAuto
+#     availableModes:
+#       - SemiAuto
+#     minAngle: 2
+#     maxAngle: 17
+#     angleIncrease: 4
+#     angleDecay: 45
+#     fireRate: 5
+#     soundLoudGunshot:
+#       path: /Audio/GG/Weapons/M4/shot.ogg
+#   - type: Item
+#     size: Rifles
+#   - type: ItemSlots
+#     slots:
+#       gun_magazine:
+#         name: Magazine
+#         startingItem: EFSMagazineRifleSTANAG
+#         insertSound: /Audio/GG/Weapons/M4/in.ogg
+#         ejectSound: /Audio/GG/Weapons/M4/out.ogg
+#         priority: 2
+#         whitelist:
+#           tags:
+#             - EFSMagazineRifleGEN3
+#             - EFSMagazineRifleSTANAG
+#       gun_chamber:
+#         name: Chamber
+#         startingItem: Cartridge5.56×45
+#         priority: 1
+#         whitelist:
+#           tags:
+#             - Cartridge5.56×45
+#   - type: ChamberMagazineAmmoProvider
+#   - type: ContainerContainer
+#     containers:
+#       gun_magazine: !type:ContainerSlot
+#       gun_chamber: !type:ContainerSlot
+#   #- type: ItemMapper
+#   #  mapLayers:
+#   #    gen3:
+#   #      whitelist:
+#   #        tags:
+#   #        - MagazineRifleGEN3
+#   #  sprite: GG/Weapons/m4.rsi
+#   #  scale: 0.45, 0.45
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 1
+#     zeroVisible: true
+#   - type: Appearance

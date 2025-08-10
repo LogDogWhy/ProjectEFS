@@ -50,32 +50,41 @@
 - type: gamePreset
   id: Secret
   alias:
-    - secret
-    - sekrit
-  name: secret-title
+    - deathmatch
+    - dm
+  name: death-match-title
+  description: death-match-description
+  maxPlayers: 15
   showInVote: true
-  description: secret-description
+  supportedMaps: DeathMatchMapPool
   rules:
-    - Secret
+    - DeathMatch31
 
 - type: gamePreset
   id: SecretExtended #For Admin Use: Runs Extended but shows "Secret" in lobby.
   alias:
-    - secretextended
-  name: secret-title
-  showInVote: false #Admin Use
-  description: secret-description
+    - deathmatch
+    - dm
+  name: death-match-title
+  description: death-match-description
+  maxPlayers: 15
+  showInVote: true
+  supportedMaps: DeathMatchMapPool
   rules:
-    - BasicStationEventScheduler
-    - GameRuleMeteorScheduler
+    - DeathMatch31
 
 - type: gamePreset
   id: SecretGreenshift #For Admin Use: Runs Greenshift but shows "Secret" in lobby.
   alias:
-  - secretgreenshift
-  name: secret-title
-  showInVote: false #Admin Use
-  description: secret-description
+    - deathmatch
+    - dm
+  name: death-match-title
+  description: death-match-description
+  maxPlayers: 15
+  showInVote: true
+  supportedMaps: DeathMatchMapPool
+  rules:
+    - DeathMatch31
 
 - type: gamePreset
   id: Sandbox

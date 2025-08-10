@@ -1,0 +1,26 @@
+- type: alert
+  id: ESSlightOverload
+  category: ESOverload
+  icons:
+  - sprite: /Textures/_ES14/Interface/Alerts/overload.rsi
+    state: slight_overload
+  name: alerts-slight-overload-name
+  description: alerts-slight-overload-desc
+
+- type: alert
+  id: ESOverload
+  category: ESOverload
+  icons:
+  - sprite: /Textures/_ES14/Interface/Alerts/overload.rsi
+    state: overload
+  name: alerts-overload-name
+  description: alerts-overload-desc
+
+- type: alert
+  id: ESSevereOverload
+  category: ESOverload
+  icons:
+  - sprite: /Textures/_ES14/Interface/Alerts/overload.rsi
+    state: severe_overload
+  name: alerts-severe-overload-name
+  description: alerts-severe-overload-desc

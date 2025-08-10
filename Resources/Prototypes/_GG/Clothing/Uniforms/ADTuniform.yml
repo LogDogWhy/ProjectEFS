@@ -1,0 +1,13 @@
+#by prazat911
+- type: entity
+  parent: ClothingUniformBase
+  id: ADTTagillaSuit
+  name: Штаны тагиллы
+  description: Обосранные и вонючие штаны тагиллы
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Uniforms/Jumpsuit/Halloween/tagilla_pants.rsi
+  - type: Clothing
+    sprite: ADT/Clothing/Uniforms/Jumpsuit/Halloween/tagilla_pants.rsi
+  - type: ESWeight
+    self: 0.5

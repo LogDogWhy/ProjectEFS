@@ -1,0 +1,185 @@
+- type: entity
+  name: АКС-74У
+  suffix: Standart
+  parent: EFSBaseWeaponAk74
+  id: EFSBaseWeaponAks74u
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/aksu.rsi
+    layers:
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - state: 74-blackmag
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+        offset: -0.1, 0.005
+        visible: false
+      - sprite: GG/Weapons/Mods/barrels.rsi
+        map: ["enum.GunVisualLayers.Suppressor"]
+        scale: 0.8, 0.8
+        offset: 0.525, 0.025
+        visible: false
+      - sprite: GG/Weapons/Mods/stock.rsi
+        map: ["enum.GunVisualLayers.Stock"]
+        scale: 0.8, 0.8
+        offset: -0.5, 0.0
+        visible: false
+      - sprite: GG/Weapons/Mods/receiver.rsi
+        map: ["enum.GunVisualLayers.Receiver"]
+        scale: 0.8, 0.8
+        offset: -0.1, 0.0
+        visible: false
+      - sprite: GG/Weapons/Mods/forearm.rsi
+        map: ["enum.GunVisualLayers.Forearm"]
+        scale: 0.8, 0.8
+        offset: -0.1, 0.0
+        visible: false
+      - sprite: GG/Weapons/Mods/scope.rsi
+        offset: -0.225, 0.1
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.8, 0.8
+        visible: false
+  - type: Gun
+    minAngle: 1
+    maxAngle: 20
+    angleIncrease: 4
+    angleDecay: 85
+    fireRate: 9
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/AK/aksu/shot.ogg
+    soundGunshot:
+      path: /Audio/GG/Weapons/AK/aksu/shot.ogg
+    soundSilGunshot:
+      path: /Audio/GG/Weapons/AK/aksu/sil.ogg
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+  - type: ContainerContainer
+    containers:
+      gun_scope: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        priority: 0
+        insertSound: /Audio/GG/Weapons/AK/in.ogg
+        ejectSound: /Audio/GG/Weapons/AK/out.ogg
+        whitelist:
+          tags:
+            - EFSMagazineRifle5.45x39
+      gun_suppressor:
+        whitelist:
+          tags:
+            - EFSAk74Barrel
+      gun_receiver:
+        whitelist:
+          tags:
+            - EFSAksuReceiver
+      gun_stock:
+        whitelist:
+          tags:
+            - EFSAksuStock
+      gun_forearm:
+        whitelist:
+          tags:
+            - EFSAksuForearm
+      gun_scope:
+        whitelist:
+          tags:
+            - EFSNScope
+
+
+- type: entity
+  name: АКС-74У
+  suffix: Standart
+  parent: EFSBaseWeaponAks74u
+  id: EFSWeaponRifleAks74u
+  components:
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+  - type: ContainerContainer
+    containers:
+      gun_scope: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge5.45x39
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge5.45x39
+      gun_magazine:
+        priority: 0
+        startingItem: EFSMagazineRifle6L23
+        insertSound: /Audio/GG/Weapons/AK/in.ogg
+        ejectSound: /Audio/GG/Weapons/AK/out.ogg
+        whitelist:
+          tags:
+            - EFSMagazineRifle5.45x39
+      gun_suppressor:
+        startingItem: EFSAkAttachmentBarrel6p20
+        whitelist:
+          tags:
+            - EFSAk74Barrel
+      gun_receiver:
+        startingItem: EFSAksuAttachmentReceiverStandart
+        whitelist:
+          tags:
+            - EFSAksuReceiver
+      gun_stock:
+        startingItem: EFSAksuAttachmentStock
+        whitelist:
+          tags:
+            - EFSAksuStock
+      gun_forearm:
+        startingItem: EFSAksuAttachmentForearm
+        whitelist:
+          tags:
+            - EFSAksuForearm
+      gun_scope:
+        whitelist:
+          tags:
+            - EFSNScope
+
+- type: entity
+  name: Ствольная коробка для AKС-74у
+  parent: EFSAkBaseAttachmentReceiver
+  id: EFSAksuAttachmentReceiverStandart
+  description:
+  components:
+  - type: Sprite
+    state: aksu
+  - type: Tag
+    tags:
+      - EFSAksuReceiver
+  - type: Attachment
+
+- type: entity
+  name: Цевье деревянное для AKС-74у
+  parent: EFSAkBaseAttachmentForearm
+  id: EFSAksuAttachmentForearm
+  description:
+  components:
+  - type: Sprite
+    state: aksu
+  - type: Tag
+    tags:
+      - EFSAksuForearm
+  - type: Attachment
+
+
+- type: entity
+  name: Приклад складной для АКС-74у
+  parent: EFSAkBaseAttachmentStock
+  id: EFSAksuAttachmentStock
+  description:
+  components:
+  - type: Sprite
+    state: aksu
+  - type: Tag
+    tags:
+      - EFSAksuStock
+  - type: Attachment

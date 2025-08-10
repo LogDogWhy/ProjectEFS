@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "efs",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "base"
+    },
+    {
+      "name": "mag-1"
+    },
+    {
+      "name": "5.45x39"
+    },
+    {
+      "name": "9x18"
+    },
+    {
+      "name": "9x19"
+    },
+    {
+      "name": "12g"
+    },
+    {
+      "name": "9x39"
+    },
+    {
+      "name": "45acp"
+    },
+    {
+      "name": "308win"
+    },
+    {
+      "name": "7.62x39"
+    },
+    {
+      "name": "7.62x54R"
+    },
+    {
+      "name": "5.56x45"
+    }
+  ]
+}

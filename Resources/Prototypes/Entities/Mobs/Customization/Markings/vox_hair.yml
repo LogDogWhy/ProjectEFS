@@ -105,7 +105,7 @@
   sprites:
     - sprite: Mobs/Customization/vox_hair.rsi
       state: mange_s
-      
+
 - type: marking
   id: VoxHairMohawk
   bodyPart: Hair

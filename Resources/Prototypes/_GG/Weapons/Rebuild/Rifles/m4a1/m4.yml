@@ -1,0 +1,132 @@
+
+- type: entity
+  name: Adar
+  parent: EFSBaseRifleAdar
+  id: EFSWeaponRifleAdar
+  description: WIP
+  components:
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        startingItem: Cartridge5.56x45
+        priority: 0
+        whitelist:
+          tags:
+            - Cartridge5.56x45
+      gun_magazine:
+        startingItem: EFSMagazineRifleSTANAG
+        priority: 1
+        whitelist:
+          tags:
+            - EFSMagazineRifle5.56x45
+        insertSound: /Audio/GG/Weapons/M4/in.ogg
+        ejectSound: /Audio/GG/Weapons/M4/out.ogg
+      gun_scope:
+        priority: 2
+        whitelist:
+          tags:
+            - EFSPicatiniScope
+      gun_forearm:
+        startingItem: EFSM4AttachmentForearmAdar
+        priority: 4
+        whitelist:
+          tags:
+            - EFSAdarForearm
+      gun_suppressor:
+        priority: 5
+        whitelist:
+          tags:
+            - EFSM4Barrel
+
+
+- type: entity
+  name: M4A1
+  parent: EFSBaseRifleM4
+  id: EFSWeaponRifleM4A1
+  description: WIP
+  components:
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        startingItem: Cartridge5.56x45
+        priority: 0
+        whitelist:
+          tags:
+            - Cartridge5.56x45
+      gun_magazine:
+        startingItem: EFSMagazineRifleSTANAG
+        insertSound: /Audio/GG/Weapons/M4/in.ogg
+        ejectSound: /Audio/GG/Weapons/M4/out.ogg
+        priority: 1
+        whitelist:
+          tags:
+            - EFSMagazineRifle5.56x45
+      gun_scope:
+        priority: 2
+        whitelist:
+          tags:
+            - EFSPicatiniScope
+      gun_forearm:
+        startingItem: EFSM4AttachmentForearmM4A1
+        priority: 3
+        whitelist:
+          tags:
+            - EFSM4Forearm
+            - EFSAdarForearm
+      gun_suppressor:
+        priority: 4
+        whitelist:
+          tags:
+            - EFSM4Barrel
+      gun_stock:
+        startingItem: EFSM4AttachmentStockM4SS
+        priority: 5
+        whitelist:
+          tags:
+            - EFSTubeStock
+
+# - type: entity
+#   name: M4A4
+#   parent: EFSBaseRifleM4
+#   id: EFSWeaponRifleM4A4
+#   description: WIP
+#   components:
+#   - type: ItemSlots
+#     slots:
+#       gun_chamber:
+#         startingItem: Cartridge5.56x45
+#         priority: 0
+#         whitelist:
+#           tags:
+#             - Cartridge5.56x45
+#       gun_magazine:
+#         startingItem: EFSMagazineRifleSTANAG
+#         insertSound: /Audio/GG/Weapons/M4/in.ogg
+#         ejectSound: /Audio/GG/Weapons/M4/out.ogg
+#         priority: 1
+#         whitelist:
+#           tags:
+#             - EFSMagazineRifle5.56x45
+#       gun_scope:
+#         priority: 2
+#         whitelist:
+#           tags:
+#             - EFSPicatiniScope
+#       gun_forearm:
+#         startingItem: EFSM4AttachmentForearmM4A1
+#         priority: 3
+#         whitelist:
+#           tags:
+#             - EFSM4Forearm
+#             - EFSAdarForearm
+#       gun_suppressor:
+#         priority: 4
+#         whitelist:
+#           tags:
+#             - EFSM4Barrel
+#       gun_stock:
+#         startingItem: EFSM4AttachmentStockM4SS
+#         priority: 5
+#         whitelist:
+#           tags:
+#             - EFSTubeStock

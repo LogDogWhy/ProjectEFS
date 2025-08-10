@@ -27,4 +27,5 @@ public sealed partial class LoadoutComponent : Component
     [DataField]
     [AutoNetworkedField]
     public List<ProtoId<RoleLoadoutPrototype>>? RoleLoadout;
+
 }

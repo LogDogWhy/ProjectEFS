@@ -1,0 +1,61 @@
+<DefaultWindow
+    xmlns="https://spacestation14.io"
+    xmlns:widgets="clr-namespace:Content.Client.UserInterface.Systems.Chat.Widgets"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Systems.Chat.Controls"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    Title="Dialogue Window"
+    MinSize="500 380">
+
+
+
+    <BoxContainer
+        Name="Avatar"
+        Orientation="Vertical"
+        Margin="10 10 0 0">
+        <PanelContainer
+            HorizontalAlignment ="Left"
+            SetSize="100 100">
+            <PanelContainer.PanelOverride>
+                <gfx:StyleBoxFlat BackgroundColor="#102308"/>
+            </PanelContainer.PanelOverride>
+        </PanelContainer>
+        <Label Name="TargetName" Margin="0 15 0 0"/>
+        <TextureRect
+        TextureScale="2 2"
+        Name="AvatarIcon"
+        HorizontalExpand="True"
+        Margin="20 -120 0 0"/>
+
+    </BoxContainer>
+
+    <BoxContainer
+        Name="DialogueChat"
+        Orientation="Vertical"
+        Margin="150 10 0 0">
+    <PanelContainer
+        HorizontalAlignment ="Left"
+        SetSize="350 150">
+        <RichTextLabel Name="Messeage" Text="Hello!" Margin="20 -50 20 20" />
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#102308"/>
+        </PanelContainer.PanelOverride>
+    </PanelContainer>
+    </BoxContainer>
+
+
+    <BoxContainer
+        Orientation="Vertical"
+        Margin="150 180 0 0">
+    <PanelContainer
+        HorizontalAlignment ="Left"
+        HorizontalExpand = "False"
+        Name="DialogueChoicePanel"
+        SetSize="350 29">
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#102308"/>
+        </PanelContainer.PanelOverride>
+    </PanelContainer>
+    <BoxContainer Orientation="Vertical" Name= "DialogueChoice" Margin="0 -29 0 0"/>
+    </BoxContainer>
+
+</DefaultWindow>

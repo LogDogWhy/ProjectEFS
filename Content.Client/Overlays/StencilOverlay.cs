@@ -9,6 +9,8 @@ using Robust.Shared.Enums;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Content.Shared.GG.WorldEdge;
+using Content.Shared.GG.DayCycle.Components;
 
 namespace Content.Client.Overlays;
 
@@ -70,6 +72,22 @@ public sealed partial class StencilOverlay : Overlay
         if (_entManager.TryGetComponent<RestrictedRangeComponent>(mapUid, out var restrictedRangeComponent))
         {
             DrawRestrictedRange(args, restrictedRangeComponent, invMatrix);
+        }
+
+        args.WorldHandle.UseShader(null);
+        args.WorldHandle.SetTransform(Matrix3x2.Identity);
+
+        //GG Overlays
+        if (_entManager.TryGetComponent<GGWorldEdgeComponent>(mapUid, out var worldEdge))
+        {
+            DrawWorldEdge(args, worldEdge, invMatrix);
+        }
+        //GG Overlays end
+
+        //GG Overlays
+        if (_entManager.TryGetComponent<GGCloudShadowsComponent>(mapUid, out var shadows))
+        {
+            DrawCloudShadows(args, shadows, invMatrix);
         }
 
         args.WorldHandle.UseShader(null);

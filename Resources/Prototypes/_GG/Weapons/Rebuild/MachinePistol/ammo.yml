@@ -1,0 +1,138 @@
+- type: entity
+  id: BaseMagazinePistolMP5
+  name: "Магазин MP5 9x19"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazinePistol9x19MP5
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x19
+    capacity: 30
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineMP59x19/30.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: EFSMagazinePistolMP5
+  name: "Магазин MP5 на 30 9x19"
+  parent: BaseMagazinePistolMP5
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: EFSMagazinePistolMP5Big
+  name: "Барабан MP5 на 50 9x19"
+  parent: BaseMagazinePistolMP5
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineMP59x19/50.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x19
+    capacity: 50
+
+- type: Tag
+  id: EFSMagazinePistol9x19MP5
+
+
+
+- type: entity
+  id: BaseMagazinePistolVitya
+  name: "Магазин на 30 патронов 9x19 для ПП Витязь"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazine9x19Vitya
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x19
+    capacity: 30
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineVitya9x19/black.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: EFSMagazinePistolVitya
+  name: "Магазин на 30 патронов 9x19 для ПП Витязь"
+  parent: BaseMagazinePistolVitya
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: EFSMagazinePistolVityaPuf
+  name: "Магазин PUFGUN на 30 патронов 9x19 для ПП Витязь"
+  parent: BaseMagazinePistolVitya
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineVitya9x19/yellow.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazine9x19Vitya

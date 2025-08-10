@@ -1,0 +1,94 @@
+# - type: startingGear
+#   id: BaseScavGear
+#   name: Набор Scav
+#   inList: false
+#   equipment:
+#     shoes: ClothingShoesColorBlack
+
+- type: entity
+  parent: MobHuman
+  id: EFSScavBot
+  name: Дикий6
+  suffix: Human, Base
+  components:
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+      hair: HairBald
+    - type: Loadout
+      prototypes: [ScavSet1, ScavSet2]
+    - type: RandomMetadata
+      nameSegments: 
+      - EFS_names_first_male
+      - EFS_names_second_male
+    - type: NpcFactionMember
+      factions:
+      - Syndicate
+    - type: HTN
+      rootTask:
+        task: SimpleRangedHostileCompound
+    - type: Gun
+      fireRate: 1
+      selectedMode: Burst
+      availableModes:
+        - Burst
+      minAngle: 8
+      maxAngle: 16
+      angleIncrease: 5
+      angleDecay: 20
+    - type: BallisticAmmoProvider
+      proto: Cartridge7.62x39
+      capacity: 90
+        
+- type: dataset
+  id: EFS_names_first_male
+  values:
+  - Пися
+  - Ашот
+  - Киса
+  - Рафик
+  - Юрец
+  - Прохор
+  - Илюша
+  - Дед
+  - Гена
+  - Жерар
+  - Джек
+  - Абрахам
+  - Рустам
+  - Гога
+  - Панфутий
+  - Жак
+  - Анатолий
+  - Ваня
+  - Марк
+  - Гордей
+  - Рамиль
+  - Рафик
+
+- type: dataset
+  id: EFS_names_second_male
+  values:
+  - Красивый
+  - Репетитор
+  - Хрюк
+  - Ктулху
+  - Полторашка
+  - Монк
+  - Пукич
+  - Монолит
+  - Кожемяка
+  - Контрольный
+  - Шишка
+  - Мероприятие
+  - Корень
+  - Цыкса
+  - Импортный
+  - Праздник
+  - Лебёдкин
+  - Флекс
+  - Поджатый
+  - Слобода
+
+
+
+    

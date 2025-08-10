@@ -11,6 +11,7 @@
     <Nullable>enable</Nullable>
     <Configurations>Debug;Release;Tools;DebugOpt</Configurations>
     <Platforms>AnyCPU</Platforms>
+    <CETCompat>false</CETCompat>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Nett" />

@@ -1,0 +1,25 @@
+- type: weather
+  id: EFTFog
+  offsetSpeed: 0.04, 0.06
+  color: "#a9c4bf"
+  alpha: 0.8
+  sprite:
+    sprite: /Textures/GG/Effects/fog.rsi
+    state: fog
+    scrolling: "0.2, -0.1"
+  sound:
+    path: /Audio/GG/Effects/Fog/fog.ogg
+    params:
+      loop: true
+      volume: -6
+
+
+- type: parallax
+  id: EFTFogP
+  layers:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/GG/Effects/fog.rsi/fog.png"
+      slowness: 0.95
+      scale: "2, 2"
+      scrolling: "0.1, -0.05"

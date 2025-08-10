@@ -1,0 +1,46 @@
+
+- type: roleLoadout
+  name: ЧВК "BEAR"
+  id: JobPassenger
+  groups:
+  - EFSJumpsuitBear
+  - EFSHeadBear
+  - EFSMask
+  - EFSBackpack
+  - EFSOuterClothing
+  - EFSBelt
+  - EFSNeck
+  - EFSGlasses
+  - EFSGloves
+  - EFSWeaponBear
+  - EFSSecondWeaponBear
+  - EFSMeeleBear
+  - EFSAmmo
+  - EFSMedicine
+  - EFSGrenade
+  points: 20
+
+- type: roleLoadout
+  name: ЧВК "USEC"
+  id: JobUSEC
+  groups:
+  - EFSJumpsuitUsec
+  - EFSHeadUsec
+  - EFSMask
+  - EFSBackpack
+  - EFSOuterClothing
+  - EFSBelt
+  - EFSNeck
+  - EFSGlasses
+  - EFSGloves
+  - EFSWeaponUsec
+  - EFSSecondWeaponUsec
+  - EFSMeeleUsec
+  - EFSAmmo
+  - EFSMedicine
+  - EFSGrenade
+  points: 20
+
+
+
+

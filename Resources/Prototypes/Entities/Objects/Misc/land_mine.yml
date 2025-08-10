@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: BaseLandMine
   abstract: true
   components:
@@ -74,3 +74,4 @@
     intensitySlope: 3
     totalIntensity: 120 # about a ~4 tile radius
     canCreateVacuum: false
+

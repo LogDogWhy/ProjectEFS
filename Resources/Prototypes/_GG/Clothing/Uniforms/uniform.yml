@@ -1,0 +1,379 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformUsec
+  name: Форма USEC
+  description: Форма бойцов ЧВК "USEC"
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/usec.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/usec.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformBear
+  name: Форма BEAR
+  description: Форма бойцов ЧВК "BEAR"
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/bear.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/bear.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformNeutral
+  name: Обтягивающая форма
+  description: Альтернативная форма бойцов ЧВК "USEC"
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/camo1.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/camo1.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformUsec2
+  name: Форма Военнослужащего
+  description: Форма бойцов регулярной армии
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/camo2.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/camo2.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformMatroska
+  name: Мартоска
+  description: Форма бойцов ВДВ.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/matroska.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/matroska.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformShturman
+  name: Пуховик Штурмана
+  description: Куртка от одно из лучшего снайпера Таркова.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/shturman.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/shturman.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformEFS_1
+  name: Военный Комбенизон
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/camo_brown.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/camo_brown.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformScavYellowAndBlack
+  name: Мятая чёрная спортивка
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/blackandyellow.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/blackandyellow.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformEFS_Russia
+  name: Рашка
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/russia_suit.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/russia_suit.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformEFS_Sanitar
+  description: Халат врача с дурной репутацией
+  name: Халат Санитара
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/sanitar.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/sanitar.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformEFS_Scav
+  name: Рваная одежда
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/scav_suit.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/scav_suit.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformEFS_Vatnik
+  name: Рваная одежда
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/vatnik.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/vatnik.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformEFS_Hoodie
+  name: Толстовка спящего агента
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/hoodie.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/hoodie.rsi
+  - type: ESWeight
+    self: 0.5
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformEFS_Sandstorm
+  name: Камуфляж Sandstorm
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Uniform/sandstorm.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Uniform/sandstorm.rsi
+  - type: ESWeight
+    self: 0.5
+
+#######################################################################################
+#   MASKS
+
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskCF
+  name: Балаклава Cold Fear
+  description: Балаклава, которая поможет скрыть лицо
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Head/Mask/cf.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Head/Mask/cf.rsi
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,0,0
+  - type: ESWeight
+    self: 0.1
+
+
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskEFS_HalfMask
+  name: Полумаска
+  description: Полумаска сделенная из рваной ткани
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Head/Mask/mask.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Head/Mask/mask.rsi
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,0,0
+  - type: ESWeight
+    self: 0.1
+
+###################################################
+
+# HATS
+
+- type: entity
+  parent: ClothingHeadBase
+  id: EFSHatBomber
+  name: Шапка Бомбер
+  description: Геральдический символ городских бродяг. Носить нужно правильно, иначе волшебные свойства шапки перестают действовать.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Head/Hats/adik.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Head/Hats/adik.rsi
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: Reflect
+    reflectProb: 0.02
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.99
+        Piercing: 0.99
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,0,0
+  - type: ESWeight
+    self: 0.1
+
+- type: entity
+  parent: ClothingHeadBase
+  id: EFSHatPomPon
+  name: Шапка с помпоном
+  description: Теплая шапка палевного цвета с помпоном. Только дикие такое могут носить. Ну или какие-то двинутые ребята, которые хотят быть в центре внимания.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Head/Hats/ponpom.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Head/Hats/ponpom.rsi
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,0,0
+  - type: ESWeight
+    self: 0.1
+
+- type: entity
+  parent: ClothingHeadBase
+  id: EFSHatSanitar
+  name: Повязка на голову
+  description: Кажется она заляпана кровью пациентов
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Head/Hats/sanitar_head.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Head/Hats/sanitar_head.rsi
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,0,0
+  - type: ESWeight
+    self: 0.1
+
+- type: entity
+  parent: ClothingHeadBase
+  id: EFSHatBlackCap
+  name: Кепка армейская (Черная)
+  description: Кепка армейского образца
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Head/Hats/black_cap.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Head/Hats/black_cap.rsi
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,0,0
+  - type: ESWeight
+    self: 0.1
+
+###################################
+# Armband
+
+- type: entity
+  parent: ClothingNeckBase
+  id: EFSArmbandBlue
+  name: Синяя повязка
+  description: Повязка на плечо синего цвета для идентификации свой-чужой.
+  components:
+    - type: Sprite
+      sprite: GG/Clothing/Armband/blue.rsi
+    - type: Clothing
+      sprite: GG/Clothing/Armband/blue.rsi
+    - type: Item
+      size: Small
+      shape:
+      - 0,0,0,0
+    - type: ESWeight
+      self: 0.1
+
+- type: entity
+  parent: ClothingNeckBase
+  id: EFSArmbandRed
+  name: красная повязка
+  description: Повязка на плечо красного цвета для идентификации свой-чужой.
+  components:
+    - type: Sprite
+      sprite: GG/Clothing/Armband/red.rsi
+    - type: Clothing
+      sprite: GG/Clothing/Armband/red.rsi
+    - type: Item
+      size: Small
+      shape:
+      - 0,0,0,0
+    - type: ESWeight
+      self: 0.1
+
+- type: entity
+  parent: ClothingNeckBase
+  id: EFSArmbandGreen
+  name: Зеленая повязка
+  description: Повязка на плечо зеленого цвета для идентификации свой-чужой.
+  components:
+    - type: Sprite
+      sprite: GG/Clothing/Armband/green.rsi
+    - type: Clothing
+      sprite: GG/Clothing/Armband/green.rsi
+    - type: Item
+      size: Small
+      shape:
+      - 0,0,0,0
+    - type: ESWeight
+      self: 0.1
+
+- type: entity
+  parent: ClothingNeckBase
+  id: EFSArmbandYellow
+  name: Желтая повязка
+  description: Повязка на плечо желтого цвета для идентификации свой-чужой.
+  components:
+    - type: Sprite
+      sprite: GG/Clothing/Armband/yellow.rsi
+    - type: Clothing
+      sprite: GG/Clothing/Armband/yellow.rsi
+    - type: Item
+      size: Small
+      shape:
+      - 0,0,0,0
+    - type: ESWeight
+      self: 0.1

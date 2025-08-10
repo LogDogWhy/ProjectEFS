@@ -82,6 +82,14 @@ public sealed partial class GunSystem : SharedGunSystem
         // Plays animated effects on the client.
         SubscribeNetworkEvent<HitscanEvent>(OnHitscan);
 
+        InitializeSuppressorVisuals();
+        InitializeGripVisuals();
+        InitializeScopeVisuals();
+        InitializeStockVisuals();
+        InitializeForearmVisuals();
+        InitializeGadgetVisuals();
+        InitializeReceiverVisuals();
+
         InitializeMagazineVisuals();
         InitializeSpentAmmo();
     }
@@ -138,6 +146,7 @@ public sealed partial class GunSystem : SharedGunSystem
 
     public override void Update(float frameTime)
     {
+
         if (!Timing.IsFirstTimePredicted)
             return;
 

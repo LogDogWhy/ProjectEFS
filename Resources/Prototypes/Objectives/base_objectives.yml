@@ -9,11 +9,6 @@
 
 # all objectives should inherit this at some point
 # then have its icon etc fields set in the final objective prototypes
-- type: entity
-  abstract: true
-  id: BaseObjective
-  components:
-  - type: Objective
 
 # requires that the player not have a die objective
 - type: entity

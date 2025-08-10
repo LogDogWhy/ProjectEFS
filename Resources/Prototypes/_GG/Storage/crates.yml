@@ -1,0 +1,275 @@
+- type: entity
+  name: Картотека
+  parent: [ BaseStructureDynamic, BaseBagOpenClose ]
+  id: filingCardCab
+  suffix: Empty
+  description: A cabinet for all your filing needs.
+  components:
+  - type: Storage
+    storageOpenSound:
+      path: /Audio/GG/Objects/Files/open.ogg
+    storageCloseSound:
+      path: /Audio/GG/Objects/Files/close.ogg
+    grid:
+    - 0,0,1,1
+    maxItemSize: Normal
+  - type: Sprite
+    sprite: GG/Objects/Storage/cardboard.rsi
+    state: box
+    noRot: true
+    layers:
+    - state: box
+    - state: box-open
+      map: ["openLayer"]
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.18,-0.48,0.18,0.48"
+        density: 200
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: InteractionOutline
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+
+- type: entity
+  parent: [filingCardCab, BaseTarkovmedStorageFill]
+  id: filingCardCabRandom
+  suffix: Random
+
+- type: entity
+  name: ЯЩИК ДЛЯ ОТЛАДКИ
+  parent: [ BaseStructureDynamic, BaseBagOpenClose ]
+  id: EFScrate
+  suffix: DEV
+  description: A cabinet for all your filing needs.
+  components:
+  - type: Storage
+    grid:
+    - 0,0,9,3
+    maxItemSize: Normal
+  - type: Sprite
+    sprite: GG/Objects/Storage/industrial.rsi
+    state: box
+    noRot: true
+    layers:
+    - state: box
+    - state: box-open
+      map: ["openLayer"]
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.18,-0.48,0.18,0.48"
+        density: 200
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: InteractionOutline
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+  # - type: Storage
+  #   storageOpenSound:
+  #     path: /Audio/GG/Objects/Files/open.ogg
+  #   storageCloseSound:
+  #     path: /Audio/GG/Objects/Files/close.ogg
+  #   grid:
+  #   - 0,0,9,4
+  #   maxItemSize: Normal
+  # - type: Sprite
+  #   sprite: GG/Objects/Storage/industrial.rsi
+  #   state: box
+  #   noRot: true
+  #   layers:
+  #   - state: box
+  #   - state: box-open
+  #     map: ["openLayer"]
+  # - type: UserInterface
+  #   interfaces:
+  #   - key: enum.StorageUiKey.Key
+  #     type: StorageBoundUserInterface
+  # - type: Transform
+  #   noRot: true
+  # - type: Fixtures
+  #   fixtures:
+  #     fix1:
+  #       shape:
+  #         !type:PhysShapeAabb
+  #         bounds: "-0.18,-0.48,0.18,0.48"
+  #       density: 200
+  #       mask:
+  #       - MachineMask
+  #       layer:
+  #       - MachineLayer
+  # - type: InteractionOutline
+  # - type: ContainerContainer
+  #   containers:
+  #     storagebase: !type:Container
+
+- type: entity
+  id: EFS_IndustrialCrate
+  parent: EFScrate
+  name: Ящик с индустриальным оборудованием
+  suffix: none
+  components:
+  - type: Storage
+    grid:
+    - 0,0,9,4
+    storageOpenSound:
+      path: /Audio/GG/Objects/Plastic/plasticcase_light_open.ogg
+    storageCloseSound:
+      path: /Audio/GG/Objects/Plastic/plasticcase_light_close.ogg
+  - type: Sprite
+    sprite: GG/Objects/Storage/industrial.rsi
+
+- type: entity
+  id: EFS_MedCrate
+  parent: EFS_IndustrialCrate
+  name: Ящик с медикаментами
+  components:
+  - type: Storage
+    grid:
+    - 0,0,9,4
+    storageOpenSound:
+      path: /Audio/GG/Objects/Plastic/plasticcase_light_open.ogg
+    storageCloseSound:
+      path: /Audio/GG/Objects/Plastic/plasticcase_light_close.ogg
+  - type: Sprite
+    sprite: GG/Objects/Storage/med.rsi
+
+- type: entity
+  id: EFS_FoodCrate
+  parent: EFS_IndustrialCrate
+  name: Ящик с провизией
+  components:
+  - type: Storage
+    grid:
+    - 0,0,9,4
+    storageOpenSound:
+      path: /Audio/GG/Objects/Wood/woodbox_open.ogg
+    storageCloseSound:
+      path: /Audio/GG/Objects/Wood/woodbox_close.ogg
+  - type: Sprite
+    sprite: GG/Objects/Storage/woodbox.rsi
+
+- type: entity
+  id: EFS_HighMilBoxCrate
+  parent: EFS_IndustrialCrate
+  name: Большой оружейный ящик
+  components:
+  - type: Storage
+    grid:
+    - 0,0,9,4
+    storageOpenSound:
+      path: /Audio/GG/Objects/Wood/woodbox_open.ogg
+    storageCloseSound:
+      path: /Audio/GG/Objects/Wood/woodbox_close.ogg
+  - type: Sprite
+    sprite: GG/Objects/Storage/highbox.rsi
+
+- type: entity
+  id: EFS_SmallMilBoxCrate
+  parent: EFS_IndustrialCrate
+  name: Маленький оружейный ящик
+  components:
+  - type: Storage
+    grid:
+    - 0,0,9,4
+    storageOpenSound:
+      path: /Audio/GG/Objects/Wood/woodbox_small_open.ogg
+    storageCloseSound:
+      path: /Audio/GG/Objects/Wood/woodbox_small_close.ogg
+  - type: Sprite
+    sprite: GG/Objects/Storage/smallbox.rsi
+
+- type: entity
+  id: EFS_GreenMilBoxCrate
+  parent: EFS_IndustrialCrate
+  name: Оружейный ящик
+  components:
+  - type: Storage
+    grid:
+    - 0,0,9,4
+    storageOpenSound:
+      path: /Audio/GG/Objects/Wood/woodbox_open.ogg
+    storageCloseSound:
+      path: /Audio/GG/Objects/Wood/woodbox_close.ogg
+  - type: Sprite
+    sprite: GG/Objects/Storage/green_crate.rsi
+
+- type: entity
+  id: EFS_AmmoBox
+  parent: EFScrate
+  name: Ящик с патронами
+  suffix: none
+  components:
+  - type: Storage
+    grid:
+    - 0,0,4,4
+    storageOpenSound:
+      path: /Audio/GG/Objects/Plastic/plasticcase_light_open.ogg
+    storageCloseSound:
+      path: /Audio/GG/Objects/Plastic/plasticcase_light_close.ogg
+  - type: Sprite
+    sprite: GG/Objects/Storage/ammo_box.rsi
+
+- type: entity
+  parent: [EFS_HighMilBoxCrate, BaseTarkovMilitaryStorageFill, BaseTarkovAmmoStorageFill]
+  id: FilledEFS_HighMilBoxCrate
+  suffix: Filled
+
+- type: entity
+  parent: [EFS_AmmoBox, BaseTarkovAmmoStorageFill]
+  id: FilledEFS_AmmoBox
+  suffix: Filled
+
+- type: entity
+  parent: [EFS_SmallMilBoxCrate, BaseTarkovMilitaryStorageFill, BaseTarkovAmmoStorageFill]
+  id: FilledEFS_SmallMilBoxCrate
+  suffix: Filled
+
+- type: entity
+  parent: [EFS_GreenMilBoxCrate, BaseTarkovMilitaryStorageFill, BaseTarkovAmmoStorageFill]
+  id: FilledEFS_GreenMilBoxCrate
+  suffix: Filled
+
+- type: entity
+  parent: [EFS_IndustrialCrate, BaseTarkovLootTechStorageFill, BaseTarkovAmmoStorageFill]
+  id: FilledEFS_IndustrialCrate
+  suffix: Filled
+
+- type: entity
+  parent: [EFS_MedCrate, BaseTarkovmedStorageFill]
+  id: FilledEFS_MedCrate
+  suffix: Filled
+
+- type: entity
+  parent: [EFS_FoodCrate, BaseTarkovFoodStorageFill]
+  id: FilledEFS_FoodCrate
+  suffix: Filled
+
+- type: entity
+  parent: [filingCardCab, BaseTarkovCartsStorageFill]
+  id: FilledEFS_filingCardCab
+  name: Картотека
+  suffix: Filled

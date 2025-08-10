@@ -40,6 +40,12 @@ namespace Content.Client.HealthAnalyzer.UI
             _spriteSystem = _entityManager.System<SpriteSystem>();
             _prototypes = dependencies.Resolve<IPrototypeManager>();
             _cache = dependencies.Resolve<IResourceCache>();
+
+            var healthTexture = new SpriteSpecifier.Rsi(
+            new ResPath("/Textures/GG/Interface/Icons/health.rsi"),
+            "health_points"
+            );
+            HealthIcon.Texture = _spriteSystem.Frame0(healthTexture);
         }
 
         public void Populate(HealthAnalyzerScannedUserMessage msg)
@@ -66,26 +72,36 @@ namespace Content.Client.HealthAnalyzer.UI
             if (msg.ScanMode.HasValue)
             {
                 ScanModePanel.Visible = true;
-                ScanModeText.Text = Loc.GetString(msg.ScanMode.Value ? "health-analyzer-window-scan-mode-active" : "health-analyzer-window-scan-mode-inactive");
-                ScanModeText.FontColorOverride = msg.ScanMode.Value ? Color.Green : Color.Red;
+
             }
             else
             {
                 ScanModePanel.Visible = false;
             }
 
+
+
+            patientDamageAmount.Text = Loc.GetString(
+                "health-analyzer-window-entity-damage-total-text",
+                ("amount", damageable.TotalDamage)
+            );
+
+            // Update the health icon color based on total damage.
+            UpdateHealthIcon(damageable.TotalDamage);
+
             PatientName.Text = Loc.GetString(
                 "health-analyzer-window-entity-health-text",
                 ("entityName", entityName)
             );
 
-            Temperature.Text = Loc.GetString("health-analyzer-window-entity-temperature-text",
-                ("temperature", float.IsNaN(msg.Temperature) ? "N/A" : $"{msg.Temperature - Atmospherics.T0C:F1} °C ({msg.Temperature:F1} K)")
-            );
+            // Temperature.Text = Loc.GetString("health-analyzer-window-entity-temperature-text",
+            //     ("temperature", float.IsNaN(msg.Temperature) ? "N/A" : $"{msg.Temperature - Atmospherics.T0C:F1} °C ({msg.Temperature:F1} K)")
+            // );
 
             BloodLevel.Text = Loc.GetString("health-analyzer-window-entity-blood-level-text",
                 ("bloodLevel", float.IsNaN(msg.BloodLevel) ? "N/A" : $"{msg.BloodLevel * 100:F1} %")
             );
+
 
             if (msg.Bleeding == true)
             {
@@ -102,6 +118,28 @@ namespace Content.Client.HealthAnalyzer.UI
                 ("amount", damageable.TotalDamage)
             );
 
+            if (_entityManager.TryGetComponent(target, out HungerComponent? yummers))
+            {
+                HungerLevel.Visible = true;
+                HungerLevel.FontColorOverride = Color.Orange;
+                HungerLevel.Text = Loc.GetString(
+                    "health-analyzer-window-entity-hunger-total-text",
+                    ("amount", (int)yummers.CurrentHunger)
+                );
+            }
+
+            if (_entityManager.TryGetComponent(target, out ThirstComponent? drink))
+            {
+                ThirstLevel.Visible = true;
+                ThirstLevel.FontColorOverride = Color.Cyan;
+                ThirstLevel.Text = Loc.GetString(
+                    "health-analyzer-window-entity-thirst-total-text",
+                    ("amount", (int)drink.CurrentThirst)
+                );
+            }
+
+
+
             var damageSortedGroups =
                 damageable.DamagePerGroup.OrderBy(damage => damage.Value)
                     .ToDictionary(x => x.Key, x => x.Value);
@@ -114,6 +152,7 @@ namespace Content.Client.HealthAnalyzer.UI
                 && hunger.CurrentThreshold <= HungerThreshold.Starving)
             {
                 var box = new Control { Margin = new Thickness(0, 0, 0, 15) };
+
 
                 box.AddChild(CreateDiagnosticGroupTitle(
                     Loc.GetString("health-analyzer-window-malnutrition"),
@@ -222,5 +261,20 @@ namespace Content.Client.HealthAnalyzer.UI
 
             return rootContainer;
         }
+
+        private void UpdateHealthIcon(FixedPoint2 totalDamage)
+        {
+            // Assuming totalDamage ranges from 0 (no damage) to 100 (maximum damage).
+            float damagePercentage = (float)(totalDamage.Float() / 100.0);
+
+            // Clamp the percentage between 0 and 1.
+            damagePercentage = Math.Clamp(damagePercentage, 0f, 1f);
+
+            // Transition from green (healthy) to red (injured).
+            var healthColor = Color.InterpolateBetween(Color.Green, Color.Red, damagePercentage);
+
+            HealthIcon.ModulateSelfOverride = healthColor;
+        }
+
     }
 }

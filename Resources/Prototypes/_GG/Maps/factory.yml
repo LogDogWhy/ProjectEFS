@@ -1,0 +1,134 @@
+# - type: gameMap
+#   id: Factory
+#   mapName: Alpha Factory
+#   mapPath: /Maps/123.yml
+#   minPlayers: 0
+#   stations:
+#     Factory:
+#       stationProto: StandardStationArena
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: "Zavod"
+#         - type: StationJobs
+#           overflowJobs:
+#             - Passenger
+#             - USEC
+#           availableJobs:
+#             Passenger: [ -1, -1 ]
+#             USEC: [ -1, -1 ]
+
+
+# - type: gameMap
+#   id: REZERV
+#   mapName: REZERV ALPHA
+#   mapPath: /Maps/Tarkov/Rezerv2.yml
+#   minPlayers: 0
+#   stations:
+#     REZERV:
+#       stationProto: StandardStationArena
+#       components:
+#         - type: StationNameSetup
+#           mapNameTemplate: "REZERV"
+#         - type: StationJobs
+#           overflowJobs:
+#             - Passenger
+#             - USEC
+#           availableJobs:
+#             Passenger: [ -1, -1 ]
+#             USEC: [ -1, -1 ]
+
+- type: gameMap
+  id: REZERV
+  mapName: REZERV
+  mapPath: /Maps/Tarkov/Rezerv/rezerv.yml
+  minPlayers: 0
+  stations:
+    REZERV:
+      stationProto: StandardStationArena
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "REZERV"
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+            - USEC
+          availableJobs:
+            Passenger: [ -1, -1 ]
+            USEC: [ -1, -1 ]
+
+- type: gameMap
+  id: BUNKER
+  mapName: BUNKER
+  mapPath: /Maps/Tarkov/Rezerv/bunker.yml
+  minPlayers: 0
+  stations:
+    REZERV:
+      stationProto: StandardStationArena
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "BUNKER"
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+            - USEC
+          availableJobs:
+            Passenger: [ -1, -1 ]
+            USEC: [ -1, -1 ]
+
+- type: gameMap
+  id: BUNKERCPT
+  mapName: BUNKERCPT
+  mapPath: /Maps/Tarkov/Rezerv/bunkercpt.yml
+  minPlayers: 0
+  stations:
+    BUNKERCPT:
+      stationProto: StandardStationArena
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "BUNKERCPT"
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+          availableJobs:
+            Passenger: [ -1, -1 ]
+            USEC: [ -1, -1 ]
+
+
+- type: gameMap
+  id: Factory
+  mapName: Alpha Factory
+  mapPath: /Maps/123.yml
+  minPlayers: 0
+  stations:
+    Factory:
+      stationProto: StandardStationArena
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Zavod"
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+            - USEC
+          availableJobs:
+            Passenger: [ -1, -1 ]
+            USEC: [ -1, -1 ]
+
+
+- type: gameMap
+  id: REZERVWINTER
+  mapName: REZERV
+  mapPath: /Maps/Tarkov/Rezerv/winter.yml
+  minPlayers: 0
+  stations:
+    REZERV:
+      stationProto: StandardStationArena
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "REZERV"
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+            - USEC
+          availableJobs:
+            Passenger: [ -1, -1 ]
+            USEC: [ -1, -1 ]

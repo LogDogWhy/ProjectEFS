@@ -919,7 +919,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemConcrete
   heatCapacity: 10000
-  weather: true
+  weather: false
 
 - type: tile
   id: FloorConcreteMono
@@ -938,7 +938,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemConcreteMono
   heatCapacity: 10000
-  weather: true
+  weather: false
 
 - type: tile
   id: FloorConcreteSmooth
@@ -957,7 +957,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemConcreteSmooth
   heatCapacity: 10000
-  weather: true
+  weather: false
 
 - type: tile
   id: FloorGrayConcrete
@@ -976,7 +976,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemGrayConcrete
   heatCapacity: 10000
-  weather: true
+  weather: false
 
 - type: tile
   id: FloorGrayConcreteMono
@@ -995,7 +995,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemGrayConcreteMono
   heatCapacity: 10000
-  weather: true
+  weather: false
 
 - type: tile
   id: FloorGrayConcreteSmooth
@@ -1014,7 +1014,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemGrayConcreteSmooth
   heatCapacity: 10000
-  weather: true
+  weather: false
 
 - type: tile
   id: FloorOldConcrete
@@ -1033,7 +1033,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemOldConcrete
   heatCapacity: 10000
-  weather: true
+  weather: false
 
 - type: tile
   id: FloorOldConcreteMono
@@ -1052,7 +1052,7 @@
     collection: FootstepTile
   itemDrop: FloorTileItemOldConcreteMono
   heatCapacity: 10000
-  weather: true
+  weather: false
 
 - type: tile
   id: FloorOldConcreteSmooth
@@ -1459,7 +1459,7 @@
   id: FloorGrass
   name: tiles-planet-grass-floor
   sprite: /Textures/Tiles/grass.png
-  variants: 4 #Corvax
+  variants: 1 #Corvax
   placementVariants:
   - 1.0
   - 1.0
@@ -1477,7 +1477,7 @@
   id: FloorGrassJungle
   name: tiles-jungle-grass-floor
   sprite: /Textures/Tiles/grassjungle.png
-  variants: 4 #Corvax
+  variants: 1 #Corvax
   placementVariants:
   - 1.0
   - 1.0
@@ -1617,7 +1617,7 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
-  weather: true
+  weather: false
 
 - type: tile
   id: FloorAsteroidIronsand
@@ -1898,6 +1898,7 @@
     collection: FootstepGrass
   itemDrop: FloorTileItemAstroGrass
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorMowedAstroGrass
@@ -1914,6 +1915,7 @@
   isSubfloor: false
   deconstructTools: [ Cutting ]
   itemDrop: FloorTileItemMowedAstroGrass
+  weather: true
 
 - type: tile
   id: FloorJungleAstroGrass
@@ -1923,6 +1925,7 @@
   isSubfloor: false
   deconstructTools: [ Cutting ]
   itemDrop: FloorTileItemJungleAstroGrass
+  weather: true
 
 # Ice
 - type: tile

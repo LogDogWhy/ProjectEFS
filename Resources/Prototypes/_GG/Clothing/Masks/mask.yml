@@ -1,0 +1,20 @@
+#by prazat911
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: ADTClothingHeadHatTagilla
+  name: Маска тагиллы
+  description: Работать со стилем
+  components:
+  - type: Tag
+  - type: Sprite
+    sprite: ADT/Clothing/Mask/tagilla_mask.rsi
+  - type: Clothing
+    sprite: ADT/Clothing/Mask/tagilla_mask.rsi
+  - type: Reflect
+    reflectProb: 0.366
+  - type: Armor
+    modifiers:
+      coefficients:
+        Piercing: 0.95
+  - type: ESWeight
+    self: 2

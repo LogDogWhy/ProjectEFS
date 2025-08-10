@@ -1,0 +1,513 @@
+- type: entity
+  abstract: true
+  id: BaseTarkovLootTechStorageFill
+  components:
+  - type: StorageFill
+    contents:
+        - id: null
+          prob: 0.25
+          orGroup: InnerLoot1
+        - id: Bats
+          prob: 0.125
+          orGroup: InnerLoot1
+        - id: Akali
+          prob: 0.125
+          orGroup: InnerLoot1
+        - id: Bolts
+          prob: 0.125
+          orGroup: InnerLoot1
+        - id: Btape
+          prob: 0.125
+          orGroup: InnerLoot1
+        - id: Paracord
+          prob: 0.125
+          orGroup: InnerLoot1
+        - id: Propane
+          prob: 0.125
+          orGroup: InnerLoot1
+        - id: WrenchEFS
+          prob: 0.125
+          orGroup: InnerLoot1
+        - id: Wtape
+          prob: 0.125
+          orGroup: InnerLoot1
+        - id: WaterFilter
+          prob: 0.333
+          orGroup: InnerLoot2
+        - id: WD40
+          prob: 0.333
+          orGroup: InnerLoot2
+        - id: Xeno
+          prob: 0.333
+          orGroup: InnerLoot2
+        - id: null
+          prob: 0.5
+          orGroup: InnerLoot1
+        - id: Bpowder
+          prob: 0.125
+          orGroup: InnerLoot3
+        - id: null
+          prob: 0.75
+          orGroup: InnerLoot3
+        - id: WD40-big
+          prob: 0.143
+          orGroup: InnerLoot3
+        - id: TNT
+          prob: 0.143
+          orGroup: InnerLoot3
+        - id: Thermite
+          prob: 0.143
+          orGroup: InnerLoot3
+        - id: Dfuel
+          prob: 0.143
+          orGroup: InnerLoot3
+        - id: FuelCan
+          prob: 0.143
+          orGroup: InnerLoot3
+        - id: Kektape
+          prob: 0.143
+          orGroup: InnerLoot3
+        - id: Thermometer
+          prob: 0.143
+          orGroup: InnerLoot3
+        - id: null
+          prob: 0.25
+          orGroup: InnerLoot4
+        - id: Bats
+          prob: 0.125
+          orGroup: InnerLoot4
+        - id: Akali
+          prob: 0.125
+          orGroup: InnerLoot4
+        - id: Bolts
+          prob: 0.125
+          orGroup: InnerLoot4
+        - id: Btape
+          prob: 0.125
+          orGroup: InnerLoot4
+        - id: Paracord
+          prob: 0.125
+          orGroup: InnerLoot4
+        - id: Propane
+          prob: 0.125
+          orGroup: InnerLoot4
+        - id: WrenchEFS
+          prob: 0.125
+          orGroup: InnerLoot4
+        - id: Wtape
+          prob: 0.125
+          orGroup: InnerLoot4
+
+- type: entity
+  abstract: true
+  id: BaseTarkovmedStorageFill
+  components:
+  - type: StorageFill
+    contents:
+      - id: null
+        prob: 0.50
+        orGroup: InnerLoot1
+      - id: Vazelin
+        prob: 0.15
+        orGroup: InnerLoot1
+      - id: CMS
+        prob: 0.09
+        orGroup: InnerLoot1
+      - id: GoldStar
+        prob: 0.09
+        orGroup: InnerLoot1
+      - id: Salewa
+        prob: 0.3
+        orGroup: InnerLoot1
+      - id: Esmarh
+        prob: 0.15
+        orGroup: InnerLoot1
+      - id: null
+        prob: 0.50
+        orGroup: InnerLoot2
+      - id: Vazelin
+        prob: 0.15
+        orGroup: InnerLoot2
+      - id: CMS
+        prob: 0.09
+        orGroup: InnerLoot2
+      - id: GoldStar
+        prob: 0.09
+        orGroup: InnerLoot2
+      - id: Salewa
+        prob: 0.3
+        orGroup: InnerLoot2
+      - id: Esmarh
+        prob: 0.3
+        orGroup: InnerLoot2
+      - id: null
+        prob: 0.70
+        orGroup: Stims
+      - id: ZagustinPen
+        prob: 0.1
+        orGroup: Stims
+      - id: AdrenalinePen
+        prob: 0.1
+        orGroup: Stims
+      - id: PropitalPen
+        prob: 0.1
+        orGroup: Stims
+      - id: Vitamin
+        prob: 0.1
+      - id: EFSSyringe
+        prob: 0.1
+      - id: Hydro
+        prob: 0.1
+      - id: BloodKit
+        prob: 0.1
+      - id: null
+        prob: 0.80
+        orGroup: BonusLoot
+      - id: CMS
+        prob: 0.09
+        orGroup: BonusLoot
+      - id: Salewa
+        prob: 0.15
+        orGroup: BonusLoot
+      - id: Esmarh
+        prob: 0.15
+        orGroup: BonusLoot
+      - id: Vazelin
+        prob: 0.15
+        orGroup: BonusLoot
+      - id: CMS
+        prob: 0.09
+        orGroup: BonusLoot
+      - id: GoldStar
+        prob: 0.15
+        orGroup: BonusLoot
+      - id: Salewa
+        prob: 0.15
+        orGroup: BonusLoot
+      - id: Esmarh
+        prob: 0.15
+        orGroup: BonusLoot
+      - id: Vitamin
+        prob: 0.4
+        orGroup: BonusLoot
+      - id: EFSSyringe
+        prob: 0.4
+        orGroup: BonusLoot
+      - id: Hydro
+        prob: 0.4
+        orGroup: BonusLoot
+      - id: BloodKit
+        prob: 0.4
+        orGroup: BonusLoot
+
+- type: entity
+  abstract: true
+  id: BaseTarkovFoodStorageFill
+  components:
+  - type: StorageFill
+    contents:
+      - id: null
+        prob: 0.5
+        orGroup: Coffee
+      - id: CoffeeLupo
+        prob: 0.1
+        orGroup: Coffee
+      - id: Coffee
+        prob: 0.4
+        orGroup: Coffee
+      - id: Soda
+        prob: 0.333
+      - id: Tea42
+        prob: 0.1
+      - id: EFSFoodGarbusha
+        prob: 0.333
+      - id: EFSFoodCannedMilk
+        prob: 0.333
+      - id: EFSFoodBeens
+        prob: 0.333
+      - id: EFSFoodGarbusha
+        prob: 0.333
+        orGroup: BonusLoot
+      - id: EFSFoodCannedMilk
+        prob: 0.333
+        orGroup: BonusLoot
+      - id: EFSFoodBeens
+        orGroup: BonusLoot
+        prob: 0.333
+      - id: Coffee
+        prob: 0.333
+        orGroup: BonusLoot
+
+- type: entity
+  abstract: true
+  id: BaseTarkovRareStorageFill
+  components:
+  - type: StorageFill
+    contents:
+      - id: Bitcoin
+        prob: 0.333
+        orGroup: Rare
+      - id: Virtex
+        prob: 0.333
+        orGroup: Rare
+      - id: Fdrive
+        prob: 0.333
+        orGroup: Rare
+      - id: Tetris
+        prob: 0.333
+        orGroup: Rare
+
+- type: entity
+  abstract: true
+  id: BaseTarkovCartsStorageFill
+  components:
+  - type: StorageFill
+    contents:
+      - id: EFSCable
+        prob: 0.333
+        orGroup: Loot
+      - id: EFSSSD
+        prob: 0.2
+        orGroup: Loot
+      - id: Fdrive
+        prob: 0.1
+        orGroup: Loot
+      - id: Wtape
+        prob: 0.333
+        orGroup: Loot
+      - id: Btape
+        prob: 0.333
+        orGroup: Loot
+      - id: Kektape
+        prob: 0.2
+        orGroup: Loot
+      - id: Bolts
+        prob: 0.333
+        orGroup: Loot
+      - id: Bats
+        prob: 0.333
+        orGroup: Loot
+      - id: LCD
+        prob: 0.25
+        orGroup: Loot
+      - id: Thermite
+        prob: 0.25
+        orGroup: Loot
+
+- type: entity
+  abstract: true
+  id: BaseTarkovAmmoStorageFill
+  components:
+  - type: StorageFill
+    contents:
+      - id: null
+        prob: 0.5
+        orGroup: Ammo1
+      - id: EFSMagazineRifleGEN3
+        prob: 0.25
+        orGroup: Ammo1
+      # - id: EFSMagazineRifleSTANAG
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # - id: EFSMagazineRifle6L23
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # # - id: EFSMagazineRifleАКМAluminn
+      # #   prob: 0.25
+      # #   orGroup: Ammo1
+      # - id: EFSMagazineRifleSVD
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # - id: EFSMagazinePistol90-93
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # - id: EFSMagazineKedr
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # - id: EFSMagazinePistolGlock
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # - id: EFSMagazinePistolMP5
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # - id: EFSMagazinePistolUMP
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # - id: EFSMagazinePistolColt
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # - id: EFSMagazineRifle6L25
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # - id: EFSMagazineRifleKAC
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # - id: EFSMagazineRifleVepr
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # - id: EFSMagazineRifleAICS
+      #   prob: 0.25
+      #   orGroup: Ammo1
+      # - id: EFSMagazineRifleGEN3
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # - id: EFSMagazineRifleSTANAG
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # - id: EFSMagazineRifle6L23
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # # - id: EFSMagazineRifleАКМAluminn
+      # #   prob: 0.25
+      # #   orGroup: Ammo2
+      # - id: EFSMagazineRifleSVD
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # - id: EFSMagazinePistol90-93
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # - id: EFSMagazineKedr
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # - id: EFSMagazinePistolGlock
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # - id: EFSMagazinePistolMP5
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # - id: EFSMagazinePistolUMP
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # - id: EFSMagazinePistolColt
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # - id: EFSMagazineRifle6L25
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # - id: EFSMagazineRifleKAC
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # - id: EFSMagazineRifleVepr
+      #   prob: 0.25
+      #   orGroup: Ammo2
+      # - id: EFSMagazineRifleAICS
+      #   prob: 0.25
+      #   orGroup: Ammo2
+
+- type: entity
+  abstract: true
+  id: BaseTarkovMilitaryStorageFill
+  components:
+  - type: StorageFill
+    contents:
+      - id: null
+        prob: 0.5
+        orGroup: Weapon
+      # - id: WeaponSniperMosinT
+      #   prob: 0.4
+      #   orGroup: Weapon
+      # - id: WeaponRifleSKS
+      #   prob: 0.4
+      #   orGroup: Weapon
+      # - id: EFSWeaponSniperSVD
+      #   prob: 0.2
+      #   orGroup: Weapon
+      # - id: WeaponRifleVSS
+      #   prob: 0.2
+      #   orGroup: Weapon
+      # - id: EFSWeaponSniperM700
+      #   prob: 0.25
+      #   orGroup: Weapon
+      # - id: WeaponShotgunM3
+      #   prob: 0.35
+      #   orGroup: Weapon
+      # - id: WeaponRifleM4A1
+      #   prob: 0.27553
+      #   orGroup: Weapon
+      # - id: WeaponRifleMDR556
+      #   prob: 0.27554
+      #   orGroup: Weapon
+      # - id: WeaponRifleMDR762
+      #   prob: 0.26324
+      #   orGroup: Weapon
+      # - id: EFSWeaponRifleAkm
+      #   prob: 0.34237
+      #   orGroup: Weapon
+      # - id: EFSWeaponRifleAk74m
+      #   prob: 0.34237
+      #   orGroup: Weapon
+      # - id: EFSWeaponRifleVeprKm
+      #   prob: 0.4
+      #   orGroup: Weapon
+      # - id: EFSWeaponPistolGlock
+      #   prob: 0.4
+      #   orGroup: Weapon
+      # - id: EFSWeaponPistolPM
+      #   prob: 0.4
+      #   orGroup: Weapon
+      # - id: EFSWeaponPistolColt
+      #   prob: 0.4
+      #   orGroup: Weapon
+      # - id: EFSWeaponSubMachineGunMP5
+      #   prob: 0.35
+      #   orGroup: Weapon
+      # - id: EFSWeaponSubMachineGunUMP
+      #   prob: 0.35
+      #   orGroup: Weapon
+      # - id: EFSWeaponSubMachineKedr91
+      #   prob: 0.4
+      #   orGroup: Weapon
+      # - id: ClothingMaskCF
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: ClothingMaskEFS_HalfMask
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSHatBomber
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSHatPomPon
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSHatBlackCap
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSArmorPress
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSArmor6B13
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSArmor6B43
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSArmorBagariy
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSArmorNFMTHOR
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSArmorModule3M
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSArmorTrooperTFO
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSArmorGearAVS
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSHelmetAltyn
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSHelmetSH68
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSHelmetSfera94
+      #   prob: 0.25
+      #   orGroup: Clothing
+      # - id: EFSHelmetUlachTan
+      #   prob: 0.25
+      #   orGroup: Clothing
+      - id: EFSHelmetExfilDark
+        prob: 0.25
+        orGroup: Clothing

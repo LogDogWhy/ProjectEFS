@@ -22,6 +22,8 @@ public sealed partial class MagazineVisualsComponent : Component
     /// Should we hide when the count is 0
     /// </summary>
     [DataField("zeroVisible")] public bool ZeroVisible;
+
+    [DataField("dynamicSprite")] public bool DynamicSprite = false;
 }
 
 public enum GunVisualLayers : byte
@@ -30,4 +32,13 @@ public enum GunVisualLayers : byte
     BaseUnshaded,
     Mag,
     MagUnshaded,
+    Suppressor,
+    Grip,
+
+    Scope,
+    Stock,
+    Forearm,
+    Receiver,
+
+    Gadget,
 }

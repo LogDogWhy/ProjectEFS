@@ -1,0 +1,181 @@
+- type: entity
+  name: Desert Tech MDR 5.56
+  parent: BaseWeaponRifle
+  id: EFSWeaponRifleMDR556
+  description: Автоматическая винтовка MDR разработана американской компанией Desert Tech LLC построенная в конфигурации буллпап, эта винтовка в базовом варианте будет представлять собой модульное, мультикалиберное автоматическое оружие, предназначенное для вооружения подразделений сил специального назначения полиции и армии.
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/mdr_b.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+        scale: 0.8, 0.8
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+      - sprite: GG/Weapons/Mods/grip.rsi
+        map: ["enum.GunVisualLayers.Grip"]
+        scale: 0.8, 0.8
+        offset: 0.35, -0.025
+      - sprite: GG/Weapons/Mods/scope.rsi
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.8, 0.8
+        offset: 0.05, 0.125
+      - sprite: GG/Weapons/Mods/barrels.rsi
+        map: ["enum.GunVisualLayers.Suppressor"]
+        scale: 0.8, 0.8
+        offset: 0.675, 0.05
+  - type: Clothing
+    sprite: GG/Weapons/mdr_b.rsi
+  - type: Item
+    size: Rifles
+  - type: Gun
+    minAngle: 2
+    maxAngle: 18
+    angleIncrease: 3
+    angleDecay: 100
+    fireRate: 7.8
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/M4/shot.ogg
+    soundSilGunshot:
+      path: /Audio/GG/Weapons/M4/sil.ogg
+    soundGunshot:
+      path: /Audio/GG/Weapons/M4/shot.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazineRifleSTANAG
+        insertSound: /Audio/GG/Weapons/M4/in.ogg
+        ejectSound: /Audio/GG/Weapons/M4/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazineRifle5.56x45
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge5.56x45
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge5.56x45
+      gun_suppressor:
+        priority: 3
+        whitelist:
+          tags:
+            - EFSM4Barrel
+      gun_scope:
+        priority: 4
+        whitelist:
+          tags:
+            - EFSPicatiniScope
+      gun_grip:
+        priority: 5
+        whitelist:
+          tags:
+            - EFSMoeGrip
+  - type: ChamberMagazineAmmoProvider
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      gun_suppressor: !type:ContainerSlot
+      gun_grip: !type:ContainerSlot
+      gun_scope: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+    dynamicSprite: true
+  - type: Appearance
+  - type: SuppressorVisuals
+    suppressorState: suppressor
+  - type: Suppressor
+  - type: GripVisuals
+    gripState: grip
+  - type: Grip
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+
+- type: entity
+  name: Desert Tech MDR 7.62
+  parent: BaseWeaponRifle
+  id: EFSWeaponRifleMDR762
+  description: Автоматическая винтовка буллпап MDR 7.62x51 (.308), разработанная американской компанией Desert Tech LLC. Эта винтовка в базовом варианте будет представлять собой модульное, мультикалиберное автоматическое оружие, предназначенное для вооружения подразделений сил специального назначения полиции и армии.
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/mdr.rsi
+    layers:
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+      - sprite: GG/Weapons/Mods/grip.rsi
+        map: ["enum.GunVisualLayers.Grip"]
+        scale: 0.8, 0.8
+        offset: 0.2125, -0.05
+      - sprite: GG/Weapons/Mods/scope.rsi
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.8, 0.8
+        offset: -0.225, 0.095
+  - type: Clothing
+    sprite: GG/Weapons/mdr.rsi
+  - type: Item
+    size: Rifles
+  - type: Gun
+    minAngle: 2
+    maxAngle: 26
+    angleIncrease: 5
+    angleDecay: 90
+    fireRate: 7.5
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/MDR/shot.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazineRifleKAC
+        insertSound: /Audio/GG/Weapons/M4/in.ogg
+        ejectSound: /Audio/GG/Weapons/M4/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazineRifleType1_7.62x51
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge7.62x51
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge7.62x51
+      gun_scope:
+        priority: 3
+        whitelist:
+          tags:
+            - EFSPicatiniScope
+      gun_grip:
+        priority: 4
+        whitelist:
+          tags:
+            - EFSMoeGrip
+  - type: ChamberMagazineAmmoProvider
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      gun_grip: !type:ContainerSlot
+      gun_scope: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: GripVisuals
+    gripState: grip
+  - type: Grip
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope

@@ -1,0 +1,162 @@
+# - type: entity
+#   parent: ClothingBackpack
+#   id: ClothingBackpackTarkovFilledM4
+#   noSpawn: true
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: EFSWeaponRifleM4A1
+#       - id: EFSMagazineRifleSTANAG
+#       - id: EFSMagazineRifleSTANAG
+
+# - type: entity
+#   parent: ClothingBackpack
+#   id: ClothingBackpackTarkovFilledAK74
+#   noSpawn: true
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: EFSWeaponRifleAk74m
+#       - id: EFSMagazineRifle6L23
+#       - id: EFSMagazineRifle6L23
+
+# - type: entity
+#   parent: ClothingBackpack
+#   id: ClothingBackpackTarkovFilledAKM
+#   noSpawn: true
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: EFSWeaponRifleAkm
+#       - id: EFSMagazineRifleАКМAluminn
+#       - id: EFSMagazineRifleАКМAluminn
+
+# - type: entity
+#   parent: ClothingBackpack
+#   id: ClothingBackpackTarkovFilledVSS
+#   noSpawn: true
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: EFSWeaponRifleVSS
+#       - id: EFSMagazineRifle6L25
+#       - id: EFSMagazineRifle6L25
+
+# - type: entity
+#   parent: ClothingBackpack
+#   id: ClothingBackpackTarkovFilledMP5
+#   noSpawn: true
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: EFSWeaponSubMachineGunMP5
+#       - id: EFSMagazinePistolMP5
+#       - id: EFSMagazinePistolMP5
+
+# - type: entity
+#   parent: ClothingBackpack
+#   id: ClothingBackpackTarkovFilledUMP
+#   noSpawn: true
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: EFSWeaponSubMachineGunUMP
+#       - id: EFSMagazinePistolUMP
+#       - id: EFSMagazinePistolUMP
+
+# - type: entity
+#   parent: ClothingBackpack
+#   id: ClothingBackpackTarkovFilledMosin
+#   noSpawn: true
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: WeaponSniperMosinT
+#       - id: MagazineBoxRifle7.62x54R
+#       - id: MagazineBoxRifle7.62x54R
+
+# - type: entity
+#   parent: ClothingBackpack
+#   id: ClothingBackpackTarkovFilledM3
+#   noSpawn: true
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: WeaponShotgunM3
+#       - id: BoxLethalshot
+
+# - type: entity
+#   name: Коробка с Glock-18
+#   parent: BoxCardboard
+#   id: BoxGlock
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: WeaponPistolGlock
+#       - id: MagazinePistolGlock
+#   - type: Sprite
+#     layers:
+#       - state: box_of_doom
+#       - state: magazine
+
+# - type: entity
+#   name: Коробка с PM
+#   parent: BoxCardboard
+#   id: BoxPM
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: WeaponPistolPM
+#       - id: MagazinePistol90-93
+#   - type: Sprite
+#     layers:
+#       - state: box_of_doom
+#       - state: magazine
+
+# - type: entity
+#   name: Коробка с Colt
+#   parent: BoxCardboard
+#   id: BoxColt
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: WeaponPistolColt
+#       - id: MagazinePistolColt
+#   - type: Sprite
+#     layers:
+#       - state: box_of_doom
+#       - state: magazine
+#   - type: Storage
+#     capacity: 15
+
+# - type: entity
+#   parent: ClothingBackpack
+#   id: ClothingBackpackTarkovFilledSKS
+#   noSpawn: true
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: WeaponRifleSKS
+#       - id: MagazineBoxRifleBig7.62x39
+
+# - type: entity
+#   parent: ClothingBackpack
+#   id: ClothingBackpackTarkovFilledMDR556
+#   noSpawn: true
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: WeaponRifleMDR556
+#       - id: MagazineRifleGEN3
+#       - id: MagazineRifleGEN3
+
+# - type: entity
+#   parent: ClothingBackpack
+#   id: ClothingBackpackTarkovFilledMDR762
+#   noSpawn: true
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: WeaponRifleMDR762
+#       - id: MagazineRiflePMAG
+#       - id: MagazineRiflePMAG

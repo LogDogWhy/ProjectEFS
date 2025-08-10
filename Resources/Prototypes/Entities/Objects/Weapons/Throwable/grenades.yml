@@ -49,13 +49,16 @@
     intensitySlope: 3
     totalIntensity: 120 # about a ~4 tile radius
     canCreateVacuum: false
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/GG/Weapons/Grenade/impact.ogg
   - type: OnUseTimerTrigger
     beepSound:
-      path: "/Audio/Effects/beep1.ogg"
+      path: "/Audio/GG/Weapons/Grenade/lever.ogg"
       params:
         volume: 5
     initialBeepDelay: 0
-    beepInterval: 2 # 2 beeps total (at 0 and 2)
+    beepInterval: 10 # 2 beeps total (at 0 and 2)
 
 - type: entity
   name: flashbang
@@ -75,11 +78,20 @@
     proto: GrenadeFlashEffect
   - type: Appearance
   - type: TimerTriggerVisuals
-    primingSound:
-      path: /Audio/Effects/countdown.ogg
   - type: GuideHelp
     guides:
     - Security
+  - type: OnUseTimerTrigger
+    beepSound:
+      path: "/Audio/GG/Weapons/Grenade/lever.ogg"
+      params:
+        volume: 5
+    initialBeepDelay: 0
+    delay: 2
+    beepInterval: 10 # 2 beeps total (at 0 and 2)
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/GG/Weapons/Grenade/impact_flash.ogg
 
 - type: entity
   id: GrenadeFlashEffect
@@ -385,7 +397,7 @@
         - Scientist
         - Borg
 # Corvax-HiddenDesc-End
-          
+
 - type: entity
   parent: GrenadeBase
   id: SmokeGrenade

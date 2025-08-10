@@ -3,7 +3,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: TimedDespawn
-    lifetime: 0.4
+    lifetime: 0.2
   - type: Sprite
     drawdepth: Effects
     layers:
@@ -65,6 +65,8 @@
       path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
   - type: TimedDespawn
     lifetime: 10
+  - type: ESWeight
+    self: 0.06
 
 - type: entity
   id: BaseBulletTrigger # Trigger-on-collide bullets

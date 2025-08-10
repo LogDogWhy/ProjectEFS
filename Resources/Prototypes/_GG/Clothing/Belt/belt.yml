@@ -1,0 +1,151 @@
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltRPSholder
+  name: TV-109 + TV-106 (РПС)
+  description: Тяжелая подвесная система TV-109 предназначены для крепления на пояс TV-106, или аналогичный, с целью разгрузить часть веса на плечи. Плечи усилены пенкой и имеют стропы MOLLE, для перевода пояса в комплекте с этой системой в полноценную РПС.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Belt/rpsholder.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Belt/rpsholder.rsi
+  - type: Item
+    size: Normal
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,3,1
+    whitelist:
+      components:
+        - BallisticAmmoProvider
+        - CartridgeAmmo
+        - RangedMagazine
+        - Ammo
+        - Flash
+        - GrenadeBase
+        - Injector
+        - Pill
+        - ExplodeOnTrigger
+  - type: ESWeight
+    self: 1
+
+# - type: entity
+#   parent: ClothingBeltStorageBase
+#   id: ClothingBeltUMKAholder
+#   name: Охотничий жилет Умка
+#   description: Жилет Умка М33-SET1 разработан для охотников, путешественников, профессионалов полевых профессий и профессионалов безопасности.
+#   components:
+#   - type: Sprite
+#     sprite: GG/Clothing/Belt/umkaholder.rsi
+#   - type: Clothing
+#     sprite: GG/Clothing/Belt/umkaholder.rsi
+#   - type: Item
+#     size: 50
+#   - type: Storage
+#     capacity: 40
+#     whitelist:
+#       components:
+#         - BallisticAmmoProvider
+#         - CartridgeAmmo
+#         - RangedMagazine
+#         - Ammo
+#         - Flash
+#         - GrenadeBase
+#         - Injector
+#         - Pill
+#         - ExplodeOnTrigger
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltBANKROBBERholder
+  name: Bank Robber
+  description: Сверхкомпактная и легкая разгрузка для максимальной мобильности и комфорта.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Belt/bankrobberholder.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Belt/bankrobberholder.rsi
+  - type: Item
+    size: Normal
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,2,1
+    whitelist:
+      components:
+        - BallisticAmmoProvider
+        - CartridgeAmmo
+        - RangedMagazine
+        - Ammo
+        - Flash
+        - Grenade
+        - Injector
+        - Pill
+        - ExplodeOnTrigger
+  - type: ESWeight
+    self: 1
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltSCAVBELTholder
+  name: Жилет Дикого
+  description: Рыбацкий жилет, при острой нужде, кое-как способен заменить разгрузку.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Belt/scav.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Belt/scav.rsi
+  - type: Item
+    size: Normal
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,1,1
+    whitelist:
+      components:
+        - BallisticAmmoProvider
+        - CartridgeAmmo
+        - RangedMagazine
+        - Ammo
+        - Flash
+        - Grenade
+        - Injector
+        - Pill
+        - ExplodeOnTrigger
+  - type: ESWeight
+    self: 1
+
+
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: EFSClothingOuterBase
+  components:
+  - type: Clothing
+    slots:
+    - outerClothing
+    - belt
+  - type: Sprite
+    state: icon
+  - type: ESWeight
+    self: 1
+
+- type: entity
+  abstract: true
+  parent: EFSClothingOuterBase
+  id: EFSClothingOuterStorageBase
+  components:
+  - type: Storage
+    grid:
+    - 0,0,2,1
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: StaticPrice
+    price: 80
+  - type: ESWeight
+    self: 1

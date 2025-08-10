@@ -13,3 +13,6 @@ health-analyzer-window-scan-mode-active = АКТИВЕН
 health-analyzer-window-scan-mode-inactive = НЕАКТИВЕН
 health-analyzer-window-malnutrition = Тяжёлое недоедание
 health-analyzer-popup-scan-target = { CAPITALIZE($user) } пытается просканировать вас!
+
+health-analyzer-window-entity-hunger-total-text = Энергия:  {$amount}
+health-analyzer-window-entity-thirst-total-text = Вода:     {$amount}

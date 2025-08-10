@@ -1,0 +1,200 @@
+- type: Tag
+  id: EFSM4Barrel
+
+- type: Tag
+  id: EFSM4Forearm
+
+- type: Tag
+  id: EFSAdarForearm
+
+
+
+## BARRELS
+
+- type: entity
+  name: EFSM4BaseAttachmentBarrel
+  parent: BaseItem
+  id: EFSM4BaseAttachmentBarrel
+  abstract: true
+  description: "Сущность"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/barrels.rsi
+  - type: Tag
+    tags:
+      - EFSM4Barrel
+  - type: Attachment
+  - type: ESWeight
+    self: 0.3
+
+- type: entity
+  name: Глушитель Nt4
+  parent: EFSM4BaseAttachmentBarrel
+  id: EFSM4AttachmentBarrelNT4
+  description: "Сущность"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/barrels.rsi
+    state: nt4
+  - type: Tag
+    tags:
+      - EFSM4Barrel
+  - type: Attachment
+    sil: true
+
+## FOREARM
+
+- type: entity
+  name: EFSM4BaseAttachmentForearm
+  parent: BaseItem
+  id: EFSM4BaseAttachmentForearm
+  abstract: true
+  description: "Сущность"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/forearm.rsi
+  - type: Tag
+    tags:
+      - EFSM4Forearm
+  - type: Attachment
+
+- type: entity
+  name: Деревянное цевьё для Adar
+  parent: EFSM4BaseAttachmentForearm
+  id: EFSM4AttachmentForearmAdar
+  description: "Сущность"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/forearm.rsi
+    state: adar
+  - type: Tag
+    tags:
+      - EFSM4Forearm
+      - EFSAdarForearm
+  - type: Attachment
+
+- type: entity
+  name: Цевье MOE SL (Олива)
+  parent: EFSM4BaseAttachmentForearm
+  id: EFSM4AttachmentForearmMoeSlOlive
+  description: "Сущность"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/forearm.rsi
+    state: desert_moesl
+  - type: Tag
+    tags:
+      - EFSM4Forearm
+      - EFSAdarForearm
+  - type: Attachment
+    tags:
+      - EFSMoeGrip
+    newSlot: gun_grip
+
+- type: entity
+  name: Цевье MOE SL (Олива)
+  parent: EFSM4BaseAttachmentForearm
+  id: EFSM4AttachmentForearmMoeSlBlack
+  description: "Сущность"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/forearm.rsi
+    state: black_moesl
+  - type: Tag
+    tags:
+      - EFSM4Forearm
+      - EFSAdarForearm
+  - type: Attachment
+    tags:
+      - EFSMoeGrip
+    newSlot: gun_grip
+
+
+- type: entity
+  name: Цевье KAC
+  parent: EFSM4BaseAttachmentForearm
+  id: EFSM4AttachmentForearmKAC
+  description: "Сущность"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/forearm.rsi
+    state: kac
+  - type: Tag
+    tags:
+      - EFSM4Forearm
+  - type: Attachment
+    tags:
+      - EFSPicatiniGrip
+    newSlot: gun_grip
+
+- type: entity
+  name: Цевье Carbine Length
+  parent: EFSM4BaseAttachmentForearm
+  id: EFSM4AttachmentForearmM4A1
+  description: "Сущность"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/forearm.rsi
+    state: m4
+  - type: Tag
+    tags:
+      - EFSM4Forearm
+  - type: Attachment
+
+## Stock
+
+- type: entity
+  name: EFSM4BaseAttachmentStock
+  parent: BaseItem
+  id: EFSM4BaseAttachmentStock
+  abstract: true
+  description: "А я ебу чтоли"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/stock.rsi
+  - type: Tag
+    tags:
+      - EFSAkStock
+  - type: Attachment
+  - type: ESWeight
+    self: 0.3
+
+- type: entity
+  name: Приклад M4SS
+  parent: EFSM4BaseAttachmentStock
+  id: EFSM4AttachmentStockM4SS
+  description:
+  components:
+  - type: Sprite
+    state: m4ss
+  - type: Tag
+    tags:
+      - EFSTubeStock
+  - type: Attachment
+
+
+- type: entity
+  name: Приклад Gen2 (FDE)
+  parent: EFSM4BaseAttachmentStock
+  id: EFSM4AttachmentStockGen2Fde
+  description:
+  components:
+  - type: Sprite
+    state: fde-gen2
+  - type: Tag
+    tags:
+      - EFSTubeStock
+  - type: Attachment
+
+- type: entity
+  name: Приклад Ergo
+  parent: EFSM4BaseAttachmentStock
+  id: EFSM4AttachmentStockErgo
+  description:
+  components:
+  - type: Sprite
+    state: ergo
+  - type: Tag
+    tags:
+      - EFSTubeStock
+  - type: Attachment

@@ -1,0 +1,48 @@
+
+- type: entity
+  name: АК-101
+  suffix: Standart
+  parent: EFSBaseWeaponAk101
+  id: EFSWeaponRifleAk101
+  components:
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        priority: 0
+        whitelist:
+          tags:
+            - Cartridge5.56x45
+      gun_magazine:
+        # startingItem: EFSMagazineRifleBlack6L29
+        priority: 1
+        insertSound: /Audio/GG/Weapons/AK/in.ogg
+        ejectSound: /Audio/GG/Weapons/AK/out.ogg
+        whitelist:
+          tags:
+            - EFSMagazineRifleAk5.56x45
+      gun_suppressor:
+        whitelist:
+          tags:
+            - EFSM4Barrel
+      gun_receiver:
+        startingItem: EFSAkAttachmentReceiverStandart
+        whitelist:
+          tags:
+            - EFSAkReceiver
+      gun_stock:
+        startingItem: EFSAkAttachmentStock74m
+        whitelist:
+          tags:
+            - EFSAkStock
+      gun_forearm:
+        startingItem: EFSAkAttachmentForearmTubeAk74
+        whitelist:
+          tags:
+            - EFSAkForearm
+
+
+
+
+
+
+

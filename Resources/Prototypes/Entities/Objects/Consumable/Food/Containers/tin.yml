@@ -50,6 +50,8 @@
     damageContainer: Inorganic
   - type: StaticPrice
     price: 50
+  - type: ESWeight
+    self: 0.5
 
 - type: entity
   abstract: true
@@ -70,6 +72,8 @@
   - type: Tag
     tags:
     - Trash
+  - type: ESWeight
+    self: 0.5
 
 # Tins
 

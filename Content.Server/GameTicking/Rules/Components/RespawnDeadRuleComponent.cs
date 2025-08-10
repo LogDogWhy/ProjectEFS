@@ -11,4 +11,7 @@ public sealed partial class RespawnDeadRuleComponent : Component
     /// </summary>
     [DataField]
     public bool AlwaysRespawnDead;
+
+    [DataField]
+    public bool SendTolobby = false;
 }

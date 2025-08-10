@@ -1,0 +1,169 @@
+
+- type: dialogue
+  id: start
+  narratorText: "Здаров вояка!"
+  responses:
+    - text: "Я уже принёс предмет."
+      nextDialogueId: quest_check_yes
+      questCompleteId: "EFSQuestFindAndSecureTest"
+    - text: "Есть работа?"
+      nextDialogueId: quest_details
+    - text: "Что можешь рассказать?"
+      nextDialogueId: dialogue1
+    - text: "*Уйти*"
+      nextDialogueId: null
+
+- type: dialogue
+  id: dialogue1
+  narratorText: "Ну бью в баклуши, как видишь...."
+  responses:
+    - text: "Ясно..."
+      nextDialogueId: start
+    - text: "Мне не интересно."
+      nextDialogueId: null
+
+- type: dialogue
+  id: quest_details
+  narratorText: "Принеси мне предмет."
+  responses:
+    - text: "Будет сделанно!."
+      nextDialogueId: quest_bye
+      questId: "EFSQuestFindAndSecureTest"
+    - text: "Мне не интересно."
+      nextDialogueId: null
+
+- type: dialogue
+  id: quest_check_
+  narratorText: "Если ты это читаешь, то ты насрал в коде!"
+  responses:
+    - text: "БЛЯТЬ"
+      nextDialogueId: null
+
+- type: dialogue
+  id: quest_check_yes
+  narratorText: "Отлично! Хорошо сработано!"
+  responses:
+    - text: "*Уйти*"
+      nextDialogueId: null
+
+- type: dialogue
+  id: quest_check_find_artifact_no
+  narratorText: "Что? Ещё не нашёл? Ну так не стой столбом и вперёд!"
+  responses:
+    - text: "*Уйти*"
+      nextDialogueId: null
+
+- type: dialogue
+  id: quest_bye
+  narratorText: "Отлично, увидимся позже."
+  responses:
+    - text: "*Уйти*"
+      nextDialogueId: null
+
+- type: entity
+  id: EFSDialogueTest
+  parent: BaseStructure
+  name: Пися Чёткий
+  description: Болванчик для отладки
+  components:
+  - type: Rotatable
+  - type: Sprite
+    sprite: GG/Objects/Decoration/scav.rsi
+    state: test
+  - type: Transform
+    noRot: true
+  - type: Dialogue
+    startDialogueId: start
+  - type: InteractionOutline
+
+- type: entity
+  abstract: true
+  id: BaseObjective
+  components:
+  - type: Objective
+
+# - type: entity
+#   abstract: true
+#   parent: BaseObjective
+#   id: EFSBaseQuestObjective
+#   components:
+#   - type: Objective
+#     issuer: objective-issuer-syndicate
+
+# - type: entity
+#   abstract: true
+#   parent: BaseStealObjective
+#   id: BaseEFSQuestFindAndSecureTest
+#   components:
+#   - type: StealCondition
+#     objectiveNoOwnerText: objective-condition-steal-title-no-owner
+#     objectiveText: objective-condition-steal-title
+#     descriptionText: objective-condition-steal-description
+#     descriptionMultiplyText: objective-condition-thief-multiply-description
+
+- type: entity
+  parent: BaseItemTrakov
+  id: BitcoinTest
+  name: Биткоин TEST
+  description: Физический эквивалент криптовалюты Bitcoin номиналом 0.2BTC.
+  components:
+  - type: Sprite
+    state: bitcoin
+    scale: 0.5, 0.5
+  - type: StealTarget
+    stealGroup: RandomTask
+
+# - type: entity
+#   abstract: true
+#   parent: [BaseObjective, BaseStealObjective]
+#   id: EFSQuestFindAndSecureTest
+#   components:
+#   - type: StealCondition
+#     verifyMapExistence: false
+#   - type: Objective
+#     difficulty: 2.75
+
+# - type: entity
+#   abstract: true
+#   parent: EFSQuestFindAndSecureTest
+#   id: EFSQuestFindAndSecureObjective
+#   components:
+#   - type: StealCondition
+#     stealGroup: RandomTask
+#   - type: Objective
+#     difficulty: 1
+
+
+
+
+
+
+- type: entity
+  abstract: true
+  parent: BaseObjective
+  id: BaseTarkovObjective
+  components:
+  - type: Objective
+    issuer: objective-issuer-syndicate
+
+- type: entity
+  abstract: true
+  parent: [BaseTarkovObjective, BaseStealObjective]
+  id: BaseTarkovFindObjective
+  components:
+  - type: StealCondition
+    verifyMapExistence: false
+  - type: Objective
+    difficulty: 1
+
+
+- type: entity
+  parent: BaseTarkovFindObjective
+  id: TarkovFindObjective
+  components:
+  - type: StealCondition
+    stealGroup: RandomTask
+
+# - type: stealTargetGroup
+#   id: IDCard
+#   name: ID Cards (any)

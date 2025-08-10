@@ -1,0 +1,29 @@
+
+#by prazat911
+- type: entity
+  parent: ClothingHeadBase
+  id: ADTClothingHeadKillaHelmet
+  name: Шлем киллы
+  description: Защитный шлем «Маска-1» появился на вооружении в 1991 году, как замена шлему «Сфера». Личный шлем Киллы.
+  suffix: Halloween
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Head/Hats/Halloween/killahelmet.rsi
+  - type: Clothing
+    sprite: ADT/Clothing/Head/Hats/Halloween/killahelmet.rsi
+  - type: Reflect
+    reflectProb: 0.15
+  - type: Armor
+    modifiers:
+      coefficients:
+        Piercing: 0.87
+        Heat: 0.87
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.93
+  #   sprintModifier: 0.93
+  - type: ESWeight
+    self: 2.8
+
+

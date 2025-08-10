@@ -341,3 +341,35 @@
       itemIconStyle: NoItem
       useDelay: 1 # emote spam
       event: !type:ToggleActionEvent
+
+# Define the action entity itself.
+- type: entity
+  id: ActionActivateHealthAnalyzer
+  name: Проверить Здоровье
+  description: Ахуенный анализатор спрятанный в прямой кишке ЧВК
+  components:
+    - type: InstantAction
+      useDelay: 1
+      itemIconStyle: BigAction
+      priority: -20
+      icon:
+        sprite: GG/Interface/Icons/healthaction.rsi
+        state: base
+      event: !type:ActivateImplantEvent # Reference the concrete event type
+
+
+# Define the implant that uses this action.
+- type: entity
+  parent: BaseSubdermalImplant
+  id: EFsAssFuckingImplant
+  name: Статус ЧВК
+  description: Ахуенный анализатор спрятанный в прямой кишке ЧВК
+  categories: [HideSpawnMenu]
+  components:
+    - type: PlayerHealthAnalyzer
+    - type: SubdermalImplant
+      implantAction: ActionActivateHealthAnalyzer
+    - type: UserInterface
+      interfaces:
+        enum.HealthAnalyzerUiKey.Key:
+          type: HealthAnalyzerBoundUserInterface

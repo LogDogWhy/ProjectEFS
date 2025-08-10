@@ -1,0 +1,48 @@
+- type: Tag
+  id: EFSMagazineRifleAk5.56x45
+
+- type: entity
+  id: BaseMagazineRifle6L29
+  name: "Магазин 6Л29 5.56x45"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazineRifleAk5.56x45
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge5.56x45
+    capacity: 30
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    layers:
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: EFSMagazineRifleBlack6L29
+  name: "Магазин 6L29 Чёрный 5.56x45"
+  parent: BaseMagazineRifle6L29
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.56x45
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineAk5.56x45/101-black.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

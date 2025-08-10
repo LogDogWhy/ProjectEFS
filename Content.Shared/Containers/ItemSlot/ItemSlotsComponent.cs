@@ -71,6 +71,7 @@ namespace Content.Shared.Containers.ItemSlots
         [Access(typeof(ItemSlotsSystem), Other = AccessPermissions.ReadWriteExecute)]
         public EntityWhitelist? Whitelist;
 
+        [Access(typeof(ItemSlotsSystem), Other = AccessPermissions.ReadWriteExecute)]
         [DataField]
         public EntityWhitelist? Blacklist;
 

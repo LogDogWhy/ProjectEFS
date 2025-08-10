@@ -22,6 +22,7 @@ using Robust.Shared.Physics.Controllers;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared.Hands.EntitySystems;
 using PullableComponent = Content.Shared.Movement.Pulling.Components.PullableComponent;
 
 namespace Content.Shared.Movement.Systems
@@ -46,6 +47,8 @@ namespace Content.Shared.Movement.Systems
         [Dependency] protected readonly SharedPhysicsSystem Physics = default!;
         [Dependency] private   readonly SharedTransformSystem _transform = default!;
         [Dependency] private   readonly TagSystem _tags = default!;
+
+        [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
 
         protected EntityQuery<InputMoverComponent> MoverQuery;
         protected EntityQuery<MobMoverComponent> MobMoverQuery;
@@ -385,16 +388,17 @@ namespace Content.Shared.Movement.Systems
         protected abstract bool CanSound();
 
         private bool TryGetSound(
-            bool weightless,
-            EntityUid uid,
-            InputMoverComponent mover,
-            MobMoverComponent mobMover,
-            TransformComponent xform,
-            [NotNullWhen(true)] out SoundSpecifier? sound,
-            ContentTileDefinition? tileDef = null)
+    bool weightless,
+    EntityUid uid,
+    InputMoverComponent mover,
+    MobMoverComponent mobMover,
+    TransformComponent xform,
+    [NotNullWhen(true)] out SoundSpecifier? sound,
+    ContentTileDefinition? tileDef = null)
         {
             sound = null;
 
+            // Если звуки не могут воспроизводиться или у объекта нет тэга FootstepSound, возвращаем false
             if (!CanSound() || !_tags.HasTag(uid, "FootstepSound"))
                 return false;
 
@@ -430,21 +434,47 @@ namespace Content.Shared.Movement.Systems
 
             mobMover.StepSoundDistance -= distanceNeeded;
 
+            // Сначала проверяем FootstepModifierComponent на самом персонаже
             if (TryComp<FootstepModifierComponent>(uid, out var moverModifier))
             {
                 sound = moverModifier.FootstepSoundCollection;
-                return true;
             }
-
-            if (_inventory.TryGetSlotEntity(uid, "shoes", out var shoes) &&
-                TryComp<FootstepModifierComponent>(shoes, out var modifier))
+            // Проверяем, есть ли обувь с FootstepModifierComponent
+            else if (_inventory.TryGetSlotEntity(uid, "shoes", out var shoes) &&
+                    TryComp<FootstepModifierComponent>(shoes, out var modifier))
             {
                 sound = modifier.FootstepSoundCollection;
-                return true;
+            }
+            else
+            {
+                // Если не нашли никаких модификаторов, получаем звуки от поверхности (тайла)
+                TryGetFootstepSound(uid, xform, shoes != null, out sound, tileDef: tileDef);
             }
 
-            return TryGetFootstepSound(uid, xform, shoes != null, out sound, tileDef: tileDef);
+            // Проверка слотов рук на наличие предмета с компонентом WeaponCarryComponent
+
+            foreach (var hand in _handsSystem.EnumerateHands(uid))
+            {
+                if (_handsSystem.TryGetHand(uid, hand.Name, out var handslot) &&
+                    TryComp<WeaponCarryComponent>(handslot.HeldEntity, out var carryComponent))
+                    {
+                        var carrySound = carryComponent.CarrySoundCollection;
+
+                        if (carrySound != null)
+                        {
+                            var soundModifier = mover.Sprinting ? 3.5f : 1.5f;
+
+                            var audioParams = carrySound.Params
+                                .WithVolume(carrySound.Params.Volume + soundModifier)
+                                .WithVariation(carrySound.Params.Variation ?? mobMover.FootstepVariation);
+                            _audio.PlayPredicted(carrySound, uid, uid, audioParams);
+                        }
+                    }
+            }
+
+            return sound != null;
         }
+
 
         private bool TryGetFootstepSound(
             EntityUid uid,

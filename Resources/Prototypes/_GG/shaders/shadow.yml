@@ -1,0 +1,4 @@
+# - type: shader
+#   id: ShadowShader
+#   kind: source
+#   path: "GG/Shaders/shadow.swsl"

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "EFS",
+  "size": {
+    "x": 64,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "stelash"
+    },
+    {
+      "name": "carpet"
+    },
+    {
+      "name": "doublecrate"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+- type: job
+  id: USEC
+  name: ЧВК "USEC"
+  description: Постарайтесь не умереть.
+  startingGear: UsecGear
+  icon: "UsecFaction"
+  playTimeTracker: PmcUsec
+
+- type: startingGear
+  id: UsecGear
+  name: Набор Usec
+  inList: false
+  equipment:
+    shoes: ClothingShoesColorBlack
+    id: BadgeUSEC
+    # back: Fiiled_EFSClothingMilitaryBackpack
+
+- type: playTimeTracker
+  id: PmcUsec
+
+- type: entity
+  id: SpawnPointUSEC
+  parent: SpawnPointJobBase
+  name: Spawn Point USEC
+  components:
+  - type: SpawnPoint
+    job_id: USEC
+  - type: Sprite
+    layers:
+      - state: green
+      - state: hop
+
+- type: entity
+  id: SpawnPointUSECLateJoin
+  suffix: LateJoin
+  parent: SpawnPointJobBase
+  name: Spawn Point USEC
+  components:
+  - type: SpawnPoint
+    job_id: USEC
+    spawn_type: LateJoin
+  - type: Sprite
+    layers:
+      - state: green
+      - state: hop
+
+- type: entity
+  id: SpawnPointBear
+  parent: SpawnPointJobBase
+  name: passenger
+  components:
+  - type: SpawnPoint
+    job_id: Passenger
+  - type: Sprite
+    layers:
+      - state: green
+      - state: passenger

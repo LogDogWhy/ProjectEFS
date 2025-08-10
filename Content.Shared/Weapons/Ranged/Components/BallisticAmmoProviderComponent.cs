@@ -7,9 +7,10 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared.Weapons.Ranged.Components;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-public sealed partial class BallisticAmmoProviderComponent : Component
+public partial class BallisticAmmoProviderComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+
+    [ViewVariables(VVAccess.ReadWrite), DataField("soundRack"), AutoNetworkedField]
     public SoundSpecifier? SoundRack = new SoundPathSpecifier("/Audio/Weapons/Guns/Cock/smg_cock.ogg");
 
     [ViewVariables(VVAccess.ReadWrite), DataField]
@@ -41,8 +42,15 @@ public sealed partial class BallisticAmmoProviderComponent : Component
     /// <remarks>
     /// Set to false for entities like turrets to avoid users being able to cycle them.
     /// </remarks>
-    [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
+    [ViewVariables(VVAccess.ReadWrite), DataField("cycleable"), AutoNetworkedField]
     public bool Cycleable = true;
+
+    // Wizden fuck u
+    /// <summary>
+    /// Will the ammoprovider automatically cycle through rounds or does it need doing manually.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), DataField("autoCycle"), AutoNetworkedField]
+    public bool AutoCycle = true;
 
     /// <summary>
     /// Is it okay for this entity to directly transfer its valid ammunition into another provider?
@@ -55,4 +63,7 @@ public sealed partial class BallisticAmmoProviderComponent : Component
     /// </summary>
     [DataField]
     public TimeSpan FillDelay = TimeSpan.FromSeconds(0.5);
+
+    [ViewVariables(VVAccess.ReadWrite), DataField("boltClosed"), AutoNetworkedField]
+    public bool BoltClosed = true;
 }

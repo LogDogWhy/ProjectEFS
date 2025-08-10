@@ -1,0 +1,46 @@
+- type: stack
+  id: Salewa
+  name: Salewa
+  #icon: { sprite: "/GG/Medical/Medicine/medical.rsi", state: salewa }
+  spawn: Salewa
+  maxCount: 5
+
+- type: stack
+  id: Esmarh
+  name: Esmarh
+  #icon: { sprite: "/GG/Medical/Medicine/medical.rsi", state: esmarh }
+  spawn: Esmarh
+  maxCount: 1
+
+- type: stack
+  id: GoldStar
+  name: GoldStar
+  icon: { sprite: "/GG/Medical/Medicine/medical.rsi", state: star }
+  spawn: GoldStar
+  maxCount: 3
+
+- type: stack
+  id: CMS
+  name: CMS
+  icon: { sprite: "/GG/Medical/Medicine/medical.rsi", state: cms }
+  spawn: CMS
+  maxCount: 2
+
+- type: stack
+  id: Vazelin
+  name: Vazelin
+  icon: { sprite: "/GG/Medical/Medicine/medical.rsi", state: vaz }
+  spawn: Vazelin
+  maxCount: 3
+
+- type: stack
+  id: Ai
+  name: Ai
+  spawn: Ai
+  maxCount: 2
+
+- type: stack
+  id: Grizzly
+  name: Grizzly
+  spawn: Grizzly
+  maxCount: 10

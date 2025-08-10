@@ -14,6 +14,7 @@ namespace Content.Shared.Weapons.Ranged.Systems;
 public abstract partial class SharedGunSystem
 {
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
 
 
     protected virtual void InitializeBallistic()
@@ -201,6 +202,7 @@ public abstract partial class SharedGunSystem
         Audio.PlayPredicted(component.SoundRack, uid, user);
 
         var shots = GetBallisticShots(component);
+        component.Cycleable = true; // fix GG
         Cycle(uid, component, coordinates);
 
         var text = Loc.GetString(shots == 0 ? "gun-ballistic-cycled-empty" : "gun-ballistic-cycled");
@@ -237,10 +239,13 @@ public abstract partial class SharedGunSystem
         return component.Entities.Count + component.UnspawnedCount;
     }
 
-    private void OnBallisticTakeAmmo(EntityUid uid, BallisticAmmoProviderComponent component, TakeAmmoEvent args)
+ private void OnBallisticTakeAmmo(EntityUid uid, BallisticAmmoProviderComponent component, TakeAmmoEvent args)
     {
         for (var i = 0; i < args.Shots; i++)
         {
+            if (!component.Cycleable)
+                break;
+
             EntityUid entity;
 
             if (component.Entities.Count > 0)
@@ -248,6 +253,13 @@ public abstract partial class SharedGunSystem
                 entity = component.Entities[^1];
 
                 args.Ammo.Add((entity, EnsureShootable(entity)));
+        // GG
+                if (!component.AutoCycle)
+                {
+                    return;
+                }
+        // OLD RETURN
+
                 component.Entities.RemoveAt(component.Entities.Count - 1);
                 Containers.Remove(entity, component.Container);
             }
@@ -256,7 +268,25 @@ public abstract partial class SharedGunSystem
                 component.UnspawnedCount--;
                 entity = Spawn(component.Proto, args.Coordinates);
                 args.Ammo.Add((entity, EnsureShootable(entity)));
+
+                // GG
+                // Put it back in if it doesn't auto-cycle
+                if (HasComp<CartridgeAmmoComponent>(entity) && !component.AutoCycle)
+                {
+                    if (!IsClientSide(entity))
+                    {
+                        component.Entities.Add(entity);
+                        _containerSystem.Insert(entity,component.Container);
+
+                    }
+                    else
+                    {
+                        component.UnspawnedCount++;
+                    }
+                }
+                // OLD RETURN
             }
+
         }
 
         UpdateBallisticAppearance(uid, component);
@@ -286,3 +316,5 @@ public abstract partial class SharedGunSystem
 public sealed partial class AmmoFillDoAfterEvent : SimpleDoAfterEvent
 {
 }
+
+

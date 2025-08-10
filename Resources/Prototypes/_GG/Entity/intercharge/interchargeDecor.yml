@@ -1,0 +1,134 @@
+- type: entity
+  id: EFSDecorInterchargeBase
+  abstract: true
+  parent: BaseStructure
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Decoration/intercharge.rsi
+  - type: Transform
+    noRot: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb {}
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: InteractionOutline
+
+- type: entity
+  id: EFSDecorInterchargeCassa
+  parent: EFSDecorInterchargeBase
+  name: Касса
+  description: Может тут осталось что-нибудь...
+  components:
+  - type: Sprite
+    state: cassa
+    snapCardinals: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.1,0.2,0.1"
+        density: 190
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    noRot: true
+
+- type: entity
+  id: EFSDecorInterchargeDum2
+  parent: EFSDecorInterchargeBase
+  name: Маникен
+  description: Его легко спутать с человеком.
+  components:
+  - type: Sprite
+    state: dum2
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.04,0.5,-0.04,-0.4"
+        layer:
+        - WallLayer
+
+- type: entity
+  id: EFSDecorInterchargeVeshalka
+  parent: EFSDecorInterchargeBase
+  name: Вешелка с одеждой
+  description: По виду секнод-хенд.
+  components:
+  - type: Sprite
+    state: veshalka
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.04,0.5,-0.04,-0.4"
+        layer:
+        - WallLayer
+
+- type: entity
+  id: EFSDecorPolki
+  parent: EFSDecorBase
+  name: Полки
+  description: Ни пылинки.
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Decoration/intercharge.rsi
+    state: polki
+
+
+- type: entity
+  id: EFSDecorInterchargePolki
+  parent: EFSDecorPolki
+
+- type: entity
+  id: EFSDecorInterchargeStelash
+  parent: EFSDecorInterchargeBase
+  name: Стеллаж
+  description: Админ бомжара.
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Decoration/64.rsi
+    state: stelash
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.04,0.5,-0.04,-0.4"
+        layer:
+        - WallLayer
+
+- type: entity
+  id: EFSEscapeTile
+  components:
+  - type: Physics
+    bodyType: Static
+    fixedRotation: true
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        layer:
+          - LowImpassable
+  - type: Sprite
+    texture: "GG/Interface/Icons/escape.png"
+  - type: GGEscapeTile
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    stepOn: true
+

@@ -1,0 +1,64 @@
+- type: Tag
+  id: EFSUMPBarrel
+
+- type: Tag
+  id: EFS9x19Barrel
+
+- type: Tag
+  id: EFS12GBarrel
+
+- type: entity
+  name: EFSBaseAttachmentBarrel
+  parent: BaseItem
+  id: EFSBaseAttachmentBarrel
+  abstract: true
+  description: "Сущность"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/barrels.rsi
+  - type: Tag
+  - type: Attachment
+  - type: ESWeight
+    self: 0.3
+
+- type: entity
+  name: Глушитель Omega 45k
+  parent: EFSBaseAttachmentBarrel
+  id: EFSAttachmentUMPBarrelOmega
+  description: SilencerCo "Omega 45K" - универсальный глушитель, самый маленький, легкий и бесшумный глушитель в своем классе. Специфицирован для автоматической стрельбы и может использоваться с пистолетами, винтовками и пистолетами-пулеметами, обеспечивая исключительную надежность в сверхкомпактном корпусе.
+  components:
+  - type: Sprite
+    state: omega
+  - type: Attachment
+    sil: true
+  - type: Tag
+    tags:
+      - EFSUMPBarrel
+
+- type: entity
+  name: Глушитель Illusion
+  parent: EFSBaseAttachmentBarrel
+  id: EFSAttachment9x19BarrelIllusion
+  description: WIP
+  components:
+  - type: Sprite
+    state: illusion
+  - type: Attachment
+    sil: true
+  - type: Tag
+    tags:
+      - EFS9x19Barrel
+
+- type: entity
+  name: Глушитель Savivo
+  parent: EFSBaseAttachmentBarrel
+  id: EFSAttachment9x19BarrelSavivo
+  description: WIP
+  components:
+  - type: Sprite
+    state: savivo
+  - type: Attachment
+    sil: true
+  - type: Tag
+    tags:
+      - EFS12GBarrel

@@ -1,0 +1,772 @@
+# PointsCostLoadoutEffect
+
+
+- type: startingGear
+  id: DefaultCamo
+  equipment:
+    jumpsuit: ClothingUniformBear
+
+- type: startingGear
+  id: BrownCamo
+  equipment:
+    jumpsuit: ClothingUniformEFS_1
+
+- type: startingGear
+  id: MatroskaCamo
+  equipment:
+    jumpsuit: ClothingUniformMatroska
+
+- type: startingGear
+  id: DefaultCamoUsec
+  equipment:
+    jumpsuit: ClothingUniformUsec
+
+- type: startingGear
+  id: SandCamoUsec
+  equipment:
+    jumpsuit: ClothingUniformEFS_Sandstorm
+
+- type: startingGear
+  id: HoodieCamoUsec
+  equipment:
+    jumpsuit: ClothingUniformEFS_Hoodie
+
+- type: startingGear
+  id: YellowAndBlackCamo
+  equipment:
+    jumpsuit: ClothingUniformScavYellowAndBlack
+
+- type: startingGear
+  id: RussiaCamo
+  equipment:
+    jumpsuit: ClothingUniformEFS_Russia
+
+- type: startingGear
+  id: AbibasBlackSuit
+  equipment:
+    jumpsuit: ADTClothingUniformAbibasBlackSuit
+    shoes: ClothingShoesColorBlack
+
+- type: startingGear
+  id: TagillaSuit
+  equipment:
+    jumpsuit: ADTTagillaSuit
+    shoes: ClothingShoesColorBlack
+
+##################################
+
+- type: startingGear
+  id: BlackCap
+  equipment:
+    head: EFSHatBlackCap
+
+- type: startingGear
+  id: HatBomber
+  equipment:
+    head: EFSHatBomber
+
+- type: startingGear
+  id: PomPon
+  equipment:
+    head: EFSHatPomPon
+
+- type: startingGear
+  id: HelmetSH68
+  equipment:
+    head: EFSHelmetSH68
+
+- type: startingGear
+  id: HelmetAltyn
+  equipment:
+    head: EFSHelmetAltyn
+
+- type: startingGear
+  id: HelmetRys
+  equipment:
+    head: EFSHelmetRys
+
+- type: startingGear
+  id: HelmetSfera94
+  equipment:
+    head: EFSHelmetSfera94
+
+- type: startingGear
+  id: HelmetUlachTan
+  equipment:
+    head: EFSHelmetUlachTan
+
+- type: startingGear
+  id: HelmetExfilDark
+  equipment:
+    head: EFSHelmetExfilDark
+
+- type: startingGear
+  id: KillaHelmet
+  equipment:
+    head: ADTClothingHeadKillaHelmet
+
+- type: startingGear
+  id: TagillaHelmet
+  equipment:
+    head: ADTClothingHeadHatTagilla
+
+##################################
+
+
+- type: startingGear
+  id: ArmbandBlue
+  equipment:
+    neck: EFSArmbandBlue
+
+- type: startingGear
+  id: ArmbandRed
+  equipment:
+    neck: EFSArmbandRed
+
+- type: startingGear
+  id: ArmbandGreen
+  equipment:
+    neck: EFSArmbandGreen
+
+- type: startingGear
+  id: ArmbandYellow
+  equipment:
+    neck: EFSArmbandYellow
+
+##################################
+
+- type: startingGear
+  id: MilitaryBackpack
+  equipment:
+    back: Fiiled_EFSClothingMilitaryBackpack
+
+##################################
+
+- type: startingGear
+  id: RPSHolder
+  equipment:
+    belt: ClothingBeltRPSholder
+
+- type: startingGear
+  id: BankRobberHolder
+  equipment:
+    belt: ClothingBeltBANKROBBERholder
+
+- type: startingGear
+  id: ScavHolder
+  equipment:
+    belt: ClothingBeltSCAVBELTholder
+
+- type: startingGear
+  id: TritonHolder
+  equipment:
+    belt: ADTClothingBeltKilla
+
+##################################
+
+- type: startingGear
+  id: ArmorPress
+  equipment:
+    outerClothing: EFSArmorPress
+
+- type: startingGear
+  id: Armor6B13
+  equipment:
+    outerClothing: EFSArmor6B13
+
+- type: startingGear
+  id: ArmorBagariy
+  equipment:
+    outerClothing: EFSArmorBagariy
+
+- type: startingGear
+  id: ArmorModule3M
+  equipment:
+    outerClothing: EFSArmorModule3M
+
+- type: startingGear
+  id: ArmorTrooperTFO
+  equipment:
+    outerClothing: EFSArmorTrooperTFO
+
+- type: startingGear
+  id: ArmorNFMTHOR
+  equipment:
+    outerClothing: EFSArmorNFMTHOR
+
+- type: startingGear
+  id: Armor6B43
+  equipment:
+    outerClothing: EFSArmor6B43
+
+- type: startingGear
+  id: ArmorGearAVS
+  equipment:
+    outerClothing: EFSArmorGearAVS
+
+- type: startingGear
+  id: TagillaArmor
+  equipment:
+    outerClothing: ADTTagillaArmor
+
+- type: startingGear
+  id: KillaArmor
+  equipment:
+    outerClothing: ADTKillaArmor
+
+- type: startingGear
+  id: None
+
+#######################################
+
+- type: startingGear
+  id: MosinT
+  storage:
+    back:
+    - EFSWeaponSniperMosin
+    - MagazineBoxRifle7.62x54R
+
+- type: startingGear
+  id: Kedr91
+  storage:
+    back:
+    - EFSWeaponSubMachineKedr91
+    - EFSMagazineKedr30
+    - EFSMagazineKedr30
+
+- type: startingGear
+  id: SKS
+  storage:
+    back:
+    - EFSWeaponRifleSKS
+    - MagazineBoxRifleBig7.62x39
+
+- type: startingGear
+  id: M700
+  storage:
+    back:
+    - EFSWeaponSniperM700
+    - EFSMagazineRifleAICS
+    - EFSMagazineRifleAICS
+
+- type: startingGear
+  id: G28
+  storage:
+    back:
+    - EFSWeaponSniperG28
+    - EFSMagazineRifleG28
+    - EFSMagazineRifleG28
+
+- type: startingGear
+  id: MP5
+  storage:
+    back:
+    - EFSWeaponSubMachineGunMP5
+    - EFSMagazinePistolMP5
+    - EFSMagazinePistolMP5
+
+- type: startingGear
+  id: UMP
+  storage:
+    back:
+    - EFSWeaponSubMachineGunUMP
+    - EFSMagazinePistolUMP
+    - EFSMagazinePistolUMP
+
+- type: startingGear
+  id: ShotgunM3
+  storage:
+    back:
+    - WeaponShotgunM3
+    - MagazineShotgun
+    - MagazineShotgun
+
+- type: startingGear
+  id: MagazineShotgun
+  storage:
+    back:
+    - MagazineShotgun
+    - MagazineShotgun
+
+- type: startingGear
+  id: VeprKm
+  storage:
+    back:
+    - EFSWeaponRifleAkmVepr
+    - EFSMagazineRifleАКМRebro
+    - EFSMagazineRifleАКМRebro
+
+- type: startingGear
+  id: VeprHunter
+  storage:
+    back:
+    - EFSWeaponSniperVeprHunter
+    - EFSMagazineRifleVepr
+    - EFSMagazineRifleVepr
+
+
+- type: startingGear
+  id: Ak74m
+  storage:
+    back:
+    - EFSWeaponRifleAk74M
+    - EFSMagazineRifleBlack6L23
+    - EFSMagazineRifleBlack6L23
+
+- type: startingGear
+  id: Akm
+  storage:
+    back:
+    - EFSWeaponRifleAkm
+    - EFSMagazineRifleАКМRebro
+    - EFSMagazineRifleАКМRebro
+
+- type: startingGear
+  id: SVD
+  storage:
+    back:
+    - EFSWeaponSniperSVD
+    - EFSMagazineRifleSVD
+    - EFSMagazineRifleSVD
+
+- type: startingGear
+  id: VSS
+  storage:
+    back:
+    - EFSWeaponRifleVSS
+    - EFSMagazineRifle6L25
+    - EFSMagazineRifle6L25
+
+- type: startingGear
+  id: M4A1
+  storage:
+    back:
+    - EFSWeaponRifleM4A1
+    - EFSMagazineRifleGEN3
+    - EFSMagazineRifleGEN3
+
+- type: startingGear
+  id: Ak74
+  storage:
+    back:
+    - EFSWeaponRifleAk74
+    - EFSMagazineRifle6L23
+    - EFSMagazineRifle6L23
+
+- type: startingGear
+  id: SA58
+  storage:
+    back:
+    - EFSWeaponRifleSA58
+    - EFSMagazineRifleKAC
+    - EFSMagazineRifleKAC
+
+- type: startingGear
+  id: Adar
+  storage:
+    back:
+    - EFSWeaponRifleAdar
+    - EFSMagazineRifleSTANAG
+    - EFSMagazineRifleSTANAG
+
+- type: startingGear
+  id: MDR556
+  storage:
+    back:
+    - EFSWeaponRifleMDR556
+    - EFSMagazineRifleGEN3
+    - EFSMagazineRifleSTANAG
+
+- type: startingGear
+  id: MDR762
+  storage:
+    back:
+    - EFSWeaponRifleMDR762
+    - EFSMagazineRifleKAC
+    - EFSMagazineRifleKAC
+
+- type: startingGear
+  id: Glock18
+  storage:
+    back:
+    - EFSWeaponPistolGlock
+    - EFSMagazinePistolGlock
+
+- type: startingGear
+  id: Grach
+  storage:
+    back:
+    - EFSWeaponPistolGrach
+    - EFSMagazinePistolGrach
+
+- type: startingGear
+  id: PM
+  storage:
+    back:
+    - EFSWeaponPistolPM
+    - EFSMagazinePistol90-93
+
+- type: startingGear
+  id: Colt
+  storage:
+    back:
+    - EFSWeaponPistolColt
+    - EFSMagazinePistolColt
+
+- type: startingGear
+  id: Aksu
+  storage:
+    back:
+    - EFSWeaponRifleAks74u
+    - EFSMagazineRifleBlack6L23
+    - EFSMagazineRifleBlack6L23
+
+- type: startingGear
+  id: Saiga
+  storage:
+    back:
+    - EFSWeaponShotgunSaiga12
+    - EFSMagazineRifleSaiga
+    - EFSMagazineRifleSaiga
+
+- type: startingGear
+  id: Vitya
+  storage:
+    back:
+    - EFSWeaponSubMachineVitya
+    - EFSMagazinePistolVitya
+    - EFSMagazinePistolVitya
+
+- type: startingGear
+  id: PMScav
+  storage:
+    back:
+    - EFSWeaponPistolPMScav
+    - EFSMagazinePistol90-93
+
+##################################################\
+
+- type: startingGear
+  id: BoxPistol9x19
+  storage:
+    back:
+    - MagazineBoxPistol9x19
+    - MagazineBoxPistol9x19
+
+- type: startingGear
+  id: BoxPistol9x19b
+  storage:
+    back:
+    - MagazineBoxPistol9x19b
+    - MagazineBoxPistol9x19b
+
+- type: startingGear
+  id: BoxPistol.45
+  storage:
+    back:
+    - MagazineBoxPistol.45
+    - MagazineBoxPistol.45
+
+- type: startingGear
+  id: BoxPistol.45b
+  storage:
+    back:
+    - MagazineBoxPistol.45b
+    - MagazineBoxPistol.45b
+
+- type: startingGear
+  id: Box9x39
+  storage:
+    back:
+    - MagazineBox9x39
+    - MagazineBox9x39
+
+- type: startingGear
+  id: Box9x39b
+  storage:
+    back:
+      - MagazineBox9x39b
+      - MagazineBox9x39b
+
+- type: startingGear
+  id: BoxRifleBig7.62x39
+  storage:
+    back:
+      - MagazineBoxRifleBig7.62x39
+      - MagazineBoxRifleBig7.62x39
+
+- type: startingGear
+  id: BoxRifleBig7.62x39b
+  storage:
+    back:
+    - MagazineBoxRifleBig7.62x39b
+    - MagazineBoxRifleBig7.62x39b
+
+- type: startingGear
+  id: BoxRifle5.45x39
+  storage:
+    back:
+    - MagazineBoxRifle5.45x39
+    - MagazineBoxRifle5.45x39
+
+- type: startingGear
+  id: BoxRifle5.45x39b
+  storage:
+    back:
+    - MagazineBoxRifle5.45x39b
+    - MagazineBoxRifle5.45x39b
+
+- type: startingGear
+  id: BoxRifle5.56x45
+  storage:
+    back:
+    - MagazineBoxRifle5.56x45
+    - MagazineBoxRifle5.56x45
+
+- type: startingGear
+  id: BoxRifle5.56x45b
+  storage:
+    back:
+    - MagazineBoxRifle5.56x45b
+    - MagazineBoxRifle5.56x45b
+
+
+- type: startingGear
+  id: BoxPistol9x18
+  storage:
+    back:
+    - MagazineBoxPistol9x18
+    - MagazineBoxPistol9x18
+
+- type: startingGear
+  id: BoxPistol9x18b
+  storage:
+    back:
+    - MagazineBoxPistol9x18b
+    - MagazineBoxPistol9x18b
+
+- type: startingGear
+  id: BoxRifle7.62x54R
+  storage:
+    back:
+    - MagazineBoxRifle7.62x54R
+    - MagazineBoxRifle7.62x54R
+
+- type: startingGear
+  id: BoxRifle7.62x54Rb
+  storage:
+    back:
+    - MagazineBoxRifle7.62x54Rb
+    - MagazineBoxRifle7.62x54Rb
+
+- type: startingGear
+  id: BoxRifle7.62x51
+  storage:
+    back:
+    - MagazineBoxRifle7.62x51
+    - MagazineBoxRifle7.62x51
+
+- type: startingGear
+  id: BoxRifle7.62x51b
+  storage:
+    back:
+    - MagazineBoxRifle7.62x51b
+    - MagazineBoxRifle7.62x51b
+
+
+#################################
+
+- type: startingGear
+  id: 6x3Knife
+  storage:
+    back:
+    - EFS6x3Knife
+
+- type: startingGear
+  id: KukriKnife
+  storage:
+    back:
+    - EFSKukriKnife
+
+- type: startingGear
+  id: TagillaHammer
+  storage:
+    back:
+    - ADTTagillaSledgehammerReal
+
+
+############################
+
+
+- type: startingGear
+  id: FingerlessGloves
+  equipment:
+    gloves: ClothingHandsGlovesFingerless
+
+- type: startingGear
+  id: TacticalGloves
+  equipment:
+    gloves: ClothingHandsGlovesCombat
+
+- type: startingGear
+  id: YellowGloves
+  equipment:
+    gloves: ClothingHandsGlovesColorYellow
+
+- type: startingGear
+  id: TagillaGloves
+  equipment:
+    gloves: ADTRedMartialArtsGloves
+
+
+############################
+
+- type: startingGear
+  id: ColdFearMask
+  equipment:
+    mask: ClothingMaskCF
+
+- type: startingGear
+  id: HalfMask
+  equipment:
+    mask: ClothingMaskEFS_HalfMask
+
+- type: startingGear
+  id: BlackGlasses
+  equipment:
+    eyes: ClothingEyesGlassesSunglasses
+
+- type: startingGear
+  id: FlashlightSecliteMenu
+  storage:
+    back:
+    - FlashlightSeclite
+
+
+############################
+
+- type: startingGear
+  id: CMSMenu
+  storage:
+    back:
+    - CMS
+
+- type: startingGear
+  id: GoldStarMenu
+  storage:
+    back:
+    - GoldStar
+
+- type: startingGear
+  id: EFSMedGrizzlyMenu
+  storage:
+    back:
+    - EFSMedGrizzly
+
+- type: startingGear
+  id: EFSMedAi2Menu
+  storage:
+    back:
+    - EFSMedAi2
+
+- type: startingGear
+  id: PropitalPenMenu
+  storage:
+    back:
+    - PropitalPen
+
+- type: startingGear
+  id: AdrenalinePenMenu
+  storage:
+    back:
+    - AdrenalinePen
+
+- type: startingGear
+  id: MorphinePenMenu
+  storage:
+    back:
+    - EFSMorphinePen
+
+- type: startingGear
+  id: TrimadolPenMenu
+  storage:
+    back:
+    - EFSTrimadolPen
+
+- type: startingGear
+  id: ZagustinPenMenu
+  storage:
+    back:
+    - ZagustinPen
+
+- type: startingGear
+  id: EFSSJ1PenMenu
+  storage:
+    back:
+    - EFSSJ1Pen
+
+- type: startingGear
+  id: EFSPerfotoranPenMenu
+  storage:
+    back:
+    - EFSPerfotoranPen
+
+###############################
+
+- type: startingGear
+  id: F1Grenade
+  storage:
+    back:
+    - ExGrenade
+
+- type: startingGear
+  id: GrenadeFlash
+  storage:
+    back:
+    - GrenadeFlashBang
+
+- type: startingGear
+  id: Soap
+  storage:
+    back:
+    - EFSSBEYSoap
+
+
+
+
+
+
+
+
+
+
+
+- type: startingGear
+  id: ScavSet1
+  equipment:
+    outerClothing: EFSArmorPress
+    head: EFSHatBlackCap
+    jumpsuit: ClothingUniformScavYellowAndBlack
+    shoes: ClothingShoesColorBlack
+    back: ClothingMilitaryBackpack
+  storage:
+    back:
+      - MagazineBoxRifle7.62x54R
+      - MagazineBoxRifle7.62x54R
+  inhand:
+    - EFSWeaponSniperMosin
+
+- type: startingGear
+  id: ScavSet2
+  equipment:
+    outerClothing: EFSArmorModule3M
+    head: EFSHelmetSH68
+    jumpsuit: ClothingUniformEFS_Russia
+    shoes: ClothingShoesColorBlack
+    back: ClothingMilitaryBackpack
+  storage:
+    back:
+      - EFSMagazineRifleАКМRebro
+      - EFSMagazineRifleАКМRebro
+  inhand:
+    - EFSWeaponRifleAkmVepr

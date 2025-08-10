@@ -1,0 +1,240 @@
+- type: entity
+  name: Гемостатическое средство "Загустин"
+  parent: ChemicalMedipen
+  id: ZagustinPen
+  description: Военный препарат. Ингибирует активаторы профибринолизина и тормозит его превращение в фибринолизин. Временно останавливает кровотечение и повышает устойчивость к новым. Имеет побочные эффекты. Приводит к сильной дегидратации.
+  components:
+  - type: Sprite
+    sprite: GG/Medical/Injectors/stimulator.rsi
+    scale: 0.5, 0.5
+    layers:
+    - state: zagustin
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: zagustin_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+          - ReagentId: Zagustin
+            Quantity: 15
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: Шприц с адреналином
+  parent: ChemicalMedipen
+  id: AdrenalinePen
+  description: Стерильный одноразовый шприц с дозой адреналина - основного гормона мозгового вещества надпочечников. Используется для усиления физиологической реакции, связанной с подготовкой всех мышц к повышенной активности. Временно повышает силу, выносливость. Снимает ощущение боли.
+  components:
+  - type: Sprite
+    sprite: GG/Medical/Injectors/stimulator.rsi
+    scale: 0.5, 0.5
+    layers:
+    - state: adrenaline
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: adrenaline_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+          - ReagentId: Adrenaline
+            Quantity: 15
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: Регенеративный препарат "Пропитал"
+  parent: ChemicalMedipen
+  id: PropitalPen
+  description: Военный препарат. Стимулирует процессы регенерации, за счет усиления биосинтеза пуриновых и пиримидиновых оснований, РНК, функциональных и ферментативных клеточных элементов. Повышает метаболизм, здоровье и жизнеспособность. Имеет длительные побочные эффекты. Разрешено использовать только военным врачам и фельдшерам.
+  components:
+  - type: Sprite
+    sprite: GG/Medical/Injectors/stimulator.rsi
+    scale: 0.5, 0.5
+    layers:
+    - state: propital
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: propital_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+          - ReagentId: Propital
+            Quantity: 15
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: Шприц с морфием
+  parent: ChemicalMedipen
+  id: EFSMorphinePen
+  description: Стерильный одноразовый шприц с дозой морфия - сильного наркотического анальгетика, применяющегося для снятия сильных болевых ощущений, как острых, так и хронических.
+  components:
+  - type: Sprite
+    sprite: GG/Medical/Injectors/stimulator.rsi
+    scale: 0.5, 0.5
+    layers:
+    - state: morphine
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: morphine_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 1
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 1
+        reagents:
+          - ReagentId: Morphine
+            Quantity: 1
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: Стимулятор "Тримадол"
+  parent: ChemicalMedipen
+  id: EFSTrimadolPen
+  description: Опиоидный синтетический анальгетик, разработанный для бойцов спецподразделений. Обладает центральным действием и действием на спинной мозг (способствует открытию К+ и Са2+ каналов, вызывает гиперполяризацию мембран и тормозит проведение болевых импульсов). Повышает боевые характеристики. Передозировка приводит к истощению организма после окончания действия.
+  components:
+  - type: Sprite
+    sprite: GG/Medical/Injectors/stimulator.rsi
+    scale: 0.5, 0.5
+    layers:
+    - state: trimadol
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: trimadol_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+          - ReagentId: RecoilReducer
+            Quantity: 15
+  - type: Tag
+    tags: []
+
+
+- type: entity
+  name: Стимулятор "Перфоторан"
+  parent: ChemicalMedipen
+  id: EFSPerfotoranPen
+  description: Кровезаменитель с функцией переноса кислорода, применяется. Разработан советскими учеными в 80-е годы. Представляет собой субмикронную эмульсию на основе ПФО-соединений. Попадание в кровь препарата временно ускоряет метаболизм и кровообращение.
+  components:
+  - type: Sprite
+    sprite: GG/Medical/Injectors/stimulator.rsi
+    scale: 0.5, 0.5
+    layers:
+    - state: perfotoran
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: perfotoran_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+          - ReagentId: Perfotoran
+            Quantity: 15
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: Стимулятор "SJ1"
+  parent: ChemicalMedipen
+  id: EFSSJ1Pen
+  description: Боевой стимулятор. Используется для увеличения силы и выносливости перед боем. Разрешен к применению бойцами спецподразделений. Разработан TerraGroup Labs, с маркировкой SJ1. Имеет побочные эффекты.
+  components:
+  - type: Sprite
+    sprite: GG/Medical/Injectors/stimulator.rsi
+    scale: 0.5, 0.5
+    layers:
+    - state: sj1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: sj1_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+          - ReagentId: SJ1
+            Quantity: 15
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: Стимулятор "SJ12"
+  parent: ChemicalMedipen
+  id: EFSSJ12Pen
+  description: Разработан для бойцов спецподразделений. Замедляет работу некоторых функций организма и они временно начинают работать с профицитом потребления энергии.
+  components:
+  - type: Sprite
+    sprite: GG/Medical/Injectors/stimulator.rsi
+    scale: 0.5, 0.5
+    layers:
+    - state: sj12
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: sj12_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+          - ReagentId: SJ_12
+            Quantity: 15
+  - type: Tag
+    tags: []

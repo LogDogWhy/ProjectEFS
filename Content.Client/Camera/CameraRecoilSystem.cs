@@ -9,20 +9,15 @@ public sealed class CameraRecoilSystem : SharedCameraRecoilSystem
 {
     [Dependency] private readonly IConfigurationManager _configManager = default!;
 
-    private float _intensity;
+    private float _intensity = 1f;
 
     public override void Initialize()
     {
         base.Initialize();
         SubscribeNetworkEvent<CameraKickEvent>(OnCameraKick);
 
-        Subs.CVar(_configManager, CCVars.ScreenShakeIntensity, OnCvarChanged, true);
     }
 
-    private void OnCvarChanged(float value)
-    {
-        _intensity = value;
-    }
 
     private void OnCameraKick(CameraKickEvent ev)
     {
@@ -37,7 +32,7 @@ public sealed class CameraRecoilSystem : SharedCameraRecoilSystem
         if (!Resolve(uid, ref component, false))
             return;
 
-        recoil *= _intensity;
+        recoil *= _intensity * component.Modificator; // GG
 
         // Use really bad math to "dampen" kicks when we're already kicked.
         var existing = component.CurrentKick.Length();

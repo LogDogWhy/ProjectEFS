@@ -1,6 +1,7 @@
 using Content.Shared.Damage.Components;
 using Content.Shared.FixedPoint;
 using Content.Shared.Movement.Systems;
+using Content.Shared.GG.Drugs;
 
 namespace Content.Shared.Damage
 {
@@ -18,6 +19,12 @@ namespace Content.Shared.Damage
 
         private void OnRefreshMovespeed(EntityUid uid, SlowOnDamageComponent component, RefreshMovementSpeedModifiersEvent args)
         {
+            if (EntityManager.HasComponent<PainKillerComponent>(uid))
+            {
+                args.ModifySpeed(1, 1);
+                return;
+            }
+
             if (!EntityManager.TryGetComponent<DamageableComponent>(uid, out var damage))
                 return;
 

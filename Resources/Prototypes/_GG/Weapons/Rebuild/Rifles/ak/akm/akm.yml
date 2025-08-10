@@ -1,0 +1,140 @@
+
+
+##############################################
+
+- type: entity
+  name: АКМ
+  suffix: Standart
+  parent: EFSBaseWeaponAkm
+  id: EFSWeaponRifleAkm
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        priority: 0
+        startingItem: EFSMagazineRifleАКМOrange
+        insertSound: /Audio/GG/Weapons/AK/in.ogg
+        ejectSound: /Audio/GG/Weapons/AK/out.ogg
+        whitelist:
+          tags:
+            - EFSMagazineRifle7.62x39
+      gun_suppressor:
+        startingItem: EFSAkmAttachmentBarrel6p1
+        whitelist:
+          tags:
+            - EFSAkmBarrel
+      gun_receiver:
+        startingItem: EFSAkAttachmentReceiverStandart
+        whitelist:
+          tags:
+            - EFSAkReceiver
+      gun_stock:
+        startingItem: EFSAkAttachmentStockAKM
+        whitelist:
+          tags:
+            - EFSAkStock
+      gun_forearm:
+        startingItem: EFSAkAttachmentForearm
+        whitelist:
+          tags:
+            - EFSAkForearm
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge7.62x39
+        priority: 1
+        whitelist:
+          tags:
+            - EFSMagazineRifle7.62x39
+
+- type: entity
+  name: АКМН
+  suffix: Standart
+  parent: EFSBaseWeaponAkmN
+  id: EFSWeaponRifleAkmN
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        priority: 0
+        startingItem: EFSMagazineRifleАКМOrange
+        insertSound: /Audio/GG/Weapons/AK/in.ogg
+        ejectSound: /Audio/GG/Weapons/AK/out.ogg
+        whitelist:
+          tags:
+            - EFSMagazineRifle7.62x39
+      gun_suppressor:
+        startingItem: EFSAkmAttachmentBarrel6p1
+        whitelist:
+          tags:
+            - EFSAkmBarrel
+      gun_receiver:
+        startingItem: EFSAkAttachmentReceiverStandart
+        whitelist:
+          tags:
+            - EFSAkReceiver
+      gun_stock:
+        startingItem: EFSAkAttachmentStockAKM
+        whitelist:
+          tags:
+            - EFSAkStock
+      gun_forearm:
+        startingItem: EFSAkAttachmentForearm
+        whitelist:
+          tags:
+            - EFSAkForearm
+      gun_scope:
+        priority: 7
+        whitelist:
+          tags:
+            - EFSNScope
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge7.62x39
+        priority: 1
+        whitelist:
+          tags:
+            - EFSMagazineRifle7.62x39
+
+
+- type: entity
+  name: Вепрь-Ак
+  suffix: Standart
+  parent: EFSBaseWeaponAkmVepr
+  id: EFSWeaponRifleAkmVepr
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        priority: 0
+        startingItem: EFSMagazineRifleАКМRebro
+        insertSound: /Audio/GG/Weapons/AK/in.ogg
+        ejectSound: /Audio/GG/Weapons/AK/out.ogg
+        whitelist:
+          tags:
+            - EFSMagazineRifle7.62x39
+      gun_suppressor:
+        whitelist:
+          tags:
+            - EFSAkmBarrel
+      gun_receiver:
+        startingItem: EFSAkAttachmentReceiverStandart
+        whitelist:
+          tags:
+            - EFSAkReceiver
+      gun_stock:
+        startingItem: EFSAkAttachmentStockVPO
+        whitelist:
+          tags:
+            - EFSAkStock
+      gun_forearm:
+        startingItem: EFSAkAttachmentForearmTubeVpo
+        whitelist:
+          tags:
+            - EFSAkForearm
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge7.62x39
+        priority: 1
+        whitelist:
+          tags:
+            - EFSMagazineRifle7.62x39

@@ -24,15 +24,26 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
     [DataField]
     public Dictionary<ProtoId<LoadoutGroupPrototype>, List<Loadout>> SelectedLoadouts = new();
 
-    /*
-     * Loadout-specific data used for validation.
-     */
+    // GG - start
+    private int _points = 20;
 
-    public int? Points;
 
+    [DataField]
+    public int Points
+    {
+        get => _points;
+        private set => _points = value;
+    }
+
+    //GG
     public RoleLoadout(ProtoId<RoleLoadoutPrototype> role)
     {
         Role = role;
+    }
+
+    public void DeductPoints(int cost)
+    {
+        Points -= cost;
     }
 
     public RoleLoadout Clone()
@@ -73,7 +84,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
         }
 
         // Reset points to recalculate.
-        Points = roleProto.Points;
+        // Points = roleProto.Points;
 
         foreach (var (group, groupLoadouts) in SelectedLoadouts)
         {
@@ -185,7 +196,15 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
         {
             effect.Apply(this);
         }
+        Points = Points; // GG - Change
     }
+
+    // GG - Start
+    public void SetPoints(int points)
+    {
+        Points = points;
+    }
+    // GG - End
 
     /// <summary>
     /// Resets the selected loadouts to default if no data is present.

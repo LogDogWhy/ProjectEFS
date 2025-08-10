@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "By Prazat, Randy, Logdog(LongCock) and sechenovdmitrii",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "akali"
+    },
+    {
+      "name": "bats"
+    },
+    {
+      "name": "bitcoin"
+    },
+    {
+      "name": "bolts"
+    },
+    {
+      "name": "cable"
+    },
+    {
+      "name": "Bpowder"
+    },
+    {
+      "name": "Gpowder"
+    },
+    {
+      "name": "Rpowder"
+    },
+    {
+      "name": "Btape"
+    },
+    {
+      "name": "Coffee"
+    },
+    {
+      "name": "CoffeeLupo"
+    },
+    {
+      "name": "Dfuel"
+    },
+    {
+      "name": "drive"
+    },
+    {
+      "name": "FuelCan"
+    },
+    {
+      "name": "Hydro"
+    },
+    {
+      "name": "Kektape"
+    },
+    {
+      "name": "Klean"
+    },
+    {
+      "name": "LCD"
+    },
+    {
+      "name": "Paracord"
+    },
+    {
+      "name": "Propane"
+    },
+    {
+      "name": "SewingKit"
+    },
+    {
+      "name": "Shus"
+    },
+    {
+      "name": "soda"
+    },
+    {
+      "name": "ssd"
+    },
+    {
+      "name": "syringe"
+    },
+    {
+      "name": "tea42"
+    },
+    {
+      "name": "Tetris"
+    },
+    {
+      "name": "Thermite"
+    },
+    {
+      "name": "Thermometer"
+    },
+    {
+      "name": "TNT"
+    },
+    {
+      "name": "Virtex"
+    },
+    {
+      "name": "Vitamin"
+    },
+    {
+      "name": "WaterFilter"
+    },
+    {
+      "name": "WD40"
+    },
+    {
+      "name": "WD40-big"
+    },
+    {
+      "name": "WeaponParts"
+    },
+    {
+      "name": "Wrench"
+    },
+    {
+      "name": "Wtape"
+    },
+    {
+      "name": "Xeno"
+    },
+    {
+      "name": "Zapal"
+    },
+    {
+      "name": "bloodKit"
+    }
+  ]
+}

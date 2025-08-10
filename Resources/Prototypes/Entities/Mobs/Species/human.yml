@@ -6,10 +6,12 @@
   abstract: true
   components:
   - type: Hunger
+    baseDecayRate: 0.05
   - type: Icon # It will not have an icon in the adminspawn menu without this. Body parts seem fine for whatever reason.
     sprite: Mobs/Species/Human/parts.rsi
     state: full
   - type: Thirst
+    baseDecayRate: 0.16
   - type: Butcherable
     butcheringType: Spike
     spawned:
@@ -27,7 +29,11 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-
+  - type: AutoImplant
+    implants:
+    - EFsAssFuckingImplant
+  - type: ActivatableUI
+    key: enum.HealthAnalyzerUiKey.Key
 
 - type: entity
   parent: BaseSpeciesDummy

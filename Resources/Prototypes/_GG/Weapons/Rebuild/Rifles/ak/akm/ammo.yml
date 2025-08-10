@@ -1,0 +1,79 @@
+- type: Tag
+  id: EFSMagazineRifle7.62x39
+
+- type: entity
+  id: BaseMagazineRifleАКМ
+  name: я ебал это кодить
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazineRifle7.62x39
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge7.62x39
+    capacity: 30
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    layers:
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+
+- type: entity
+  id: EFSMagazineRifleАКМRebro
+  name: "Магазин для АК 7.62x39"
+  parent: BaseMagazineRifleАКМ
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineAk7.62x39/akm-rebro.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: EFSMagazineRifleАКМBlack
+  name: "Магазин АК-103 7.62x39"
+  parent: BaseMagazineRifleАКМ
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineAk7.62x39/akm-black.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: EFSMagazineRifleАКМOrange
+  name: "Магазин 6Л10 7.62x39"
+  parent: BaseMagazineRifleАКМ
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x39
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineAk7.62x39/akm-orange.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

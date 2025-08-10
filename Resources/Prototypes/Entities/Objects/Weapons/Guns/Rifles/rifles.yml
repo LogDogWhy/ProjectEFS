@@ -1,6 +1,6 @@
 - type: entity
   name: BaseWeaponRifle
-  parent: [BaseItem, BaseGunWieldable]
+  parent: BaseItem
   id: BaseWeaponRifle
   description: A rooty tooty point and shooty.
   abstract: true
@@ -50,6 +50,13 @@
       gun_chamber: !type:ContainerSlot
   - type: StaticPrice
     price: 500
+  - type: ESWeight
+    self: 3.0
+  - type: WeaponCarry
+    carrySoundCollection:
+      collection: WeaponCarrySounds
+      params:
+        volume: 1
 
 - type: entity
   name: AKMS
@@ -193,7 +200,7 @@
 
 - type: entity
   name: Foam Force Astro Ace
-  parent: [BaseWeaponShotgun, BaseGunWieldable]
+  parent: BaseWeaponShotgun
   id: WeaponRifleFoam
   description: A premium foam rifle of the highest quality. Its plastic feels rugged, and its mechanisms sturdy.
   components:

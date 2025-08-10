@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "EFS",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "bloodyweapon"
+    },
+    {
+      "name": "deadbody"
+    },
+    {
+      "name": "hanger"
+    },
+    {
+      "name": "heating"
+    },
+    {
+      "name": "locker"
+    },
+    {
+      "name": "monitor"
+    },
+    {
+      "name": "pc"
+    },
+    {
+      "name": "bricks"
+    },
+    {
+      "name": "radio"
+    },
+    {
+      "name": "crate"
+    },
+    {
+      "name": "propan"
+    },
+    {
+      "name": "sandbag",
+      "directions": 4
+    },
+    {
+      "name": "garbage"
+    },
+    {
+      "name": "fueltank"
+    },
+    {
+      "name": "oven"
+    },
+    {
+      "name": "bluebarrel"
+    },
+    {
+      "name": "bluebarrel2"
+    },
+    {
+      "name": "ladder1"
+    },
+    {
+      "name": "ladder2"
+    },
+    {
+      "name": "wheely"
+    },
+    {
+      "name": "wheel"
+    },
+    {
+      "name": "zip"
+    },
+    {
+      "name": "wheel1"
+    },
+    {
+      "name": "wheel2"
+    },
+    {
+      "name": "woodlogs"
+    },
+    {
+      "name": "wheel3"
+    },
+    {
+      "name": "wheel4"
+    },
+    {
+      "name": "wheel5"
+    },
+    {
+      "name": "barrel"
+    },
+    {
+      "name": "barrel-open"
+    },
+    {
+      "name": "tesla"
+    },
+    {
+      "name": "bar-crate"
+    },
+    {
+      "name": "campfire",
+      "directions": 4
+    },
+    {
+      "name": "claymore",
+      "directions": 4
+    },
+    {
+      "name": "clocks"
+    },
+    {
+      "name": "crate_old"
+    },
+    {
+      "name": "craty"
+    },
+    {
+      "name": "rails",
+      "directions": 4
+    },
+    {
+      "name": "stop-sign",
+      "directions": 4
+    },
+    {
+      "name": "wire"
+    },
+    {
+      "name": "wooden-cross"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ADTClothingUniformAbibasBlackSuit
+  name: Черная куртка абибас
+  description: Спротивка для четких челов
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Uniforms/Jumpsuit/black_abibas.rsi
+  - type: Clothing
+    sprite: ADT/Clothing/Uniforms/Jumpsuit/black_abibas.rsi
+  - type: ESWeight
+    self: 0.5

@@ -14,6 +14,7 @@
     respawnDelay: 10
     deleteBody: false
 
+
 - type: entity
   parent: BaseGameRule
   id: SubGamemodesRule
@@ -28,29 +29,13 @@
   parent: BaseGameRule
   components:
   - type: DeathMatchRule
-    rewardSpawns:
-    - id: HealingToolbox
-    - id: ClothingOuterArmorBasicSlim
-      orGroup: loot
-    - id: ClothingHeadHelmetBasic
-      orGroup: loot
-    - id: SoapNT
-      orGroup: loot
-    - id: Bola
-      orGroup: loot
-    - id: Spear
-      orGroup: loot
-    - id: ClothingShoesGaloshes
-      orGroup: loot
-    - id: FoodPieBananaCream
-      orGroup: loot
-    - id: Stimpack
-      orGroup: loot
   - type: KillCalloutRule
   - type: PointManager
   - type: RespawnDeadRule
+    sendTolobby: true
   - type: RespawnTracker
-    respawnDelay: 5
+    respawnDelay: 20
+    deleteBody: true
 
 - type: entity
   id: InactivityTimeRestart
@@ -73,7 +58,7 @@
   parent: BaseGameRule
   id: BaseNukeopsRule
   components:
-  - type: RandomMetadata #this generates the random operation name cuz it's cool. 
+  - type: RandomMetadata #this generates the random operation name cuz it's cool.
     nameSegments:
     - operationPrefix
     - operationSuffix
@@ -290,3 +275,28 @@
     - id: BloodbathPuddleMessVariationPass
       prob: 0.01
       orGroup: puddleMess
+
+
+- type: entity
+  id: VXSForts
+  parent: BaseGameRule
+  components:
+  # - type: DeathMatchRule
+  # - type: KillCalloutRule
+  # - type: PointManager
+  - type: VXSFortsGameRule
+  - type: RespawnDeadRule
+  - type: RespawnTracker
+    respawnDelay: 20
+    deleteBody: true
+
+
+- type: gamePreset
+  id: VXSFortsDonbass
+  alias:
+  - donbass
+  name: vxs-forts
+  showInVote: true #4boring4vote
+  description: vxs-forts
+  rules:
+  - VXSForts

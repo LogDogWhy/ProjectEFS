@@ -1,0 +1,31 @@
+
+- type: entity
+  name: Молот Тагиллы
+  parent: BaseItem
+  id: ADTTagillaSledgehammerReal
+  description: Молот покрыт уретаном что обеспечивает "глухой удар" с использованием стальных шариков для амортизации удара и уменьшения вибрации отдачи в рукоять.
+  suffix: ADT
+  components:
+  - type: Sprite
+    sprite: ADT/Objects/Weapons/Melee/tagilla_sledge.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 0.4
+    angle: 75
+    damage:
+      types:
+        Blunt: 25
+  - type: StaminaDamageOnHit
+    damage: 25
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 50
+  - type: Item
+    size: Rifles
+  - type: DisarmMalus
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back

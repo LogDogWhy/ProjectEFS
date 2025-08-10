@@ -1,0 +1,45 @@
+#by prazat911
+
+- type: entity
+  parent: EFSArmor6B13
+  id: ADTKillaArmor
+  name: Бронежилет модифицированный 6Б13
+  description: Модифицированный лично Киллой общевойсковой бронежилет 6Б13. Керамические бронепластины заменены на полиэтиленовые облегченные плиты. Класс защиты выше, вес - меньше.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/OuterClothing/Suits/Halloween/killa_armor.rsi
+  - type: Clothing
+    sprite: ADT/Clothing/OuterClothing/Suits/Halloween/killa_armor.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.99
+    sprintModifier: 0.99
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.50
+        Piercing: 0.50
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ADTTagillaArmor
+  name: Жилет с бронепластинами Crye Precision "AVS MBAV"
+  description: Бывалый плитник Тагиллы на основе модульной системы AVS от Crye Precision. Установлена фронтальная панель на три подсумка. Да и, собственно, все. Ничего лишнего.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/OuterClothing/Suits/Halloween/tagilla_armor.rsi
+  - type: Clothing
+    sprite: ADT/Clothing/OuterClothing/Suits/Halloween/tagilla_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.5
+        Piercing: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.95
+  #   sprintModifier: 0.95
+  - type: ESWeight
+    self: 5
+

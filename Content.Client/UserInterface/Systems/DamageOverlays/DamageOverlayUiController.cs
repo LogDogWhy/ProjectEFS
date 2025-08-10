@@ -8,6 +8,7 @@ using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
+using Content.Shared.GG.Drugs;
 using Robust.Shared.Player;
 
 namespace Content.Client.UserInterface.Systems.DamageOverlays;
@@ -28,8 +29,8 @@ public sealed class DamageOverlayUiController : UIController
         SubscribeLocalEvent<LocalPlayerDetachedEvent>(OnPlayerDetached);
         SubscribeLocalEvent<MobStateChangedEvent>(OnMobStateChanged);
         SubscribeLocalEvent<MobThresholdChecked>(OnThresholdCheck);
-    }
 
+    }
     private void OnPlayerAttach(LocalPlayerAttachedEvent args)
     {
         ClearOverlay();
@@ -59,10 +60,15 @@ public sealed class DamageOverlayUiController : UIController
 
         if (args.Target != _playerManager.LocalEntity)
             return;
+        if (EntityManager.HasComponent<PainKillerComponent>(args.Target))
+        {
+            ClearOverlay();
+            return;
+        }
         UpdateOverlays(args.Target, args.MobState, args.Damageable, args.Threshold);
     }
 
-    private void ClearOverlay()
+    public void ClearOverlay()
     {
         _overlay.DeadLevel = 0f;
         _overlay.CritLevel = 0f;
@@ -71,7 +77,7 @@ public sealed class DamageOverlayUiController : UIController
     }
 
     //TODO: Jezi: adjust oxygen and hp overlays to use appropriate systems once bodysim is implemented
-    private void UpdateOverlays(EntityUid entity, MobStateComponent? mobState, DamageableComponent? damageable = null, MobThresholdsComponent? thresholds = null)
+    public void UpdateOverlays(EntityUid entity, MobStateComponent? mobState, DamageableComponent? damageable = null, MobThresholdsComponent? thresholds = null)
     {
         if (mobState == null && !EntityManager.TryGetComponent(entity, out mobState) ||
             thresholds == null && !EntityManager.TryGetComponent(entity, out thresholds) ||

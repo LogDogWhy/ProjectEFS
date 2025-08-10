@@ -24,6 +24,7 @@ public sealed partial class LoadoutWindow : FancyWindow
         Profile = profile;
         var protoManager = collection.Resolve<IPrototypeManager>();
 
+
         foreach (var group in proto.Groups)
         {
             if (!protoManager.TryIndex(group, out var groupProto))

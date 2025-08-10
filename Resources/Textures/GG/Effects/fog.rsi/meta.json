@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "size": {
+    "x": 1000,
+    "y": 1000
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Modify from SS14",
+  "states": [
+    {
+      "name": "fog"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+- type: Tag
+  id: Tarkovmed
+
+- type: entity
+  parent: BaseItem
+  id: BaseHealingItemTrakov
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Tarkovmed
+  - type: Sprite
+    sprite: GG/Medical/Medicine/medical.rsi
+  - type: Item
+    sprite: GG/Medical/Medicine/medical.rsi
+    size: Small
+  # Inherited
+  - type: StaticPrice
+    price: 0
+  - type: ESWeight
+    self: 1
+
+- type: entity
+  parent: BaseHealingItemTrakov
+  id: EFSMedGrizzly
+  name: Аптечка "Grizzly"
+  description:
+  components:
+  - type: Sprite
+    state: grizzly
+    scale: 0.6, 0.6
+  - type: Healing
+    delay: 4
+    damageContainers:
+      - Biological
+    damage:
+      groups:
+        Brute: -30
+    bloodlossModifier: -10
+    selfHealPenaltyMultiplier: 0
+    healingBeginSound:
+      path: "/Audio/GG/Medicine/2.ogg"
+    healingEndSound:
+      path: "/Audio/GG/Medicine/1.ogg"
+  - type: Stack
+    stackType: Grizzly
+    count: 10
+  - type: StackPrice
+    price: 10
+  - type: Item
+    size: Normal
+  - type: ESWeight
+    self: 0.33
+
+- type: entity
+  parent: BaseHealingItemTrakov
+  id: EFSMedAi2
+  name: Аптечка "АИ-2"
+  description:
+  components:
+  - type: Sprite
+    state: ai
+    scale: 0.5, 0.5
+  - type: Healing
+    delay: 2
+    damageContainers:
+      - Biological
+    damage:
+      groups:
+        Brute: -15
+    selfHealPenaltyMultiplier: 0
+    healingBeginSound:
+      path: "/Audio/GG/Medicine/ai.ogg"
+    healingEndSound:
+      path: "/Audio/GG/Medicine/1.ogg"
+  - type: Stack
+    stackType: Ai
+    count: 2
+  - type: StackPrice
+    price: 2
+  - type: Item
+    size: Tiny
+
+- type: entity
+  parent: BaseHealingItemTrakov
+  id: Salewa
+  name: Аптечка "Salewa"
+  description: Аптечка, содержащая спасательную термонакидку, разнообразные перевязочные материалы и инструменты.
+  components:
+  - type: Sprite
+    state: salewa
+    scale: 0.6, 0.6
+  - type: Healing
+    delay: 4
+    damageContainers:
+      - Biological
+    damage:
+      groups:
+        Brute: -30
+    bloodlossModifier: -10
+    selfHealPenaltyMultiplier: 0
+    healingBeginSound:
+      path: "/Audio/GG/Medicine/2.ogg"
+    healingEndSound:
+      path: "/Audio/GG/Medicine/1.ogg"
+  - type: Stack
+    stackType: Salewa
+    count: 5
+  - type: StackPrice
+    price: 5
+  - type: ESWeight
+    self: 0.33
+
+- type: entity
+  parent: BaseHealingItemTrakov
+  id: Esmarh
+  name: Жгут Эсмарха
+  description: Жгут кровостанавливающий, назван в честь Фридриха Августа фон Эсмарха, который и предложил его применение наряду с другими методами в военно-полевой хирургии.
+  components:
+  - type: Sprite
+    state: esmarh
+  - type: Item
+    size: Tiny
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      groups:
+        Brute: -1 # 5 for each type in the group
+    bloodlossModifier: -10
+    delay: 2
+    selfHealPenaltyMultiplier: 0
+    scale: 5
+    healingBeginSound:
+      path: "/Audio/GG/Medicine/bandage.ogg"
+    healingEndSound:
+      path: "/Audio/GG/Medicine/bandage_f.ogg"
+  - type: Stack
+    stackType: Esmarh
+    count: 1
+  - type: StackPrice
+    price: 1
+
+- type: entity
+  parent: BaseHealingItemTrakov
+  id: CMS
+  name: Хирургический набор "CMS"
+  description: Компактный хирургический набор для оказания первой помощи при пулевых ранениях и прочих серьезных травмах и ранах.
+  components:
+  - type: Sprite
+    state: cms
+  - type: Healing
+    delay: 10
+    damageContainers:
+      - Biological
+    damage:
+      groups:
+        Brute: -60
+    selfHealPenaltyMultiplier: 0
+    scale: 5
+    healingBeginSound:
+      path: "/Audio/GG/Medicine/cmsopen.ogg"
+    healingEndSound:
+      path: "/Audio/GG/Medicine/cmsclose.ogg"
+  - type: Stack
+    stackType: CMS
+    count: 2
+  - type: StackPrice
+    price: 2
+
+
+
+- type: statusEffect
+  id: TunnelVision
+  alert: TunnelVision
+
+- type: alert
+  id: TunnelVision
+  icons: [ /Textures/GG/Interface/Alerts/Tunnel.png ]
+  name: Тунельное зрение
+  description: Ваше зрение тускнеет.
+
+- type: statusEffect
+  id: PainKiller
+  alert: PainKiller
+
+- type: alert
+  id: PainKiller
+  icons: [ /Textures/GG/Interface/Alerts/painkiller.png ]
+  name: На болеутоляющих
+  description: Вас ничего не сковывает.
+
+- type: statusEffect
+  id: RecoilReducer
+  alert: RecoilReducer
+
+- type: alert
+  id: RecoilReducer
+  icons:
+  - sprite: /Textures/GG/Interface/Alerts/recoil.rsi
+    state: recoil
+  name: Контроль отдачи +
+  description: Ваша отдачи была сброшенна.
+
+- type: statusEffect
+  id: StrengthBuffer
+  alert: StrengthBuffer
+
+- type: alert
+  id: StrengthBuffer
+  icons:
+  - sprite: /Textures/GG/Interface/Alerts/strength.rsi
+    state: base
+  name: Сила +
+  description: Переносимый вес был увеличен.
+
+- type: entity
+  name: Мазь
+  parent: BaseItem
+  id: EFSBaseMaz
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: GG/Medical/Medicine/medical.rsi
+    scale: 0.5, 0.5
+  - type: Icon
+    sprite: GG/Medical/Medicine/medical.rsi
+  - type: Item
+    size: Tiny
+    heldPrefix: 0
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 3
+  - type: Injector
+    toggleState: Inject
+    injectOnly: true
+    minTransferAmount: 1
+    maxTransferAmount: 1
+    transferAmount: 1
+  - type: Appearance
+  - type: Tag
+    tags:
+    - Syringe
+
+- type: entity
+  parent: EFSBaseMaz
+  id: Vazelin
+  name: Вазелиновая мазь
+  description: Вазелин - универсальная мазь, применяемая везде, где требуются водоизоляционные или смазочные свойства, например, санобработка небольших царапин и ожогов, нанесение защитного покрытия на склонные к коррозии предметы или смазка механизмов, требующих не содержащих кислоты смазок.
+  components:
+  - type: Sprite
+    state: vaz
+  - type: Icon
+    state: vaz
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 3
+        reagents:
+        - ReagentId: Morphine
+          Quantity: 3
+
+- type: entity
+  parent: EFSBaseMaz
+  id: GoldStar
+  name: Мазь "Золотая Звезда"
+  description: Мазь «Золотая Звезда», или, в народе, просто "звёздочка", изготавливается в братском Вьетнаме из целого коктейля жгучих эфирных масел - камфоры, ментола, мяты, эвкалипта и др. - замешанных в вазелин. Нанесённая в правильные места, спасает от головной боли, простуды и насморка, и укусов насекомых. Только для наружного применения!
+  components:
+  - type: Sprite
+    state: star
+  - type: Icon
+    state: star
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 3
+        reagents:
+        - ReagentId: Morphine
+          Quantity: 3

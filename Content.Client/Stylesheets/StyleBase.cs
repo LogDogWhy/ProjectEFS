@@ -1,6 +1,5 @@
 using System.Numerics;
 using Content.Client.Resources;
-using Content.Client.UserInterface.Controls;
 using Robust.Client.Graphics;
 using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface;
@@ -125,17 +124,17 @@ namespace Content.Client.Stylesheets
 
             var vScrollBarGrabberNormal = new StyleBoxFlat
             {
-                BackgroundColor = Color.Gray.WithAlpha(0.35f), ContentMarginLeftOverride = DefaultGrabberSize,
+                BackgroundColor = Color.Green.WithAlpha(0.35f), ContentMarginLeftOverride = DefaultGrabberSize,
                 ContentMarginTopOverride = DefaultGrabberSize
             };
             var vScrollBarGrabberHover = new StyleBoxFlat
             {
-                BackgroundColor = new Color(140, 140, 140).WithAlpha(0.35f), ContentMarginLeftOverride = DefaultGrabberSize,
+                BackgroundColor = Color.Green.WithAlpha(0.35f), ContentMarginLeftOverride = DefaultGrabberSize,
                 ContentMarginTopOverride = DefaultGrabberSize
             };
             var vScrollBarGrabberGrabbed = new StyleBoxFlat
             {
-                BackgroundColor = new Color(160, 160, 160).WithAlpha(0.35f), ContentMarginLeftOverride = DefaultGrabberSize,
+                BackgroundColor = Color.Green.WithAlpha(0.35f), ContentMarginLeftOverride = DefaultGrabberSize,
                 ContentMarginTopOverride = DefaultGrabberSize
             };
 

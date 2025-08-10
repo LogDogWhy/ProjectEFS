@@ -1,0 +1,80 @@
+- type: entity
+  name: Сн. Винт. Remington Model 700
+  parent: BaseWeaponSniper
+  id: EFSWeaponSniperM700
+  description: Снайперская винтовка Remington Model 700 cо скользящим затвором, серийно выпускаемая с 1962-ого года компанией "Remington Arms".
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/m700.rsi
+    layers:
+      - state: base
+        scale: 0.75, 0.75
+        map: ["enum.GunVisualLayers.Base"]
+      - sprite: GG/Weapons/Mods/scope.rsi
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.75, 0.75
+        offset: 0.0, 0.0
+        visible: false
+  - type: Item
+    size: SniperRifles
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    quickEquip: false
+    slots:
+    - Back
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/M700/shot.ogg
+    ProjectileSpeed: 200
+  - type: BallisticAmmoProvider
+    cycleable: true
+    autoCycle: false
+    capacity: 5
+    proto: Cartridge7.62x51
+    whitelist:
+      tags:
+      - Cartridge7.62x51
+  - type: ItemSlots
+    slots:
+      gun_scope:
+        priority: 0
+        whitelist:
+          tags:
+            - EFSM700Scope
+  - type: ContainerContainer
+    containers:
+      gun_scope: !type:ContainerSlot
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+  - type: ZoomableGun
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+
+- type: Tag
+  id: EFSM700Scope
+
+
+- type: entity
+  name: Прицел VooDoo
+  parent: EFSBaseAttachmentScope
+  id: EFSAttachmentM700ScopeVooDoo
+  description: WIP
+  components:
+  - type: Sprite
+    state: vd
+  - type: Tag
+    tags:
+      - EFSM700Scope
+  - type: Attachment
+
+
+

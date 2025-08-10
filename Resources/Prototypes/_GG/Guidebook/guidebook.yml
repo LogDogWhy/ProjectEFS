@@ -1,0 +1,53 @@
+- type: guideEntry
+  id: GGGuideForNew
+  name: Куда нажимать, чтобы было смешно?
+  text: "/ServerInfo/GG/Guidebook/NewPlayer.xml"
+  children:
+  - CharacterPreset
+  - GameModes
+  - ItemGuide
+
+
+- type: guideEntry
+  id: CharacterPreset
+  name: Снаряжение
+  text: "/ServerInfo/GG/Guidebook/CharacterPreset/CharacterPreset.xml"
+
+- type: guideEntry
+  id: GameModes
+  name: Режимы игры
+  text: "/ServerInfo/GG/Guidebook/ItemGuide/ItemGuide.xml"
+  children:
+  - Deathmatch
+  - CapturePoint
+
+- type: guideEntry
+  id: Deathmatch
+  name: Бой на смерть
+  text: "/ServerInfo/GG/Guidebook/GameModes/DeathMatch.xml"
+
+- type: guideEntry
+  id: CapturePoint
+  name: Захват точек
+  text: "/ServerInfo/GG/Guidebook/GameModes/CapturePoint.xml"
+
+
+- type: guideEntry
+  id: ItemGuide
+  name: Предметы
+  text: "/ServerInfo/GG/Guidebook/ItemGuide/ItemGuide.xml"
+  children:
+  - Weight
+  - Medical
+  # - GGMods
+
+- type: guideEntry
+  id: Weight
+  name: Система веса
+  text: "/ServerInfo/GG/Guidebook/Mechanics/Weight.xml"
+
+- type: guideEntry
+  id: Medical
+  name: Стимуляторы
+  text: "/ServerInfo/GG/Guidebook/ItemGuide/Medical.xml"
+

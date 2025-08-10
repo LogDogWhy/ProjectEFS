@@ -1,0 +1,82 @@
+- type: Tag
+  id: EFSMagazineRifle5.45x39
+
+- type: entity
+  id: BaseMagazineRifle6L23
+  name: "Магазин 6L23 5.45x39"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazineRifle5.45x39
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge5.45x39
+    capacity: 30
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    layers:
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: EFSMagazineRifleBlack6L23
+  name: "Магазин 6L23 Чёрный 5.45x39"
+  parent: BaseMagazineRifle6L23
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.45x39
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineAk5.45x39/74-black.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: EFSMagazineRifle6L23
+  name: "Магазин 6L23 5.45x39"
+  parent: BaseMagazineRifle6L23
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.45x39
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineAk5.45x39/74-orange.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: EFSMagazineRifle6L31
+  name: "Магазин 6L31 5.45x39"
+  parent: BaseMagazineRifle6L23
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.45x39
+    capacity: 60
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineAk5.45x39/74-icecream.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazineRifle6L23

@@ -1,0 +1,643 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseMagazineBoxPistol9x19
+  name: ammunition box (.35 auto)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x19
+    proto: Cartridge9x19
+    capacity: 50
+  - type: Item
+    size: Tiny
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/ammobox.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.01
+
+- type: entity
+  parent: BaseMagazineBoxPistol9x19
+  id: MagazineBoxPistol9x19
+  name: Коробка патронов (9x19)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: 9x19
+  - type: ESWeight
+    self: 0.01
+
+- type: entity
+  abstract: true
+  parent: BaseMagazineBoxPistol9x19
+  id: BaseMagazineBoxPistol9x19b
+  name: ammunition box (.35 auto)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x19b
+    proto: Cartridge9x19b
+    capacity: 50
+
+
+
+- type: entity
+  parent: [BaseMagazineBoxPistol9x19b, MagazineBoxPistol9x19]
+  id: MagazineBoxPistol9x19b
+  name: (БП) Коробка патронов  (9x19)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19b
+
+
+
+################################################################################
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseMagazineBoxPistol.45
+  name: ammunition box (.35 auto)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge.45
+    proto: Cartridge.45
+    capacity: 50
+  - type: Item
+    size: Tiny
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/ammobox.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.01
+
+
+- type: entity
+  parent: BaseMagazineBoxPistol.45
+  id: MagazineBoxPistol.45
+  name: Коробка патронов (.45)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge.45
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: 45acp
+
+- type: entity
+  abstract: true
+  parent: BaseMagazineBoxPistol.45
+  id: BaseMagazineBoxPistol.45b
+  name: ammunition box (.35 auto)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge.45b
+    proto: Cartridge.45b
+    capacity: 50
+
+- type: entity
+  parent: [BaseMagazineBoxPistol.45b, MagazineBoxPistol.45]
+  id: MagazineBoxPistol.45b
+  name: (БП) Коробка патронов (.45)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge.45b
+
+##########################################################################
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseMagazineBox9x39
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x39
+    proto: Cartridge9x39
+    capacity: 30
+  - type: Item
+    size: Tiny
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/ammobox.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.01
+
+
+# Boxes
+- type: entity
+  parent: BaseMagazineBox9x39
+  id: MagazineBox9x39
+  name: Коробка патронов (9x39)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x39
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: 9x39
+#todo
+- type: entity
+  abstract: true
+  parent: BaseMagazineBox9x39
+  id: BaseMagazineBox9x39b
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x39b
+    proto: Cartridge9x39b
+    capacity: 30
+
+# Boxes
+- type: entity
+  parent: [BaseMagazineBox9x39b, MagazineBox9x39]
+  id: MagazineBox9x39b
+  name: (БП) Коробка патронов (9x39)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x39b
+
+##########################################################################
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseMagazineBoxRifle7.62x39
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge7.62x39
+    proto: Cartridge7.62x39
+    capacity: 50
+  - type: Item
+    size: Tiny
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/ammobox.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.01
+
+
+# Boxes
+- type: entity
+  parent: BaseMagazineBoxRifle7.62x39
+  id: MagazineBoxRifleBig7.62x39
+  name: Коробка патронов (7.62x39)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 50
+    proto: Cartridge7.62x39
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: 7.62x39
+
+- type: entity
+  abstract: true
+  parent: BaseMagazineBoxRifle7.62x39
+  id: BaseMagazineBoxRifle7.62x39b
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge7.62x39
+    proto: Cartridge7.62x39b
+    capacity: 50
+
+# Boxes
+- type: entity
+  parent: [BaseMagazineBoxRifle7.62x39b, MagazineBoxRifleBig7.62x39]
+  id: MagazineBoxRifleBig7.62x39b
+  name: (БП) Коробка патронов (7.62x39)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 50
+    proto: Cartridge7.62x39b
+
+##########################################################################
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseMagazineBoxRifle5.45x39
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge5.45x39
+    proto: Cartridge5.45x39
+    capacity: 50
+  - type: Item
+    size: Tiny
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/ammobox.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.01
+
+
+# Boxes
+- type: entity
+  parent: BaseMagazineBoxRifle5.45x39
+  id: MagazineBoxRifle5.45x39
+  name: Коробка патронов (5.45x39)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.45x39
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: 5.45x39
+
+- type: entity
+  abstract: true
+  parent: BaseMagazineBoxRifle5.45x39
+  id: BaseMagazineBoxRifle5.45x39b
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge5.45x39b
+    proto: Cartridge5.45x39b
+    capacity: 50
+
+# Boxes
+- type: entity
+  parent: [BaseMagazineBoxRifle5.45x39b, MagazineBoxRifle5.45x39]
+  id: MagazineBoxRifle5.45x39b
+  name: (БП) Коробка патронов (5.45x39)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.45x39b
+
+
+##################################################################
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseMagazineBoxRifle5.56x45
+  name: ammunition box (5.56x45)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge5.56x45
+    proto: Cartridge5.56x45
+    capacity: 50
+  - type: Item
+    size: Tiny
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/ammobox.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.01
+
+
+# Boxes
+- type: entity
+  parent: BaseMagazineBoxRifle5.56x45
+  id: MagazineBoxRifle5.56x45
+  name: Коробка патронов (5.56x45)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.56x45
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: 5.56x45
+
+- type: entity
+  abstract: true
+  parent: BaseMagazineBoxRifle5.56x45
+  id: BaseMagazineBoxRifle5.56x45b
+  name: ammunition box (5.56x45)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge5.56x45b
+    proto: Cartridge5.56x45b
+    capacity: 50
+
+# Boxes
+- type: entity
+  parent: [ BaseMagazineBoxRifle5.56x45b, MagazineBoxRifle5.56x45]
+  id: MagazineBoxRifle5.56x45b
+  name: (БП) Коробка патронов (5.56x45)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 50
+    proto: Cartridge5.56x45b
+
+
+##################################################################123
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseMagazineBoxPistol9x18
+  name: ammunition box (9x18)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x18
+    proto: Cartridge9x18
+    capacity: 50
+  - type: Item
+    size: Tiny
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/ammobox.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.01
+
+
+- type: entity
+  id: MagazineBoxPistol9x18
+  parent: BaseMagazineBoxPistol9x18
+  name: Коробка патронов (9x18)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x18
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: 9x18
+
+- type: entity
+  abstract: true
+  parent: BaseMagazineBoxPistol9x18
+  id: BaseMagazineBoxPistol9x18b
+  name: ammunition box (9x18)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x18b
+    proto: Cartridge9x18b
+    capacity: 50
+
+- type: entity
+  id: MagazineBoxPistol9x18b
+  parent: [ BaseMagazineBoxPistol9x18b, MagazineBoxPistol9x18]
+  name: (БП) Коробка патронов (9x18)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x18b
+
+############################################################
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseMagazineBoxRifle7.62x54R
+  name: ammunition box (7.62x54R)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge7.62x54R
+    proto: Cartridge7.62x54R
+    capacity: 10
+  - type: Item
+    size: Tiny
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/ammobox.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.01
+
+
+# Boxes
+- type: entity
+  parent: BaseMagazineBoxRifle7.62x54R
+  id: MagazineBoxRifle7.62x54R
+  name: Коробка патронов (7.62x54R)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x54R
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: 7.62x54R
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseMagazineBoxRifle7.62x54Rb
+  name: ammunition box (7.62x54R)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge7.62x54Rb
+    proto: Cartridge7.62x54Rb
+    capacity: 10
+
+# Boxes
+- type: entity
+  parent: [ BaseMagazineBoxRifle7.62x54Rb, MagazineBoxRifle7.62x54R]
+  id: MagazineBoxRifle7.62x54Rb
+  name: (БП) Коробка патронов (7.62x54R)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x54Rb
+
+#####################################################################
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseMagazineBoxRifle7.62x51
+  name: ammunition box (7.62x51)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge7.62x51
+    proto: Cartridge7.62x51
+    capacity: 20
+  - type: Item
+    size: Tiny
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/ammobox.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.01
+
+
+# Boxes
+- type: entity
+  parent: BaseMagazineBoxRifle7.62x51
+  id: MagazineBoxRifle7.62x51
+  name: Коробка патронов (7.62x51)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x51
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: 308win
+
+# - type: entity
+#   abstract: true
+#   parent: BaseMagazineBoxRifle7.62x51
+#   id: BaseMagazineBoxRifle7.62x51b
+#   name: ammunition box (7.62x51)
+#   components:
+#     proto: Cartridge7.62x51b
+#     capacity: 20
+
+
+# Boxes
+# - type: entity
+#   parent: [BaseMagazineBoxRifle7.62x51b, MagazineBoxRifle7.62x51]
+#   id: MagazineBoxRifle7.62x51b
+#   name: Коробка патронов Бп (7.62x51)
+#   components:
+#   - type: BallisticAmmoProvider
+#     proto: Cartridge7.62x51b
+
+- type: entity
+  abstract: true
+  parent: BaseMagazineBoxRifle7.62x51
+  id: BaseMagazineBoxRifle7.62x51b
+  name: ammunition box (7.62x51)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge7.62x51
+    proto: Cartridge7.62x51b
+    capacity: 20
+
+# Boxes
+- type: entity
+  parent: [BaseMagazineBoxRifle7.62x51b, MagazineBoxRifle7.62x51]
+  id: MagazineBoxRifle7.62x51b
+  name: (БП) Коробка патронов (7.62x51)
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x51b

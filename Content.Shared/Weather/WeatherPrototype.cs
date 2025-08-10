@@ -1,6 +1,7 @@
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using System.Numerics;
 
 namespace Content.Shared.Weather;
 
@@ -20,4 +21,16 @@ public sealed partial class WeatherPrototype : IPrototype
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite), DataField("sound")]
     public SoundSpecifier? Sound;
+
+    /// <summary>
+    /// GG offset speed
+    /// </summary>
+    [DataField]
+    public Vector2 OffsetSpeed = Vector2.Zero;
+
+    /// <summary>
+    /// GG alpha
+    /// </summary>
+    [DataField]
+    public float Alpha = 1f;
 }

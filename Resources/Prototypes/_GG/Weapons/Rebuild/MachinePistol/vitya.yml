@@ -1,0 +1,147 @@
+- type: entity
+  name: пп-витязь
+  suffix: Standart
+  parent: EFSBaseWeaponAk74
+  id: EFSBaseWeaponVitya
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/vitya.rsi
+    layers:
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - state: yellowmag
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+        visible: false
+      - sprite: GG/Weapons/Mods/barrels.rsi
+        map: ["enum.GunVisualLayers.Suppressor"]
+        scale: 0.8, 0.8
+        offset: 0.525, 0.025
+        visible: false
+      - sprite: GG/Weapons/Mods/stock.rsi
+        map: ["enum.GunVisualLayers.Stock"]
+        scale: 0.8, 0.8
+        offset: -0.5, 0.0
+        visible: false
+      - sprite: GG/Weapons/Mods/forearm.rsi
+        map: ["enum.GunVisualLayers.Forearm"]
+        scale: 0.8, 0.8
+        offset: 0.125, 0.025
+        visible: false
+      - sprite: GG/Weapons/Mods/scope.rsi
+        offset: -0.225, 0.1
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.8, 0.8
+        visible: false
+      - sprite: GG/Weapons/Mods/grip.rsi
+        map: ["enum.GunVisualLayers.Grip"]
+        scale: 0.75, 0.75
+        offset: 0.15, -0.0425
+        visible: false
+  - type: Item
+    size: PistolMachine
+  - type: Gun
+    minAngle: 1
+    maxAngle: 15
+    fireRate: 8.5
+    angleIncrease: 2
+    angleDecay: 90
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/Vitya/shot.ogg
+    soundSilGunshot:
+      path: /Audio/GG/Weapons/Vitya/sil.ogg
+    soundGunshot:
+      path: /Audio/GG/Weapons/Vitya/shot.ogg
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+  - type: ContainerContainer
+    containers:
+      gun_scope: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        priority: 0
+        insertSound: /Audio/GG/Weapons/AK/in.ogg
+        ejectSound: /Audio/GG/Weapons/AK/out.ogg
+        whitelist:
+          tags:
+            - EFSMagazine9x19Vitya
+      gun_suppressor:
+        whitelist:
+          tags:
+            - EFSAk74Barrel
+      gun_stock:
+        whitelist:
+          tags:
+            - EFSAksuStock
+      gun_forearm:
+        whitelist:
+          tags:
+            - EFSAkForearm
+      gun_scope:
+        whitelist:
+          tags:
+            - EFSNScope
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge9x19
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge9x19
+
+
+- type: entity
+  name: Пп-Витязь
+  suffix: Standart
+  parent: EFSBaseWeaponVitya
+  id: EFSWeaponSubMachineVitya
+  components:
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+  - type: ContainerContainer
+    containers:
+      gun_scope: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge9x19
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge9x19
+      gun_magazine:
+        priority: 0
+        startingItem: EFSMagazinePistolVitya
+        insertSound: /Audio/GG/Weapons/AK/in.ogg
+        ejectSound: /Audio/GG/Weapons/AK/out.ogg
+        whitelist:
+          tags:
+            - EFSMagazine9x19Vitya
+      gun_suppressor:
+        whitelist:
+          tags:
+            - EFS9x19Barrel
+      gun_stock:
+        startingItem: EFSAksuAttachmentStock
+        whitelist:
+          tags:
+            - EFSAksuStock
+      gun_forearm:
+        startingItem: EFSAkAttachmentForearmTubeAk74
+        whitelist:
+          tags:
+            - EFSAkForearm
+      gun_scope:
+        whitelist:
+          tags:
+            - EFSNScope

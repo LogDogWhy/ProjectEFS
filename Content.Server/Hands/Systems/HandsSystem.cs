@@ -24,6 +24,10 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
+using Content.Shared.Clothing.Components;
+using Content.Shared.Inventory;
+using Content.Server._ES14.Weight.Components;
+
 namespace Content.Server.Hands.Systems
 {
     public sealed class HandsSystem : SharedHandsSystem
@@ -206,7 +210,26 @@ namespace Content.Server.Hands.Systems
                 return true;
 
             var length = direction.Length();
-            var distance = Math.Clamp(length, minDistance, hands.ThrowRange);
+
+            float distance;
+
+            if (TryComp<ClothingComponent>(throwEnt, out var clothComp) && (clothComp.Slots.HasFlag(SlotFlags.BACK) || clothComp.Slots.HasFlag(SlotFlags.OUTERCLOTHING)))
+            {
+                distance = Math.Clamp(length, minDistance, hands.ThrowRange / 6);
+            }
+            else if (TryComp<ESWeightComponent>(throwEnt, out var weightComp)  && weightComp.Total > 2)
+            {
+                float ModifierWeight = (float)(weightComp.Total * 0.1);
+                if (ModifierWeight <= 1)
+                    ModifierWeight += 1;
+                ModifierWeight *= 1.5f;
+                distance = Math.Clamp(length, minDistance, hands.ThrowRange / ModifierWeight);
+            }
+            else
+            {
+                distance = Math.Clamp(length, minDistance, hands.ThrowRange);
+            }
+
             direction *= distance / length;
 
             var throwSpeed = hands.BaseThrowspeed;

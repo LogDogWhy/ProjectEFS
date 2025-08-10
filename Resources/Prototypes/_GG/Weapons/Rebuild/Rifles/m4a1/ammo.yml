@@ -1,0 +1,69 @@
+- type: Tag
+  id: EFSMagazineRifle5.56x45
+
+- type: entity
+  id: BaseMagazineRifleSTANAG
+  name: "Магазин STANAG 5.56x45"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazineRifle5.56x45
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge5.56x45
+    capacity: 30
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineM45.56x45.rsi/stanag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: EFSMagazineRifleSTANAG
+  name: "Магазин STANAG 5.56x45"
+  parent: BaseMagazineRifleSTANAG
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.56x45
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: EFSMagazineRifleGEN3
+  name: "Магазин GEN3 5.56x45"
+  parent: BaseMagazineRifleSTANAG
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge5.56x45
+  - type: Sprite
+    sprite: GG/Weapons/AmmoRebuild/MagazineM45.56x45.rsi/black-gen3.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false

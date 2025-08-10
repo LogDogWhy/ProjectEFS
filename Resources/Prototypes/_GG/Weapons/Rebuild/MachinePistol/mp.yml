@@ -1,0 +1,250 @@
+- type: entity
+  name: HK UMP
+  parent: BaseWeaponSubMachineGun
+  id: EFSWeaponSubMachineGunUMP
+  description: Heckler & Koch "UMP" — пистолет-пулемёт, разработанный немецкой компанией Heckler & Koch в 1990-х как более легкий и дешевый аналог MP5. Данный вариант предназначен для стрельбы патроном .45 ACP и имеет сниженную до 600 выс/мин скорострельность.
+  components:
+  - type: Item
+    size: PistolMachine
+  - type: Sprite
+    sprite: GG/Weapons/ump.rsi
+    layers:
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+      - sprite: GG/Weapons/Mods/barrels.rsi
+        map: ["enum.GunVisualLayers.Suppressor"]
+        scale: 0.8, 0.8
+        offset: 0.425, 0.0125
+      - sprite: GG/Weapons/Mods/grip.rsi
+        map: ["enum.GunVisualLayers.Grip"]
+        scale: 0.8, 0.8
+        offset: 0.175, -0.05
+        visible: false
+      - sprite: GG/Weapons/Mods/scope.rsi
+        offset: -0.225, 0.075
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.8, 0.8
+        visible: false
+  - type: Clothing
+    sprite: GG/Weapons/ump.rsi
+  - type: Gun
+    fireRate: 7
+    minAngle: 1
+    maxAngle: 15
+    angleIncrease: 1
+    angleDecay: 70
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/GG/Weapons/UMP/shot.ogg
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/UMP/shot.ogg
+    soundSilGunshot:
+      path: /Audio/GG/Weapons/UMP/sil.ogg
+    availableModes:
+    - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazinePistolUMP
+        insertSound: /Audio/GG/Weapons/UMP/in.ogg
+        ejectSound: /Audio/GG/Weapons/UMP/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazinePistolUMP
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge.45
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge.45
+      gun_suppressor:
+        name: Barrel
+        priority: 3
+        whitelist:
+          tags:
+            - EFSUMPBarrel
+      gun_scope:
+        priority: 4
+        whitelist:
+          tags:
+            - EFSPicatiniScope
+      gun_grip:
+        priority: 5
+        whitelist:
+          tags:
+            - EFSPicatiniGrip
+  - type: ContainerContainer
+    containers:
+      gun_scope: !type:ContainerSlot
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      gun_suppressor: !type:ContainerSlot
+      gun_grip: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+  - type: SuppressorVisuals
+    suppressorState: suppressor
+  - type: Suppressor
+  - type: GripVisuals
+    gripState: grip
+  - type: Grip
+
+
+- type: entity
+  name: ПП-91 "Кедр"
+  parent: BaseWeaponSubMachineGun
+  id: EFSWeaponSubMachineKedr91
+  description: Пистолет-пулемёт ПП-91 "Кедр", разработан в начале 90-х годов по заказу МВД и выпускаемый на Златоустовском машиностроительном заводе. Состоит на вооружении почти всех силовых структур РФ.
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/kedr.rsi
+    layers:
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+  - type: Clothing
+    sprite: GG/Weapons/kedr.rsi
+  - type: Gun
+    fireRate: 11.5
+    minAngle: 2
+    maxAngle: 10
+    angleIncrease: 4
+    angleDecay: 80
+    selectedMode: FullAuto
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/PP19/shot.ogg
+    availableModes:
+    - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazineKedr
+        insertSound: /Audio/GG/Weapons/PP19/in.ogg
+        ejectSound: /Audio/GG/Weapons/PP19/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazineKedr
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge9x18
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge9x18
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Item
+    size: PistolMachine
+
+
+- type: entity
+  name: HK MP5
+  parent: BaseWeaponSubMachineGun
+  id: EFSWeaponSubMachineGunMP5
+  description: Пистолет-пулемет HK MP5 в версии УСМ Navy 3 Round Burst с отсечкой по 3 патрона. Широко известный образец пистолета пулемета, в первую очередь известен как оружие GSG9 и подобных силовых структур мира, а также как частый гость в кинематографе и видеоиграх.
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/mp5.rsi
+    layers:
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+      - sprite: GG/Weapons/Mods/scope.rsi
+        offset: -0.125, 0.075
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.8, 0.8
+        visible: false
+      - sprite: GG/Weapons/Mods/barrels.rsi
+        map: ["enum.GunVisualLayers.Suppressor"]
+        scale: 0.8, 0.8
+        offset: 0.55, 0.025
+  - type: Item
+    size: PistolMachine
+  - type: Gun
+    minAngle: 1
+    maxAngle: 14
+    fireRate: 10
+    angleIncrease: 3
+    angleDecay: 90
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    - Burst
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/MP5/shot.ogg
+    soundGunshot:
+      path: /Audio/GG/Weapons/MP5/sil.ogg
+    soundSilGunshot:
+      path: /Audio/GG/Weapons/MP5/shot.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazinePistolMP5
+        insertSound: /Audio/GG/Weapons/UMP/in.ogg
+        ejectSound: /Audio/GG/Weapons/UMP/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazinePistol9x19MP5
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge9x19
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge9x19
+      gun_suppressor:
+        priority: 3
+        whitelist:
+          tags:
+            - EFS9x19Barrel
+      gun_scope:
+        priority: 4
+        whitelist:
+          tags:
+            - EFSPicatiniScope
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      gun_scope: !type:ContainerSlot
+      gun_suppressor: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+    dynamicSprite: true
+  - type: Appearance
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+  - type: SuppressorVisuals
+    suppressorState: suppressor
+  - type: Suppressor

@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "By LogDog",
+  "size": {
+    "x": 64,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "74"
+    },
+    {
+      "name": "74m"
+    },
+    {
+      "name": "akm"
+    },
+    {
+      "name": "aks"
+    },
+    {
+      "name": "archangel74"
+    },
+    {
+      "name": "attachment-74"
+    },
+    {
+      "name": "attachment-74m"
+    },
+    {
+      "name": "attachment-akm"
+    },
+    {
+      "name": "attachment-aks"
+    },
+    {
+      "name": "attachment-archangel74"
+    },
+    {
+      "name": "attachment-ergo"
+    },
+    {
+      "name": "attachment-fde-gen2"
+    },
+    {
+      "name": "attachment-m4ss"
+    },
+    {
+      "name": "attachment-vpo_ak"
+    },
+    {
+      "name": "ergo"
+    },
+    {
+      "name": "stock-fal"
+    },
+    {
+      "name": "attachment-stock-fal"
+    },
+    {
+      "name": "fde-gen2"
+    },
+    {
+      "name": "m4ss"
+    },
+    {
+      "name": "attachment-aksu"
+    },
+    {
+      "name": "aksu"
+    },
+    {
+      "name": "vpo_ak"
+    }
+  ]
+}

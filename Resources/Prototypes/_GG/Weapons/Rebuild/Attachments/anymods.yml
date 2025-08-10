@@ -1,0 +1,129 @@
+- type: Tag
+  id: EFSPicatiniGrip
+
+- type: Tag
+  id: EFSMoeGrip
+
+- type: Tag
+  id: EFSPicatiniScope
+
+- type: Tag
+  id: EFSTubeStock
+
+
+
+- type: entity
+  name: EFSBaseAttachmentGrip
+  parent: BaseItem
+  id: EFSBaseAttachmentGrip
+  abstract: true
+  description: DEV
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/grip.rsi
+  - type: Attachment
+  - type: ESWeight
+    self: 0.3
+
+- type: entity
+  name: Рукоятнка Рк-6
+  parent: EFSBaseAttachmentGrip
+  id: EFSAttachmentGripPicatiniRK6
+  description: "Рукоятка РК-6 устанавливается на нижнюю планку Weaver и служит для оперативного управления оружием при стрельбе. Производство Зенит."
+  components:
+  - type: Sprite
+    state: rk6
+  - type: Tag
+    tags:
+      - EFSPicatiniGrip
+  - type: Attachment
+
+- type: entity
+  name: Рукоятнка AFG (Чёрное)
+  parent: EFSBaseAttachmentGrip
+  id: EFSAttachmentGripPicatiniBlackAFG
+  description: "Тактическая рукоятка Magpul AFG (Angled Fore Grip). Позволяет удерживать оружие в более естественном для руки стрелка положении и по центральной оси ствола. Благодаря этому, помогает смягчить отдачу и повышает управляемость оружия. Версия в черном цвете."
+  components:
+  - type: Sprite
+    state: black_afg
+  - type: Tag
+    tags:
+      - EFSPicatiniGrip
+  - type: Attachment
+
+- type: entity
+  name: Рукоятнка MOE AFG (Чёрное)
+  parent: EFSBaseAttachmentGrip
+  id: EFSAttachmentGripMoeBlackAFG
+  description: "Тактическая рукоятка Magpul M-LOK AFG. Устанавливается только в запатентованый Magpul слот M-LOK на соответствующей продукции. Версия в черном цвете."
+  components:
+  - type: Sprite
+    state: moe_black_afg
+  - type: Tag
+    tags:
+      - EFSMoeGrip
+  - type: Attachment
+
+
+## Scope
+
+
+- type: entity
+  name: EFSBaseAttachmentScope
+  parent: BaseItem
+  id: EFSBaseAttachmentScope
+  abstract: true
+  description: DEV
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/scope.rsi
+  - type: Tag
+    tags:
+      - EFSPicatiniScope
+  - type: Attachment
+  - type: ESWeight
+    self: 0.3
+
+- type: entity
+  name: Прицел "Кобра"
+  parent: EFSBaseAttachmentScope
+  id: EFSAttachmentScopeKobra
+  description: "Кобра весьма популярный коллиматорный прицел среди силовых структур и гражданских стрелков. Разрабатывался для Вооруженных Сил РФ однако на вооружение официально так и не был принят."
+  components:
+  - type: Sprite
+    state: kobra
+  - type: Tag
+    tags:
+      - EFSPicatiniScope
+  - type: Attachment
+
+
+- type: entity
+  name: Прицел Оптический "Acog"
+  parent: EFSBaseAttachmentScope
+  id: EFSAttachmentScopeAcog
+  description: "Оптический прицел ACOG 3.5x35 производства компании Trijicon. По-прежнему является фаворитом среди профессиональных стрелков, сотрудников правоохранительных органов и свободолюбивых граждан со всего мира."
+  components:
+  - type: Sprite
+    state: acog
+  - type: Tag
+    tags:
+      - EFSPicatiniScope
+  - type: Attachment
+
+
+- type: entity
+  name: Прицел "EoTech"
+  parent: EFSBaseAttachmentScope
+  id: EFSAttachmentScopeEotech
+  description: Голографический прицел Eotech 553. Благодаря его конструкции, позволяет использовать его на широком спектре оружия даже с не складными прицельными приспособлениями. Используется US SOCOM как основной прицел для операций в ограниченном пространстве.
+  components:
+  - type: Sprite
+    state: eotech
+  - type: Tag
+    tags:
+      - EFSPicatiniScope
+  - type: Attachment
+
+
+

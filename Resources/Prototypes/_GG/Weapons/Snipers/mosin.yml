@@ -1,0 +1,91 @@
+# - type: entity
+#   name: Винтовка Мосина
+#   parent: BaseWeaponSniper
+#   id: WeaponSniperMosinT
+#   description: A rooty tooty point and shooty.
+#   components:
+#   - type: Sprite
+#     sprite: GG/Weapons/mosin.rsi
+#     layers:
+#       - state: base
+#         scale: 0.75, 0.75
+#         map: ["enum.GunVisualLayers.Base"]
+#   - type: Item
+#     size: SniperRifles
+#   - type: Clothing
+#     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+#     quickEquip: false
+#     slots:
+#     - Back
+#   - type: AmmoCounter
+#   - type: Gun
+#     fireRate: 1
+#     selectedMode: SemiAuto
+#     availableModes:
+#     - SemiAuto
+#     soundLoudGunshot:
+#       path: /Audio/GG/Weapons/Mosin/cumshot.ogg
+#   - type: BallisticAmmoProvider
+#     cycleable: true
+#     autoCycle: false
+#     capacity: 5
+#     proto: Cartridge7.62x54R
+#     whitelist:
+#       tags:
+#       - Cartridge7.62x54R
+#   - type: ContainerContainer
+#     containers:
+#       ballistic-ammo: !type:Container
+#         ents: []
+#   - type: StaticPrice
+#     price: 500
+#   - type: ZoomableGun
+
+# - type: entity
+#   name: Винтовка Мосина
+#   suffix: NEW
+#   parent: BaseWeaponSniper2
+#   id: WeaponSniperMosinT2222
+#   description: A rooty tooty point and shooty.
+#   components:
+#   - type: Sprite
+#     sprite: GG/Weapons/mosin.rsi
+#     layers:
+#       - state: base
+#         scale: 0.75, 0.75
+#         map: ["enum.GunVisualLayers.Base"]
+#   - type: Item
+#     size: SniperRifles
+#   - type: Clothing
+#     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+#     quickEquip: false
+#     slots:
+#     - Back
+#   - type: AmmoCounter
+#   - type: Gun
+#     fireRate: 1
+#     selectedMode: SemiAuto
+#     availableModes:
+#     - SemiAuto
+#     soundLoudGunshot:
+#       path: /Audio/GG/Weapons/Mosin/cumshot.ogg
+#   - type: ChamberBallisticAmmoProvider
+#     cycleable: true
+#     autoCycle: false
+#     capacity: 20
+#     proto: Cartridge7.62x54R
+#     whitelist:
+#       tags:
+#       - Cartridge7.62x54R
+#   - type: MagazineVisuals
+#   - type: StaticPrice
+#     price: 500
+#   - type: ContainerContainer
+#     containers:
+#       gun_chamber: !type:ContainerSlot
+#       ballistic-ammo: !type:Container
+#         ents: []
+
+
+
+

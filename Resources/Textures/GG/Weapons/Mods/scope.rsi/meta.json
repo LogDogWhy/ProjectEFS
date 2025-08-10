@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "By LogDog",
+  "size": {
+    "x": 64,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "attachment-kobra"
+    },
+    {
+      "name": "attachment-l_kobra"
+    },
+    {
+      "name": "attachment-l_pso"
+    },
+    {
+      "name": "kobra"
+    },
+    {
+      "name": "l_kobra"
+    },
+    {
+      "name": "l_pso"
+    },
+    {
+      "name": "attachment-acog"
+    },
+    {
+      "name": "acog"
+    },
+    {
+      "name": "attachment-eotech"
+    },
+    {
+      "name": "eotech"
+    },
+    {
+      "name": "attachment-pu"
+    },
+    {
+      "name": "pu"
+    },
+    {
+      "name": "attachment-vd"
+    },
+    {
+      "name": "vd"
+    }
+  ]
+}

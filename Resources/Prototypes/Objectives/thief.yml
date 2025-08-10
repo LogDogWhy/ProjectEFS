@@ -5,10 +5,10 @@
   components:
   - type: Objective
     issuer: objective-issuer-thief
-  - type: RoleRequirement
-    roles:
-      components:
-      - ThiefRole
+  # - type: RoleRequirement
+  #   roles:
+  #     components:
+  #     - ThiefRole
 
 - type: entity
   abstract: true

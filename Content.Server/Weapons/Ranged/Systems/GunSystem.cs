@@ -25,6 +25,8 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Robust.Shared.Containers;
+using Content.Shared.Inventory;
+using Content.Shared.Armor;
 
 namespace Content.Server.Weapons.Ranged.Systems;
 
@@ -40,7 +42,7 @@ public sealed partial class GunSystem : SharedGunSystem
     [Dependency] private readonly StaminaSystem _stamina = default!;
     [Dependency] private readonly StunSystem _stun = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
-
+    [Dependency] private readonly InventorySystem _inventory = default!;
     private const float DamagePitchVariation = 0.05f;
     public const float GunClumsyChance = 0.5f;
 
@@ -378,6 +380,23 @@ public sealed partial class GunSystem : SharedGunSystem
         {
             var type = SharedMeleeWeaponSystem.GetHighestDamageSound(modifiedDamage, ProtoManager);
 
+            Dictionary<string, SoundSpecifier>? originalSoundGroups = null;
+            bool isWearingVest = false;
+
+            // Проверяем, есть ли на персонаже жилет и броня.
+            if (_inventory.TryGetSlotEntity(otherEntity, "outerClothing", out var vest) &&
+                TryComp<ArmorComponent>(vest, out var comp) && comp != null)
+            {
+                // Сохраняем оригинальную коллекцию звуков, если тип "Brute" имеется.
+                if (rangedSound.SoundGroups != null && rangedSound.SoundGroups.TryGetValue("Brute", out var originalSoundGroup))
+                {
+                    originalSoundGroups = new Dictionary<string, SoundSpecifier>(rangedSound.SoundGroups);
+                    rangedSound.SoundGroups["Brute"] = new SoundCollectionSpecifier("VestImpact");
+                    isWearingVest = true;
+                }
+            }
+
+            // Теперь продолжаем как и раньше: ищем нужный тип звука и воспроизводим его.
             if (type != null && rangedSound.SoundTypes?.TryGetValue(type, out var damageSoundType) == true)
             {
                 Audio.PlayPvs(damageSoundType, otherEntity, AudioParams.Default.WithVariation(DamagePitchVariation));
@@ -388,12 +407,14 @@ public sealed partial class GunSystem : SharedGunSystem
                 Audio.PlayPvs(damageSoundGroup, otherEntity, AudioParams.Default.WithVariation(DamagePitchVariation));
                 playedSound = true;
             }
+
+            // Восстанавливаем оригинальную коллекцию, если она была изменена.
+            if (isWearingVest && originalSoundGroups != null)
+            {
+                rangedSound.SoundGroups = originalSoundGroups;
+            }
         }
 
-        if (!playedSound && weaponSound != null)
-        {
-            Audio.PlayPvs(weaponSound, otherEntity);
-        }
     }
 
     // TODO: Pseudo RNG so the client can predict these.

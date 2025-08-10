@@ -1,0 +1,43 @@
+- type: entity
+  parent: Clothing
+  id: BaseBadge
+  name: identification card
+  description: A card necessary to access various areas aboard the station.
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Badges/badges.rsi
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: GG/Clothing/Badges/badges.rsi
+  - type: Item
+    heldPrefix: default
+    size: Tiny
+  - type: Access
+  - type: IdCard
+  - type: StationRecordKeyStorage
+  - type: ESWeight
+    self: 0.1
+
+- type: entity
+  parent: BaseBadge
+  id: BadgeBEAR
+  name: Жетон "BEAR"
+  components:
+  - type: Sprite
+    layers:
+    - state: bear
+  - type: PresetIdCard
+    job: Passenger
+
+- type: entity
+  parent: BaseBadge
+  id: BadgeUSEC
+  name: Жетон "USEC"
+  components:
+  - type: Sprite
+    layers:
+    - state: usec
+  - type: PresetIdCard
+    job: Passenger

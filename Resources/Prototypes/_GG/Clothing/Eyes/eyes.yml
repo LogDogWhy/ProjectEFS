@@ -1,0 +1,21 @@
+
+- type: entity
+  name: Прибор ночного видения
+  id: ClothingEyesVision
+  description: Обеспечивает оперативника изображением местности в условиях недостаточной освещённости.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
+    state: icon
+  - type: Clickable
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
+    equipSound: /Audio/GG/Items/PNV_on.ogg
+    unequipSound: /Audio/GG/Items/PNV_off.ogg
+    quickEquip: false
+    slots: [ Eyes ]
+  - type: GroupExamine
+  - type: UseDelay
+    delay: 4
+  - type: ESWeight
+    self: 0.1

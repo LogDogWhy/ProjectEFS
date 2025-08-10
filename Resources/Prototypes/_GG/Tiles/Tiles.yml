@@ -1,0 +1,521 @@
+# - type: tile
+#   id: EFTFloorBrickBroken
+#   name: gg-tiles-brick-broken
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_broken.rsi/full_brick_broken.png
+#   variants: 6
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorBlackFull
+#   name: gg-tiles-black-full
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_full.rsi/full_black_full.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorGreenFull
+#   name: gg-tiles-green-full
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_full.rsi/full_green_full.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorNavyFull
+#   name: gg-tiles-navy-full
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_full.rsi/full_navy_full.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorWhiteFull
+#   name: gg-tiles-white-full
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_full.rsi/full_white_full.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorBlackLarge
+#   name: gg-tiles-black-large
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_large.rsi/full_black_large.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorCeramic
+#   name: gg-tiles-ceramic
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_large.rsi/full_ceramic.png
+#   variants: 16
+#   placementVariants:
+#   - 0.55
+#   - 0.033
+#   - 0.088
+#   - 0.088
+#   - 0.09
+#   - 0.09
+#   - 0.09
+#   - 0.09
+#   - 0.045
+#   - 0.045
+#   - 0.045
+#   - 0.045
+#   - 0.10
+#   - 0.10
+#   - 0.10
+#   - 0.10
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepCeramic
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorGreenLarge
+#   name: gg-tiles-green-large
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_large.rsi/full_green_large.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection:
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorGreyLarge
+#   name: gg-tiles-grey-large
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_large.rsi/full_grey_large.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorNavyLarge
+#   name: gg-tiles-navy-large
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_large.rsi/full_navy_large.png
+#   variants: 6
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorWhiteLarge
+#   name: gg-tiles-white-large
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_large.rsi/full_white_large.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorBlueLong
+#   name: gg-tiles-blue-long
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_long.rsi/full_blue_long.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorGreyLong
+#   name: gg-tiles-grey-long
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_long.rsi/full_grey_long.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorBlack
+#   name: gg-tiles-black
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_medium.rsi/full_black.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorBrown
+#   name: gg-tiles-brown
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_medium.rsi/full_brown.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorGrey
+#   name: gg-tiles-grey
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_medium.rsi/full_grey.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorNavy
+#   name: gg-tiles-navy
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_medium.rsi/full_navy.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorBrick
+#   name: gg-tiles-brick
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/brick_small.rsi/full_brick.png
+#   variants: 8
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorConcreteAny
+#   name: gg-tiles-concrete-any
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/concrete.rsi/full_concrete_any.png
+#   variants: 5
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorConcreteBricks
+#   name: gg-tiles-concrete-bricks
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/concrete.rsi/full_concrete_bricks.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepTile
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorSteelGrate
+#   name: gg-tiles-steel-grate
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/steel.rsi/full_steel_grate.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepCatwalk
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorSteelIndustrial
+#   name: gg-tiles-steel-industrial
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/steel.rsi/full_steel_industrial.png
+#   variants: 7
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepCatwalk
+#   heatCapacity: 10000
+#   weather: false
+
+# - type: tile
+#   id: EFTFloorSteelSolid
+#   name: gg-tiles-steel-solid
+#   sprite: /Textures/GG/Tiles/KMIN Tiles/steel.rsi/full_steel_solid.png
+#   variants: 3
+#   placementVariants:
+#   - 1.0
+#   - 1.0
+#   - 1.0
+#   baseTurf: Plating
+#   isSubfloor: false
+#   deconstructTools: [ Prying ]
+#   footstepSounds:
+#     collection: FootstepCatwalk
+#   heatCapacity: 10000
+#   weather: false
+
+# # - type: tile
+# #   id: EFTFloorSteelTile
+# #   name: gg-tiles-steel-tile
+# #   sprite: /Textures/GG/Tiles/KMIN Tiles/steel.rsi/full_steel_tile.png
+# #   variants: 7
+# #   placementVariants:
+# #   - 1.0
+# #   - 1.0
+# #   - 1.0
+# #   - 1.0
+# #   - 1.0
+# #   - 1.0
+# #   - 1.0
+# #   baseTurf: Plating
+# #   isSubfloor: false
+# #   deconstructTools: [ Prying ]
+# #   footstepSounds:
+# #     collection: FootstepCatwalk
+# #   heatCapacity: 10000
+# #   weather: false
+
+# - type: soundCollection
+#   id: FootstepCeramic
+#   files:
+#   - /Audio/GG/Footsteps/walk_tile_01.ogg
+#   - /Audio/GG/Footsteps/walk_tile_02.ogg
+#   - /Audio/GG/Footsteps/walk_tile_03.ogg
+#   - /Audio/GG/Footsteps/walk_tile_04.ogg
+#   - /Audio/GG/Footsteps/walk_tile_05.ogg
+#   - /Audio/GG/Footsteps/walk_tile_06.ogg
+#   - /Audio/GG/Footsteps/walk_tile_07.ogg
+#   - /Audio/GG/Footsteps/walk_tile_08.ogg
+#   - /Audio/GG/Footsteps/walk_tile_09.ogg
+#   - /Audio/GG/Footsteps/walk_tile_10.ogg
+#   - /Audio/GG/Footsteps/walk_tile_11.ogg
+#   - /Audio/GG/Footsteps/walk_tile_12.ogg

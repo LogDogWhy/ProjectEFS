@@ -11,4 +11,7 @@ public sealed partial class FootstepModifierComponent : Component
 {
     [DataField(required: true), AutoNetworkedField]
     public SoundSpecifier FootstepSoundCollection = default!;
+
+    [DataField, AutoNetworkedField]
+    public bool Clothing = true;
 }

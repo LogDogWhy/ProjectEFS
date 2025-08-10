@@ -84,6 +84,15 @@ public abstract partial class SharedGunSystem : EntitySystem
         InitializeBattery();
         InitializeCartridge();
         InitializeChamberMagazine();
+
+        InitializeSuppressor();
+        InitializeGrip();
+        InitializeScope();
+        InitializeStock();
+        InitializeForearm();
+        InitializeGadget();
+        InitializeReceiver();
+
         InitializeMagazine();
         InitializeRevolver();
         InitializeBasicEntity();
@@ -107,6 +116,86 @@ public abstract partial class SharedGunSystem : EntitySystem
 
         DebugTools.Assert((gun.Comp.AvailableModes & gun.Comp.SelectedMode) != 0x0);
 #endif
+
+
+        var sup = GetSuppressorEntity(gun);
+        if (sup != null)
+        {
+            if(TryComp<AttachmentComponent>(sup, out var dic) && dic.Sil == true)
+            {
+                gun.Comp.SoundGunshot = gun.Comp.SoundSilGunshot;
+            }
+
+            if (TryComp<AppearanceComponent>(gun, out var appearance))
+                Appearance.SetData(gun, AmmoVisuals.Suppressor, true, appearance);
+        }
+        else
+        {
+            if (TryComp<AppearanceComponent>(gun, out var appearance))
+                Appearance.SetData(gun, AmmoVisuals.Suppressor, false, appearance);
+        }
+
+        var stock = GetStockEntity(gun);
+        if (stock != null)
+        {
+            if (TryComp<AppearanceComponent>(gun, out var appearance))
+                Appearance.SetData(gun, AmmoVisuals.Stock, true, appearance);
+        }
+        else
+        {
+            if (TryComp<AppearanceComponent>(gun, out var appearance))
+                Appearance.SetData(gun, AmmoVisuals.Stock, false, appearance);
+        }
+
+        var forearm = GetForearmEntity(gun);
+        if (forearm != null)
+        {
+            if (TryComp<AppearanceComponent>(gun, out var appearance))
+                Appearance.SetData(gun, AmmoVisuals.Forearm, true, appearance);
+        }
+        else
+        {
+            if (TryComp<AppearanceComponent>(gun, out var appearance))
+                Appearance.SetData(gun, AmmoVisuals.Forearm, false, appearance);
+        }
+
+        var grip = GetGripEntity(gun);
+        if (grip != null)
+        {
+            if (TryComp<AppearanceComponent>(gun, out var appearance))
+                Appearance.SetData(gun, AmmoVisuals.Grip, true, appearance);
+        }
+        else
+        {
+            if (TryComp<AppearanceComponent>(gun, out var appearance))
+                Appearance.SetData(gun, AmmoVisuals.Grip, false, appearance);
+        }
+
+        var gadget = GetGadgetEntity(gun);
+        if (gadget != null)
+        {
+            if (TryComp<AppearanceComponent>(gun, out var appearance))
+                Appearance.SetData(gun, AmmoVisuals.Gadget, true, appearance);
+        }
+        else
+        {
+            if (TryComp<AppearanceComponent>(gun, out var appearance))
+                Appearance.SetData(gun, AmmoVisuals.Gadget, false, appearance);
+        }
+
+        var scope = GetScopeEntity(gun);
+        if (scope != null)
+        {
+            if (TryComp<AppearanceComponent>(gun, out var appearance))
+                Appearance.SetData(gun, AmmoVisuals.Scope, true, appearance);
+        }
+        else
+        {
+            if (TryComp<AppearanceComponent>(gun, out var appearance))
+                Appearance.SetData(gun, AmmoVisuals.Scope, false, appearance);
+        }
+
+
 
         RefreshModifiers((gun, gun));
     }
@@ -470,6 +559,10 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (attemptEv.Cancelled)
             return;
 
+        var sup = GetSuppressorEntity(gun);
+        if (sup != null)
+            return;
+
         var sprite = component.MuzzleFlash;
 
         if (sprite == null)
@@ -569,4 +662,11 @@ public enum AmmoVisuals : byte
     HasAmmo, // used for generic visualizers. c# stuff can just check ammocount != 0
     MagLoaded,
     BoltClosed,
+    Suppressor,
+    Grip,
+    Scope,
+    Forearm,
+    Stock,
+    Receiver,
+    Gadget,
 }

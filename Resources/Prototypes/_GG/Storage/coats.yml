@@ -1,0 +1,62 @@
+- type: entity
+  name: куртка
+  parent: [ BaseStructure, BaseBagOpenClose ]
+  id: EFSBaseCoat
+  suffix: ДЕБАЖ
+  description: A cabinet for all your filing needs.
+  components:
+  - type: Physics
+    bodyType: Dynamic
+  - type: Storage
+    grid:
+    - 0,0,1,1
+    maxItemSize: Normal
+  - type: Clickable
+  - type: Sprite
+    sprite: GG/Objects/Storage/coat.rsi
+    snapCardinals: true
+    noRot: true
+    state: coat
+  - type: WallMount
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Transform
+    noRot: false
+  - type: InteractionOutline
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+
+- type: entity
+  name: Курта
+  parent: EFSBaseCoat
+  id: EFSBaseCoatBrown
+  suffix: Empty
+  description: Мятая куртка, есть шанс, что там остались какие-нибудь вещи.
+  components:
+  - type: Sprite
+    state: coat
+
+- type: entity
+  name: Курта
+  parent: EFSBaseCoat
+  id: EFSBaseCoatBlue
+  suffix: Empty
+  description: Мятая куртка, есть шанс, что там остались какие-нибудь вещи.
+  components:
+  - type: Sprite
+    state: mcoat

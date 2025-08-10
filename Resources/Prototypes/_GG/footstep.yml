@@ -1,0 +1,21 @@
+- type: soundCollection
+  id: FootstepBarbWire
+  files:
+  - /Audio/GG/Footsteps/barbwire1.ogg
+  - /Audio/GG/Footsteps/barbwire2.ogg
+  - /Audio/GG/Footsteps/barbwire3.ogg
+
+
+- type: soundCollection
+  id: WeaponCarrySounds
+  files:
+    - /Audio/GG/Footsteps/gear_stereo1.ogg
+    - /Audio/GG/Footsteps/gear_stereo2.ogg
+    - /Audio/GG/Footsteps/gear_stereo3.ogg
+    - /Audio/GG/Footsteps/gear_stereo4.ogg
+    - /Audio/GG/Footsteps/gear_stereo5.ogg
+    - /Audio/GG/Footsteps/gear_stereo6.ogg
+    - /Audio/GG/Footsteps/gear_stereo7.ogg
+    - /Audio/GG/Footsteps/gear_stereo8.ogg
+    - /Audio/GG/Footsteps/gear_stereo9.ogg
+    - /Audio/GG/Footsteps/gear_stereo10.ogg

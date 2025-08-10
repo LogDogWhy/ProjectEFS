@@ -1,0 +1,8 @@
+# AirDropCordComponent
+
+# - type: entity
+#   id: AirDropZone
+#   parent: MarkerBase
+#   name: AirDrop
+#   components:
+#   - type: Sprite

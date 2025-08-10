@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "By LogDog",
+  "size": {
+    "x": 64,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "attachment-aksu"
+    },
+    {
+      "name": "aksu"
+    },
+    {
+      "name": "100"
+    },
+    {
+      "name": "74"
+    },
+    {
+      "name": "74m"
+    },
+    {
+      "name": "akm"
+    },
+    {
+      "name": "attachment-100"
+    },
+    {
+      "name": "attachment-74"
+    },
+    {
+      "name": "attachment-74m"
+    },
+    {
+      "name": "attachment-akm"
+    },
+    {
+      "name": "attachment-black_akmoe"
+    },
+    {
+      "name": "attachment-black_moesl"
+    },
+    {
+      "name": "attachment-desert_akmoe"
+    },
+    {
+      "name": "attachment-desert_moesl"
+    },
+    {
+      "name": "attachment-polyak"
+    },
+    {
+      "name": "attachment-vpoak"
+    },
+    {
+      "name": "attachment-wasr"
+    },
+    {
+      "name": "attachment-adar"
+    },
+    {
+      "name": "attachment-fnfal"
+    },
+    {
+      "name": "fnfal"
+    },
+    {
+      "name": "adar"
+    },
+    {
+      "name": "m4"
+    },
+    {
+      "name": "attachment-m4"
+    },
+    {
+      "name": "kac"
+    },
+    {
+      "name": "attachment-kac"
+    },
+    {
+      "name": "black_akmoe"
+    },
+    {
+      "name": "black_moesl"
+    },
+    {
+      "name": "desert_akmoe"
+    },
+    {
+      "name": "desert_moesl"
+    },
+    {
+      "name": "polyak"
+    },
+    {
+      "name": "vpoak"
+    },
+    {
+      "name": "wasr"
+    }
+  ]
+}

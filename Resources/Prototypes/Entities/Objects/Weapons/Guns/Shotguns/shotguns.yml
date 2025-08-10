@@ -42,11 +42,13 @@
         ents: []
   - type: StaticPrice
     price: 500
+  - type: ESWeight
+    self: 2.5
 
 - type: entity
   name: Bulldog
   # Don't parent to BaseWeaponShotgun because it differs significantly
-  parent: [BaseItem, BaseGunWieldable]
+  parent: BaseItem
   id: WeaponShotgunBulldog
   description: It's a magazine-fed shotgun designed for close quarters combat. Uses .50 shotgun shells.
   components:

@@ -1,0 +1,78 @@
+- type: entity
+  name: Винтовка Мосина
+  parent: BaseWeaponSniper
+  id: EFSWeaponSniperMosin
+  description: DEV
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/mosin.rsi
+    layers:
+      - state: base
+        scale: 0.75, 0.75
+        map: ["enum.GunVisualLayers.Base"]
+      - sprite: GG/Weapons/Mods/scope.rsi
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.75, 0.75
+        offset: 0.0, 0.0
+        visible: false
+  - type: Item
+    size: SniperRifles
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    quickEquip: false
+    slots:
+    - Back
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/Mosin/cumshot.ogg
+    projectileSpeed: 300000
+  - type: BallisticAmmoProvider
+    boltClosed: true
+    cycleable: true
+    autoCycle: false
+    capacity: 5
+    proto: Cartridge7.62x54R
+    whitelist:
+      tags:
+      - Cartridge7.62x54R
+  - type: ItemSlots
+    slots:
+      gun_scope:
+        priority: 1
+        whitelist:
+          tags:
+            - EFSMosinScope
+  - type: ContainerContainer
+    containers:
+      gun_scope: !type:ContainerSlot
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+  - type: ZoomableGun
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+
+- type: Tag
+  id: EFSMosinScope
+
+
+- type: entity
+  name: Прицел ПУ
+  parent: EFSBaseAttachmentScope
+  id: EFSAttachmentMosinScopePu
+  description: WIP
+  components:
+  - type: Sprite
+    state: pu
+  - type: Tag
+    tags:
+      - EFSMosinScope
+  - type: Attachment

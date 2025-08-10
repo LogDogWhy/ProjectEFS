@@ -10,62 +10,92 @@
 - type: soundCollection
   id: FootstepWood
   files:
-  - /Audio/Effects/Footsteps/wood1.ogg
-  - /Audio/Effects/Footsteps/wood2.ogg
-  - /Audio/Effects/Footsteps/wood3.ogg
-  - /Audio/Effects/Footsteps/wood4.ogg
-  - /Audio/Effects/Footsteps/wood5.ogg
+  - /Audio/GG/Footsteps/walk_wood_01.ogg
+  - /Audio/GG/Footsteps/walk_wood_02.ogg
+  - /Audio/GG/Footsteps/walk_wood_03.ogg
+  - /Audio/GG/Footsteps/walk_wood_04.ogg
+  - /Audio/GG/Footsteps/walk_wood_05.ogg
+  - /Audio/GG/Footsteps/walk_wood_06.ogg
+  - /Audio/GG/Footsteps/walk_wood_07.ogg
+  - /Audio/GG/Footsteps/walk_wood_08.ogg
+  - /Audio/GG/Footsteps/walk_wood_09.ogg
+  - /Audio/GG/Footsteps/walk_wood_10.ogg
+  - /Audio/GG/Footsteps/walk_wood_12.ogg
+  - /Audio/GG/Footsteps/walk_wood_13.ogg
+  - /Audio/GG/Footsteps/walk_wood_14.ogg
+  - /Audio/GG/Footsteps/walk_wood_15.ogg
+  - /Audio/GG/Footsteps/walk_wood_16.ogg
+  - /Audio/GG/Footsteps/walk_wood_17.ogg
+  - /Audio/GG/Footsteps/walk_wood_18.ogg
+  - /Audio/GG/Footsteps/walk_wood_19.ogg
+  - /Audio/GG/Footsteps/walk_wood_20.ogg
+  - /Audio/GG/Footsteps/walk_wood_21.ogg
+  - /Audio/GG/Footsteps/walk_wood_22.ogg
 
 - type: soundCollection
   id: FootstepCatwalk
   files:
-  - /Audio/Effects/Footsteps/catwalk1.ogg
-  - /Audio/Effects/Footsteps/catwalk2.ogg
-  - /Audio/Effects/Footsteps/catwalk3.ogg
-  - /Audio/Effects/Footsteps/catwalk4.ogg
-  - /Audio/Effects/Footsteps/catwalk5.ogg
-
+  - /Audio/GG/Footsteps/walk_metal1.ogg
+  - /Audio/GG/Footsteps/walk_metal2.ogg
+  - /Audio/GG/Footsteps/walk_metal3.ogg
+  - /Audio/GG/Footsteps/walk_metal4.ogg
+  - /Audio/GG/Footsteps/walk_metal5.ogg
+  - /Audio/GG/Footsteps/walk_metal6.ogg
+####
 - type: soundCollection
-  id: FootstepFloor
+  id: FootstepTile
   files:
-  - /Audio/Effects/Footsteps/floor1.ogg
-  - /Audio/Effects/Footsteps/floor2.ogg
-  - /Audio/Effects/Footsteps/floor3.ogg
-  - /Audio/Effects/Footsteps/floor4.ogg
-  - /Audio/Effects/Footsteps/floor5.ogg
+  - /Audio/GG/Footsteps/run_gravel_01.ogg
+  - /Audio/GG/Footsteps/run_gravel_02.ogg
+  - /Audio/GG/Footsteps/run_gravel_03.ogg
+  - /Audio/GG/Footsteps/run_gravel_04.ogg
+  - /Audio/GG/Footsteps/run_gravel_05.ogg
+  - /Audio/GG/Footsteps/run_gravel_06.ogg
+  - /Audio/GG/Footsteps/run_gravel_07.ogg
+  - /Audio/GG/Footsteps/run_gravel_08.ogg
 
 - type: soundCollection
   id: FootstepHull
   files:
-  - /Audio/Effects/Footsteps/hull1.ogg
-  - /Audio/Effects/Footsteps/hull2.ogg
-  - /Audio/Effects/Footsteps/hull3.ogg
-  - /Audio/Effects/Footsteps/hull4.ogg
-  - /Audio/Effects/Footsteps/hull5.ogg
+  - /Audio/GG/Footsteps/walk_metal1.ogg
+  - /Audio/GG/Footsteps/walk_metal2.ogg
+  - /Audio/GG/Footsteps/walk_metal3.ogg
+  - /Audio/GG/Footsteps/walk_metal4.ogg
+  - /Audio/GG/Footsteps/walk_metal5.ogg
+  - /Audio/GG/Footsteps/walk_metal6.ogg
 
 - type: soundCollection
   id: FootstepPlating
   files:
-  - /Audio/Effects/Footsteps/plating1.ogg
-  - /Audio/Effects/Footsteps/plating2.ogg
-  - /Audio/Effects/Footsteps/plating3.ogg
-  - /Audio/Effects/Footsteps/plating4.ogg
-  - /Audio/Effects/Footsteps/plating5.ogg
+  - /Audio/GG/Footsteps/walk_proflist_01.ogg
+  - /Audio/GG/Footsteps/walk_proflist_02.ogg
+  - /Audio/GG/Footsteps/walk_proflist_03.ogg
+  - /Audio/GG/Footsteps/walk_proflist_04.ogg
+  - /Audio/GG/Footsteps/walk_proflist_05.ogg
+  - /Audio/GG/Footsteps/walk_proflist_06.ogg
+  - /Audio/GG/Footsteps/walk_proflist_07.ogg
+  - /Audio/GG/Footsteps/walk_proflist_08.ogg
+  - /Audio/GG/Footsteps/walk_proflist_09.ogg
+  - /Audio/GG/Footsteps/walk_proflist_10.ogg
 
 - type: soundCollection
-  id: FootstepTile
+  id: FootstepAsteroid
   files:
-  - /Audio/Effects/Footsteps/tile1.ogg
-  - /Audio/Effects/Footsteps/tile2.ogg
-  - /Audio/Effects/Footsteps/tile3.ogg
-  - /Audio/Effects/Footsteps/tile4.ogg
+  - /Audio/GG/Footsteps/run_gravel_01.ogg
+  - /Audio/GG/Footsteps/run_gravel_02.ogg
+  - /Audio/GG/Footsteps/run_gravel_03.ogg
+  - /Audio/GG/Footsteps/run_gravel_04.ogg
+  - /Audio/GG/Footsteps/run_gravel_05.ogg
+  - /Audio/GG/Footsteps/run_gravel_06.ogg
+  - /Audio/GG/Footsteps/run_gravel_07.ogg
+  - /Audio/GG/Footsteps/run_gravel_08.ogg
 
 - type: soundCollection
   id: FootstepClown
   files:
   - /Audio/Effects/Footsteps/clownstep1.ogg
   - /Audio/Effects/Footsteps/clownstep2.ogg
-  
+
 - type: soundCollection
   id: FootstepJester
   files:
@@ -73,14 +103,14 @@
   - /Audio/Effects/Footsteps/jesterstep2.ogg
 
 - type: soundCollection
-  id: FootstepSkates
-  files:
-  - /Audio/Items/Toys/skates.ogg
-
-- type: soundCollection
   id: FootstepDuck
   files:
   - /Audio/Items/Toys/quack.ogg
+
+- type: soundCollection
+  id: FootstepSkates
+  files:
+  - /Audio/Items/Toys/skates.ogg
 
 - type: soundCollection
   id: FootstepHeavy
@@ -89,13 +119,24 @@
   - /Audio/Effects/Footsteps/suitstep2.ogg
 
 - type: soundCollection
-  id: FootstepAsteroid
+  id: FootstepFloor
   files:
-  - /Audio/Effects/Footsteps/asteroid1.ogg
-  - /Audio/Effects/Footsteps/asteroid2.ogg
-  - /Audio/Effects/Footsteps/asteroid3.ogg
-  - /Audio/Effects/Footsteps/asteroid4.ogg
-  - /Audio/Effects/Footsteps/asteroid5.ogg
+  - /Audio/GG/Footsteps/walk_plastic_01.ogg
+  - /Audio/GG/Footsteps/walk_plastic_02.ogg
+  - /Audio/GG/Footsteps/walk_plastic_03.ogg
+  - /Audio/GG/Footsteps/walk_plastic_04.ogg
+  - /Audio/GG/Footsteps/walk_plastic_05.ogg
+  - /Audio/GG/Footsteps/walk_plastic_06.ogg
+  - /Audio/GG/Footsteps/walk_plastic_07.ogg
+  - /Audio/GG/Footsteps/walk_plastic_08.ogg
+  - /Audio/GG/Footsteps/walk_plastic_09.ogg
+  - /Audio/GG/Footsteps/walk_plastic_10.ogg
+  - /Audio/GG/Footsteps/walk_plastic_11.ogg
+  - /Audio/GG/Footsteps/walk_plastic_12.ogg
+  - /Audio/GG/Footsteps/walk_plastic_13.ogg
+  - /Audio/GG/Footsteps/walk_plastic_14.ogg
+  - /Audio/GG/Footsteps/walk_plastic_15.ogg
+  - /Audio/GG/Footsteps/walk_plastic_16.ogg
 
 - type: soundCollection
   id: FootstepSnow
@@ -108,18 +149,26 @@
 - type: soundCollection
   id: FootstepGrass
   files:
-  - /Audio/Effects/Footsteps/grass1.ogg
-  - /Audio/Effects/Footsteps/grass2.ogg
-  - /Audio/Effects/Footsteps/grass3.ogg
-  - /Audio/Effects/Footsteps/grass4.ogg
+  - /Audio/GG/Footsteps/walk_concrete1.ogg
+  - /Audio/GG/Footsteps/walk_concrete2.ogg
+  - /Audio/GG/Footsteps/walk_concrete3.ogg
+  - /Audio/GG/Footsteps/walk_concrete4.ogg
+  - /Audio/GG/Footsteps/walk_concrete5.ogg
+  - /Audio/GG/Footsteps/walk_concrete6.ogg
+
 
 - type: soundCollection
   id: FootstepWater
   files:
-    - /Audio/Effects/Footsteps/water1.ogg
-    - /Audio/Effects/Footsteps/water2.ogg
-    - /Audio/Effects/Footsteps/water3.ogg
-    - /Audio/Effects/Footsteps/water4.ogg
+  - /Audio/GG/Footsteps/walk_puddle_01.ogg
+  - /Audio/GG/Footsteps/walk_puddle_02.ogg
+  - /Audio/GG/Footsteps/walk_puddle_03.ogg
+  - /Audio/GG/Footsteps/walk_puddle_04.ogg
+  - /Audio/GG/Footsteps/walk_puddle_05.ogg
+  - /Audio/GG/Footsteps/walk_puddle_06.ogg
+  - /Audio/GG/Footsteps/walk_puddle_07.ogg
+  - /Audio/GG/Footsteps/walk_puddle_08.ogg
+  - /Audio/GG/Footsteps/walk_puddle_09.ogg
 
 - type: soundCollection
   id: BarestepHard
@@ -160,6 +209,20 @@
   - /Audio/Effects/Footsteps/clownspiderstep2.ogg
 
 - type: soundCollection
+  id: FootstepTarkov
+  files:
+  - /Audio/GG/Footsteps/gear_stereo1.ogg
+  - /Audio/GG/Footsteps/gear_stereo2.ogg
+  - /Audio/GG/Footsteps/gear_stereo3.ogg
+  - /Audio/GG/Footsteps/gear_stereo4.ogg
+  - /Audio/GG/Footsteps/gear_stereo5.ogg
+  - /Audio/GG/Footsteps/gear_stereo6.ogg
+  - /Audio/GG/Footsteps/gear_stereo7.ogg
+  - /Audio/GG/Footsteps/gear_stereo8.ogg
+  - /Audio/GG/Footsteps/gear_stereo9.ogg
+  - /Audio/GG/Footsteps/gear_stereo10.ogg
+
+- type: soundCollection
   id: FootstepThud
   files:
   - /Audio/Effects/Footsteps/largethud.ogg
@@ -189,7 +252,7 @@
   id: FootstepBlood
   files:
   - /Audio/Effects/Footsteps/gib_step.ogg
-  
+
 - type: soundCollection
   id: FootstepSticky
   files:

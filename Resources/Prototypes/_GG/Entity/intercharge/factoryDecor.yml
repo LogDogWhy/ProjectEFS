@@ -1,0 +1,121 @@
+- type: entity
+  id: EFSDecorBarrelBig
+  parent: EFSDecorRezervBase # duh
+  name: Огромный чан
+  description: 
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Decoration/2x64.rsi
+    state: bigbarrel
+    snapCardinals: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.8,0.6,-0.8,-0.6"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+
+- type: entity
+  id: EFSDecorFenceTGBroken
+  parent: EFSDecorRezervBase # duh
+  name: Ограда
+  description: На ней изображенно лого кампании "TerraGroup". Время никого не щадит.
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Decoration/2x64.rsi
+    state: wrekedfecne
+    drawdepth: Overdoors
+    snapCardinals: false
+  - type: Rotatable
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.8,-0.8,-0.8,-1.0"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: SpriteFade
+
+
+- type: entity
+  id: EFSDecorFenceTG2
+  parent: EFSDecorRezervBase # duh
+  name: Ограда
+  description: На ней изображенно лого кампании "TerraGroup". 
+  components:
+  - type: SpriteFade
+  - type: Sprite
+    sprite: GG/Objects/Decoration/2x64.rsi
+    state: bluefence
+    drawdepth: Overdoors
+    snapCardinals: false
+  - type: Rotatable
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.8,-0.8,-0.8,-1.0"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+
+
+
+
+- type: entity
+  id: EFSDecorPlita
+  parent: EFSDecorRezervBase # duh
+  name: Плитка 
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Decoration/2x64.rsi
+    state: plita
+  - type: Fixtures
+
+- type: entity
+  id: EFSDecorPlita1
+  parent: EFSDecorRezervBase # duh
+  name: Плитка 2
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Decoration/2x64.rsi
+    state: plita2
+  - type: Fixtures
+
+- type: entity
+  id: EFSDecorPlita2
+  parent: EFSDecorRezervBase # duh
+  name: Плитка 3
+  components: 
+  - type: Sprite
+    sprite: GG/Objects/Decoration/2x64.rsi
+    state: plita3
+  - type: Fixtures
+
+- type: entity
+  id: EFSDecorPlitaWall
+  parent: EFSDecorRezervBase # duh
+  name: Плитка СТЕНА
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Decoration/2x64.rsi
+    state: 
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.48,0.48,-0.47,-0.5"
+        layer:
+        - WallLayer
+
+  

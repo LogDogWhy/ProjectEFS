@@ -1,0 +1,258 @@
+- type: loadoutGroup
+  id: EFSJumpsuitBear
+  name: Комбенизон
+  loadouts:
+  - RussiaCamo
+  - DefaultCamo
+  - BrownCamo
+  - MatroskaCamo
+  - AbibasBlackSuit
+  - TagillaSuit
+
+
+- type: loadoutGroup
+  id: EFSJumpsuitUsec
+  name: Комбенизон
+  loadouts:
+  - YellowAndBlackCamo
+  - DefaultCamoUsec
+  - SandCamoUsec
+  - HoodieCamoUsec
+  - AbibasBlackSuit
+  - TagillaSuit
+
+- type: loadoutGroup
+  id: EFSHeadBear
+  name: Шлем
+  minLimit: 0
+  loadouts:
+  - None
+  - BlackCap
+  - PomPon
+  - HatBomber
+  - HelmetSH68
+  - HelmetSfera94
+  - HelmetExfilDark
+  - HelmetAltyn
+  - KillaHelmet
+  - TagillaHelmet
+
+- type: loadoutGroup
+  id: EFSHeadUsec
+  minLimit: 0
+  name: Шлем
+  loadouts:
+  - None
+  - BlackCap
+  - PomPon
+  - HatBomber
+  - HelmetSH68
+  - HelmetUlachTan
+  - HelmetExfilDark
+  - HelmetRys
+  - KillaHelmet
+  - TagillaHelmet
+
+- type: loadoutGroup
+  id: EFSNeck
+  name: Повязка
+  minLimit: 0
+  loadouts:
+  - None
+  - ArmbandBlue
+  - ArmbandRed
+  - ArmbandGreen
+  - ArmbandYellow
+
+- type: loadoutGroup
+  id: EFSBackpack
+  name: Рюкзак
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - MilitaryBackpack
+
+- type: loadoutGroup
+  id: EFSOuterClothing
+  name: Броня
+  minLimit: 0
+  loadouts:
+  - None
+  - ArmorPress
+  - ArmorModule3M
+  - Armor6B13
+  - ArmorTrooperTFO
+  - ArmorGearAVS
+  - ArmorBagariy
+  - ArmorNFMTHOR
+  - Armor6B43
+  - KillaArmor
+  - TagillaArmor
+
+- type: loadoutGroup
+  id: EFSBelt
+  name: Разгрузка
+  minLimit: 0
+  loadouts:
+  - None
+  - ScavHolder
+  - BankRobberHolder
+  - RPSHolder
+  - TritonHolder
+
+- type: loadoutGroup
+  id: EFSAmmo
+  name: Амуниция
+  minLimit: 0
+  maxLimit: 3
+  loadouts:
+  - None
+  - BoxPistol9x19
+  - BoxPistol9x19b
+  - BoxPistol.45
+  - BoxPistol.45b
+  - Box9x39
+  - Box9x39b
+  - BoxRifleBig7.62x39
+  - BoxRifleBig7.62x39b
+  - BoxRifle5.45x39
+  - BoxRifle5.45x39b
+  - BoxRifle5.56x45
+  - BoxRifle5.56x45b
+  - BoxPistol9x18
+  - BoxPistol9x18b
+  - BoxRifle7.62x54R
+  - BoxRifle7.62x54Rb
+  - BoxRifle7.62x51
+  - BoxRifle7.62x51b
+  - MagazineShotgun
+
+- type: loadoutGroup
+  id: EFSWeaponBear
+  name: Основное оружие
+  minLimit: 0
+  loadouts:
+  - None
+  - MosinT
+  - Kedr91
+  - VeprKm
+  - SKS
+  - Vitya
+  - Saiga
+  - Ak74
+  - Aksu
+  - Ak74m
+  - Akm
+  - SVD
+  - VSS
+
+- type: loadoutGroup
+  id: EFSWeaponUsec
+  name: Основное оружие
+  minLimit: 0
+  loadouts:
+  - None
+  - M700
+  - Kedr91
+  - Adar
+  - VeprHunter
+  - MP5
+  - SA58
+  - UMP
+  - ShotgunM3
+  - MDR556
+  - M4A1
+  - G28
+  - MDR762
+
+- type: loadoutGroup
+  id: EFSSecondWeaponBear
+  name: Вторичное оружие
+  minLimit: 0
+  loadouts:
+  - None
+  - PMScav
+  - Grach
+
+- type: loadoutGroup
+  id: EFSSecondWeaponUsec
+  name: Вторичное оружие
+  minLimit: 0
+  loadouts:
+  - None
+  - Colt
+  - Glock18
+
+
+- type: loadoutGroup
+  id: EFSMeeleUsec
+  name: Ближний бой
+  loadouts:
+  - KukriKnife
+  - TagillaHammer
+
+- type: loadoutGroup
+  id: EFSMeeleBear
+  name: Ближний бой
+  loadouts:
+  - 6x3Knife
+  - TagillaHammer
+
+
+- type: loadoutGroup
+  id: EFSGloves
+  name: Перчатки
+  minLimit: 0
+  loadouts:
+  - None
+  - YellowGloves
+  - FingerlessGloves
+  - TacticalGloves
+  - TagillaGloves
+
+- type: loadoutGroup
+  id: EFSMask
+  name: Маски
+  minLimit: 0
+  loadouts:
+  - None
+  - ColdFearMask
+  - HalfMask
+
+- type: loadoutGroup
+  id: EFSGlasses
+  name: Разное
+  minLimit: 0
+  loadouts:
+  - None
+  - BlackGlasses
+  - FlashlightSecliteMenu
+
+- type: loadoutGroup
+  id: EFSMedicine
+  name: Медицина
+  minLimit: 0
+  maxLimit: 4
+  loadouts:
+  - EFSMedAi2Menu
+  - EFSMedGrizzlyMenu
+  # - CMSMenu
+  - GoldStarMenu
+  - PropitalPenMenu
+  - AdrenalinePenMenu
+  - MorphinePenMenu
+  - TrimadolPenMenu
+  - ZagustinPenMenu
+  - EFSPerfotoranPenMenu
+  - EFSSJ1PenMenu
+
+
+- type: loadoutGroup
+  id: EFSGrenade
+  name: Гранаты
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - GrenadeFlash
+  - Soap
+  - F1Grenade

@@ -1,0 +1,721 @@
+- type: Tag
+  id: EFSMagazineTarkov
+
+
+# - type: Tag
+#   id: EFSMagazineRifleGEN3
+
+################################################################################
+
+
+
+################################################################################
+
+
+################################################################################
+
+# - type: entity
+#   id: BaseMagazineRifleАКМAluminn
+#   name: "Магазин алюминиевый 7.62x39"
+#   parent: BaseItem
+#   abstract: true
+#   components:
+#   - type: Tag
+#     tags:
+#       - EFSMagazineRifleАКМAluminn
+#   - type: Item
+#     size: Small
+#   - type: BallisticAmmoProvider
+#     mayTransfer: true
+#     whitelist:
+#       tags:
+#         - EFSMagazineTarkov
+#         - Cartridge7.62x39
+#     capacity: 30
+#   - type: ContainerContainer
+#     containers:
+#       ballistic-ammo: !type:Container
+#   - type: Sprite
+#     sprite: GG/Weapons/Ammo/Magazine7.62x39.rsi
+#     layers:
+#     - state: base
+#       map: ["enum.GunVisualLayers.Base"]
+#     - state: mag-1
+#       map: ["enum.GunVisualLayers.Mag"]
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 2
+#     zeroVisible: false
+#   - type: Appearance
+
+# - type: entity
+#   id: EFSMagazineRifleАКМAluminn
+#   name: "Магазин алюминиевый 7.62x39"
+#   parent: BaseMagazineRifleАКМAluminn
+#   components:
+#   - type: BallisticAmmoProvider
+#     proto: Cartridge7.62x39
+#   - type: Sprite
+#     layers:
+#     - state: base
+#       map: ["enum.GunVisualLayers.Base"]
+#     - state: mag-1
+#       map: ["enum.GunVisualLayers.Mag"]
+
+# - type: Tag
+#   id: EFSMagazineRifleАКМAluminn
+
+- type: entity
+  id: BaseMagazineRifleSVD
+  name: "Магазин для СВД на 10 патрон 7.62x54R"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineRifleSVD
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - EFSMagazineTarkov
+        - Cartridge7.62x54R
+    capacity: 10
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/MagazineSVD5.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.3
+
+- type: entity
+  id: EFSMagazineRifleSVD
+  name: "Магазин для СВД на 10 патрон 7.62x54R"
+  parent: BaseMagazineRifleSVD
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x54R
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazineRifleSVD
+
+################################################################################
+
+- type: entity
+  id: BaseMagazinePistol90-93
+  name: "Магазин 90-93 ПМ 9x18"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazinePistol90-93
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x18
+    capacity: 8
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/Magazine9x18.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.1
+
+- type: entity
+  id: EFSMagazinePistol90-93
+  name: "Магазин 90-93 ПМ 9x18"
+  parent: BaseMagazinePistol90-93
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x18
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazinePistol90-93
+
+- type: entity
+  id: BaseMagazineKedr30
+  name: "Магазин на 30 патронов 9x18ПМ для ПП-91"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazineKedr
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x18
+    capacity: 30
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/MagazineKedr.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.15
+
+- type: entity
+  id: EFSMagazineKedr30
+  name: "Магазин на 30 патронов 9x18ПМ для ПП-91"
+  parent: BaseMagazineKedr30
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x18
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: BaseMagazineKedr
+  name: "Магазин на 20 патронов 9x18ПМ для ПП-91"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazineKedr
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x18
+    capacity: 20
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/MagazineKedr.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.125
+
+- type: entity
+  id: EFSMagazineKedr
+  name: "Магазин на 20 патронов 9x18ПМ для ПП-91"
+  parent: BaseMagazineKedr
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x18
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazineKedr
+
+################################################################################
+
+- type: entity
+  id: BaseMagazinePistolGlock
+  name: "Магазин Glock 9x19"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazinePistolGlock
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x19
+    capacity: 17
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/MagazineGlock9x19.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.1
+
+
+- type: entity
+  id: EFSMagazinePistolGlock
+  name: "Магазин Glock 9x19"
+  parent: BaseMagazinePistolGlock
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazinePistolGlock
+############################################################################
+
+- type: entity
+  id: BaseMagazinePistolGrach
+  name: "Магазин Грач 9x19"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazinePistolGrach
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x19
+    capacity: 15
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/MagazineGrach.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.1
+
+
+- type: entity
+  id: EFSMagazinePistolGrach
+  name: "Магазин на грач 9x19"
+  parent: BaseMagazinePistolGrach
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x19
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazinePistolGrach
+
+################################################################################
+
+
+
+################################################################################
+
+- type: entity
+  id: BaseMagazinePistolUMP
+  name: "Магазин UMP .45"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazinePistolUMP
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge.45
+    capacity: 25
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/MagazineUMP.45.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.15
+
+- type: entity
+  id: EFSMagazinePistolUMP
+  name: "Магазин UMP .45"
+  parent: BaseMagazinePistolUMP
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge.45
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazinePistolUMP
+
+- type: entity
+  id: BaseMagazinePistolColt
+  name: "Магазин Colt .45"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazinePistolColt
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge.45
+    capacity: 7
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/MagazineColt.45.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.1
+
+- type: entity
+  id: EFSMagazinePistolColt
+  name: "Магазин Colt .45"
+  parent: BaseMagazinePistolColt
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge.45
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazinePistolColt
+
+################################################################################
+
+- type: entity
+  id: BaseMagazineRifle6L25
+  name: "Магазин 6L25 9x39"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazineRifle6L25
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge9x39
+    capacity: 20
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/Magazine9x39.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.1
+
+- type: entity
+  id: EFSMagazineRifle6L25
+  name: "Магазин VSS 9x39"
+  parent: BaseMagazineRifle6L25
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge9x39
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazineRifle6L25
+
+#########################################################################
+
+
+
+
+- type: entity
+  id: BaseMagazineRifleAICS
+  name: "Магазин AICS 7.62x51"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazineRifleM700
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge7.62x51
+    capacity: 5
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/MagazineAICS.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.1
+
+- type: entity
+  id: EFSMagazineRifleAICS
+  name: "Магазин AICS 7.62x51"
+  parent: BaseMagazineRifleAICS
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x51
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazineRifleM700
+
+- type: entity
+  id: BaseMagazineRifleVepr
+  name: "Магазин на 5 патронов 7.62×51 для ВПО-101 «Вепрь-Хантер»"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazineRifleVepr
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge7.62x51
+    capacity: 5
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/MagazineVeprHunt.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.1
+
+- type: entity
+  id: EFSMagazineRifleVepr
+  name: "Магазин на 5 патронов 7.62×51 для ВПО-101 «Вепрь-Хантер»"
+  parent: BaseMagazineRifleVepr
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x51
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazineRifleVepr
+
+
+
+- type: entity
+  id: BaseMagazineRifleSaiga
+  name: "Магазин на 5 пуль 12-го калибра для Сайги"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazineRifleSaiga
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - ShellShotgun
+    capacity: 5
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/MagazineSaiga.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: ESWeight
+    self: 0.1
+
+- type: entity
+  id: EFSMagazineRifleSaiga
+  name: "Магазин на 5 пуль 12-го калибра для Сайги"
+  parent: BaseMagazineRifleSaiga
+  components:
+  - type: BallisticAmmoProvider
+    proto: ShellShotgun
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazineRifleSaiga

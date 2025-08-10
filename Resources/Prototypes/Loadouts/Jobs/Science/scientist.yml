@@ -1,21 +1,18 @@
 # Senior Time
-- type: loadoutEffectGroup
-  id: SeniorResearcher
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:DepartmentTimeRequirement
-      department: Science
-      time: 216000 #60 hrs
+# - type: loadoutEffectGroup
+#   id: SeniorResearcher
+  # effects:
+  # - !type:JobRequirementLoadoutEffect
+  #   requirement:
+  #     !type:DepartmentTimeRequirement
+  #     department: Science
+  #     time: 216000 #60 hrs
 
 # Head
 
 - type: loadout
   id: ScientificBeret
   equipment: ScientificBeret
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorResearcher
 
 - type: startingGear
   id: ScientificBeret
@@ -91,9 +88,6 @@
 - type: loadout
   id: SeniorResearcherJumpsuit
   equipment: SeniorResearcherJumpsuit
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorResearcher
 
 - type: startingGear
   id: SeniorResearcherJumpsuit
@@ -103,9 +97,6 @@
 - type: loadout
   id: SeniorResearcherJumpskirt
   equipment: SeniorResearcherJumpskirt
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorResearcher
 
 - type: startingGear
   id: SeniorResearcherJumpskirt
@@ -189,9 +180,6 @@
 - type: loadout
   id: SeniorResearcherLabCoat
   equipment: SeniorResearcherLabCoat
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorResearcher
 
 - type: startingGear
   id: SeniorResearcherLabCoat
@@ -240,9 +228,6 @@
 - type: loadout
   id: SeniorResearcherPDA
   equipment: SeniorResearcherPDA
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorResearcher
 
 - type: startingGear
   id: SeniorResearcherPDA

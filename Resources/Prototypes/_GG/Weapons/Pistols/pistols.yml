@@ -1,0 +1,164 @@
+- type: entity
+  name: Glock-18
+  parent: BaseWeaponPistol
+  id: EFSWeaponPistolGlock
+  description: Glock 18 — австрийский пистолет, разработанный фирмой Glock для нужд австрийской армии. Благодаря своим боевым качествам и надёжности получил широкое распространение в качестве полицейского, спортивного, а так же гражданского оружия самообороны.
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/glock.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/Glock/shot.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazinePistolGlock
+        insertSound: /Audio/GG/Weapons/Glock/in.ogg
+        ejectSound: /Audio/GG/Weapons/Glock/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazinePistolGlock
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge9x19
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge9x19
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: ESWeight
+    self: 1.5
+
+- type: entity
+  name: PM
+  parent: BaseWeaponPistol
+  id: EFSWeaponPistolPM
+  description: Проверенный временем ПМ. Из-за повсеместной доступности как пистолета, так и боеприпаса, до сих пор используется спецназом РФ благодаря своей исключительной надёжности, лёгкости и компактности. Единственный минус - малая убойность пистолета.
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/pm.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/PM/shot.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazinePistol90-93
+        insertSound: /Audio/GG/Weapons/PM/in.ogg
+        ejectSound: /Audio/GG/Weapons/PM/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazinePistol90-93
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge9x18
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge9x18
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: ESWeight
+    self: 1.5
+
+- type: entity
+  name: Colt 1911A1
+  parent: BaseWeaponPistol
+  id: EFSWeaponPistolColt
+  description: "Широко известный, как просто 'Кольт', M1911 является одним из самых известных пистолетов в мире. M1911A1 это дальнейшее развитие пистолета M1911. После Первой Мировой войны 1911 претерпел множество эргономических изменений, среди которых: укороченный спусковой крючок, улучшенные механические прицельные приспособления а также обновленный автоматический предохранитель."
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/colt.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/Colt/shot.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazinePistolColt
+        insertSound: /Audio/GG/Weapons/Colt/in.ogg
+        ejectSound: /Audio/GG/Weapons/Colt/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazinePistolColt
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge.45
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge.45
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: ESWeight
+    self: 1.5
+
+- type: entity
+  name: PM Дикого
+  parent: EFSWeaponPistolPM
+  id: EFSWeaponPistolPMScav
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/vipPm.rsi
+
+
+- type: entity
+  name: Грач
+  parent: BaseWeaponPistol
+  id: EFSWeaponPistolGrach
+  description: Самозарядный полуавтоматический пистолет российского производства под патрон 9x19. Состоит на вооружении ВС РФ, спец. подразделений МВД и других силовых ведомств.
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/grach.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/Grach/shot.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazinePistolGrach
+        insertSound: /Audio/GG/Weapons/Glock/in.ogg
+        ejectSound: /Audio/GG/Weapons/Glock/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazinePistolGrach
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge9x19
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge9x19
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: ESWeight
+    self: 1.5

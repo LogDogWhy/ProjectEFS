@@ -1,0 +1,223 @@
+- type: entity
+  name: M4 BASE
+  parent: BaseWeaponRifle
+  id: EFSBaseRifleAdar
+  description: WIP
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/adar.rsi
+    layers:
+      - state: stanagmag
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - sprite: GG/Weapons/Mods/barrels.rsi
+        map: ["enum.GunVisualLayers.Suppressor"]
+        scale: 0.8, 0.8
+        offset: 0.725, 0.025
+      - sprite: GG/Weapons/Mods/scope.rsi
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.8, 0.8
+        offset: -0.225, 0.095
+      - sprite: GG/Weapons/Mods/forearm.rsi
+        map: ["enum.GunVisualLayers.Forearm"]
+        scale: 0.8, 0.8
+        offset: 0.2, 0.025
+      - sprite: GG/Weapons/Mods/stock.rsi
+        map: ["enum.GunVisualLayers.Stock"]
+        scale: 0.8, 0.8
+        offset: -0.525, 0.05
+        visible: false
+      - sprite: GG/Weapons/Mods/grip.rsi
+        map: ["enum.GunVisualLayers.Grip"]
+        scale: 0.8, 0.8
+        offset: 0.2125, -0.05
+  - type: Clothing
+    sprite: GG/Weapons/m4.rsi
+  - type: Gun
+    minAngle: 1.5
+    maxAngle: 15
+    angleIncrease: 7
+    angleDecay: 90
+    fireRate: 6.5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/GG/Weapons/M4/shot.ogg
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/M4/shot.ogg
+    soundSilGunshot:
+      path: /Audio/GG/Weapons/M4/sil.ogg
+  - type: Item
+    size: Rifles
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge5.56x45
+        priority: 0
+        whitelist:
+          tags:
+            - Cartridge5.56x45
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazineRifleSTANAG
+        insertSound: /Audio/GG/Weapons/M4/in.ogg
+        ejectSound: /Audio/GG/Weapons/M4/out.ogg
+        priority: 1
+        whitelist:
+          tags:
+            - EFSDebugTag
+      gun_scope:
+        name: Scope
+        priority: 2
+        whitelist:
+          tags:
+            - EFSDebugTag
+      gun_forearm:
+        name: Forearm
+        priority: 3
+        whitelist:
+          tags:
+            - EFSDebugTag
+      gun_suppressor:
+        name: Supperssor
+        priority: 4
+        whitelist:
+          tags:
+            - EFSDebugTag
+  - type: ChamberMagazineAmmoProvider
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      gun_suppressor: !type:ContainerSlot
+      gun_forearm: !type:ContainerSlot
+      gun_scope: !type:ContainerSlot
+  - type: MagazineVisuals
+    steps: 1
+    zeroVisible: true
+    dynamicSprite: true
+  - type: Appearance
+  - type: SuppressorVisuals
+    suppressorState: suppressor
+  - type: Suppressor
+  - type: GripVisuals
+    gripState: grip
+  - type: Grip
+  - type: ForearmVisuals
+    forearmState: forearm
+  - type: Forearm
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+
+
+- type: entity
+  name: M4 BASE
+  parent: EFSBaseRifleAdar
+  id: EFSBaseRifleM4
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/m4.rsi
+    layers:
+      - sprite: GG/Weapons/Mods/stock.rsi
+        map: ["enum.GunVisualLayers.Stock"]
+        scale: 0.8, 0.8
+        offset: -0.475, 0.0
+        visible: false
+      - state: stanagmag
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - sprite: GG/Weapons/Mods/barrels.rsi
+        map: ["enum.GunVisualLayers.Suppressor"]
+        scale: 0.8, 0.8
+        offset: 0.650, 0.025
+      - sprite: GG/Weapons/Mods/scope.rsi
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.8, 0.8
+        offset: -0.225, 0.095
+      - sprite: GG/Weapons/Mods/forearm.rsi
+        map: ["enum.GunVisualLayers.Forearm"]
+        scale: 0.8, 0.8
+        offset: 0.175, 0.025
+      - sprite: GG/Weapons/Mods/grip.rsi
+        map: ["enum.GunVisualLayers.Grip"]
+        scale: 0.8, 0.8
+        offset: 0.2125, -0.025
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge5.56x45
+        priority: 0
+        whitelist:
+          tags:
+            - Cartridge5.56x45
+      gun_magazine:
+        insertSound: /Audio/GG/Weapons/M4/in.ogg
+        ejectSound: /Audio/GG/Weapons/M4/out.ogg
+        priority: 1
+        whitelist:
+          tags:
+            - EFSDebugTag
+      gun_scope:
+        priority: 2
+        whitelist:
+          tags:
+            - EFSDebugTag
+      gun_forearm:
+        priority: 3
+        whitelist:
+          tags:
+            - EFSDebugTag
+      gun_suppressor:
+        priority: 4
+        whitelist:
+          tags:
+            - EFSDebugTag
+      gun_stock:
+        priority: 5
+        whitelist:
+          tags:
+            - EFSDebugTag
+  - type: ChamberMagazineAmmoProvider
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      gun_suppressor: !type:ContainerSlot
+      gun_forearm: !type:ContainerSlot
+      gun_scope: !type:ContainerSlot
+      gun_stock: !type:ContainerSlot
+  - type: MagazineVisuals
+    steps: 1
+    zeroVisible: true
+    dynamicSprite: true
+  - type: StockVisuals
+    stockState: stock
+  - type: Stock
+  - type: Gun
+    minAngle: 3
+    maxAngle: 18
+    angleIncrease: 7
+    angleDecay: 90
+    fireRate: 7
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/GG/Weapons/M4/shot.ogg
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/M4/shot.ogg
+    soundSilGunshot:
+      path: /Audio/GG/Weapons/M4/sil.ogg

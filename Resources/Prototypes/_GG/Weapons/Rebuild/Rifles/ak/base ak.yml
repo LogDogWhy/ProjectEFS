@@ -1,0 +1,220 @@
+
+- type: entity
+  name: АК Base
+  parent: BaseWeaponRifle
+  id: EFSBaseRifleAk
+  abstract: true
+  description: "Dev Item"
+  components:
+    - type: Sprite
+      sprite: GG/Weapons/ak.rsi
+      layers:
+        - state: base
+          scale: 0.8, 0.8
+          map: ["enum.GunVisualLayers.Base"]
+        - state: 74-blackmag
+          map: ["enum.GunVisualLayers.Mag"]
+          scale: 0.8, 0.8
+          offset: -0.0225, 0.0
+        - sprite: GG/Weapons/Mods/barrels.rsi
+          map: ["enum.GunVisualLayers.Suppressor"]
+          scale: 0.8, 0.8
+          offset: 0.725, -0.022
+          visible: false
+        - sprite: GG/Weapons/Mods/stock.rsi
+          map: ["enum.GunVisualLayers.Stock"]
+          scale: 0.8, 0.8
+          offset: -0.5, -0.05
+          visible: false
+        - sprite: GG/Weapons/Mods/receiver.rsi
+          map: ["enum.GunVisualLayers.Receiver"]
+          scale: 0.8, 0.8
+          offset: -0.225, 0.05
+          visible: false
+        - sprite: GG/Weapons/Mods/forearm.rsi
+          map: ["enum.GunVisualLayers.Forearm"]
+          scale: 0.8, 0.8
+          offset: 0.175, -0.025
+          visible: false
+        - sprite: GG/Weapons/Mods/grip.rsi
+          map: ["enum.GunVisualLayers.Grip"]
+          scale: 0.8, 0.8
+          offset: 0.2125, -0.0775
+          visible: false
+        - sprite: GG/Weapons/Mods/scope.rsi
+          offset: -0.225, 0.055
+          map: ["enum.GunVisualLayers.Scope"]
+          scale: 0.8, 0.8
+          visible: false
+    - type: Gun
+      minAngle: 3
+      maxAngle: 16
+      angleIncrease: 3
+      angleDecay: 40
+      fireRate: 3
+      soundGunshot:
+        path: /Audio/GG/Weapons/AK/74/shot.ogg
+      soundLoudGunshot:
+        path: /Audio/GG/Weapons/AK/74/shot.ogg
+      soundSilGunshot:
+        path: /Audio/GG/Weapons/AK/74/sil.ogg
+    - type: ChamberMagazineAmmoProvider
+    - type: Item
+      size: Rifles
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: EFSMagazineRifleBlack6L23
+          insertSound: /Audio/GG/Weapons/AK/in.ogg
+          ejectSound: /Audio/GG/Weapons/AK/out.ogg
+          priority: 2
+          whitelist:
+            tags:
+              - EFSDebugTag
+        gun_chamber:
+          name: Chamber
+          startingItem: Cartridge5.45x39
+          priority: 1
+          whitelist:
+            tags:
+              - EFSDebugTag
+        gun_suppressor:
+          name: Barrel
+          priority: 3
+          whitelist:
+            tags:
+              - EFSDebugTag
+        gun_receiver:
+          name: Receiver
+          priority: 4
+          whitelist:
+            tags:
+              - EFSDebugTag
+        gun_stock:
+          name: Stock
+          priority: 5
+          whitelist:
+            tags:
+              - EFSDebugTag
+        gun_forearm:
+          name: Forearm
+          priority: 6
+          whitelist:
+            tags:
+              - EFSDebugTag
+    - type: ContainerContainer
+      containers:
+        gun_magazine: !type:ContainerSlot
+        gun_chamber: !type:ContainerSlot
+        gun_suppressor: !type:ContainerSlot
+        gun_forearm: !type:ContainerSlot
+        gun_stock: !type:ContainerSlot
+        gun_receiver: !type:ContainerSlot
+    - type: MagazineVisuals
+      zeroVisible: true
+      steps: 1
+      dynamicSprite: true
+    - type: Appearance
+    - type: SuppressorVisuals
+      suppressorState: suppressor
+    - type: Suppressor
+    - type: GripVisuals
+      gripState: grip
+    - type: Grip
+    - type: StockVisuals
+      stockState: stock
+    - type: Stock
+    - type: ForearmVisuals
+      forearmState: forearm
+    - type: Forearm
+    - type: ScopeVisuals
+      scopeState: scope
+    - type: Scope
+    - type: ReceiverVisuals
+      receiverState: receiver
+    - type: Receiver
+
+
+- type: entity
+  name: АК Base
+  parent: EFSBaseRifleAk
+  id: EFSBaseRifleLAk
+  abstract: true
+  description: "Dev Item"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/akl.rsi
+  - type: ItemSlots
+    slots:
+      gun_scope:
+        priority: 2
+        whitelist:
+          tags:
+            - EFSDebugTag
+  - type: ContainerContainer
+    containers:
+      gun_scope: !type:ContainerSlot
+  - type: Gun
+    minAngle: 3
+    maxAngle: 15
+    angleIncrease: 4
+    angleDecay: 20
+    fireRate: 6
+
+
+- type: entity
+  name: АК Base
+  parent: EFSBaseRifleAk
+  id: EFSBaseRifleAkm
+  abstract: true
+  description: "Dev Item"
+  components:
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge7.62x39
+        priority: 1
+        whitelist:
+          tags:
+            - EFSDebugTag
+  - type: Gun
+    soundGunshot:
+      path: /Audio/GG/Weapons/AK/akm/shot.ogg
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/AK/akm/shot.ogg
+    soundSilGunshot:
+      path: /Audio/GG/Weapons/AK/akm/sil.ogg
+    minAngle: 3
+    maxAngle: 15
+    angleIncrease: 4
+    angleDecay: 20
+    fireRate: 6
+
+
+- type: entity
+  name: АК Base
+  parent: EFSBaseRifleAk
+  id: EFSBaseRiflelAkm
+  abstract: true
+  description: "Dev Item"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/akl.rsi
+  - type: ItemSlots
+    slots:
+      gun_scope:
+        priority: 2
+        whitelist:
+          tags:
+            - EFSDebugTag
+  - type: ContainerContainer
+    containers:
+      gun_scope: !type:ContainerSlot
+  - type: Gun
+    minAngle: 3
+    maxAngle: 15
+    angleIncrease: 4
+    angleDecay: 20
+    fireRate: 6

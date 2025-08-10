@@ -4,11 +4,13 @@ using System.Numerics;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Station.Events;
+using Content.Shared.Atmos;
 using Content.Shared.Body.Components;
 using Content.Shared.Buckle.Components;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Content.Shared.Ghost;
+using Content.Shared.Gravity;
 using Content.Shared.Maps;
 using Content.Shared.Parallax;
 using Content.Shared.Shuttles.Components;
@@ -143,6 +145,15 @@ public sealed partial class ShuttleSystem
         DebugTools.Assert(!_mapManager.IsMapPaused(mapId));
         var parallax = EnsureComp<ParallaxComponent>(mapUid);
         parallax.Parallax = ftlMap.Parallax;
+
+        //GG FTL map tweaks
+        var mapLight = EnsureComp<MapLightComponent>(mapUid);
+        mapLight.AmbientLightColor = ftlMap.AmbientColor;
+
+        var gravity = EnsureComp<GravityComponent>(mapUid);
+        gravity.Enabled = true;
+        gravity.Inherent = true;
+        //GG FTL map tweaks ends
 
         return mapUid;
     }

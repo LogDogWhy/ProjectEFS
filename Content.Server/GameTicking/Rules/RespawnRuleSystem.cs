@@ -9,10 +9,20 @@ using Content.Shared.Mind;
 using Content.Shared.Mobs;
 using Content.Shared.Players;
 using Robust.Server.Player;
+using Robust.Shared.Console;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Server.EUI;
+using Content.Server.GG.EscapeTile;
+using System.Threading.Tasks;
+using Robust.Shared.Player;
+using Robust.Server.Audio;
+using Content.Server.Access.Systems;
+using Content.Server.GameTicking.Rules.Components;
+using Microsoft.EntityFrameworkCore.Metadata;
+
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -21,11 +31,16 @@ namespace Content.Server.GameTicking.Rules;
 /// </summary>
 public sealed class RespawnRuleSystem : GameRuleSystem<RespawnDeadRuleComponent>
 {
+
+    [Dependency] private readonly IConsoleHost _console = default!;
     [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly StationSystem _station = default!;
+    [Dependency] private readonly EuiManager _euiManager = default!;
+    [Dependency] private readonly SharedMindSystem _mind = default!;
 
+    [Dependency] private readonly AudioSystem _audio = default!;
     /// <inheritdoc/>
     public override void Initialize()
     {
@@ -54,7 +69,11 @@ public sealed class RespawnRuleSystem : GameRuleSystem<RespawnDeadRuleComponent>
 
                 if (session.GetMind() is { } mind && TryComp<MindComponent>(mind, out var mindComp) && mindComp.OwnedEntity.HasValue)
                     QueueDel(mindComp.OwnedEntity.Value);
-                GameTicker.MakeJoinGame(session, station, silent: true);
+                    {
+                        _audio.PlayGlobal("/Audio/GG/Effects/death.ogg", session);
+                        GameTicker.MakeJoinGame(session, station,  silent: true);
+                    }
+
                 tracker.RespawnQueue.Remove(player);
             }
         }
@@ -81,19 +100,46 @@ public sealed class RespawnRuleSystem : GameRuleSystem<RespawnDeadRuleComponent>
         if (!TryComp<ActorComponent>(args.Target, out var actor))
             return;
 
+        if (!_playerManager.TryGetSessionById(actor.PlayerSession.UserId, out var session))
+            return;
+
+        if(!_mind.TryGetMind(actor.PlayerSession.UserId, out var mind) && mind == null)
+            return;
+
         var query = EntityQueryEnumerator<RespawnDeadRuleComponent, RespawnTrackerComponent, GameRuleComponent>();
-        while (query.MoveNext(out var uid, out var respawnRule, out  var tracker, out var rule))
+        while (query.MoveNext(out var uid, out var respawnRule, out var tracker, out var rule))
         {
             if (!GameTicker.IsGameRuleActive(uid, rule))
                 continue;
+
+            if (respawnRule.SendTolobby)
+            {
+                GameTicker.Respawn(actor.PlayerSession);
+                return;
+            }
+
 
             if (respawnRule.AlwaysRespawnDead)
                 AddToTracker(actor.PlayerSession.UserId, (uid, tracker));
             if (RespawnPlayer((args.Target, actor), (uid, tracker)))
                 break;
         }
+
     }
 
+
+    public void RemovePlayerFromRespawnQueue(ICommonSession player)
+    {
+        foreach (var tracker in EntityQuery<RespawnTrackerComponent>())
+        {
+            if (!_playerManager.TryGetSessionById(player.UserId, out var session))
+                    continue;
+
+                if (session.GetMind() is { } mind && TryComp<MindComponent>(mind, out var mindComp) && mindComp.OwnedEntity.HasValue)
+                    QueueDel(mindComp.OwnedEntity.Value);
+            tracker.RespawnQueue.Remove(player.UserId);
+        }
+    }
     /// <summary>
     /// Attempts to directly respawn a player, skipping the lobby screen.
     /// </summary>
@@ -124,7 +170,6 @@ public sealed class RespawnRuleSystem : GameRuleSystem<RespawnDeadRuleComponent>
 
     /// <summary>
     /// Adds a given player to the respawn tracker, ensuring that they are respawned if they die.
-    /// </summary>
     public void AddToTracker(Entity<ActorComponent?> player, Entity<RespawnTrackerComponent?> respawnTracker)
     {
         if (!Resolve(respawnTracker, ref respawnTracker.Comp) || !Resolve(player, ref player.Comp, false))

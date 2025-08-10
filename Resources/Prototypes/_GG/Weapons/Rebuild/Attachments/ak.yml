@@ -1,0 +1,438 @@
+- type: Tag
+  id: EFSAk74Barrel
+
+- type: Tag
+  id: EFSAkReceiver
+
+- type: Tag
+  id: EFSAkStock
+
+- type: Tag
+  id: EFSAkForearm
+
+- type: Tag
+  id: EFSAksuReceiver
+
+- type: Tag
+  id: EFSAksuStock
+
+- type: Tag
+  id: EFSAksuForearm
+
+- type: Tag
+  id: EFSAkStockN
+
+- type: Tag
+  id: EFSNScope
+
+- type: Tag
+  id: EFSAkmBarrel
+
+# BARRELS
+
+- type: entity
+  name: EFSAk74BaseAttachmentBarrel
+  parent: BaseItem
+  id: EFSAkBaseAttachmentBarrel
+  abstract: true
+  description: "Сущность"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/barrels.rsi
+  - type: Tag
+    tags:
+      - EFSAk74Barrel
+  - type: Attachment
+  - type: ESWeight
+    self: 0.3
+
+- type: entity
+  name: Газовая трубка 6П20 для АК-74
+  parent: EFSAkBaseAttachmentBarrel
+  id: EFSAkAttachmentBarrel6p20
+  description: "Штатный дульный тормоз-компенсатор производства Ижмаш для автомата АК-74М."
+  components:
+  - type: Sprite
+    state: 6p20
+  - type: Tag
+    tags:
+      - EFSAk74Barrel
+
+# дописать
+- type: entity
+  name: Компенсатор 6П1 для АКМ
+  parent: EFSAkBaseAttachmentBarrel
+  id: EFSAkmAttachmentBarrel6p1
+  description:
+  components:
+  - type: Sprite
+    state: comp-akm
+  - type: Tag
+    tags:
+      - EFSAkmBarrel
+
+- type: entity
+  name: Глушитель Гексагон 7.62x39
+  parent: EFSAkBaseAttachmentBarrel
+  id: EFSAkmAttachmentBarrelGecko
+  description:
+  components:
+  - type: Sprite
+    state: geck_akm
+  - type: Attachment
+    sil: true
+  - type: Tag
+    tags:
+      - EFSAkmBarrel
+
+- type: entity
+  name: Глушитель ПБС-1
+  parent: EFSAkBaseAttachmentBarrel
+  id: EFSAkAttachmentBarrelpbs1
+  description: "Глушитель ПБС-1 производства ЦНИИ Точмаш- он же прибор для беззвучной и беспламенной стрельбы из 7,62-мм модернизированных автоматов Калашникова."
+  components:
+  - type: Sprite
+    state: pbs1
+  - type: Attachment
+    sil: true
+  - type: Tag
+    tags:
+      - EFSAk74Barrel
+
+
+## Receiver
+
+- type: entity
+  name: EFSAkBaseAttachmentReceiver
+  parent: BaseItem
+  abstract: true
+  id: EFSAkBaseAttachmentReceiver
+  description: "Сущность"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/receiver.rsi
+  - type: Tag
+    tags:
+      - EFSAkReceiver
+  - type: Attachment
+  - type: ESWeight
+    self: 0.3
+
+- type: entity
+  name: Ствольная коробка для AK
+  parent: EFSAkBaseAttachmentReceiver
+  id: EFSAkAttachmentReceiverStandart
+  description: "Штатная крышка ствольной коробки АК-74 производства Ижмаш."
+  components:
+  - type: Sprite
+    state: ak
+  - type: Tag
+    tags:
+      - EFSAkReceiver
+  - type: Attachment
+
+
+- type: entity
+  name: Ствольная коробка для AK "Бастион"
+  parent: EFSAkBaseAttachmentReceiver
+  id: EFSAkAttachmentReceiverBastion
+  description: "Крышка ствольной коробки с интегрированной планкой Пикатинни Бастион совместима со всеми моделями автомата Калашникова и карабинами, построенными на базе АК. Позволяет осуществлять установку любых прицельных приспособлений, монтируемых на планку Пикатинни."
+  components:
+  - type: Sprite
+    state: bastion
+  - type: Tag
+    tags:
+      - EFSAkReceiver
+  - type: Attachment
+    tags:
+      - EFSPicatiniScope
+    newSlot: gun_scope
+    swap: true
+
+## Forearm
+
+- type: entity
+  name: EFSAkBaseAttachmentForearm
+  parent: BaseItem
+  id: EFSAkBaseAttachmentForearm
+  abstract: true
+  description: "Сущность"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/forearm.rsi
+  - type: Tag
+    tags:
+      - EFSAkForearm
+  - type: Attachment
+
+- type: entity
+  name: Цевье деревянное для АК-74
+  parent: EFSAkBaseAttachmentForearm
+  id: EFSAkAttachmentForearmTube74
+  description: "Штатное деревянное цевьё для автомата АК-74 производства Ижмаш."
+  components:
+  - type: Sprite
+    state: 74
+  - type: Tag
+    tags:
+      - EFSAkForearm
+  - type: Attachment
+
+- type: entity
+  name: Цевье полимерное для АК-74
+  parent: EFSAkBaseAttachmentForearm
+  id: EFSAkAttachmentForearmTubeAk74
+  description: "Полимерное цевьё для автомата АК-74 производства Ижмаш, пришедшее на смену классическому деревянному."
+  components:
+  - type: Sprite
+    state: 74m
+  - type: Tag
+    tags:
+      - EFSAkForearm
+  - type: Attachment
+
+- type: entity
+  name: Цевье деревянное для ВПО
+  parent: EFSAkBaseAttachmentForearm
+  id: EFSAkAttachmentForearmTubeVpo
+  description: "Штатное деревянное цевьё для ВПО производства Молот Оружие."
+  components:
+  - type: Sprite
+    state: vpoak
+  - type: Tag
+    tags:
+      - EFSAkForearm
+  - type: Attachment
+
+- type: entity
+  name: Цевье деревянное для АКМ
+  parent: EFSAkBaseAttachmentForearm
+  id: EFSAkAttachmentForearm
+  description: "Штатное деревянное цевьё для автомата АКM производства Ижмаш."
+  components:
+  - type: Sprite
+    state: akm
+  - type: Tag
+    tags:
+      - EFSAkForearm
+  - type: Attachment
+
+- type: entity
+  name: Цевье Wasr для АКМ
+  parent: EFSAkBaseAttachmentForearm
+  id: EFSAkAttachmentForearmTubeWasr
+  description: "Румынское деревянное цевьё с рукоятью для винтовок WASR-10/63, производства Cugir Arms Factory. Подходит для установки на системы семейства АК."
+  components:
+  - type: Sprite
+    state: wasr
+  - type: Tag
+    tags:
+      - EFSAkForearm
+  - type: Attachment
+
+- type: entity
+  name: Цевье полимерное для АК 100
+  parent: EFSAkBaseAttachmentForearm
+  id: EFSAkAttachmentForearmTubeAk100
+  description: "Полимерное цевьё для автоматов АК 100-й серии производства Ижмаш, является дальнейшей модернизацией полимерного цевья АК-74М. Оснащено нижней рельсой для установки тактического оборудования."
+  components:
+  - type: Sprite
+    state: 100
+  - type: Tag
+    tags:
+      - EFSAkForearm
+  - type: Attachment
+    tags:
+      - EFSPicatiniGrip
+    newSlot: gun_grip
+
+# - type: entity
+#   name: Цевье Зенит "Б-10" для АК
+#   parent: EFSAkBaseAttachmentForearm
+#   id: EFSAkAttachmentForearmTubeAkPoly
+#   description: "Цельнофрезерованное цевьё Б-10 изготовлено из сплава алюминия Д16Т с покрытием черного цвета, предназначено для установки на штатное место цевья автоматов АК. Имеет планки Пикатинни с двух сторон. Позволяет производить установку дополнительного оборудования (тактические рукоятки, подствольные фонари, лазерные целеуказатели). Производство Зенит."
+#   components:
+#   - type: Sprite
+#     state: polyak
+#   - type: Tag
+#     tags:
+#       - EFSAkForearm
+#   - type: Attachment
+
+- type: entity
+  name: Цевье Magpul "MOE AKM" (Олива)
+  parent: EFSAkBaseAttachmentForearm
+  id: EFSAkAttachmentForearmTubeMoeOlive
+  description: Цевье "MOE AKM" ставится на АК-47/АКМ/АК-74 и совместимые оружейные системы. Оснащено запатентованными креплениями M-LOK для установки дополнительного оборудования или направляющих. Версия в цвете Олива (Olive Drab).
+  components:
+  - type: Sprite
+    state: desert_akmoe
+  - type: Tag
+    tags:
+      - EFSAkForearm
+  - type: Attachment
+    tags:
+      - EFSMoeGrip
+    newSlot: gun_grip
+
+- type: entity
+  name: Цевье Magpul "MOE AKM" (Чёрное)
+  parent: EFSAkBaseAttachmentForearm
+  id: EFSAkAttachmentForearmTubeMoeBlack
+  description: Цевье "MOE AKM" ставится на АК-47/АКМ/АК-74 и совместимые оружейные системы. Оснащено запатентованными креплениями M-LOK для установки дополнительного оборудования или направляющих. Версия в черном цвете.
+  components:
+  - type: Sprite
+    state: black_akmoe
+  - type: Tag
+    tags:
+      - EFSAkForearm
+  - type: Attachment
+    tags:
+      - EFSMoeGrip
+    newSlot: gun_grip
+
+
+# Stocks
+
+
+- type: entity
+  name: EFSAkBaseAttachmentStock
+  parent: BaseItem
+  id: EFSAkBaseAttachmentStock
+  abstract: true
+  description: "А я ебу чтоли"
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/stock.rsi
+  - type: Tag
+    tags:
+      - EFSAkStock
+  - type: Attachment
+  - type: ESWeight
+    self: 0.3
+
+- type: entity
+  name: Приклад полимерный для АК-74
+  parent: EFSAkBaseAttachmentStock
+  id: EFSAkAttachmentStock74m
+  description: "Полимерный приклад для АК-74 производства Ижмаш, пришедший на смену деревянному."
+  components:
+  - type: Sprite
+    state: 74m
+  - type: Tag
+    tags:
+      - EFSAkStock
+  - type: Attachment
+
+- type: entity
+  name: Приклад деревянный для АК-74
+  parent: EFSAkBaseAttachmentStock
+  id: EFSAkAttachmentStock74
+  description: "Штатный деревянный приклад для АК-74 производства Ижмаш."
+  components:
+  - type: Sprite
+    state: 74
+  - type: Tag
+    tags:
+      - EFSAkStock
+  - type: Attachment
+
+- type: entity
+  name: Приклад деревянный для АКM
+  parent: EFSAkBaseAttachmentStock
+  id: EFSAkAttachmentStockAKM
+  description: "Штатный деревянный приклад для АКМ производства Ижмаш."
+  components:
+  - type: Sprite
+    state: akm
+  - type: Tag
+    tags:
+      - EFSAkStock
+  - type: Attachment
+
+- type: entity
+  name: Приклад деревянный для ВПО
+  parent: EFSAkBaseAttachmentStock
+  id: EFSAkAttachmentStockVPO
+  description: "Штатный деревянный приклад для ВПО производства Молот Оружие."
+  components:
+  - type: Sprite
+    state: vpo_ak
+  - type: Tag
+    tags:
+      - EFSAkStock
+  - type: Attachment
+
+- type: entity
+  name: Приклад складной для АКС-74
+  parent: EFSAkBaseAttachmentStock
+  id: EFSAkAttachmentStockAKS
+  description: "Металлический скелетонированный приклад 6P21 Sb.5 для автоматических винтовок АКС-74, производства Ижмаш."
+  components:
+  - type: Sprite
+    state: aks
+  - type: Tag
+    tags:
+      - EFSAkStockN
+  - type: Attachment
+
+- type: entity
+  name: Приклад ProMag Archangel для АК
+  parent: EFSAkBaseAttachmentStock
+  id: EFSAkAttachmentStockArchangel
+  description: Приклад "OPFOR AA47" производства "ProMag" для АКМ/АК-74 и совместимых.
+  components:
+  - type: Sprite
+    state: archangel74
+  - type: Tag
+    tags:
+      - EFSAkStock
+  - type: Attachment
+
+
+
+## SCOPE
+
+- type: entity
+  name: EFSAkBaseAttachmentScope
+  parent: BaseItem
+  id: EFSAkBaseAttachmentScope
+  abstract: true
+  description: DEV
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/Mods/scope.rsi
+  - type: Tag
+    tags:
+      - EFSNScope
+  - type: Attachment
+  - type: ESWeight
+    self: 0.3
+
+- type: entity
+  name: Прицел ПСО на ласточкин хвост
+  parent: EFSAkBaseAttachmentScope
+  id: EFSAkAttachmentScopePSO
+  description: "Прицел снайперский оптический Изделие ПСО-1М2. Прицел снайперский оптический предназначен для ведения прицельной стрельбы из снайперской винтовки Драгунова (СВД) по различным целям с четырёхкратным увеличением и полем зрения в 6 градусов. Содержит в комплекте кронштейн."
+  components:
+  - type: Sprite
+    state: l_pso
+  - type: Tag
+    tags:
+      - EFSNScope
+  - type: Attachment
+
+- type: entity
+  name: Прицел "Кобра" на ласточкин хвост
+  parent: EFSAkBaseAttachmentScope
+  id: EFSAkAttachmentScopeKobra
+  description: "Кобра весьма популярный коллиматорный прицел среди силовых структур и гражданских стрелков. Разрабатывался для Вооруженных Сил РФ однако на вооружение официально так и не был принят. Содержит в комплекте кронштейн"
+  components:
+  - type: Sprite
+    state: l_kobra
+  - type: Tag
+    tags:
+      - EFSNScope
+  - type: Attachment
+
+

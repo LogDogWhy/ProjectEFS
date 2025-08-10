@@ -122,16 +122,16 @@
     #   - !type:HTNPrimitiveTask
     #     operator: !type:EquipOperator
 
-    # Pickup ammo if any nearby
-    #- preconditions:
-    #    - !type:GunAmmoPrecondition
-    #      maxPercent: 0.0
-    #  tasks:
-    #    - !type:HTNCompoundTask
-    #      task: ClearActiveHandCompound
-#
-#        - !type:HTNCompoundTask
-#          task: PickupAmmoCompound
+    #Pickup ammo if any nearby
+    - preconditions:
+       - !type:GunAmmoPrecondition
+         maxPercent: 0.0
+      tasks:
+       - !type:HTNCompoundTask
+         task: ClearActiveHandCompound
+
+       - !type:HTNCompoundTask
+         task: PickupAmmoCompound
 
     # Pickup gun with ammo if we have no ammo
     -  preconditions:

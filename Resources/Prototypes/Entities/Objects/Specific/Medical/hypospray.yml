@@ -132,6 +132,8 @@
     price: 75 # These are limited supply items.
   - type: TrashOnSolutionEmpty
     solution: pen
+  - type: ESWeight
+    self: 0.5
 
 - type: entity
   name: emergency medipen

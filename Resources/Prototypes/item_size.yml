@@ -45,3 +45,31 @@
   name: item-component-size-Ginormous
   defaultShape:
   - 0,0,5,5
+
+- type: itemSize
+  id: PistolMachine
+  name: Пистолет-Пулемёт
+  weight: 4
+  defaultShape:
+  - 0,0,2,1
+
+- type: itemSize
+  id: Rifles
+  name: Винтовка
+  weight: 6
+  defaultShape:
+  - 0,0,3,1
+
+- type: itemSize
+  id: SniperRifles
+  name: Сн.Винтовка
+  weight: 6
+  defaultShape:
+  - 0,0,4,0
+
+- type: itemSize
+  name: Дробовик
+  id: Shotgun
+  weight: 6
+  defaultShape:
+  - 0,0,3,0

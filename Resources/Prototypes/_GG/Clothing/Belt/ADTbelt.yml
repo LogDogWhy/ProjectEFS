@@ -1,0 +1,30 @@
+#by prazat911
+#РПС Киллы
+
+- type: entity
+  id: ADTClothingBeltKilla
+  parent: ClothingBeltStorageBase
+  name: Тритон М43-А
+  description: Боевой нагрудник Тритон М43–А - Создан для размещёния и переноски элементов амуниции и снаряжения, для использования в умеренном и жарком климате
+  components:
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,2,4
+    whitelist:
+      components:
+        - BallisticAmmoProvider
+        - CartridgeAmmo
+        - RangedMagazine
+        - Ammo
+        - Flash
+        - GrenadeBase
+        - Injector
+        - Pill
+        - ExplodeOnTrigger
+  - type: Sprite
+    sprite: ADT/Clothing/Belt/killa_webbing.rsi
+  - type: Clothing
+    sprite: ADT/Clothing/Belt/killa_webbing.rsi
+  - type: ESWeight
+    self: 1

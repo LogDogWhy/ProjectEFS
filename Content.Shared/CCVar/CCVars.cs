@@ -701,7 +701,7 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> AdminChatSoundVolume =
             CVarDef.Create("audio.admin_chat_sound_volume", -5f, CVar.ARCHIVE | CVar.CLIENT | CVar.REPLICATED);
         public static readonly CVarDef<string> AHelpSound =
-            CVarDef.Create("audio.ahelp_sound", "/Audio/Effects/adminhelp.ogg", CVar.ARCHIVE | CVar.CLIENTONLY);
+            CVarDef.Create("audio.ahelp_sound", "/Audio/GG/Effects/adminhelp.ogg", CVar.ARCHIVE | CVar.CLIENTONLY);
 
         /*
          * HUD
@@ -1727,8 +1727,6 @@ namespace Content.Shared.CCVar
         /// Screen shake intensity slider, controlling the intensity of the CameraRecoilSystem.
         /// Goes from 0 (no recoil at all) to 1 (regular amounts of recoil)
         /// </summary>
-        public static readonly CVarDef<float> ScreenShakeIntensity =
-            CVarDef.Create("accessibility.screen_shake_intensity", 1f, CVar.CLIENTONLY | CVar.ARCHIVE);
 
         /// <summary>
         /// A generic toggle for various visual effects that are color sensitive.
@@ -2200,5 +2198,13 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<bool> DebugPow3rDisableParallel =
             CVarDef.Create("debug.pow3r_disable_parallel", true, CVar.SERVERONLY);
+
+
+        #region Lying Down System
+
+        public static readonly CVarDef<bool> AutoGetUp =
+            CVarDef.Create("rest.auto_get_up", true, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);
+
+        #endregion
     }
 }

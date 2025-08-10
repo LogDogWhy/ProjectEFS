@@ -1,0 +1,383 @@
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: EFSArmorPress
+  name: Бронежилет БНТИ "Жук-3" (Пресса)
+  description: Бронежилет 3-го класса защиты для журналистов, работающих в зонах военных действий.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/OuterClothing/Armor/press.rsi
+  - type: Clothing
+    sprite: GG/Clothing/OuterClothing/Armor/press.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.7
+        Piercing: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.95
+  #   sprintModifier: 0.95
+  - type: Item
+    shape:
+    - 0,0,2,2
+  - type: ESWeight
+    self: 5
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: EFSArmor6B13
+  name: Бронежилет 6Б13 штурмовой
+  description: Общевойсковой штурмовой бронежилет является средством индивидуальной бронезащиты личного состава боевых подразделений сухопутных войск, ВДВ, морской пехоты и т.д. Бронежилет предназначен для защиты жизненно важных органов от поражения пулями стрелкового оружия, осколками снарядов, мин, гранат и холодным оружием, снижения степени тяжести заброневой контузионной травмы при выполнении боевых задач.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/OuterClothing/Armor/6b13.rsi
+  - type: Clothing
+    sprite: GG/Clothing/OuterClothing/Armor/6b13.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.63
+        Piercing: 0.63
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.90
+  #   sprintModifier: 0.90
+  - type: Item
+    shape:
+    - 0,0,3,2
+  - type: ESWeight
+    self: 6
+
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: EFSArmorBagariy
+  name: Бронежилет НПП КлАСС "Багарий"
+  description: Во втором тысячелетии экипировка военнослужащего получила серьёзные изменения в виду новых угроз и задач. Требовался лучший уровень защиты, поэтому Российской армии потребовался надежный и функциональный бронежилет. В середине 2000-х годов в ВВ МВД, которые позже переформировали в Росгвардию, поступили бронежилеты "Багарий". "Багарий" использовался как обычными солдатами внутренних войск, так и в спецназе. Активно использовался ЧВК BEAR как основной тяжелый бронежилет.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/OuterClothing/Armor/bagariy.rsi
+  - type: Clothing
+    sprite: GG/Clothing/OuterClothing/Armor/bagariy.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.58
+        Piercing: 0.58
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.87
+  #   sprintModifier: 0.87
+  - type: Item
+    shape:
+    - 0,0,3,3
+  - type: ESWeight
+    self: 6.5
+
+
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: EFSArmorModule3M
+  name: Бронежилет БНТИ "Модуль-3М"
+  description: Легкий бронежилет второго класса защиты, используемый частными охранными предприятиями, инкассационными службами.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/OuterClothing/Armor/module3m.rsi
+  - type: Clothing
+    sprite: GG/Clothing/OuterClothing/Armor/module3m.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.75
+        Piercing: 0.75
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: Item
+    shape:
+    - 0,0,3,3
+  - type: ESWeight
+    self: 5
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: EFSArmorTrooperTFO
+  name: Бронежилет HighCom "Trooper TFO" (Multicam)
+  description: Бронежилет фирмы Highcom, популярный среди ЧВК USEC. Облегченные плиты AR500 4-го класса защиты закрывают только области груди и спины.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/OuterClothing/Armor/trooper.rsi
+  - type: Clothing
+    sprite: GG/Clothing/OuterClothing/Armor/trooper.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.6
+        Piercing: 0.6
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.93
+  #   sprintModifier: 0.93
+  - type: Item
+    shape:
+    - 0,0,2,2
+  - type: ESWeight
+    self: 5
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: EFSArmorNFMTHOR
+  name: Бронежилет NFM "THOR Integrated Carrier"
+  description: Штурмовой бронежилет полной защиты укомплектованный мягкими и твердыми бронеэлементами для защиты от осколков и пуль пистолетных и винтовочных калибров.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/OuterClothing/Armor/blackgen4.rsi
+  - type: Clothing
+    sprite: GG/Clothing/OuterClothing/Armor/blackgen4.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.5
+        Piercing: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.82
+  #   sprintModifier: 0.82
+  - type: Item
+    shape:
+    - 0,0,3,3
+  - type: ESWeight
+    self: 10.0
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: EFSArmor6B43
+  name: Бронежилет 6Б43 6А "Забрало-Ш"
+  description: Бронежилет 6Б43 6А класса бронезащиты предназначен для защиты от поражения пулями патронов стрелкового оружия, в том числе БП и ПП, осколками, мин, гранат, холодного оружия и снижения заброневых травм в ходе ведения боевых действий.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/OuterClothing/Armor/6b43.rsi
+  - type: Clothing
+    sprite: GG/Clothing/OuterClothing/Armor/6b43.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.49
+        Piercing: 0.49
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.8
+  #   sprintModifier: 0.8
+  - type: Item
+    shape:
+    - 0,0,3,3
+  - type: ESWeight
+    self: 10.0
+#######################################################
+
+- type: entity
+  parent: EFSClothingOuterStorageBase
+  id: EFSArmorGearAVS
+  name: Разгрузочный жилет с бронепластинами Crye Precision "AVS"
+  description: Разгрузочная система Crye Precision AVS оснащенная легкими бронеплитами из комбинированных материалов. Один из самых удобных для ношения плитников.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/OuterClothing/Armor/avs.rsi
+  - type: Clothing
+    sprite: GG/Clothing/OuterClothing/Armor/avs.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.6
+        Piercing: 0.6
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.95
+  #   sprintModifier: 0.95
+  - type: Item
+    shape:
+    - 0,0,3,2
+  - type: ESWeight
+    self: 8.0
+
+    #########################################################
+
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: EFSHelmetAltyn
+  name: Бронешлем "Алтын"
+  description: «Алтын» прошел реальные боевые испытания в Афганистане и Чечне и до сих пор остается на вооружении органов МВД РФ и армейского спецназа.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Head/Helmets/altyn.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Head/Helmets/altyn.rsi
+  - type: Reflect
+    reflectProb: 0.23
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Piercing: 0.9
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.95
+  #   sprintModifier: 0.95
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: Item
+    shape:
+    - 0,0,1,1
+  - type: ESWeight
+    self: 3.0
+
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: EFSHelmetRys
+  name: Бронешлем "Рысь"
+  description: Бронешлем «Рысь-Т» представляет из себя улучшенную и облегченную версию знаменитого шлема Алтын. Состоит на вооружении штурмовых подразделений МВД.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Head/Helmets/rys.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Head/Helmets/rys.rsi
+  - type: ESWeight
+    self: 3.0
+
+
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: EFSHelmetSH68
+  name: Шлем стальной СШ-68
+  description: СШ-68- пришел на смену общевойсковому шлему СШ-60. Отличается от предшественника большей прочностью, большим наклоном передней части и короткими боковыми бортами.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Head/Helmets/ded.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Head/Helmets/ded.rsi
+  - type: Reflect
+    reflectProb: 0.10
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: Item
+    shape:
+    - 0,0,1,1
+  - type: ESWeight
+    self: 1.5
+
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: EFSHelmetSfera94
+  name: Шлем ССШ-94 "СФЕРА-С"
+  description: Специальный шлем с модульной защитой из утолщенной бронестали. Используется спецназом МВД РФ.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Head/Helmets/sfera.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Head/Helmets/sfera.rsi
+  - type: Reflect
+    reflectProb: 0.15
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.97
+        Piercing: 0.97
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.97
+  #   sprintModifier: 0.97
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: Item
+    shape:
+    - 0,0,1,1
+  - type: ESWeight
+    self: 2.0
+
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: EFSHelmetUlachTan
+  name: Шлем HighCom "Striker ULACH IIIA" (Coyote Tan)
+  description: Боевой шлем от компании Highcom с защитой затылка и ушей. Без дополнительных креплений. Цвет coyote tan.
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/Head/Helmets/ulach_brown.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Head/Helmets/ulach_brown.rsi
+  - type: Reflect
+    reflectProb: 0.18
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Piercing: 0.95
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: Item
+    shape:
+    - 0,0,1,1
+  - type: ESWeight
+    self: 1.8
+
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: EFSHelmetExfilDark
+  name: Шлем Team Wendy "EXFIL Ballistic" (Черный)
+  description: Один из самых последних тактических баллистических шлемов с широкими возможностями по его кастомизации.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Helmets/light_riot.rsi
+  - type: Clothing
+    sprite: GG/Clothing/Head/Helmets/exfil.rsi
+  - type: Reflect
+    reflectProb: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.93
+        Piercing: 0.93
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.95
+  #   sprintModifier: 0.95
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: Item
+    shape:
+    - 0,0,1,1
+  - type: ESWeight
+    self: 2.0
+
+
+
+- type: entity
+  parent: [ClothingOuterBaseMedium, AllowSuitStorageClothing]
+  id: ClothingOuterArmorEFSSPELOIGOVNOED2
+  name: Лохмотья Зрячего
+  description: Костюм воскрешнного зрячего
+  components:
+  - type: Sprite
+    sprite: GG/Clothing/OuterClothing/Coats/slepoi.rsi
+  - type: Clothing
+    sprite: GG/Clothing/OuterClothing/Coats/slepoi.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.10
+        Slash: 0.10
+        Piercing: 0.001
+        Heat: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.10
+  # - type: ClothingSpeedModifier
+  #   walkModifier: 0.1
+  #   sprintModifier: 0.1

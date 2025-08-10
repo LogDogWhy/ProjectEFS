@@ -1,3 +1,5 @@
+using Content.Shared.Damage;
+using Content.Shared.Tag;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Shared.Audio;
@@ -8,7 +10,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 namespace Content.Shared.Weapons.Ranged.Components;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState, AutoGenerateComponentPause]
-[Access(typeof(SharedGunSystem))]
+[Access(typeof(SharedGunSystem), typeof(SharedAttachmentSystem))]
 public sealed partial class GunComponent : Component
 {
     #region Sound
@@ -18,6 +20,12 @@ public sealed partial class GunComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier? SoundGunshot = new SoundPathSpecifier("/Audio/Weapons/Guns/Gunshots/smg.ogg");
+
+    [ViewVariables(VVAccess.ReadWrite), DataField("soundLoudGunshot")]
+    public SoundSpecifier? SoundLoudGunshot = new SoundPathSpecifier("/Audio/Weapons/Guns/Gunshots/smg.ogg");
+
+    [ViewVariables(VVAccess.ReadWrite), DataField("soundSilGunshot")]
+    public SoundSpecifier? SoundSilGunshot = new SoundPathSpecifier("/Audio/Weapons/Guns/Gunshots/smg.ogg");
 
     /// <summary>
     /// The sound to use when the gun is fired.
@@ -138,12 +146,6 @@ public sealed partial class GunComponent : Component
     public EntityCoordinates? ShootCoordinates = null;
 
     /// <summary>
-    /// Who the gun is being requested to shoot at directly.
-    /// </summary>
-    [ViewVariables]
-    public EntityUid? Target = null;
-
-    /// <summary>
     ///     The base value for how many shots to fire per burst.
     /// </summary>
     [DataField, AutoNetworkedField]
@@ -187,7 +189,8 @@ public sealed partial class GunComponent : Component
     /// The base value for how fast the projectile moves.
     /// </summary>
     [DataField]
-    public float ProjectileSpeed = 25f;
+    [AutoNetworkedField]
+    public float ProjectileSpeed = 60f;
 
     /// <summary>
     /// How fast the projectile moves.
@@ -232,6 +235,13 @@ public sealed partial class GunComponent : Component
     /// </summary>
     [DataField]
     public bool ClumsyProof = false;
+
+    /// <summary>
+    /// Who the gun is being requested to shoot at directly.
+    /// </summary>
+    [ViewVariables]
+    public EntityUid? Target = null;
+
 }
 
 [Flags]

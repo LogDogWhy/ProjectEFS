@@ -1,0 +1,138 @@
+- type: entity
+  name: Марксманская винтовка HK G28
+  parent: BaseWeaponRifle
+  id: EFSWeaponSniperG28
+  description: Винтовка HK G28 была разработана компанией Heckler & Koch специально по заказу Бундесвера, в качестве оружия поддержки малых пехотных подразделений. G28 создана на основе спортивно-охотничьей самозарядной винтовки HK MR308, которая, в свою очередь, представляет собой гражданский вариант автоматической винтовки HK 417. Несмотря на ряд отличий, HK G28 по своему устройству на 75% частей взаимозаменяема с HK 417. Эта винтовка дает возможность пехоте вести эффективную стрельбу на недоступные для штатных штурмовых винтовок калибра 5.56мм дистанции.
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/g28.rsi
+    layers:
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+      - sprite: GG/Weapons/Mods/grip.rsi
+        map: ["enum.GunVisualLayers.Grip"]
+        scale: 0.8, 0.8
+        offset: 0.2125, -0.025
+      - sprite: GG/Weapons/Mods/scope.rsi
+        map: ["enum.GunVisualLayers.Scope"]
+        scale: 0.8, 0.8
+        offset: -0.25, 0.1
+  - type: Clothing
+    sprite: GG/Weapons/g28.rsi
+  - type: Gun
+    minAngle: 1
+    maxAngle: 20
+    angleIncrease: 4.5
+    angleDecay: 95
+    fireRate: 4
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/G28/shot.ogg
+  - type: Item
+    size: SniperRifles
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazineRifleG28
+        insertSound: /Audio/GG/Weapons/M4/in.ogg
+        ejectSound: /Audio/GG/Weapons/M4/out.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - EFSMagazineRifle7.62x51G28
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge7.62x51
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge7.62x51
+      gun_scope:
+        priority: 3
+        whitelist:
+          tags:
+            - EFSPicatiniScope
+      gun_grip:
+        priority: 4
+        whitelist:
+          tags:
+            - EFSPicatiniGrip
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      gun_grip: !type:ContainerSlot
+      gun_scope: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ChamberMagazineAmmoProvider
+  - type: GripVisuals
+    gripState: grip
+  - type: Grip
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+
+
+
+- type: entity
+  id: BaseMagazineRifleG28
+  name: "Магазин на 20 патрон 7.62x51 под G28"
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - EFSMagazineTarkov
+      - EFSMagazineRifle7.62x51G28
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge7.62x51
+    capacity: 20
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: GG/Weapons/Ammo/MagazineG28.7.62x51.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+
+- type: entity
+  id: EFSMagazineRifleG28
+  name: "Магазин на 20 патрон 7.62x51 под G28"
+  parent: BaseMagazineRifleG28
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge7.62x51
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: Tag
+  id: EFSMagazineRifle7.62x51G28

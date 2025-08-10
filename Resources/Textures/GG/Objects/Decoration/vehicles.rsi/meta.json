@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "EFS",
+  "size": {
+    "x": 192,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "bmp"
+    },
+    {
+      "name": "bmp-rust"
+    },
+    {
+      "name": "bmp-wrecked"
+    },
+    {
+      "name": "t72-rust"
+    },
+    {
+      "name": "tiger"
+    }
+  ]
+}

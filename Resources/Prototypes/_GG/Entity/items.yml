@@ -1,0 +1,401 @@
+- type: entity
+  parent: BaseItem
+  id: BaseItemTrakov
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Items/stuffs.rsi
+  - type: Item
+    sprite: GG/Objects/Items/stuffs.rsi
+    size: Small
+  # Inherited
+  - type: StaticPrice
+    price: 0
+  - type: ESWeight
+    self: 0.8
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Akali
+  name: Бутылка Щёлочи
+  description: Щелочь активно применяется для удаления различных отложений в трубах и обогревательных элементах. Также используется в кустарном химическом производстве.
+  components:
+  - type: Sprite
+    state: akali
+    scale: 0.5, 0.5
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Bats
+  name: Батарейки
+  description: Пальчиковые батарейки. Применяются в массе бытовых устройств.
+  components:
+  - type: Sprite
+    state: bats
+    scale: 0.75, 0.75
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Bitcoin
+  name: Биткоин
+  description: Физический эквивалент криптовалюты Bitcoin номиналом 0.2BTC.
+  components:
+  - type: Sprite
+    state: bitcoin
+    scale: 0.5, 0.5
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Bolts
+  name: Болты
+  description: Крепёжные болты, используемые в паре с гайками.
+  components:
+  - type: Sprite
+    state: bolts
+    scale: 0.75, 0.75
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Bpowder
+  name: Оружейный порох "Коршун"
+  description: Банка с оружейным порохом. Необходимый ресурс для создания патронов. Состав пороха Коршун отличается применением пироксилина с наличием графита, который необходим для уменьшения электризации смеси.
+  components:
+  - type: Sprite
+    state: Bpowder
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Gpowder
+  name: Оружейный порох "Орел"
+  description: Банка с оружейным порохом. Необходимый ресурс для создания патронов. Главным плюсом пороха этой марки является его плотный состав и большая энергия, выделяемая при сгорании.
+  components:
+  - type: Sprite
+    state: Gpowder
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Rpowder
+  name: Оружейный порох "Ястреб"
+  description: Банка с оружейным порохом. Необходимый ресурс для создания патронов. Редкая и качественная смесь высокоэнергетического баллистического пороха со стабилизирующими компонентами.
+  components:
+  - type: Sprite
+    state: Rpowder
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Btape
+  name: Изолента
+  description: Хоть изолента и предназначена, в теории, для изоляции проводов, на практике её применение ограничено лишь фантазией владельца. Среди наиболее типичных примеров - мелкий ремонт, перематывание трещин, склеивание разных вещей и обмотка ручек, чтоб не скользили.
+  components:
+  - type: Sprite
+    state: Btape
+
+- type: entity
+  parent: BaseItemTrakov
+  id: EFSCable
+  name: Пучёк проводов
+  description: Обрезки проводов различного назначения. Могут пригодиться в электронных целях.
+  components:
+  - type: Sprite
+    state: cable
+
+- type: entity
+  parent: BaseItemTrakov
+  id: CoffeeLupo
+  name: Банка кофе Dr. Lupo's
+  description: Знаменитые огромные кофейные бобы "Dr. Lupo's". Они реально здоровые! Прожарка максимально хардкорная, вштырит однозначно.
+  components:
+  - type: Sprite
+    state: CoffeeLupo
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Coffee
+  name: Банка кофе Majaica
+  description: Банка кофе Majaica, может долго храниться не теряя аромата 100% арабики.
+  components:
+  - type: Sprite
+    state: Coffee
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Dfuel
+  name: Присадка для диз. топл.
+  description: Присадка, улучшающая качество дизельного топлива. Редкий и специфический состав.
+  components:
+  - type: Sprite
+    state: Dfuel
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Fdrive
+  name: Флеш-накопитель
+  description: Защищенный флеш накопитель. Они определенно могут содержать важные данные.
+  components:
+  - type: Sprite
+    state: drive
+    scale: 0.5, 0.5
+
+
+- type: entity
+  parent: BaseItemTrakov
+  id: FuelCan
+  name: Метал. топл. канистра
+  description: Металлическая канистра для горюче-смазочных материалов.
+  components:
+  - type: Sprite
+    state: FuelCan
+
+# - type: entity
+#   parent: BaseItemTrakov
+#   id:
+#   name:
+#   description:
+#   components:
+#   - type: Sprite
+#     state:
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Hydro
+  name: Бутылка перекиси водорода
+  description: Перекись водорода применяется в медицине как очищающее и антисептическое средство обработки ран.
+  components:
+  - type: Sprite
+    state: Hydro
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Kektape
+  name: Кектейп
+  description: KEKТЕЙП не сможет склеить вашу тяжелую тарковскую судьбу, но лодку склеить сможет. Заделать дыру в аквариуме. Много чего может лента КЕКТЕЙП.
+  components:
+  - type: Sprite
+    state: Kektape
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Klean
+  name: Оружейная смазка FireKlean
+  description: Оружейная смазка "#FireKlean" считается одной из самых качественных в мире. Можно использовать также и в других делах!
+  components:
+  - type: Sprite
+    state: Klean
+
+- type: entity
+  parent: BaseItemTrakov
+  id: LCD
+  name: Рабочий LCD дисплей
+  description: Целый и работоспособный жидкокристаллический дисплей. Можно использовать в системах слежения как устройство визуализации сигналов.
+  components:
+  - type: Sprite
+    state: LCD
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Paracord
+  name: Моток паракорда
+  description: Лёгкий полимерный шнур, изготовленный из нейлона, изначально использовавшийся в стропах парашютов. Паракорд может использоваться для многих иных целей, как военными, так и гражданским населением.
+  components:
+  - type: Sprite
+    state: Paracord
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Propane
+  name: Баллон пропана 5л
+  description: Пропан - это крайне взрывоопасный газ, который используется для сварки и для газовых плит в тех домах или местах, где нет центрального газоснабжения.
+  components:
+  - type: Sprite
+    state: Propane
+
+- type: entity
+  parent: BaseItemTrakov
+  id: SewingKit
+  name: Набор для шитья
+  description: Простой швейный набор "Красавчик", чтобы подлатать одежду или создать что-то новое в мире моды.
+  components:
+  - type: Sprite
+    state: SewingKit
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Shus
+  name: Монтажная пена Shustrilo
+  description: Shustrilo - это профессиональные монтажные пены премиум-класса для использования с пистолетом. Отличаются высоким выходом пены из баллона, улучшенными показателями прочности, устойчивости и др. Высочайшее качество продуктов Shustrilo позволяет быть уверенным в гарантированном результате работ.
+  components:
+  - type: Sprite
+    state: Shus
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Soda
+  name: Пачка соды
+  description: Кислая соль угольной кислоты и натрия. Обыкновенно представляет собой мелкокристаллический порошок белого цвета. Используется в пищевой промышленности, в кулинарии, в медицине как нейтрализатор ожогов кожи и слизистых оболочек человека кислотами и снижения кислотности желудочного сока.
+  components:
+  - type: Sprite
+    state: soda
+
+- type: entity
+  parent: BaseItemTrakov
+  id: EFSSSD
+  name: SSD диск
+  description: Твердотельный накопитель. Используется для хранения данных с повышенной производительностью чтения и записи. Китайская подделка samsuka от samisuki.
+  components:
+  - type: Sprite
+    state: ssd
+    scale: 0.5, 0.5
+
+- type: entity
+  parent: BaseItemTrakov
+  id: EFSSyringe
+  name: Шприц в упаковке
+  description: Одноразовый шприц в индивидуальной стерильной упаковке.
+  components:
+  - type: Sprite
+    state: syringe
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Tea42
+  name: Коробка с чаем 42nd SBET
+  description: Коробка английского чая 42nd Signature Blend English Tea. Для настоящих ценителей.
+  components:
+  - type: Sprite
+    state: tea42
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Tetris
+  name: Электронная игра Тетриз
+  description: Древний артефакт утерянного прошлого.
+  components:
+  - type: Sprite
+    state: Tetris
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Thermite
+  name: Банка с термитной смесью
+  description: Зажигательные смеси на основе термита представляют собой смесь алюминиевого порошка (пудры) и оксида железа. У этих составов очень высокая температура горения и они способны гореть без присутствия кислорода. Термит обладает чрезвычайно сильным прожигающим действием и его практически невозможно потушить.
+  components:
+  - type: Sprite
+    state: Thermite
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Thermometer
+  name: Аналоговый термометр
+  description: Аналоговый термометр, предназначенный для измерения и контроля температуры жидких сред.
+  components:
+  - type: Sprite
+    state: Thermometer
+
+- type: entity
+  parent: BaseItemTrakov
+  id: TNT
+  name: Тротиловая шашка ТП-200
+  description: Шашка ТП-200 предназначена для использования в качестве зарядов при производстве сейсморазведочных работ, промежуточных детонаторов при инициировании скважинных зарядов ВВ, дроблении негабарита и производства специальных взрывных работ.
+  components:
+  - type: Sprite
+    state: TNT
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Virtex
+  name: Программируемый процессор Virtex
+  description: Специализированный программируемый военный процессор. Продукт ориентирован на широкополосные приложения с низкой задержкой, для которых требуются обработка большого объема данных и минимальная задержка. https://youtu.be/FtutLA63Cp8?si=DtxIrrIZ-znJKHB2
+  components:
+  - type: Sprite
+    state: Virtex
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Vitamin
+  name: Банка с витаминами OLOLO
+  description: Банка с мультивитаминами OLOLO Multivitamin. Востребованный товар в условиях пониженного иммунитета.
+  components:
+  - type: Sprite
+    state: Vitamin
+
+- type: entity
+  parent: BaseItemTrakov
+  id: WaterFilter
+  name: Водный фильтр
+  description: Угольный водный фильтр, используемый как на производстве в пищевой промышленности, так и дома. Предназначен для очистки воды от вредных примесей.
+  components:
+  - type: Sprite
+    state: WaterFilter
+
+- type: entity
+  parent: BaseItemTrakov
+  id: WD40
+  name: WD-40 (100мл)
+  description: Первоначально препарат был разработан для промышленных потребителей как водоотталкивающее средство, предотвращающее коррозию. Позже было установлено, что он также имеет множество возможностей для бытового применения. По корпоративной легенде, формула продукта была разработана с сороковой попытки (WD-40 как сокращение от англ. Water Displacement — 40th Attempt). Продукт состоит в основном из различных углеводородов.
+  components:
+  - type: Sprite
+    state: WD40
+
+- type: entity
+  parent: BaseItemTrakov
+  id: WD40-big
+  name: WD-40 (400мл)
+  description: Первоначально препарат был разработан для промышленных потребителей как водоотталкивающее средство, предотвращающее коррозию. Позже было установлено, что он также имеет множество возможностей для бытового применения. По корпоративной легенде, формула продукта была разработана с сороковой попытки (WD-40 как сокращение от англ. Water Displacement — 40th Attempt). Продукт состоит в основном из различных углеводородов.
+  components:
+  - type: Sprite
+    state: WD40-big
+
+- type: entity
+  parent: BaseItemTrakov
+  id: WeaponParts
+  name: Оружейные части
+  description: Различные части оружия, необходимые для замены сломанных деталей, либо для производства кустарного оружия.
+  components:
+  - type: Sprite
+    state: WeaponParts
+
+- type: entity
+  parent: BaseItemTrakov
+  id: WrenchEFS
+  name: Гаечный ключ
+  description: Двухрожковый гаечный ключ. Несмотря на простоту конструкции, гаечный ключ применяется практически во всех областях техники для сборки механизмов различных уровней сложности.
+  components:
+  - type: Sprite
+    state: Wrench
+
+# скотч
+- type: entity
+  parent: BaseItemTrakov
+  id: Wtape
+  name: Монтажный скотч
+  description: Монтажный скотч, годящийся на всё то же, что и изолента, только в несколько раз шире.
+  components:
+  - type: Sprite
+    state: Wtape
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Xeno
+  name: Монтажная пена Xenomorph
+  description: Xenomorph - монтажная пена с превосходной структурой ячеек и высокой механической прочностью. Проста в употреблении, наносится тонкой трубкой-аппликатором. Пена является саморасширяющимся материалом, при твердении увеличивается в объеме примерно в два раза. Обладает превосходной адгезией к большинству таких строительных материалов, как дерево, бетон, камень, металл, и т.д. Изделие не содержит хлор-фтор-углеродных пропеллентов. Является надежным и экономичным решением для герметизации и заполнения пустот.
+  components:
+  - type: Sprite
+    state: Xeno
+
+- type: entity
+  parent: BaseItemTrakov
+  id: Zapal
+  name: Запал УЗРГМ для гранат
+  description: Унифицированный Запал Ручной Гранаты Модернизированный — в отличие от УЗРГ содержит внутри алюминиевой втулки замедлителя медленногорящий малогазовый пиротехнический состав с высокой стабильностью горения и азидовый капсюль-детонатор в алюминиевой гильз. Необходимая деталь для производства гранат.
+  components:
+  - type: Sprite
+    state: Zapal
+
+- type: entity
+  parent: BaseItemTrakov
+  id: BloodKit
+  name: Набор для переливания крови
+  description: Набор медицинских инструментов, необходимых для переливания крови.
+  components:
+  - type: Sprite
+    state: bloodKit

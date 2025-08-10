@@ -1,0 +1,114 @@
+
+- type: entity
+  name: SA-58 (FN FAL)
+  parent: BaseWeaponRifle
+  id: EFSWeaponRifleSA58
+  description: WIP
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/sa58.rsi
+    layers:
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+        scale: 0.8, 0.8
+      - sprite: GG/Weapons/Mods/forearm.rsi
+        map: ["enum.GunVisualLayers.Forearm"]
+        scale: 0.8, 0.8
+      - sprite: GG/Weapons/Mods/stock.rsi
+        map: ["enum.GunVisualLayers.Stock"]
+        scale: 0.8, 0.8
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        startingItem: Cartridge7.62x51
+        priority: 0
+        whitelist:
+          tags:
+            - Cartridge7.62x51
+      gun_magazine:
+        startingItem: EFSMagazineRifleKAC
+        insertSound: /Audio/GG/Weapons/SA58/in.ogg
+        ejectSound: /Audio/GG/Weapons/SA58/out.ogg
+        priority: 1
+        whitelist:
+          tags:
+            - EFSMagazineRifleType1_7.62x51
+      gun_forearm:
+        startingItem: EFSSA58AttachmentForearm
+        priority: 4
+        whitelist:
+          tags:
+            - EFSSA58Forearm
+      gun_stock:
+        startingItem: EFSSA58AttachmentStock
+        priority: 4
+        whitelist:
+          tags:
+            - EFSSA58Stock
+  - type: ChamberMagazineAmmoProvider
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      gun_stock: !type:ContainerSlot
+      gun_forearm: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ForearmVisuals
+    forearmState: forearm
+  - type: Forearm
+  - type: StockVisuals
+    stockState: stock
+  - type: Stock
+  - type: Gun
+    minAngle: 2
+    maxAngle: 21
+    angleIncrease: 3.5
+    angleDecay: 100
+    fireRate: 7
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/GG/Weapons/SA58/shot.ogg
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/SA58/shot.ogg
+
+- type: Tag
+  id: EFSSA58Forearm
+
+- type: Tag
+  id: EFSSA58Stock
+
+- type: entity
+  name: Цевьё FN Fal
+  parent: EFSM4BaseAttachmentForearm
+  id: EFSSA58AttachmentForearm
+  description: WIP
+  components:
+  - type: Sprite
+    state: fnfal
+  - type: Tag
+    tags:
+      - EFSSA58Forearm
+  - type: Attachment
+
+- type: entity
+  name: Приклад Fn Fal
+  parent: EFSM4BaseAttachmentStock
+  id: EFSSA58AttachmentStock
+  description: WIP
+  components:
+  - type: Sprite
+    state: stock-fal
+  - type: Tag
+    tags:
+      - EFSSA58Stock
+  - type: Attachment

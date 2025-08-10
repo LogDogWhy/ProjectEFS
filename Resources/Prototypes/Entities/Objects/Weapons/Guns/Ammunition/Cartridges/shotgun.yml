@@ -9,8 +9,8 @@
     - Cartridge
     - ShellShotgun
   - type: CartridgeAmmo
-    count: 6
-    spread: 15
+    count: 5
+    spread: 12
     soundEject:
       collection: ShellEject
   - type: Sprite
@@ -20,6 +20,8 @@
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: Appearance
   - type: SpentAmmoVisuals
+  - type: ESWeight
+    self: 0.09
 
 - type: entity
   id: ShellShotgunBeanbag
@@ -130,7 +132,7 @@
     maxTransferAmount: 7
   - type: SpentAmmoVisuals
     state: "tranquilizer"
-    
+
 - type: entity
   id: ShellShotgunImprovised
   name: improvised shotgun shell
@@ -146,7 +148,7 @@
     node: shell
   - type: CartridgeAmmo
     count: 10
-    spread: 45 
+    spread: 45
     proto: PelletShotgunImprovised
   - type: SpentAmmoVisuals
     state: "improvised"

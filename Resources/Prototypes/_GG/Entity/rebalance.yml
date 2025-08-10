@@ -1,0 +1,160 @@
+# - type: entity
+#   parent: ClothingOuterArmorBasic
+#   id: ClothingOuterArmorTier1
+#   name: Жилет I тира
+#   description: WIP
+#   components:
+#   - type: Sprite
+#     sprite: GG/Clothing/OuterClothing/Armor/press.rsi
+#     scale: 0.9, 0.9
+#   - type: Clothing
+#     sprite: GG/Clothing/OuterClothing/Armor/press.rsi
+#   - type: Armor
+#     modifiers:
+#       coefficients:
+#         Slash: 0.7
+#         Piercing: 0.70
+#   - type: ExplosionResistance
+#     damageCoefficient: 0.95
+#   - type: ClothingSpeedModifier
+#     walkModifier: 0.95
+#     sprintModifier: 0.95
+
+# #Mercenary web vest
+# - type: entity
+#   parent: ClothingOuterArmorBasic
+#   id: ClothingOuterArmorTier2
+#   name: Жилет II тира
+#   description: WIP
+#   components:
+#   - type: Sprite
+#     sprite: GG/Clothing/OuterClothing/Armor/trooper.rsi
+#   - type: Clothing
+#     sprite: GG/Clothing/OuterClothing/Armor/trooper.rsi
+#   - type: Armor
+#     modifiers:
+#       coefficients:
+#         Blunt: 0.95
+#         Slash: 0.6
+#         Piercing: 0.64
+#   - type: ExplosionResistance
+#     damageCoefficient: 0.9
+#   - type: ClothingSpeedModifier
+#     walkModifier: 0.9
+#     sprintModifier: 0.9
+
+# #Web vest
+# - type: entity
+#   parent: ClothingOuterArmorBasic
+#   id: ClothingOuterArmorTier3
+#   name: Жилет III тира
+#   description: WIP
+#   components:
+#   - type: Sprite
+#     sprite: GG/Clothing/OuterClothing/Armor/6b42.rsi
+#   - type: Clothing
+#     sprite: GG/Clothing/OuterClothing/Armor/6b42.rsi
+#   - type: Armor
+#     modifiers:
+#       coefficients:
+#         Blunt: 0.9
+#         Slash: 0.57
+#         Piercing: 0.57
+#         Heat: 0.57
+#   - type: ExplosionResistance
+#     damageCoefficient: 0.9
+#   - type: ClothingSpeedModifier
+#     walkModifier: 0.85
+#     sprintModifier: 0.85
+
+# - type: entity
+#   parent: ClothingOuterArmorBasic
+#   id: ClothingOuterArmorTier4
+#   name: Жилет IV тира
+#   description: WIP
+#   components:
+#   - type: Sprite
+#     sprite: GG/Clothing/OuterClothing/Armor/blackgen4.rsi
+#   - type: Clothing
+#     sprite: GG/Clothing/OuterClothing/Armor/blackgen4.rsi
+#   - type: Armor
+#     modifiers:
+#       coefficients:
+#         Blunt: 0.85
+#         Slash: 0.47
+#         Piercing: 0.47
+#         Heat: 0.47
+#   - type: ExplosionResistance
+#     damageCoefficient: 0.90
+#   - type: ClothingSpeedModifier
+#     walkModifier: 0.79
+#     sprintModifier: 0.79
+
+# ############################################
+# - type: entity
+#   parent: ClothingHeadBase
+#   id: ClothingHeadHelmetTier1
+#   name: Шлем I тира + НПВ
+#   description: WIP
+#   components:
+#   - type: Sprite
+#     sprite: GG/Clothing/Head/Helmets/ulach_brown.rsi
+#   - type: Clothing
+#     sprite: GG/Clothing/Head/Helmets/ulach_brown.rsi
+#   - type: Armor #This is intentionally not spaceproof, when the time comes to port the values from SS13 this should be buffed from what it was.
+#     modifiers:
+#       coefficients:
+#         Blunt: 0.95
+#         Piercing: 0.95
+#   - type: ToggleableClothing
+#     stripDelay: 4
+#     clothingPrototype: ClothingEyesVision
+#     requiredSlot:
+#     - HEAD
+#     slot: eyes
+#   - type: ClothingSpeedModifier
+#     walkModifier: 0.95
+#     sprintModifier: 0.95
+
+
+# #Mercenary Helmet
+# - type: entity
+#   parent: ClothingHeadHelmetBasic
+#   id: ClothingHeadHelmetTier2
+#   name: Шлем II тира
+#   description: WIP
+#   components:
+#   - type: Sprite
+#     sprite: GG/Clothing/Head/Helmets/sfera.rsi
+#     scale: 0.9, 0.9
+#   - type: Clothing
+#     sprite: GG/Clothing/Head/Helmets/sfera.rsi
+#   - type: Armor
+#     modifiers:
+#       coefficients:
+#         Blunt: 0.9
+#         Piercing: 0.9
+#   - type: ClothingSpeedModifier
+#     walkModifier: 0.95
+#     sprintModifier: 0.95
+
+# - type: entity
+#   parent: ClothingHeadBase
+#   id: ClothingHeadHelmetTier3
+#   name: Шлем III тира
+#   description: WIP
+#   components:
+#   - type: Sprite
+#     sprite: Clothing/Head/Helmets/light_riot.rsi
+#     scale: 0.9, 0.9
+#   - type: Clothing
+#     sprite: Clothing/Head/Helmets/light_riot.rsi
+#   - type: IngestionBlocker
+#   - type: Armor
+#     modifiers:
+#       coefficients:
+#         Blunt: 0.85
+#         Piercing: 0.85
+#   - type: ClothingSpeedModifier
+#     walkModifier: 0.95
+#     sprintModifier: 0.95

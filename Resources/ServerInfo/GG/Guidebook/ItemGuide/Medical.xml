@@ -1,0 +1,42 @@
+<Document>
+
+  # Стимуляторы
+
+  На Сервере присутствуют различные стимуляторы которые могу помочь в столкновениях с противником:
+    <Box>
+    <GuideEntityEmbed Entity="PropitalPen" Caption="Регенеративный препарат Пропитал"/>
+    </Box>
+    Поможет регенирировать ткани, а в редком случае встать и надрать задницу противнику, который вас не успел добить.
+    <Box>
+    <GuideEntityEmbed Entity="ZagustinPen" Caption="Загустин"/>
+    </Box>
+  Поможет закрыть кровотечение и не даёт открыться новым в течении некоторого времени, [color=red]обладает побочкой[/color], так что носите с собой еду.
+    <Box>
+    <GuideEntityEmbed Entity="AdrenalinePen" Caption="Шприц с адреналином"/>
+    </Box>
+  Поможет вам восстановить немного здоровья и прибавить в скорости.
+    <Box>
+    <GuideEntityEmbed Entity="EFSMorphinePen" Caption="Шприц с морфием"/>
+    </Box>
+  Поможет вам мгновенно получить бафф [color=lime]"На болеутоляющих"[/color].
+    <Box>
+    <GuideEntityEmbed Entity="EFSTrimadolPen" Caption="Стимулятор Тримадол"/>
+    </Box>
+  Поможет вам лучше управляться с отдачей, [color=red]обладает побочкой[/color], так что носите с собой аптечку.
+    <Box>
+    <GuideEntityEmbed Entity="EFSPerfotoranPen" Caption="Стимулятор Перфоторан"/>
+    </Box>
+  Поможет восстановить кровь.
+    <Box>
+    <GuideEntityEmbed Entity="EFSSJ1Pen" Caption="Стимулятор SJ1"/>
+    </Box>
+  Поможет увеличить силу вашего персонажа, от чего он сможет перетаскивать больше вещей.
+    <Box>
+    <GuideEntityEmbed Entity="EFSSJ12Pen" Caption="Стимулятор SJ12"/>
+    </Box>
+  Поможет восстановить еду и воду за счет своих магических свойств.
+
+  # P.S
+  Мне было лень создавать отдельный раздел, но знайте, что [color=lime]"На болеутоляющих"[/color] убирает оверлей повреждений и сбрасывает замедление от ранений, помимо [color=yellow]морфия[/color], [color=yellow]вазелин[/color] и [color=yellow]звездочка[/color] дают такой же эффект.
+
+</Document>

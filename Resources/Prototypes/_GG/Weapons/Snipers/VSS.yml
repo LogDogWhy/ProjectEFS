@@ -1,0 +1,62 @@
+
+
+# - type: entity
+#   name: Сн. Винт. Remington Model 700
+#   parent: BaseWeaponRifle
+#   id: EFSWeaponSniperM700
+#   description: Снайперская винтовка Remington Model 700 cо скользящим затвором, серийно выпускаемая с 1962-ого года компанией "Remington Arms".
+#   components:
+#   - type: Sprite
+#     sprite: GG/Weapons/m700.rsi
+#     layers:
+#       - state: base
+#         scale: 0.8, 0.8
+#         map: ["enum.GunVisualLayers.Base"]
+#       - state: mag-0
+#         map: ["enum.GunVisualLayers.Mag"]
+#         scale: 0.8, 0.8
+#   - type: Clothing
+#     sprite: GG/Weapons/m700.rsi
+#   - type: Gun
+#     fireRate: 1
+#     selectedMode: SemiAuto
+#     autoCycle: false
+#     availableModes:
+#     - SemiAuto
+#     soundLoudGunshot:
+#       path: /Audio/GG/Weapons/M700/shot.ogg
+#   - type: Item
+#     size: SniperRifles
+#   - type: ItemSlots
+#     slots:
+#       gun_magazine:
+#         name: Magazine
+#         startingItem: EFSMagazineRifleAICS
+#         insertSound: /Audio/GG/Weapons/M700/in.ogg
+#         ejectSound: /Audio/GG/Weapons/M700/out.ogg
+#         priority: 0
+#         whitelist:
+#           tags:
+#             - EFSMagazineRifleM700
+#       gun_chamber:
+#         name: Chamber
+#         startingItem: Cartridge7.62x51
+#         priority: 1
+#         whitelist:
+#           tags:
+#             - Cartridge7.62x51
+#   - type: ContainerContainer
+#     containers:
+#       gun_magazine: !type:ContainerSlot
+#       gun_chamber: !type:ContainerSlot
+#       ballistic-ammo: !type:Container
+#         ents: []
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 1
+#     zeroVisible: true
+#   - type: Appearance
+#   - type: ChamberMagazineAmmoProvider
+#     canLoad: true
+#     autoCycle: false
+

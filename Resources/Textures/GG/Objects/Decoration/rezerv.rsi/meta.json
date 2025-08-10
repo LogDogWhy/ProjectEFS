@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "EFS",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "box"
+    },
+    {
+      "name": "doska"
+    },
+    {
+      "name": "doska2"
+    },
+    {
+      "name": "doska3"
+    },
+    {
+      "name": "nagk"
+    },
+    {
+      "name": "nagk2"
+    },
+    {
+      "name": "pesok"
+    },
+    {
+      "name": "rasklad"
+    },
+    {
+      "name": "rasklad2"
+    },
+    {
+      "name": "rasklad3"
+    },
+    {
+      "name": "rasklad4"
+    },
+    {
+      "name": "serverqueen"
+    },
+    {
+      "name": "serverqueen2"
+    },
+    {
+      "name": "telefon"
+    }
+  ]
+}

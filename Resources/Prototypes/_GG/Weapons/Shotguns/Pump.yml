@@ -1,0 +1,167 @@
+- type: entity
+  name: Benelli M3
+  parent: BaseWeaponShotgun
+  id: WeaponShotgunM3
+  description: "Benelli M3 Super 90 — итальянский самозарядный дробовик производства Benelli, разработанный на основе конструкции ружей Benelli M1 и Benelli M2. Ружьё оснащено механизмом, сочетающим в себе инерционную автоматику с ручным перезаряжанием при помощи продольно подвижного цевья. Ружья Benelli демонстрируют превосходные баллистические характеристики, отделка и точная обработка деталей олицетворяют собой традиционный итальянский стиль."
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/m3.rsi
+    layers:
+      - state: base
+        scale: 0.8, 0.8
+        map: ["enum.GunVisualLayers.Base"]
+      - sprite: GG/Weapons/Mods/barrels.rsi
+        map: ["enum.GunVisualLayers.Suppressor"]
+        scale: 0.8, 0.8
+        offset: 0.8, 0.025
+        visible: false
+  - type: Item
+    size: Shotgun
+  - type: Clothing
+    sprite: GG/Weapons/m3.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 2
+    minAngle: 1
+    maxAngle: 40
+    angleIncrease: 10
+    angleDecay: 10
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/BM3/shot.ogg
+    soundSilGunshot:
+      path: /Audio/GG/Weapons/BM3/sil.ogg
+    soundGunshot:
+      path: /Audio/GG/Weapons/BM3/shot.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: BallisticAmmoProvider
+    autoCycle: true
+    whitelist:
+      tags:
+      - ShellShotgun
+    capacity: 5
+    proto: ShellShotgun
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
+  - type: ContainerContainer
+    containers:
+      gun_suppressor: !type:ContainerSlot
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: StaticPrice
+    price: 500
+  - type: ItemSlots
+    slots:
+      gun_suppressor:
+        priority: 0
+        whitelist:
+          tags:
+            - EFS12GBarrel
+  - type: SuppressorVisuals
+    suppressorState: suppressor
+  - type: Suppressor
+  - type: Appearance
+
+
+- type: entity
+  name: Сайга 12к
+  # Don't parent to BaseWeaponShotgun because it differs significantly
+  parent: BaseItem
+  id: EFSWeaponShotgunSaiga12
+  description: Полуавтоматический карабин 12 калибра со складывающимся прикладом, снабжён блокировкой ударно-спускового механизма, позволяющей вести стрельбу только с откинутым прикладом. Ствол укороченный, длиной 430 мм.
+  components:
+  - type: Sprite
+    sprite: GG/Weapons/saiga12.rsi
+    layers:
+    - state: base
+      scale: 0.8, 0.8
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      scale: 0.8, 0.8
+      map: ["enum.GunVisualLayers.Mag"]
+    - sprite: GG/Weapons/Mods/barrels.rsi
+      map: ["enum.GunVisualLayers.Suppressor"]
+      scale: 0.8, 0.8
+      offset: 0.525, 0.0
+      visible: false
+    - sprite: GG/Weapons/Mods/scope.rsi
+      offset: -0.225, 0.1
+      map: ["enum.GunVisualLayers.Scope"]
+      scale: 0.8, 0.8
+      visible: false
+  - type: Item
+    size: Large
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 2
+    selectedMode: SemiAuto
+    soundGunshot:
+      path: /Audio/GG/Weapons/Saiga/shot.ogg
+    soundLoudGunshot:
+      path: /Audio/GG/Weapons/Saiga/shot.ogg
+    soundSilGunshot:
+      path: /Audio/GG/Weapons/Saiga/sil.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: EFSMagazineRifleSaiga
+        priority: 2
+        whitelist:
+          tags:
+          - EFSMagazineRifleSaiga
+        whitelistFailPopup: gun-magazine-whitelist-fail
+        insertSound: /Audio/GG/Weapons/Saiga/in.ogg
+        ejectSound: /Audio/GG/Weapons/Saiga/out.ogg
+      gun_chamber:
+        name: Chamber
+        startingItem: ShellShotgun
+        priority: 1
+        whitelist:
+          tags:
+            - ShellShotgun
+      gun_scope:
+        whitelist:
+          tags:
+            - EFSNScope
+      gun_suppressor:
+        whitelist:
+          tags:
+            - EFS12GBarrel
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      gun_suppressor: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: false
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+  - type: ScopeVisuals
+    scopeState: scope
+  - type: Scope
+  - type: SuppressorVisuals
+    suppressorState: suppressor
+  - type: Suppressor
+  - type: ESWeight
+    self: 2.5

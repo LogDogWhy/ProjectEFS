@@ -1,0 +1,154 @@
+- type: entity
+  name: Флаг A
+  id: EFSCapturePointA
+  parent: BaseStructure
+  components:
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    sprite: GG/Effects/zone.rsi
+    state: pointa
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1.5
+        hard: false
+        layer:
+          - LowImpassable
+  - type: WarpPoint
+    follow: false
+    location: Точка А
+  - type: GGCapturePoint
+    pointName: A
+
+
+- type: entity
+  name: Эмблема Bear
+  suffix: НЕ МАПИТЬ!
+  id: EFSBEARFactionEmblem
+  parent: BaseStructure
+  components:
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    sprite: GG/Effects/zone.rsi
+    state: bear
+
+- type: entity
+  name: Эмблема Usec
+  suffix: НЕ МАПИТЬ!
+  id: EFSUSECFactionEmblem
+  parent: BaseStructure
+  components:
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    sprite: GG/Effects/zone.rsi
+    state: usec
+
+- type: entity
+  name: Флаг B
+  id: EFSCapturePointB
+  parent: BaseStructure
+  components:
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    sprite: GG/Effects/zone.rsi
+    state: pointb
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1.5
+        hard: false
+        layer:
+          - LowImpassable
+  - type: WarpPoint
+    follow: false
+    location: Точка B
+  - type: GGCapturePoint
+    pointName: B
+
+- type: entity
+  name: Флаг C
+  id: EFSCapturePointC
+  parent: BaseStructure
+  components:
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    sprite: GG/Effects/zone.rsi
+    state: pointc
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1.5
+        hard: false
+        layer:
+          - LowImpassable
+  - type: WarpPoint
+    follow: false
+    location: Точка C
+  - type: GGCapturePoint
+    pointName: C
+
+  # - type: NpcFactionMember
+  #   factions:
+  #   - SimpleNeutral
+
+# - type: npcFaction
+#   id: UsecTeam
+
+# - type: npcFaction
+#   id: BearTeam
+
+
+- type: statusIcon
+  id: BearFaction
+  isShaded: true
+  priority: 12
+  showTo:
+    components:
+      - GGBearTeam
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: GGBearTeam
+
+- type: statusIcon
+  id: UsecFaction
+  isShaded: true
+  priority: 12
+  showTo:
+    components:
+      - GGUsecTeam
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: GGUsecTeam
+
+
+- type: entity
+  id: CapturePoint
+  parent: BaseGameRule
+  components:
+  - type: CapturePointGameRule
+  - type: KillCalloutRule
+  - type: RespawnDeadRule
+  - type: RespawnTracker
+    respawnDelay: 5
+    deleteBody: true
+
+- type: gamePreset
+  id: CapturePointMode
+  alias:
+  - capturepoint
+  name: Capture Point
+  showInVote: true #4boring4vote
+  description: Захватите точку
+  rules:
+  - CapturePoint

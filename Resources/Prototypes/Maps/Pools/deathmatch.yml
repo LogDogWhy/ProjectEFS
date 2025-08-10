@@ -1,4 +1,5 @@
 - type: gameMapPool
   id: DeathMatchMapPool
   maps:
-  - MeteorArena
+  - Factory
+  - Saltern

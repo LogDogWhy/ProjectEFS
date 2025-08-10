@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "CBT for EFS",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "3btg"
+    },
+    {
+      "name": "3btg_empty"
+    },
+    {
+      "name": "adrenaline"       
+    },
+    {
+      "name": "adrenaline_empty" 
+    },
+    {
+      "name": "ahf1"
+    },
+    {
+      "name": "ahf1_empty"
+    },
+    {
+      "name": "etg"
+    },
+    {
+      "name": "etg_empty"
+    },
+    {
+      "name": "l1"
+    },
+    {
+      "name": "l1_empty"
+    },
+    {
+      "name": "meldonin"
+    },
+    {
+      "name": "meldonin_empty"
+    },
+    {
+      "name": "morphine"
+    },
+    {
+      "name": "morphine_empty"
+    },
+    {
+      "name": "mule"
+    },
+    {
+      "name": "mule_empty"
+    },
+    {
+      "name": "obdolbos"
+    },
+    {
+      "name": "obdolbos_empty"
+    },
+    {
+      "name": "obdolbos2"
+    },
+    {
+      "name": "obdolbos2_empty"
+    },
+    {
+      "name": "p22"
+    },
+    {
+      "name": "p22_empty"
+    },
+    {
+      "name": "perfotoran"
+    },
+    {
+      "name": "perfotoran_empty"
+    },
+    {
+      "name": "pnb"
+    },
+    {
+      "name": "pnb_empty"
+    },
+    {
+      "name": "propital"        
+    },
+    {
+      "name": "propital_empty"  
+    },
+    {
+      "name": "sj1"
+    },
+    {
+      "name": "sj1_empty"
+    },
+    {
+      "name": "sj6"
+    },
+    {
+      "name": "sj6_empty"
+    },
+    {
+      "name": "sj9"
+    },
+    {
+      "name": "sj9_empty"
+    },
+    {
+      "name": "sj12"
+    },
+    {
+      "name": "sj12_empty"
+    },
+    {
+      "name": "trimadol"
+    },
+    {
+      "name": "trimadol_empty"
+    },
+    {
+      "name": "xtg12"
+    },
+    {
+      "name": "xtg12_empty"
+    },
+    {
+      "name": "zagustin"            
+    },
+    { 
+      "name": "zagustin_empty"       
+    },
+	  {
+      "name": "medipen-inhand-left"
+    },
+    {
+      "name": "medipen-inhand-right"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+# # HK
+
+
+
+# #- type: entity
+# #  name: HK MP5K
+# #  parent: WeaponSubMachineGunMP5
+# #  id: WeaponSubMachineGunMP5K
+# #  description: HK MP5K("K" от Немецкого Kurz - "короткий") - укороченная версия пистолет-пулемета MP5 разработанная для скрытого ношения и работы на коротких дистанциях.
+# #  components:
+# #  - type: Sprite
+# #    sprite: GG/Weapons/mp5k.rsi
+# #    layers:
+# #    - state: base
+# #      map: ["enum.GunVisualLayers.Base"]
+# #      scale: 0.85, 0.85
+# #    - state: mag-0
+# #      map: ["enum.GunVisualLayers.Mag"]
+# #      scale: 0.85, 0.85
+# #  - type: Item
+# #    size: 15
+# #  - type: Gun
+# #    minAngle: 6
+# #    maxAngle: 20
+# #    fireRate: 8
+# #    angleIncrease: 8
+# #    angleDecay: 30
+# #    selectedMode: FullAuto
+# #    soundGunshot:
+# #      path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+# #  - type: MagazineVisuals
+# #    magState: mag
+# #    steps: 1
+# #    zeroVisible: true
+# #  - type: Appearance
+
+# # UMP
+
+
+
+
+# - type: entity
+#   name: ПП Витязь
+#   parent: BaseWeaponSubMachineGun
+#   id: EFSWeaponSubMachineGunVitya
+#   description: Российский пистолет-пулемет, изначально разработанный на базе автомата АКС-74У, но в дальнейшем переработанный. Является штатным пистолетом-пулеметом многих силовых структур Российской Федерации.
+#   components:
+#   - type: Sprite
+#     sprite: GG/Weapons/vitya.rsi
+#     layers:
+#       - state: base
+#         scale: 0.8, 0.8
+#         map: ["enum.GunVisualLayers.Base"]
+#       - state: mag-0
+#         map: ["enum.GunVisualLayers.Mag"]
+#         scale: 0.8, 0.8
+#   - type: Item
+#     size: PistolMachine
+#   - type: Gun
+#     minAngle: 1
+#     maxAngle: 15
+#     fireRate: 9.5
+#     angleIncrease: 2
+#     angleDecay: 50
+#     selectedMode: FullAuto
+#     availableModes:
+#     - SemiAuto
+#     - FullAuto
+#     soundLoudGunshot:
+#       path: /Audio/GG/Weapons/Vitya/shot.ogg
+#   - type: ChamberMagazineAmmoProvider
+#   - type: ItemSlots
+#     slots:
+#       gun_magazine:
+#         name: Magazine
+#         startingItem: EFSMagazinePistolVitya
+#         insertSound: /Audio/GG/Weapons/UMP/in.ogg
+#         ejectSound: /Audio/GG/Weapons/UMP/out.ogg
+#         priority: 2
+#         whitelist:
+#           tags:
+#             - EFSMagazinePistolVitya
+#       gun_chamber:
+#         name: Chamber
+#         startingItem: Cartridge9x19
+#         priority: 1
+#         whitelist:
+#           tags:
+#             - Cartridge9x19
+#   - type: ContainerContainer
+#     containers:
+#       gun_magazine: !type:ContainerSlot
+#       gun_chamber: !type:ContainerSlot
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 1
+#     zeroVisible: true
+#   - type: Appearance

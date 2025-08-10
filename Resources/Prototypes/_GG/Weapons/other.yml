@@ -1,0 +1,18 @@
+- type: entity
+  name: тактическое мыло
+  id: EFSSBEYSoap
+  parent: Soap
+  description: Аромат подорожника
+  components:
+  - type: Sprite
+    sprite: GG/Objects/Items/soap.rsi
+    layers:
+    - state: soap-4
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    fillBaseName: soap-
+  - type: Item
+    sprite: GG/Objects/Items/soap.rsi
+  - type: Residue
+    residueAdjective: residue-slippery
+    residueColor: residue-brown

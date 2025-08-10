@@ -22,6 +22,9 @@ namespace Content.Shared.Examine
                 {
                     "Armor",
                     "ClothingSpeedModifier",
+                    // ES14 changes start
+                    "ESWeightLoss"
+                    // ES14 changes end
                 },
             },
         };

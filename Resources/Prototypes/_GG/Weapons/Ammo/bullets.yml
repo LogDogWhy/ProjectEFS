@@ -1,0 +1,801 @@
+- type: entity
+  id: Bullet5.45x39
+  name: Патрон (5.45x39)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+          Piercing: 13
+          Blunt: 5
+  - type: StaminaDamageOnCollide
+    damage: 1
+
+- type: entity
+  id: BaseCartridge5.45x39
+  name: Патрон (5.45x39)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge5.45x39
+  - type: CartridgeAmmo
+    proto: Bullet5.45x39
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge5.45x39
+  name: Патрон (5.45x39)
+  parent: BaseCartridge5.45x39
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet5.45x39
+
+- type: entity
+  id: Bullet5.45x39b
+  name: Патрон Бп(5.45x39)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+          Piercing: 9
+          Blunt: 3
+    ignoreResistances: true
+
+- type: entity
+  id: BaseCartridge5.45x39b
+  name: Патрон Бп(5.45x39)
+  parent: BaseCartridge5.45x39
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet5.45x39b
+
+
+- type: entity
+  id: Cartridge5.45x39b
+  name: Патрон Бп (5.45x39)
+  parent: BaseCartridge5.45x39b
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet5.45x39b
+
+- type: Tag
+  id: Cartridge5.45x39
+
+  ################################################################################
+
+- type: entity
+  id: Bullet5.56x45
+  name: Патрон (5.56x45)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 13.75
+        Blunt: 5
+  - type: StaminaDamageOnCollide
+    damage: 1
+
+- type: entity
+  id: BaseCartridge5.56x45
+  name: Патрон (5.56x45)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge5.56x45
+  - type: CartridgeAmmo
+    proto: Bullet5.56x45
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge5.56x45b
+  name: Патрон Бп (5.56x45)
+  parent: BaseCartridge5.56x45b
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet5.56x45b
+
+- type: entity
+  id: Bullet5.56x45b
+  name: Патрон Бп (5.56x45)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10.5
+        Blunt: 3
+    ignoreResistances: true
+
+- type: entity
+  id: BaseCartridge5.56x45b
+  name: Патрон Бп(5.56x45)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge5.56x45
+  - type: CartridgeAmmo
+    proto: Bullet5.56x45b
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge5.56x45
+  name: Патрон (5.56x45)
+  parent: BaseCartridge5.56x45
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet5.56x45
+
+- type: Tag
+  id: Cartridge5.56x45
+
+################################################################################
+
+- type: entity
+  id: Bullet7.62x54R
+  name: Патрон (7.62x54R)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 19
+        Blunt: 17
+  - type: StaminaDamageOnCollide
+    damage: 4
+
+- type: entity
+  id: BaseCartridge7.62x54R
+  name: Патрон (7.62x54R)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge7.62x54R
+  - type: CartridgeAmmo
+    proto: Bullet7.62x54R
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge7.62x54R
+  name: Патрон (7.62x54R)
+  parent: BaseCartridge7.62x54R
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x54R
+
+- type: entity
+  id: Bullet7.62x54Rb
+  name: Патрон Бп (7.62x54R)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 13
+        Blunt: 13
+    ignoreResistances: true
+
+- type: entity
+  id: BaseCartridge7.62x54Rb
+  name: Патрон Бп (7.62x54R)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge7.62x54R
+  - type: CartridgeAmmo
+    proto: Bullet7.62x54Rb
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge7.62x54Rb
+  name: Патрон Бп (7.62x54R)
+  parent: BaseCartridge7.62x54Rb
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x54Rb
+
+- type: Tag
+  id: Cartridge7.62x54R
+
+
+################################################################################
+
+- type: entity
+  id: Bullet9x18
+  name: Пуля (9x18)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 7.5
+  - type: StaminaDamageOnCollide
+    damage: 1
+
+- type: entity
+  id: BaseCartridge9x18
+  name: Пуля (9x18)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge9x18
+  - type: CartridgeAmmo
+    proto: Bullet9x18
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge9x18
+  name: Пуля (9x18)
+  parent: BaseCartridge9x18
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet9x18
+
+- type: entity
+  id: Bullet9x18b
+  name: Пуля Бп (9x18)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 3
+        blunt: 3
+    ignoreResistances: true
+
+- type: entity
+  id: Cartridge9x18b
+  name: Пуля (9x18)
+  parent: BaseCartridge9x18b
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet9x18b
+
+- type: entity
+  id: BaseCartridge9x18b
+  name: Пуля Бп (9x18)
+  parent: BaseCartridge9x18
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet9x18b
+
+- type: Tag
+  id: Cartridge9x18
+
+
+################################################################################
+
+- type: entity
+  id: Bullet9x19
+  name: Пуля (9x19)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 6.25
+        Blunt: 3
+  - type: StaminaDamageOnCollide
+    damage: 1
+
+- type: entity
+  id: BaseCartridge9x19
+  name: Пуля (9x19)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge9x19
+  - type: CartridgeAmmo
+    proto: Bullet9x19
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge9x19
+  name: Пуля (9x19)
+  parent: BaseCartridge9x19
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet9x19
+
+- type: entity
+  id: Bullet9x19b
+  name: Пуля Бп (9x19)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 3
+        Blunt: 5
+    ignoreResistances: true
+
+- type: entity
+  id: BaseCartridge9x19b
+  name: Пуля Бп (9x19)
+  parent: BaseCartridge9x19
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge9x19
+  - type: CartridgeAmmo
+    proto: Bullet9x19b
+
+- type: entity
+  id: Cartridge9x19b
+  name: Пуля Бп (9x19)
+  parent: BaseCartridge9x19b
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet9x19b
+
+- type: Tag
+  id: Cartridge9x19
+
+################################################################################
+
+- type: entity
+  id: Bullet.45
+  name: Пуля (.45)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 8
+        Blunt: 5
+  - type: StaminaDamageOnCollide
+    damage: 1
+
+- type: entity
+  id: BaseCartridge.45
+  name: Пуля (.45)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge.45
+  - type: CartridgeAmmo
+    proto: Bullet.45
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge.45
+  name: Пуля (.45)
+  parent: BaseCartridge.45
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet.45
+
+- type: entity
+  id: Bullet.45b
+  name: Пуля Бп (.45)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 5
+        blunt: 5
+    ignoreResistances: true
+
+- type: entity
+  id: BaseCartridge.45b
+  name: Пуля Бп (.45)
+  parent: BaseCartridge.45
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge.45
+  - type: CartridgeAmmo
+    proto: Bullet.45b
+
+- type: entity
+  id: Cartridge.45b
+  name: Пуля Бп(.45)
+  parent: BaseCartridge.45b
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet.45b
+
+- type: Tag
+  id: Cartridge.45
+
+################################################################################
+
+- type: entity
+  id: Bullet7.62x39
+  name: Пуля (7.62x39)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 12
+        Blunt: 10
+  - type: StaminaDamageOnCollide
+    damage: 1
+
+- type: entity
+  id: BaseCartridge7.62x39
+  name: Пуля (7.62x39)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge7.62x39
+  - type: CartridgeAmmo
+    proto: Bullet7.62x39
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge7.62x39
+  name: Пуля (7.62x39)
+  parent: BaseCartridge7.62x39
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x39
+
+- type: entity
+  id: Bullet7.62x39b
+  name: Пуля Бп (7.62x39)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 8
+        Blunt: 6
+    ignoreResistances: true
+
+- type: entity
+  id: BaseCartridge7.62x39b
+  name: Пуля Бп (7.62x39)
+  parent: BaseCartridge7.62x39
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x39b
+
+
+- type: entity
+  id: Cartridge7.62x39b
+  name: Пуля Бп (7.62x39)
+  parent: BaseCartridge7.62x39b
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x39b
+
+- type: Tag
+  id: Cartridge7.62x39
+
+################################################################################
+
+- type: entity
+  id: Bullet9x39
+  name: Пуля (9x39)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 11.5
+        Blunt: 11
+  - type: StaminaDamageOnCollide
+    damage: 1
+
+- type: entity
+  id: BaseCartridge9x39
+  name: Пуля (9x39)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge9x39
+  - type: CartridgeAmmo
+    proto: Bullet9x39
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge9x39
+  name: Пуля (9x39)
+  parent: BaseCartridge9x39
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet9x39
+
+- type: entity
+  id: Bullet9x39b
+  name: Пуля (9x39)
+  parent: Bullet9x39
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 6.5
+        Blunt: 6
+  - type: StaminaDamageOnCollide
+    damage: 1
+
+- type: entity
+  id: BaseCartridge9x39b
+  name: Патрон Бп (9x39)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge9x39
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: CartridgeAmmo
+    proto: Bullet9x39b
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge9x39b
+  name: Пуля Бп (9x39)
+  parent: BaseCartridge9x39b
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet9x39b
+
+
+- type: Tag
+  id: Cartridge9x39
+
+################################################################################
+
+- type: entity
+  id: Bullet7.62x51
+  name: Патрон (7.62x51)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 15
+        Blunt: 11
+  - type: StaminaDamageOnCollide
+    damage: 4
+
+- type: entity
+  id: BaseCartridge7.62x51
+  name: Патрон (7.62x51)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge7.62x51
+  - type: CartridgeAmmo
+    proto: Bullet7.62x51
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge7.62x51
+  name: Патрон (7.62x51)
+  parent: BaseCartridge7.62x51
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x51
+
+- type: entity
+  id: Bullet7.62x51b
+  name: Патрон Бп (7.62x51)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+        Blunt: 12
+    ignoreResistances: true
+
+- type: entity
+  id: BaseCartridge7.62x51b
+  name: Патрон Бп (7.62x51)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - Cartridge7.62x51
+  - type: CartridgeAmmo
+    proto: Bullet7.62x51b
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: Cartridge7.62x51b
+  name: Патрон Бп (7.62x51)
+  parent: BaseCartridge7.62x51b
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet7.62x51b
+
+- type: Tag
+  id: Cartridge7.62x51
+
+################################################################################
+
+# - type: entity
+#   id: EFSPelletsShotgun
+#   name: Патроны 12 калибра
+#   parent: BaseMagazineShotgun
+#   components:
+#   - type: BallisticAmmoProvider
+#     proto: ShellShotgun
+#   - type: Sprite
+#     layers:
+#     - state: pellets
+#       map: ["enum.GunVisualLayers.Base"]
+#     - state: mag-1
+#       map: ["enum.GunVisualLayers.Mag"]
+
+# - type: entity
+#   id: ShellShotgun
+#   name: shell (.50)
+#   parent: BaseShellShotgun
+#   components:
+#   - type: Sprite
+#     layers:
+#       - state: base
+#         map: [ "enum.AmmoVisualLayers.Base" ]
+#   - type: CartridgeAmmo
+#     proto: PelletShotgun
